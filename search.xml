@@ -17,6 +17,9 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <tags>
+        <tag>Hello-World</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hexo+Github博客搭建指南</title>
@@ -38,7 +41,7 @@
       </tags>
   </entry>
   <entry>
-    <title>galleries</title>
+    <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
@@ -55,6 +58,21 @@
   <entry>
     <title>about</title>
     <url>/about/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>colorful</title>
+    <url>/galleries/colorful/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>记事</title>
+    <url>/galleries/%E8%AE%B0%E4%BA%8B/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>深圳日记</title>
+    <url>/galleries/%E6%B7%B1%E5%9C%B3%E6%97%A5%E8%AE%B0/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
