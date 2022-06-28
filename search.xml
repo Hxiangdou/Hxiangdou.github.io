@@ -17,6 +17,9 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
       <tags>
         <tag>Hello-World</tag>
       </tags>
@@ -27,7 +30,7 @@
     <content><![CDATA[<p>记录博客搭建过程以及踩得坑</p>
 <h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><h3 id="详细搭建过程说明"><a href="#详细搭建过程说明" class="headerlink" title="详细搭建过程说明"></a>详细搭建过程说明</h3><p><a href="https://zhuanlan.zhihu.com/p/60578464">Hexo+Github搭建博客——知乎</a></p>
 <h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><ol>
-<li>验证连接步骤，如果无法连接到<a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;</a>，<code>ssh: connect to host github.com port 22: Connection refused</code>可能是因为使用游戏加速器或者科学上网的原因，需要修改host文件，并且刷新DNS缓存。<ul>
+<li>验证连接步骤，如果无法连接到<a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#99;&#111;&#109;</a>，<code>ssh: connect to host github.com port 22: Connection refused</code>可能是因为使用游戏加速器或者科学上网的原因，需要修改host文件，并且刷新DNS缓存。<ul>
 <li>修改host文件：在<code>C:\Windows\System32\drivers\etc\</code>文件夹下，用文本编辑器打开host文件，在最后一行添加如下内容：<figure class="highlight accesslog"><table><tr><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">140.82.113.4</span> github.com<br></code></pre></td></tr></table></figure></li>
 <li>DNS刷新：在控制台输入<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure></li>
 </ul>
@@ -36,6 +39,9 @@
 <h3 id="主题选择"><a href="#主题选择" class="headerlink" title="主题选择"></a>主题选择</h3><p>在<a href="https://hexo.io/themes/">hexo主题</a>可以选择自己喜欢的主题进行部署，点击图片查看该主题的博客demo，点击名称进入该主题的github主页，按照说明部署即可，上面知乎文章里也有详细说明。</p>
 <p>根据对应主题配置文档进行个性化配置。以题主采用的zhaoo主题为例，主题配置文档为<a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">zhaoo配置文档</a></p>
 ]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
       <tags>
         <tag>博客搭建</tag>
       </tags>
@@ -58,7 +64,9 @@
   <entry>
     <title>about</title>
     <url>/about/index.html</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>茴香豆</strong><br>计科专业大数据方向憨憨，以后该干什么呢？迷茫ヾ(•ω•&#96;)o</p>
+<h1 id="WORK"><a href="#WORK" class="headerlink" title="WORK"></a>WORK</h1><p>谁能给我个工作哇</p>
+]]></content>
   </entry>
   <entry>
     <title>colorful</title>
