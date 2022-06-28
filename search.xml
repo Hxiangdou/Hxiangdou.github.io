@@ -23,34 +23,15 @@
     <url>/2022/06/27/Hexo-Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>记录博客搭建过程以及踩得坑</p>
 <h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><h3 id="详细搭建过程说明"><a href="#详细搭建过程说明" class="headerlink" title="详细搭建过程说明"></a>详细搭建过程说明</h3><p><a href="https://zhuanlan.zhihu.com/p/60578464">Hexo+Github搭建博客——知乎</a></p>
-<h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><p><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.647ex" height="1.176ex" style="vertical-align: 0.439ex; margin-bottom: -0.61ex;" viewBox="0 -432.6 278.5 506.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title">\cdot</title>
-<defs aria-hidden="true">
-<path stroke-width="1" id="E1-MJMAIN-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path>
-</defs>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#E1-MJMAIN-22C5" x="0" y="0"></use>
-</g>
-</svg></p>
-<p><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.647ex" height="1.176ex" style="vertical-align: 0.439ex; margin-bottom: -0.61ex;" viewBox="0 -432.6 278.5 506.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title">\cdot</title>
-<defs aria-hidden="true">
-<path stroke-width="1" id="E1-MJMAIN-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path>
-</defs>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#E1-MJMAIN-22C5" x="0" y="0"></use>
-</g>
-</svg></p>
-<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.647ex" height="1.176ex" style="vertical-align: 0.439ex; margin-bottom: -0.61ex;" viewBox="0 -432.6 278.5 506.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title">\cdot</title>
-<defs aria-hidden="true">
-<path stroke-width="1" id="E1-MJMAIN-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path>
-</defs>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#E1-MJMAIN-22C5" x="0" y="0"></use>
-</g>
-</svg></p>
-<p><img  src="/images/blog1/psc.png"  ><span class="image-caption">psc</span></p>
+<h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><ol>
+<li>验证连接步骤，如果无法连接到<a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a>，<code>ssh: connect to host github.com port 22: Connection refused</code>可能是因为使用游戏加速器或者科学上网的原因，需要修改host文件，并且刷新DNS缓存。<ul>
+<li>修改host文件：在<code>C:\Windows\System32\drivers\etc\</code>文件夹下，用文本编辑器打开host文件，在最后一行添加如下内容：<figure class="highlight accesslog"><table><tr><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">140.82.113.4</span> github.com<br></code></pre></td></tr></table></figure></li>
+<li>DNS刷新：在控制台输入<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="主题选择"><a href="#主题选择" class="headerlink" title="主题选择"></a>主题选择</h3><p>在<a href="https://hexo.io/themes/">hexo主题</a>可以选择自己喜欢的主题进行部署，点击图片查看该主题的博客demo，点击名称进入该主题的github主页，按照说明部署即可，上面知乎文章里也有详细说明。</p>
+<p>根据对应主题配置文档进行个性化配置。以题主采用的zhaoo主题为例，主题配置文档为<a href="https://www.izhaoo.com/2020/05/05/hexo-theme-zhaoo-doc/#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">zhaoo配置文档</a></p>
 ]]></content>
       <tags>
         <tag>博客搭建</tag>
