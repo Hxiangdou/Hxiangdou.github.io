@@ -23,11 +23,57 @@
     <url>/2022/06/27/Hexo-Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>记录博客搭建过程以及踩得坑</p>
 <h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><h3 id="详细搭建过程说明"><a href="#详细搭建过程说明" class="headerlink" title="详细搭建过程说明"></a>详细搭建过程说明</h3><p><a href="https://zhuanlan.zhihu.com/p/60578464">Hexo+Github搭建博客——知乎</a></p>
-<h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><p>$$<br> \cdot<br>$$</p>
+<h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><p><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.647ex" height="1.176ex" style="vertical-align: 0.439ex; margin-bottom: -0.61ex;" viewBox="0 -432.6 278.5 506.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\cdot</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-22C5" x="0" y="0"></use>
+</g>
+</svg></p>
+<p><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.647ex" height="1.176ex" style="vertical-align: 0.439ex; margin-bottom: -0.61ex;" viewBox="0 -432.6 278.5 506.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\cdot</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-22C5" x="0" y="0"></use>
+</g>
+</svg></p>
+<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.647ex" height="1.176ex" style="vertical-align: 0.439ex; margin-bottom: -0.61ex;" viewBox="0 -432.6 278.5 506.3" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\cdot</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-22C5" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-22C5" x="0" y="0"></use>
+</g>
+</svg></p>
 <p><img  src="/images/blog1/psc.png"  ><span class="image-caption">psc</span></p>
 ]]></content>
       <tags>
         <tag>博客搭建</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>galleries</title>
+    <url>/galleries/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>about</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
