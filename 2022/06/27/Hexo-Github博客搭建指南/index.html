@@ -75,8 +75,8 @@ Start详细搭建过程说明...">
       },
       donate: {
         enable: true,
-        alipay: 'https://pic.izhaoo.com/alipay.jpg',
-        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+        alipay: '/images/支付宝.JPG',
+        wechat: '/images/微信.JPG'
       },
       galleries: {
         enable: true
@@ -122,7 +122,7 @@ Start详细搭建过程说明...">
         page_black_list: ''
       },
       search: {
-        enable: false,
+        enable: true,
         path: 'search.xml'
       }
     }
@@ -155,6 +155,8 @@ Start详细搭建过程说明...">
       
         <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
       
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
       
     </div>
     <div class="center">Hexo+Github博客搭建指南</div>
@@ -212,7 +214,7 @@ Start详细搭建过程说明...">
           <i class="iconfont iconheart"></i><span id="/2022/06/27/Hexo-Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" class="leancloud-like" data-flag-title="Hexo+Github博客搭建指南"></span>
         </span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>64</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>67</span>
     </div>
   </div>
 </section>
@@ -221,7 +223,7 @@ Start详细搭建过程说明...">
         
         <p>记录博客搭建过程以及踩得坑</p>
 <h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><h3 id="详细搭建过程说明"><a href="#详细搭建过程说明" class="headerlink" title="详细搭建过程说明"></a>详细搭建过程说明</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">Hexo+Github搭建博客——知乎</a></p>
-<h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><p>$ \cdot</p>
+<h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><p>$$<br> \cdot<br>$$</p>
 
       </section>
       <section class="extra">
@@ -237,7 +239,7 @@ Start详细搭建过程说明...">
         
           <section class="donate">
   <div id="qrcode-donate">
-    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+    <img   class="lazyload" data-original="/images/支付宝.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
   </div>
   <div class="icon">
     <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
@@ -323,7 +325,7 @@ Start详细搭建过程说明...">
         onMouseOut="this.style.color='#33333D'">
           <i class="iconfont  iconwechat-fill "></i>
       </a><a 
-        href="https://www.instagram.com/izhaoo/ "
+        href="https://www.instagram.com/ "
         target="_blank"
         class="footer-social-item"
         onMouseOver="this.style.color= '#DA2E76'" 
@@ -337,7 +339,7 @@ Start详细搭建过程说明...">
         onMouseOut="this.style.color='#33333D'">
           <i class="iconfont  icongithub-fill "></i>
       </a><a 
-        href="mailto:izhaoo@163.com "
+        href="mailto:1134384717@qq.com "
         target="_blank"
         class="footer-social-item"
         onMouseOver="this.style.color=#FF3B00" 
@@ -369,6 +371,20 @@ Start详细搭建过程说明...">
 <script src="/js/color-mode.js"></script>
 
   
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
   
 </body>
 
