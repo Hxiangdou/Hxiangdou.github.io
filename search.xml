@@ -16,7 +16,7 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;name&quot;</span>       <span class="hljs-comment"># 新建文章</span><br>hexo new page <span class="hljs-string">&quot;name&quot;</span>  <span class="hljs-comment"># 新建页面</span><br>hexo g                <span class="hljs-comment"># 生成页面</span><br>hexo d                <span class="hljs-comment"># 部署</span><br>hexo g -d             <span class="hljs-comment"># 生成页面并部署</span><br>hexo s                <span class="hljs-comment"># 本地预览</span><br>hexo clean            <span class="hljs-comment"># 清除缓存和已生成的静态文件</span><br>hexo <span class="hljs-built_in">help</span>             <span class="hljs-comment"># 帮助</span><br></code></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>随笔</category>
       </categories>
