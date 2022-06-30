@@ -47,6 +47,70 @@
       </tags>
   </entry>
   <entry>
+    <title>Python学习之路（1）环境配置</title>
+    <url>/2022/06/30/Python-1/</url>
+    <content><![CDATA[<p>之前一直在windows平台编程，这次从零开始，完全使用Ubuntu系统学习Python。</p>
+<p>参考：<a href="https://muzing.top/posts/6c3096a1/">在 Ubuntu 22.04 上安装 Python 3.9 - muzing的杂货铺</a></p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><h3 id="更新系统软件"><a href="#更新系统软件" class="headerlink" title="更新系统软件"></a>更新系统软件</h3><figure class="highlight applescript"><table><tr><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># 刷新软件包目录</span><br>sudo apt update<br><span class="hljs-comment"># 列出当前可用的更新</span><br>sudo apt <span class="hljs-built_in">list</span> <span class="hljs-comment">--upgradable</span><br><span class="hljs-comment"># 如上一步提示有可以更新的项目，则执行更新</span><br>sudo apt upgrade<br></code></pre></td></tr></table></figure>
+
+<h3 id="安装GCC编译器"><a href="#安装GCC编译器" class="headerlink" title="安装GCC编译器"></a>安装GCC编译器</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 安装 GCC 编译器</span><br>sudo apt <span class="hljs-keyword">install</span> gcc<br><span class="hljs-comment"># 检查安装是否成功</span><br>gcc -v<br><span class="hljs-comment"># 若显示出 GCC 版本则成功</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="安装其他依赖"><a href="#安装其他依赖" class="headerlink" title="安装其他依赖"></a>安装其他依赖</h3><figure class="highlight q"><table><tr><td class="code"><pre><code class="hljs q"># 刷新软件包目录<br>sudo apt <span class="hljs-keyword">update</span><br># 安装依赖<br>sudo apt install build-essential zlib1g-<span class="hljs-built_in">dev</span> libncurses5-<span class="hljs-built_in">dev</span> libgdbm-<span class="hljs-built_in">dev</span> libnss3-<span class="hljs-built_in">dev</span> libssl-<span class="hljs-built_in">dev</span> libreadline-<span class="hljs-built_in">dev</span> libffi-<span class="hljs-built_in">dev</span> libbz2-<span class="hljs-built_in">dev</span> liblzma-<span class="hljs-built_in">dev</span> sqlite3 libsqlite3-<span class="hljs-built_in">dev</span> tk-<span class="hljs-built_in">dev</span> uuid-<span class="hljs-built_in">dev</span> libgdbm-compat-<span class="hljs-built_in">dev</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="编译与安装"><a href="#编译与安装" class="headerlink" title="编译与安装"></a>编译与安装</h2><h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><p>在 <a href="https://www.python.org/downloads/source/">Python 官网下载界面</a>下载 Python 3.9 的源代码，此处使用目前最新的 3.9.13。</p>
+<p>或者采用命令行下载</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 下载 Python 3.9.13</span><br><span class="hljs-attribute">sudo</span> wget https://www.python.org/ftp/python/<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 下载其他版本只需替换版本号数字</span><br><span class="hljs-comment"># 解压</span><br><span class="hljs-attribute">tar</span> -xf Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 进入该目录</span><br><span class="hljs-attribute">cd</span> Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/<br></code></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-comment"># 检查依赖与配置编译</span><br>sudo <span class="hljs-string">./configure</span> <span class="hljs-params">--enable-optimizations</span> <span class="hljs-params">--with-lto</span> <span class="hljs-params">--enable-shared</span><br></code></pre></td></tr></table></figure>
+
+<p>此处使用了三个可选配置项，含义如下：</p>
+<ul>
+<li><code>--enable-optimizations</code>：用 <a href="https://docs.python.org/zh-cn/3/using/configure.html#envvar-PROFILE_TASK">PROFILE_TASK</a> 启用以配置文件主导的优化（PGO）</li>
+<li><code>--with-lto</code>：在编译过程中启用链接时间优化（LTO）</li>
+<li><code>--enable-shared</code>：启用共享 Python 库 <code>libpython</code> 的编译</li>
+</ul>
+<p>经过一系列检查无误之后，会自动生成 Makefile，即可进行下一步的编译了。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>完成配置，生成 Makefile 后，就可以开始编译了。<strong>编译耗时较长</strong>（要耐心等待），可以使用 <code>-j</code> 选项指定参与编译的 CPU 核心数，例如此机器为 2核 CPU：</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 编译，-j 后面的数字为参与编译的CPU核心数，根据个人机器配置调整</span><br><span class="hljs-attribute">sudo</span> make -j <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>编译结束后，注意仔细查看一下输出，检查可能存在的错误：</p>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment"># 一种可能出现的问题：</span><br>$ sudo make<br><span class="hljs-comment"># ......省略部分输出......</span><br>Python <span class="hljs-keyword">build </span>finished successfully!<br>The necessary <span class="hljs-keyword">bits </span>to <span class="hljs-keyword">build </span>these optional modules were not found:<br>_dbm                  _tkinter              _uuid              <br>To find the necessary <span class="hljs-keyword">bits, </span>look in setup.py in detect_modules() for the module<span class="hljs-string">&#x27;s name.</span><br></code></pre></td></tr></table></figure>
+
+<p>如果出现类似如上的警告，说明编译时有部分软件包不可用，导致编译出的 Python 有部分可选模块不可用。检查上一节中提到的依赖是否都已安装，或求助于网络搜索引擎，安装对应软件包后再次编译即可。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight gauss"><table><tr><td class="code"><pre><code class="hljs gauss"><span class="hljs-meta"># 安装二进制文件</span><br>sudo <span class="hljs-built_in">make</span> altinstall<br></code></pre></td></tr></table></figure>
+
+<h3 id="链接动态库"><a href="#链接动态库" class="headerlink" title="链接动态库"></a>链接动态库</h3><p>由于[编译配置]中有 <code>--enable-shared</code> 的选项，故此时直接使用命令 <code>python3.9</code> 会提示无法找到 <code>libpython3.9.so.1.0</code> 的错误。只需找到该 <code>so</code> 文件，复制（或创建符号链接）到 <code>/usr/lib/</code> 目录下即可：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 找到 libpython 的位置</span><br>$ whereis libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1</span>: <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br><span class="hljs-comment"># 在 /usr/lib/ 下创建 libpython 的符号链接</span><br>$ sudo ln -s <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span> <span class="hljs-regexp">/usr/</span>lib/<br></code></pre></td></tr></table></figure>
+
+<h2 id="使用Python3-9"><a href="#使用Python3-9" class="headerlink" title="使用Python3.9"></a>使用Python3.9</h2><h3 id="命令行使用"><a href="#命令行使用" class="headerlink" title="命令行使用"></a>命令行使用</h3><p>直接在命令行使用 <code>python3.9</code> 命令即可调用新安装的解释器：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 在命令行使用 Python 交互式解释器</span><br>$ python3.<span class="hljs-number">9</span><br>Python <span class="hljs-number">3.9</span>.<span class="hljs-number">13</span> (main, Jun <span class="hljs-number">22</span> <span class="hljs-number">2022</span>, <span class="hljs-number">18</span>:<span class="hljs-number">58</span>:<span class="hljs-number">57</span>) <br>[GCC <span class="hljs-number">11.2</span>.<span class="hljs-number">0</span>] on linux<br>Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string">&quot;copyright&quot;</span>, <span class="hljs-string">&quot;credits&quot;</span> or <span class="hljs-string">&quot;license&quot;</span> <span class="hljs-keyword">for</span> more information.<br>&gt;&gt;&gt;<br><br><span class="hljs-comment"># 查看该命令所在位置</span><br>$ which python3.<span class="hljs-number">9</span><br><span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/</span>python3.<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
+
+<p>类似的，使用 Python 3.9 的 <code>pip</code> 的命令为 <code>pip3.9</code></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 查看 pip3.9 版本</span><br>$ pip3.<span class="hljs-number">9</span> -V<br>pip <span class="hljs-number">22.0</span>.<span class="hljs-number">4</span> from <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>python3.<span class="hljs-number">9</span><span class="hljs-regexp">/site-packages/</span>pip (python <span class="hljs-number">3.9</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="PyCharm使用"><a href="#PyCharm使用" class="headerlink" title="PyCharm使用"></a>PyCharm使用</h3><p>在 PyCharm 中简单设置后，就可以使用新安装的解释器了。</p>
+<ul>
+<li><p>首先打开 PyCharm 设置，找到 “Python 解释器” 一项，点击下拉菜单——全部显示</p>
+</li>
+<li><p>点击左上角的 <code>+</code> ，添加新的解释器</p>
+</li>
+<li><p>选择添加 “系统解释器”，点击后面的 <code>...</code> 以浏览选择解释器路径</p>
+</li>
+<li><p>编译安装，解释器可执行文件默认路径为 <code>/usr/local/bin/python3.9</code>，或者可以返回[命令行使用]检查命令 <code>python3.9</code> 的位置。在此处将完整路径粘贴进编辑框即可</p>
+</li>
+<li><p>点击确定，即可正常使用新安装的解释器了</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>

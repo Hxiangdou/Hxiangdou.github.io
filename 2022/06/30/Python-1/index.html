@@ -1,0 +1,604 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python学习之路（1）环境配置 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="之前一直在windows平台编程，这次从零开始，完全使...">
+  <meta name="author" content="茴香豆">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/支付宝.JPG',
+        wechat: '/images/微信.JPG'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">Python学习之路（1）环境配置</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 相册</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Python学习之路（1）环境配置</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>June 30, 2022</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2022/06/30/Python-1/" class="leancloud-counter" data-flag-title="Python学习之路（1）环境配置"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2022/06/30/Python-1/" class="leancloud-like" data-flag-title="Python学习之路（1）环境配置"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2717</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>之前一直在windows平台编程，这次从零开始，完全使用Ubuntu系统学习Python。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://muzing.top/posts/6c3096a1/">在 Ubuntu 22.04 上安装 Python 3.9 - muzing的杂货铺</a></p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><h3 id="更新系统软件"><a href="#更新系统软件" class="headerlink" title="更新系统软件"></a>更新系统软件</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># 刷新软件包目录</span><br>sudo apt update<br><span class="hljs-comment"># 列出当前可用的更新</span><br>sudo apt <span class="hljs-built_in">list</span> <span class="hljs-comment">--upgradable</span><br><span class="hljs-comment"># 如上一步提示有可以更新的项目，则执行更新</span><br>sudo apt upgrade<br></code></pre></td></tr></table></figure>
+
+<h3 id="安装GCC编译器"><a href="#安装GCC编译器" class="headerlink" title="安装GCC编译器"></a>安装GCC编译器</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 安装 GCC 编译器</span><br>sudo apt <span class="hljs-keyword">install</span> gcc<br><span class="hljs-comment"># 检查安装是否成功</span><br>gcc -v<br><span class="hljs-comment"># 若显示出 GCC 版本则成功</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="安装其他依赖"><a href="#安装其他依赖" class="headerlink" title="安装其他依赖"></a>安装其他依赖</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs q"># 刷新软件包目录<br>sudo apt <span class="hljs-keyword">update</span><br># 安装依赖<br>sudo apt install build-essential zlib1g-<span class="hljs-built_in">dev</span> libncurses5-<span class="hljs-built_in">dev</span> libgdbm-<span class="hljs-built_in">dev</span> libnss3-<span class="hljs-built_in">dev</span> libssl-<span class="hljs-built_in">dev</span> libreadline-<span class="hljs-built_in">dev</span> libffi-<span class="hljs-built_in">dev</span> libbz2-<span class="hljs-built_in">dev</span> liblzma-<span class="hljs-built_in">dev</span> sqlite3 libsqlite3-<span class="hljs-built_in">dev</span> tk-<span class="hljs-built_in">dev</span> uuid-<span class="hljs-built_in">dev</span> libgdbm-compat-<span class="hljs-built_in">dev</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="编译与安装"><a href="#编译与安装" class="headerlink" title="编译与安装"></a>编译与安装</h2><h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><p>在 <a target="_blank" rel="noopener" href="https://www.python.org/downloads/source/">Python 官网下载界面</a>下载 Python 3.9 的源代码，此处使用目前最新的 3.9.13。</p>
+<p>或者采用命令行下载</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 下载 Python 3.9.13</span><br><span class="hljs-attribute">sudo</span> wget https://www.python.org/ftp/python/<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 下载其他版本只需替换版本号数字</span><br><span class="hljs-comment"># 解压</span><br><span class="hljs-attribute">tar</span> -xf Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 进入该目录</span><br><span class="hljs-attribute">cd</span> Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/<br></code></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-comment"># 检查依赖与配置编译</span><br>sudo <span class="hljs-string">./configure</span> <span class="hljs-params">--enable-optimizations</span> <span class="hljs-params">--with-lto</span> <span class="hljs-params">--enable-shared</span><br></code></pre></td></tr></table></figure>
+
+<p>此处使用了三个可选配置项，含义如下：</p>
+<ul>
+<li><code>--enable-optimizations</code>：用 <a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/using/configure.html#envvar-PROFILE_TASK">PROFILE_TASK</a> 启用以配置文件主导的优化（PGO）</li>
+<li><code>--with-lto</code>：在编译过程中启用链接时间优化（LTO）</li>
+<li><code>--enable-shared</code>：启用共享 Python 库 <code>libpython</code> 的编译</li>
+</ul>
+<p>经过一系列检查无误之后，会自动生成 Makefile，即可进行下一步的编译了。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>完成配置，生成 Makefile 后，就可以开始编译了。<strong>编译耗时较长</strong>（要耐心等待），可以使用 <code>-j</code> 选项指定参与编译的 CPU 核心数，例如此机器为 2核 CPU：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 编译，-j 后面的数字为参与编译的CPU核心数，根据个人机器配置调整</span><br><span class="hljs-attribute">sudo</span> make -j <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>编译结束后，注意仔细查看一下输出，检查可能存在的错误：</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment"># 一种可能出现的问题：</span><br>$ sudo make<br><span class="hljs-comment"># ......省略部分输出......</span><br>Python <span class="hljs-keyword">build </span>finished successfully!<br>The necessary <span class="hljs-keyword">bits </span>to <span class="hljs-keyword">build </span>these optional modules were not found:<br>_dbm                  _tkinter              _uuid              <br>To find the necessary <span class="hljs-keyword">bits, </span>look in setup.py in detect_modules() for the module<span class="hljs-string">&#x27;s name.</span><br></code></pre></td></tr></table></figure>
+
+<p>如果出现类似如上的警告，说明编译时有部分软件包不可用，导致编译出的 Python 有部分可选模块不可用。检查上一节中提到的依赖是否都已安装，或求助于网络搜索引擎，安装对应软件包后再次编译即可。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gauss"><span class="hljs-meta"># 安装二进制文件</span><br>sudo <span class="hljs-built_in">make</span> altinstall<br></code></pre></td></tr></table></figure>
+
+<h3 id="链接动态库"><a href="#链接动态库" class="headerlink" title="链接动态库"></a>链接动态库</h3><p>由于[编译配置]中有 <code>--enable-shared</code> 的选项，故此时直接使用命令 <code>python3.9</code> 会提示无法找到 <code>libpython3.9.so.1.0</code> 的错误。只需找到该 <code>so</code> 文件，复制（或创建符号链接）到 <code>/usr/lib/</code> 目录下即可：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 找到 libpython 的位置</span><br>$ whereis libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1</span>: <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br><span class="hljs-comment"># 在 /usr/lib/ 下创建 libpython 的符号链接</span><br>$ sudo ln -s <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span> <span class="hljs-regexp">/usr/</span>lib/<br></code></pre></td></tr></table></figure>
+
+<h2 id="使用Python3-9"><a href="#使用Python3-9" class="headerlink" title="使用Python3.9"></a>使用Python3.9</h2><h3 id="命令行使用"><a href="#命令行使用" class="headerlink" title="命令行使用"></a>命令行使用</h3><p>直接在命令行使用 <code>python3.9</code> 命令即可调用新安装的解释器：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 在命令行使用 Python 交互式解释器</span><br>$ python3.<span class="hljs-number">9</span><br>Python <span class="hljs-number">3.9</span>.<span class="hljs-number">13</span> (main, Jun <span class="hljs-number">22</span> <span class="hljs-number">2022</span>, <span class="hljs-number">18</span>:<span class="hljs-number">58</span>:<span class="hljs-number">57</span>) <br>[GCC <span class="hljs-number">11.2</span>.<span class="hljs-number">0</span>] on linux<br>Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string">&quot;copyright&quot;</span>, <span class="hljs-string">&quot;credits&quot;</span> or <span class="hljs-string">&quot;license&quot;</span> <span class="hljs-keyword">for</span> more information.<br>&gt;&gt;&gt;<br><br><span class="hljs-comment"># 查看该命令所在位置</span><br>$ which python3.<span class="hljs-number">9</span><br><span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/</span>python3.<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
+
+<p>类似的，使用 Python 3.9 的 <code>pip</code> 的命令为 <code>pip3.9</code></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 查看 pip3.9 版本</span><br>$ pip3.<span class="hljs-number">9</span> -V<br>pip <span class="hljs-number">22.0</span>.<span class="hljs-number">4</span> from <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>python3.<span class="hljs-number">9</span><span class="hljs-regexp">/site-packages/</span>pip (python <span class="hljs-number">3.9</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="PyCharm使用"><a href="#PyCharm使用" class="headerlink" title="PyCharm使用"></a>PyCharm使用</h3><p>在 PyCharm 中简单设置后，就可以使用新安装的解释器了。</p>
+<ul>
+<li><p>首先打开 PyCharm 设置，找到 “Python 解释器” 一项，点击下拉菜单——全部显示</p>
+</li>
+<li><p>点击左上角的 <code>+</code> ，添加新的解释器</p>
+</li>
+<li><p>选择添加 “系统解释器”，点击后面的 <code>...</code> 以浏览选择解释器路径</p>
+</li>
+<li><p>编译安装，解释器可执行文件默认路径为 <code>/usr/local/bin/python3.9</code>，或者可以返回[命令行使用]检查命令 <code>python3.9</code> 的位置。在此处将完整路径粘贴进编辑框即可</p>
+</li>
+<li><p>点击确定，即可正常使用新安装的解释器了</p>
+</li>
+</ul>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>茴香豆</li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/06/30/Python-1/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;06&#x2F;30&#x2F;Python-1&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;06&#x2F;30&#x2F;Python-1&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="/images/支付宝.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2022/06/27/Hexo-Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/">Hexo+Github博客搭建指南<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz",
+        app_key: "6DvkgciWlfleRrT7w9r6snJI",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-text">安装依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6"><span class="toc-text">更新系统软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85GCC%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-text">安装GCC编译器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%85%B6%E4%BB%96%E4%BE%9D%E8%B5%96"><span class="toc-text">安装其他依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="toc-text">编译与安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-text">下载源代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91"><span class="toc-text">编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E5%8A%A8%E6%80%81%E5%BA%93"><span class="toc-text">链接动态库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Python3-9"><span class="toc-text">使用Python3.9</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8"><span class="toc-text">命令行使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PyCharm%E4%BD%BF%E7%94%A8"><span class="toc-text">PyCharm使用</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1134384717 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/Squirrel00011 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1134384717@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#ff3b00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz',
+      appKey: '6DvkgciWlfleRrT7w9r6snJI',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: "38fcd752"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
