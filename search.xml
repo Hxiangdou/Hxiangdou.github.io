@@ -111,6 +111,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Python学习之路（2）变量与简单的数据类型</title>
+    <url>/2022/06/30/Python-2/</url>
+    <content><![CDATA[<p>在本章中，主要学习Python中可使用的各种数据，以及如何存储、使用和访问这些数据。</p>
+<h2 id="1-Hello-World"><a href="#1-Hello-World" class="headerlink" title="1.Hello-World"></a>1.Hello-World</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">message = <span class="hljs-string">&quot;Hello World!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h2><p>命名规则：</p>
+<ul>
+<li>变量名只能包含字母数字和下划线，且不能以数据打头。</li>
+<li>变量名不能包含空格。</li>
+<li>变量名不能与关键字或函数名相同。</li>
+<li>变量名应简短且具有描述性</li>
+<li>慎用小写字母 l 和大写字母 O，因为会被错认为数字1和0</li>
+</ul>
+<h2 id="3-字符串"><a href="#3-字符串" class="headerlink" title="3.字符串"></a>3.字符串</h2><p>Python中，单引号或双引号括起来的是字符串，这种灵活性可以使程序员在字符串中包含引号和撇号。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># var</span><br>message = <span class="hljs-string">&quot;Hello Python world!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># change the case of string 改变大小写</span><br>name = <span class="hljs-string">&quot;ada lovelace&quot;</span><br><span class="hljs-built_in">print</span>(name.title()) <span class="hljs-comment"># Title 标题格式</span><br><span class="hljs-built_in">print</span>(name.upper()) <span class="hljs-comment"># upper case 大写</span><br><span class="hljs-built_in">print</span>(name.lower()) <span class="hljs-comment"># lower case 小写</span><br><span class="hljs-comment"># merge string 合并字符串</span><br>first_name = <span class="hljs-string">&quot;ada&quot;</span><br>last_name = <span class="hljs-string">&quot;lovelace&quot;</span><br>full_name = first_name + <span class="hljs-string">&quot; &quot;</span> + last_name<br><span class="hljs-built_in">print</span>(full_name)<br><span class="hljs-comment"># add whitespace \n \t 添加空白</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tPython&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;languages:\n\tPython\n\tC\n\tJavaScript&quot;</span>)<br><span class="hljs-comment"># delete block 删除空白</span><br>language = <span class="hljs-string">&quot;  Python  &quot;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language + <span class="hljs-string">&quot;-&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.rstrip() + <span class="hljs-string">&quot;-&quot;</span>) <span class="hljs-comment"># delete the whitespace at the right</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.lstrip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the left</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.strip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the both</span><br></code></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<figure class="highlight ldif"><table><tr><td class="code"><pre><code class="hljs ldif">Hello Python world!<br>Ada Lovelace<br>ADA LOVELACE<br>ada lovelace<br>ada lovelace<br>	Python<br><span class="hljs-attribute">languages</span>:<br>	Python<br>	C<br>	JavaScript<br><span class="hljs-literal">-</span>  Python  -<br><span class="hljs-literal">-</span>  Python-<br><span class="hljs-literal">-</span>Python  -<br><span class="hljs-literal">-</span>Python-<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-数字"><a href="#4-数字" class="headerlink" title="4.数字"></a>4.数字</h2><h3 id="4-1整数"><a href="#4-1整数" class="headerlink" title="4.1整数"></a>4.1整数</h3><p>在Python中，整数可执行加（+）减（-）乘（*）除（&#x2F;）乘方（**）整除（&#x2F;&#x2F;），并支持运算次序，并支持括号改变运算次序。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span><br><span class="hljs-number">5</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> - <span class="hljs-number">3</span><br>-<span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> * <span class="hljs-number">3</span><br><span class="hljs-number">6</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> / <span class="hljs-number">3</span><br><span class="hljs-number">0.6666666666666666</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> // <span class="hljs-number">2</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span>**<span class="hljs-number">3</span><br><span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2浮点数"><a href="#4-2浮点数" class="headerlink" title="4.2浮点数"></a>4.2浮点数</h3><p>需要注意的是，运算结果包含的浮点数的小数位数可能是不确定的。后续会学习处理多余小数位的方式。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">0.2</span> + <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> * <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
