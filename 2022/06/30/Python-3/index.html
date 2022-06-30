@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Python学习之路（2）变量与简单的数据类型 - Hexo</title>
+  <title>Python学习之路（3）列表简介 - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="在本章中，主要学习Python中可使用的各种数据，以及...">
+  <meta name="description" content="本章和下一章，将学习列表是什么以及如何使用列表元素。列...">
   <meta name="author" content="茴香豆">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -158,7 +158,7 @@
         <i class="iconfont iconsearch j-navbar-search"></i>
       
     </div>
-    <div class="center">Python学习之路（2）变量与简单的数据类型</div>
+    <div class="center">Python学习之路（3）列表简介</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -202,46 +202,39 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">Python学习之路（2）变量与简单的数据类型</h1>
+    <h1 class="head-title">Python学习之路（3）列表简介</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>June 30, 2022</span>
       
         <span class="post-info-item">
-          <i class="iconfont iconeye"></i><span id="/2022/06/30/Python-2/" class="leancloud-counter" data-flag-title="Python学习之路（2）变量与简单的数据类型"></span>
+          <i class="iconfont iconeye"></i><span id="/2022/06/30/Python-3/" class="leancloud-counter" data-flag-title="Python学习之路（3）列表简介"></span>
         </span>
         <span class="post-info-item">
-          <i class="iconfont iconheart"></i><span id="/2022/06/30/Python-2/" class="leancloud-like" data-flag-title="Python学习之路（2）变量与简单的数据类型"></span>
+          <i class="iconfont iconheart"></i><span id="/2022/06/30/Python-3/" class="leancloud-like" data-flag-title="Python学习之路（3）列表简介"></span>
         </span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1718</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2811</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <p>在本章中，主要学习Python中可使用的各种数据，以及如何存储、使用和访问这些数据。</p>
-<h2 id="1-Hello-World"><a href="#1-Hello-World" class="headerlink" title="1.Hello-World"></a>1.Hello-World</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">message = <span class="hljs-string">&quot;Hello World!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br></code></pre></td></tr></table></figure>
+        <p>本章和下一章，将学习列表是什么以及如何使用列表元素。列表让你能够在一个地方存储成组的信息。</p>
+<h2 id="认识列表"><a href="#认识列表" class="headerlink" title="认识列表"></a>认识列表</h2><p>列表由一系列按特定顺序排列的元素组成。鉴于列表通常包含多个元素，给列表指定一个表示复数的名称是个不错的主意。</p>
+<p>Python中，用 [ ] 来表示了列表，用逗号分隔其中的元素。示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">bicycles = [<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]<br><span class="hljs-built_in">print</span>(bicycles) <span class="hljs-comment"># [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h2><p>命名规则：</p>
-<ul>
-<li>变量名只能包含字母数字和下划线，且不能以数据打头。</li>
-<li>变量名不能包含空格。</li>
-<li>变量名不能与关键字或函数名相同。</li>
-<li>变量名应简短且具有描述性</li>
-<li>慎用小写字母 l 和大写字母 O，因为会被错认为数字1和0</li>
-</ul>
-<h2 id="3-字符串"><a href="#3-字符串" class="headerlink" title="3.字符串"></a>3.字符串</h2><p>Python中，单引号或双引号括起来的是字符串，这种灵活性可以使程序员在字符串中包含引号和撇号。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># var</span><br>message = <span class="hljs-string">&quot;Hello Python world!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># change the case of string 改变大小写</span><br>name = <span class="hljs-string">&quot;ada lovelace&quot;</span><br><span class="hljs-built_in">print</span>(name.title()) <span class="hljs-comment"># Title 标题格式</span><br><span class="hljs-built_in">print</span>(name.upper()) <span class="hljs-comment"># upper case 大写</span><br><span class="hljs-built_in">print</span>(name.lower()) <span class="hljs-comment"># lower case 小写</span><br><span class="hljs-comment"># merge string 合并字符串</span><br>first_name = <span class="hljs-string">&quot;ada&quot;</span><br>last_name = <span class="hljs-string">&quot;lovelace&quot;</span><br>full_name = first_name + <span class="hljs-string">&quot; &quot;</span> + last_name<br><span class="hljs-built_in">print</span>(full_name)<br><span class="hljs-comment"># add whitespace \n \t 添加空白</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tPython&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;languages:\n\tPython\n\tC\n\tJavaScript&quot;</span>)<br><span class="hljs-comment"># delete block 删除空白</span><br>language = <span class="hljs-string">&quot;  Python  &quot;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language + <span class="hljs-string">&quot;-&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.rstrip() + <span class="hljs-string">&quot;-&quot;</span>) <span class="hljs-comment"># delete the whitespace at the right</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.lstrip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the left</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.strip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the both</span><br></code></pre></td></tr></table></figure>
+<h3 id="1-访问列表元素"><a href="#1-访问列表元素" class="headerlink" title="1.访问列表元素"></a>1.访问列表元素</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">bicycles = [<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]<br><span class="hljs-comment"># access list element 访问第n个元素（从0开始）</span><br><span class="hljs-built_in">print</span>(bicycles[<span class="hljs-number">0</span>]) <span class="hljs-comment"># trek</span><br><span class="hljs-comment"># access the n element from bottom of the list 访问倒数第n个元素（从-1开始）</span><br><span class="hljs-built_in">print</span>(bicycles[-<span class="hljs-number">1</span>]) <span class="hljs-comment"># specialized</span><br></code></pre></td></tr></table></figure>
 
-<p>Output:</p>
-<figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs ldif">Hello Python world!<br>Ada Lovelace<br>ADA LOVELACE<br>ada lovelace<br>ada lovelace<br>	Python<br><span class="hljs-attribute">languages</span>:<br>	Python<br>	C<br>	JavaScript<br><span class="hljs-literal">-</span>  Python  -<br><span class="hljs-literal">-</span>  Python-<br><span class="hljs-literal">-</span>Python  -<br><span class="hljs-literal">-</span>Python-<br></code></pre></td></tr></table></figure>
+<h3 id="2-修改、添加和删除元素"><a href="#2-修改、添加和删除元素" class="headerlink" title="2.修改、添加和删除元素"></a>2.修改、添加和删除元素</h3><p>修改元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">motorcycles = [<span class="hljs-string">&#x27;honda&#x27;</span>, <span class="hljs-string">&#x27;yamaha&#x27;</span>, <span class="hljs-string">&#x27;suzuki&#x27;</span>]<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-comment"># change element 修改元素</span><br>motorcycles[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;ducati&#x27;</span><br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></code></pre></td></tr></table></figure>
+<p>添加元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># add element at the end 在末尾添加元素</span><br>motorcycles.append(<span class="hljs-string">&#x27;honda&#x27;</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br><span class="hljs-comment"># insert element 在指定位置添加元素</span><br>motorcycles.insert(<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;ducatipro&#x27;</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducatipro&#x27;, &#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br></code></pre></td></tr></table></figure>
+<p>删除元素：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># delete element 删除指定位置元素</span><br><span class="hljs-keyword">del</span> motorcycles[<span class="hljs-number">0</span>]<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br><span class="hljs-comment"># pop element 获取指定位置元素并在列表中删除（默认删除表尾元素）</span><br>poped_motorcycle = motorcycles.pop()<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(poped_motorcycle) <span class="hljs-comment"># honda</span><br>poped_motorcycle = motorcycles.pop(<span class="hljs-number">0</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(poped_motorcycle) <span class="hljs-comment"># ducati</span><br><span class="hljs-comment"># delete accroding value 根据值删除元素</span><br><span class="hljs-comment"># notice: remove only delete the first same element 注意：remove只删除第一个相同的元素</span><br>too_expensive = <span class="hljs-string">&#x27;yamaha&#x27;</span><br>motorcycles.remove(too_expensive)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(too_expensive) <span class="hljs-comment"># yamaga</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="4-数字"><a href="#4-数字" class="headerlink" title="4.数字"></a>4.数字</h2><h3 id="4-1整数"><a href="#4-1整数" class="headerlink" title="4.1整数"></a>4.1整数</h3><p>在Python中，整数可执行加（+）减（-）乘（*）除（&#x2F;）乘方（**）整除（&#x2F;&#x2F;），并支持运算次序，并支持括号改变运算次序。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span><br><span class="hljs-number">5</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> - <span class="hljs-number">3</span><br>-<span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> * <span class="hljs-number">3</span><br><span class="hljs-number">6</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> / <span class="hljs-number">3</span><br><span class="hljs-number">0.6666666666666666</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> // <span class="hljs-number">2</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span>**<span class="hljs-number">3</span><br><span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="4-2浮点数"><a href="#4-2浮点数" class="headerlink" title="4.2浮点数"></a>4.2浮点数</h3><p>需要注意的是，运算结果包含的浮点数的小数位数可能是不确定的。后续会学习处理多余小数位的方式。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">0.2</span> + <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> * <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br></code></pre></td></tr></table></figure>
+<h3 id="3-组织列表"><a href="#3-组织列表" class="headerlink" title="3.组织列表"></a>3.组织列表</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python">cars = [<span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>]<br><span class="hljs-comment"># forever sort list 永久排序</span><br>cars.sort()<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># reverse sort list 逆序排序</span><br>cars.sort(reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br><span class="hljs-comment"># temporary sort list(reverse same) 临时排序（逆序同样适用）</span><br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">sorted</span>(cars)) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># reverse list 列表反转</span><br>cars.reverse()<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># get list&#x27;s length</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(cars)) <span class="hljs-comment"># 4</span><br></code></pre></td></tr></table></figure>
 
 
       </section>
@@ -250,7 +243,7 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>茴香豆</li>
-    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/06/30/Python-2/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;06&#x2F;30&#x2F;Python-2&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;06&#x2F;30&#x2F;Python-2&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/06/30/Python-3/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;06&#x2F;30&#x2F;Python-3&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;06&#x2F;30&#x2F;Python-3&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
@@ -271,8 +264,8 @@
 
         
   <nav class="nav">
-    <a href="/2022/06/30/Python-3/"><i class="iconfont iconleft"></i>Python学习之路（3）列表简介</a>
-    <a href="/2022/06/30/Python-1/">Python学习之路（1）环境配置<i class="iconfont iconright"></i></a>
+    <a></a>
+    <a href="/2022/06/30/Python-2/">Python学习之路（2）变量与简单的数据类型<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -318,7 +311,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Hello-World"><span class="toc-text">1.Hello-World</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8F%98%E9%87%8F"><span class="toc-text">2.变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">3.字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%95%B0%E5%AD%97"><span class="toc-text">4.数字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E6%95%B4%E6%95%B0"><span class="toc-text">4.1整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-text">4.2浮点数</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E5%88%97%E8%A1%A8"><span class="toc-text">认识列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%BF%E9%97%AE%E5%88%97%E8%A1%A8%E5%85%83%E7%B4%A0"><span class="toc-text">1.访问列表元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E3%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0"><span class="toc-text">2.修改、添加和删除元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BB%84%E7%BB%87%E5%88%97%E8%A1%A8"><span class="toc-text">3.组织列表</span></a></li></ol></li></ol>
   </aside>
 
         
