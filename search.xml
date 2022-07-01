@@ -211,6 +211,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Python学习之路（5）if语句</title>
+    <url>/2022/07/01/Python-5/</url>
+    <content><![CDATA[<p>本章中，你将学习条件测试，学习简单的if语句，以及创建一系列复杂的if语句来确定当前到底处于什么情形。接下来将if应用于列表，以编写for循环。</p>
+<h1 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h1><p>一个简单实例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">cars = [<span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>]<br><span class="hljs-keyword">for</span> car <span class="hljs-keyword">in</span> cars:<br>    <span class="hljs-keyword">if</span> car == <span class="hljs-string">&#x27;bmw&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(car.upper())<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(car.title())<br><span class="hljs-comment">#output</span><br>Audi<br>BMW<br>Subaru<br>Toyota<br></code></pre></td></tr></table></figure>
+
+<h2 id="1-条件测试"><a href="#1-条件测试" class="headerlink" title="1.条件测试"></a>1.条件测试</h2><ul>
+<li>等于（&#x3D;&#x3D;），大于（&gt;），小于（&lt;）， 小于等于（&lt;&#x3D;），大于等于（&gt;&#x3D;）</li>
+<li>and、or</li>
+<li>检查特定值是否包含在列表中（in）、是否不包含在列表中（not in）</li>
+<li>bool表达式（True、False）</li>
+</ul>
+<h2 id="2-使用if语句处理列表"><a href="#2-使用if语句处理列表" class="headerlink" title="2.使用if语句处理列表"></a>2.使用if语句处理列表</h2><p>以披萨店制作披萨为例，每添加一种配料都打印一条消息：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># usr if check list</span><br>requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output</span><br>Adding mushrooms.<br>Adding green peppers.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
+
+<p>青椒用光了：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-keyword">if</span> requested_topping == <span class="hljs-string">&#x27;green peppers&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Sorry, we are out of green peppers right now.&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output</span><br>Adding mushrooms.<br>Sorry, we are out of green peppers right now.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
+
+<p>判断顾客点的配料列表是否为空：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = []<br><span class="hljs-keyword">if</span> requested_toppings:<br>    <span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Are you sure you want a plain pizza?&quot;</span>)<br><span class="hljs-comment">#output:</span><br>Are you sure you want a plain pizza?<br></code></pre></td></tr></table></figure>
+
+<p>顾客的要求往往五花八门，下面定义两个列表。第一个包含披萨店供应的配料，第二个包含顾客点的配料。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;french fires&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br>available_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;olives&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>,<br>                      <span class="hljs-string">&#x27;pepperoni&#x27;</span>, <span class="hljs-string">&#x27;pineapple&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-keyword">if</span> requested_topping <span class="hljs-keyword">in</span> available_toppings:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Sorry, we donot have &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output:</span><br>Adding mushrooms.<br>Sorry, we donot have french fires.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
