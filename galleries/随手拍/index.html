@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Archive - Hexo</title>
+  <title>随手拍 - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
@@ -158,7 +158,7 @@
         <i class="iconfont iconsearch j-navbar-search"></i>
       
     </div>
-    <div class="center">归档</div>
+    <div class="center">随手拍</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -180,7 +180,7 @@
       </li><li class="menu-item">
         <a href="/galleries/ " class="underline "> 相册</a>
       </li><li class="menu-item">
-        <a href="/archives/ " class="underline active"> 归档</a>
+        <a href="/archives/ " class="underline "> 归档</a>
       </li><li class="menu-item">
         <a href="/tags/ " class="underline "> 标签</a>
       </li><li class="menu-item">
@@ -193,55 +193,87 @@
     
   </div>
 </nav>
-  <main id="main">
-  <section class="archive">
-    <div class="archive-container">
-      <div class="archive-post">
-        <h3 class="archive-total">归档: 6 篇</h3>
-        
-        
-          
-            <h3 class="archive-year">2022 年</h3>
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/07/01/Python-4/">July 01</a>
-            <a class="archive-title" href="/2022/07/01/Python-4/">Python学习之路（4）操作列表</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/30/Python-3/">June 30</a>
-            <a class="archive-title" href="/2022/06/30/Python-3/">Python学习之路（3）列表简介</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/30/Python-2/">June 30</a>
-            <a class="archive-title" href="/2022/06/30/Python-2/">Python学习之路（2）变量与简单的数据类型</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/30/Python-1/">June 30</a>
-            <a class="archive-title" href="/2022/06/30/Python-1/">Python学习之路（1）环境配置</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/27/Hexo-Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/">June 27</a>
-            <a class="archive-title" href="/2022/06/27/Hexo-Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/">Hexo+Github博客搭建指南</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/26/hello-world/">June 26</a>
-            <a class="archive-title" href="/2022/06/26/hello-world/">Hello World</a>
-          </div>
-        
-      </div>
+  
+
+
+<main id="main">
+  <section class="gallery container">
+    <header class="header">
+  <h1 class="header-title">随手拍</h1>
+  <p class="header-subtitle">记录生活</p>
+</header>
+    <div id="wrap" class=waterfallWrap default-type="waterfall" default-col="3">
+      <a data-fancybox="images" style=width:33.333333333333336% href="/images/pat/1.jpg" class="item"><img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="/images/pat/1.jpg" /></a>
     </div>
   </section>
 </main>
+
+<script>
+  var gap = 10;
+  var items = document.getElementsByClassName('item');
+  var wrap = document.getElementById("wrap");
+
+  window.onload = function () {
+    waterFall();
+  }
+
+  window.onresize = function () {
+    setTimeout(() => {
+      waterFall();
+    }, 1000)
+  }
+
+  function waterFall() {
+    if (!(wrap.getAttribute('default-type') === 'waterfall')) return;
+    var wrapWidth = getClientWidth();
+    var columns;
+    if(wrapWidth < 768 && wrapWidth >= 576) {
+      columns = 2;
+    } else if (wrapWidth < 576) {
+      columns = 1;
+    } else {
+      columns = parseInt(wrap.getAttribute('default-col'));
+    }
+    rerenderImage(columns, wrapWidth);
+  }
+
+  function rerenderImage(col, pageWidth) {
+    var arr = [];
+    var maxHeight = 0;
+    const itemWidth = (100 / col) + '%';
+    for (var i = 0;i < items.length; i++){
+      if (i < col) {
+        items[i].style.top = 0;
+        items[i].style.left = (pageWidth / col  + gap) * i + 'px';
+        items[i].style.width = itemWidth;
+        arr.push(items[i].offsetHeight);
+      } else {
+        var minHeight = arr[0];
+        var index = 0;
+        for (var j = 0; j < arr.length; j++) {
+          if (minHeight > arr[j]) {
+            minHeight = arr[j];
+            index = j;
+          } 
+        }
+        items[i].style.top = arr[index] + gap + 'px';
+        items[i].style.left = items[index].offsetLeft + 'px';
+        items[i].style.width = itemWidth;
+        arr[index] = arr[index] + items[i].offsetHeight + gap;
+      }
+    }
+    for (var m = 0; m < arr.length; m++) {
+      if (maxHeight < arr[m]) {
+        maxHeight = arr[m];
+      } 
+    }
+    wrap.style.height = maxHeight + 'px';
+  }
+
+  function getClientWidth() {
+    return wrap.getBoundingClientRect().width;
+  }
+</script>
   
 
 <footer class="footer">
