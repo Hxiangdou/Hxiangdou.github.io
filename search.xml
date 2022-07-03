@@ -379,6 +379,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Python学习之路（9）类</title>
+    <url>/2022/07/03/Python-9/</url>
+    <content><![CDATA[<p>面向对象是最有效的软件编写方法之一。在本章中，你将编写一些类并创建其实例。你将指定可在实例中存储什么信息，定义可对这些实例执行哪些操作。你还将编写一些类来扩展既有类的功能，让相似的类能够高效地共享代码。你还将把自己编写的类存储在模块中，并在自己的程序文件中导入其他程序员编写的类。</p>
+<h2 id="1-创建和使用类"><a href="#1-创建和使用类" class="headerlink" title="1.创建和使用类"></a>1.创建和使用类</h2><p>使用类几乎可以模拟任何东西。下面来编写一个表示小狗的简单类Dog。</p>
+<h3 id="1-1创建Dog类"><a href="#1-1创建Dog类" class="headerlink" title="1.1创建Dog类"></a>1.1创建Dog类</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span>():<br>    <span class="hljs-string">&#x27;&#x27;&#x27;dog class dog 类&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, age</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;init name, age 初始化name,age&#x27;&#x27;&#x27;</span><br>        self.name = name<br>        self.age = age<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">sit</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;sit when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; is now sitting.&quot;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">roll_over</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;roll_over when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; rolled over!&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>方法_<em>init</em>_()是一个特殊的方法，每当你根据Dog类创建新实例时，Python会自动运行它。<strong>在这个方法的定义中，形参self必不可少，还必须位于其他形参的前面。</strong></p>
+<h3 id="1-2根据类创建实例"><a href="#1-2根据类创建实例" class="headerlink" title="1.2根据类创建实例"></a>1.2根据类创建实例</h3><p>创建实例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">my_dog = Dog(<span class="hljs-string">&#x27;willie&#x27;</span>, <span class="hljs-number">6</span>)<br></code></pre></td></tr></table></figure>
+
+<p>调用属性：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog&#x27;s name is &quot;</span> + my_dog.name.title() + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog is &quot;</span> + <span class="hljs-built_in">str</span>(my_dog.age) + <span class="hljs-string">&quot; years old.&quot;</span>)<br><span class="hljs-comment"># output:</span><br>My dog’s name <span class="hljs-keyword">is</span> Willie.<br>My dog <span class="hljs-keyword">is</span> <span class="hljs-number">6</span> years old.<br></code></pre></td></tr></table></figure>
+
+<p>调用方法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">my_dog.sit()<br>my_dog.roll_over()<br><span class="hljs-comment"># output:</span><br>Willie <span class="hljs-keyword">is</span> now sitting.<br>Willie rolled over!<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
