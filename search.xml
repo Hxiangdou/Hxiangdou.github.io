@@ -404,6 +404,103 @@
       </tags>
   </entry>
   <entry>
+    <title>面经总结</title>
+    <url>/2022/07/25/%E9%9D%A2%E7%BB%8F/</url>
+    <content><![CDATA[<h1 id="面经总结"><a href="#面经总结" class="headerlink" title="面经总结"></a>面经总结</h1><p>准备试找工作，故没事看些面经并进行总结。</p>
+<p>大数据开发项目：<a href="https://www.nowcoder.com/discuss/945701?source_id=discuss_experience_nctrack&channel=-1">大数据开发项目_技术交流_牛客网 (nowcoder.com)</a></p>
+<h2 id="1-复习"><a href="#1-复习" class="headerlink" title="1. 复习"></a>1. 复习</h2><p>看书，记笔记，形成健全的知识体系。大数据分：数据产品（算法）、数据平台（服务端开发）、数仓（业务）三个方向。</p>
+<p>学习路线：</p>
+<p>Java-Linux-MySQL-Zoo<a href="">keep</a>er-Hadoop(HDFS、MR、Yarn)-Hive-Flume-Sqoop-Azkaban-Redis-Kafka-HBase-Scala-Spark-Flink</p>
+<ul>
+<li>MySQL：《MySQL 技术内幕：InnoDB 存储引擎》、《高性能 MySQL》、《MySQL 实战 45 讲》、《从根儿上理解 MySQL》、《从零开始带你成为 MySQL 实战优化高手》</li>
+<li>Kafka：半兽人博客、《Apache Kafka 实战》</li>
+<li>Zookeeper：《从 Paxos 到 Zookeeper：分布式一致性原理与实践》</li>
+<li>Spark</li>
+<li>Flink</li>
+<li>MapReduce</li>
+<li>HiveSQL</li>
+</ul>
+<h2 id="2-算法"><a href="#2-算法" class="headerlink" title="2. 算法"></a>2. 算法</h2><p>Leetcode前200题反复刷</p>
+<h2 id="3-自我介绍"><a href="#3-自我介绍" class="headerlink" title="3. 自我介绍"></a>3. 自我介绍</h2><p>自我介绍是简历的精简,举例：</p>
+<figure class="highlight tap"><table><tr><td class="code"><pre><code class="hljs tap">面试官你好，我叫 CoderW，19 年毕业于哈佛大学。<br><br>从毕业到现在一直从事后台研发相关工作。<br><br>19 年-22 年在谷歌中间件团队，主要负责 xx 中间件的设计与开发，在这期间，完成了对 xxx 进行改造和优化，整体性能提升了 80%；<br><br>22 年去了微软电商团队，负责微软电商体系的设计，两年的时间，完成了微软电商从<span class="hljs-number"> 0 </span>到<span class="hljs-number"> 1 </span>的搭建过程。上线至今，日活量达到了<span class="hljs-number"> 10 </span>亿，系统平均 QPS 达到 1W。<br><br>这一次应聘的是贵公司中间件团队的资深专家岗位，在业务方向和技术栈方面，我个人认为我的匹配度还是比较高的，非常希望能够加入贵公司，一起打造 xx 系统。谢谢！<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-技术讨论"><a href="#4-技术讨论" class="headerlink" title="4. 技术讨论"></a>4. 技术讨论</h2><p>整个面试最重要的环节。</p>
+<h3 id="4-1态度"><a href="#4-1态度" class="headerlink" title="4.1态度"></a>4.1态度</h3><ol>
+<li><p><strong>不卑不亢。</strong>记住，这个环节是技术讨论环节，不是问答环节。一场好的技术讨论一定是有来有回，而不是单方面的你问我答。在尊重面试官的前提上，可以对面试官的一些结论提出质疑和探讨，在我看来，敢于提出自己的不同看法是一个加分项。如果遇到不尊重你，甚至侮辱你的面试官，我建议你直接把简历要回来，大家都是打工人，有什么好装的？</p>
+</li>
+<li><p><strong>真诚以待。</strong>有些面试官喜欢问一些比较冷门的知识来验证候选人的技术深度，这是一个很正常的事情，你也不需要太过于紧张，真诚一点，会就是会，不会就是不会，没什么关系。<strong>千万不要自作聪明强行去编造，真诚永远是第一要义！</strong></p>
+</li>
+<li><p><strong>深入发散。</strong>如果聊到你熟悉的一个知识点，你一定要好好把握，可以尝试着深入和发散，让面试官慢慢的进入你的节奏。举个例子，聊到 Kafka 零拷贝的时候。</p>
+<ol>
+<li><p>深入：你可以继续深入，聊一下 sendfile+DMA Scatter&#x2F;Gather。</p>
+</li>
+<li><p>发散：深入后再发散，聊一下为什么 RocketMQ 写日志用到了零拷贝，但是 Kafka 写日志的时候不用零拷贝。</p>
+</li>
+</ol>
+<p> <strong>深入是展现你对技术的了解程度，发散是展示你的视野宽度。</strong></p>
+</li>
+</ol>
+<p>回答完一个问题之后，可以小小的总结一下，这样不至于你一个人在那里讲的云里雾里，让面试官都找不到你想要表达的重点了。</p>
+<h3 id="4-2常见问题"><a href="#4-2常见问题" class="headerlink" title="4.2常见问题"></a>4.2常见问题</h3><h4 id="4-2-1项目"><a href="#4-2-1项目" class="headerlink" title="4.2.1项目"></a>4.2.1项目</h4><ul>
+<li>项目介绍</li>
+<li>项目中遇到的困难</li>
+<li>项目的详细细节</li>
+<li>重新开始怎样优化项目（硬件设备、算法架构、人员配置、团队分工等方面）</li>
+</ul>
+<h4 id="4-2-2Hadoop"><a href="#4-2-2Hadoop" class="headerlink" title="4.2.2Hadoop"></a>4.2.2Hadoop</h4><ul>
+<li><p>Hadoop的了解（简单介绍Hadoop，简述Hadoop的组成和定义）</p>
+</li>
+<li><p>Hadoop使用经验（介绍Hadoop的生态、组成、应用场景）</p>
+</li>
+<li><p>Hadoop能够高性能吞吐的依赖有那些（HDFS，MapReduce）</p>
+</li>
+<li><p>Hadoop的完整计算过程（包括Map、Reduce过程，任务调度等）</p>
+</li>
+<li><p>Hadoop使用中遇到的困难（从自身设备、内存分配、组件核心配置等方面入手，重点介绍数据倾斜）</p>
+</li>
+<li><p>什么是数据倾斜问题，场景有哪些？常见的解决方法是什么？</p>
+</li>
+<li><p>Hadoop数据倾斜的解决方案</p>
+</li>
+<li><p>Hadoop、Spark、MapReduce区别和优劣</p>
+<hr>
+</li>
+<li><p>Spark常用算子，原理（RDD）</p>
+</li>
+<li><p>Spark数据倾斜及解决方案</p>
+</li>
+<li><p>Spark shuffle原理，hashshuffle 和 sortshuffle</p>
+<hr>
+</li>
+<li><p>介绍MR原理（工作流程、Map-Shuffle-Reduce）</p>
+<hr>
+</li>
+<li><p>介绍Hive（Hive的定义、架构）</p>
+</li>
+<li><p>HiveSQL数据倾斜及解决方案</p>
+</li>
+</ul>
+<h4 id="4-2-3其他"><a href="#4-2-3其他" class="headerlink" title="4.2.3其他"></a>4.2.3其他</h4><ul>
+<li>各个框架各自的优缺点和应用场景</li>
+<li>数据分仓的理解</li>
+<li>未来职业规划</li>
+<li>工作中碰到特别复杂的问题怎么办</li>
+</ul>
+<h2 id="5-反问环节"><a href="#5-反问环节" class="headerlink" title="5. 反问环节"></a>5. 反问环节</h2><ol>
+<li>我面试的这个岗位需要用到哪些技术栈？</li>
+<li>我面试的这个岗位的最大挑战是什么？</li>
+<li>请问面试官对我今后的技术学习有什么建议？</li>
+<li>更看重应届生哪方面的素质？</li>
+</ol>
+]]></content>
+      <categories>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>面试, 工作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
