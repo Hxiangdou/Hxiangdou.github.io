@@ -502,6 +502,74 @@
       </tags>
   </entry>
   <entry>
+    <title>动手学习深度学习（1）课程介绍及环境配置</title>
+    <url>/2022/09/22/DL-1/</url>
+    <content><![CDATA[<p>准研究生，学习一些研究生阶段需要的预备知识，打好深度学习基础。</p>
+<h2 id="课程安排"><a href="#课程安排" class="headerlink" title="课程安排"></a>课程安排</h2><p>相关资源：</p>
+<p>课程主页：<a href="https://courses.d2l.ai/zh-v2">https://courses.d2l.ai/zh-v2</a></p>
+<p>教材：<a href="https://zh-v2.d2l.ai/">https://zh-v2.d2l.ai/</a></p>
+<p>课程论坛讨论：<a href="https://discuss.d2l.ai/c/16">https://discuss.d2l.ai/c/16</a></p>
+<p>Pytorch论坛：<a href="https://discuss.pytorch.org/">https://discuss.pytorch.org/</a></p>
+<h2 id="深度学习介绍"><a href="#深度学习介绍" class="headerlink" title="深度学习介绍"></a>深度学习介绍</h2>]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习相关期刊</title>
+    <url>/2022/09/22/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E6%9C%9F%E5%88%8A/</url>
+    <content><![CDATA[<p>收集深度学习常见期刊的分类以及简写等内容</p>
+<h2 id="常见期刊"><a href="#常见期刊" class="headerlink" title="常见期刊"></a>常见期刊</h2><ul>
+<li><p>ECCV（European Conference on Computer Vision）</p>
+<p>  <strong>欧洲计算机视觉国际会议。</strong>ECCV每年的论文接受率为25-30%左右，每次会议在全球范围会收录论文300篇左右，收录论文的主要来源是来自于美国、欧洲等顶级实验室及研究所，中国大陆的收录论文数量在10-20篇之间。</p>
+</li>
+<li><p>CVPR（Conference on Computer Vision and Pattern Recognition）</p>
+<p>  <strong>国际计算机视觉模式识别会议。</strong>这个会议是由IEEE主办的一年一度的全球学术性顶级会议，会议的主要内容是计算机视觉与模式识别技术，每年CVPR都会有一个固定的研讨主题。会议一般在每年六月举行，大部分情况下会议都在美国西部地区举办，也会在美国中部和东部地区之间循环举办。</p>
+</li>
+<li><p>ICCV （International Conference on Computer Vision）</p>
+<p>  <strong>国际计算机视觉大会。</strong>这个会议也是由IEEE主办的全球最高级别学术会议，每两年在世界范围内召开一次，在业内具有极高的评价。ICCV论文录用率非常低，是三大会议中公认级别最高的。与CVPR不同的是，CVPR会议每年都在美国地区举办，而ICCV会议自1987年起至今每两年都会在全世界不同的国家举办会议，2005年ICCV是在中国北京举办的会议。</p>
+<p>  <strong>上述会议为计算机视觉三大顶级会议</strong></p>
+</li>
+</ul>
+<h3 id="计算机视觉顶级会议"><a href="#计算机视觉顶级会议" class="headerlink" title="计算机视觉顶级会议"></a>计算机视觉顶级会议</h3><h4 id="A类"><a href="#A类" class="headerlink" title="A类"></a>A类</h4><ul>
+<li>CVPR: International Conference on Computer Vision and Pattern Recognition</li>
+<li>ICCV: International Conference on Computer Vision</li>
+<li>ICML: International Conference on Machine Learning</li>
+<li>NIPS: Annual Conference on Neural Information Processing Systems</li>
+<li>AAAI: AAAI Conference on Artificial Intelligence</li>
+<li>ACM MM: ACM International Conference on Multimedia</li>
+<li>IJCAI: International Joint Conference on Artificial Intelligence</li>
+</ul>
+<h4 id="暂无评级"><a href="#暂无评级" class="headerlink" title="暂无评级"></a>暂无评级</h4><ul>
+<li>ICLR: International Conference on Learning Representations</li>
+</ul>
+<h4 id="B类"><a href="#B类" class="headerlink" title="B类"></a>B类</h4><ul>
+<li>ECCV: European Conference on Computer Vision</li>
+</ul>
+<h3 id="计算机视觉顶级期刊"><a href="#计算机视觉顶级期刊" class="headerlink" title="计算机视觉顶级期刊"></a>计算机视觉顶级期刊</h3><h4 id="A类-1"><a href="#A类-1" class="headerlink" title="A类"></a>A类</h4><ul>
+<li>TPAMI: IEEE Trans on Pattern Analysis and Machine Intelligence</li>
+<li>IJCV: International Journal of Computer Vision</li>
+<li>TIP: IEEE Transactions on Image Processing</li>
+</ul>
+<h4 id="B类-1"><a href="#B类-1" class="headerlink" title="B类"></a>B类</h4><ul>
+<li>TNNLS: IEEE Transactions on Neural Networks and learning systems</li>
+<li>Pattern Recognition</li>
+</ul>
+]]></content>
+      <categories>
+        <category>DeepLearning期刊</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+        <tag>papers</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
