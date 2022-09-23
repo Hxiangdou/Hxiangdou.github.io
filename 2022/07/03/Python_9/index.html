@@ -6,12 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Python学习 - Hexo</title>
+  <title>Python学习之路（9）类 - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="面向对象是最有效的软件编写方法之一。在本章中，你将编写...">
   <meta name="author" content="茴香豆">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -158,7 +158,7 @@
         <i class="iconfont iconsearch j-navbar-search"></i>
       
     </div>
-    <div class="center">分类</div>
+    <div class="center">Python学习之路（9）类</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -194,71 +194,128 @@
   </div>
 </nav>
   <main id="main">
-  <section class="archive">
-    <div class="archive-container">
-      <div class="archive-post">
-        <h3 class="archive-total"># Python学习</h3>
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Python学习之路（9）类</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>July 03, 2022</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2022/07/03/Python_9/" class="leancloud-counter" data-flag-title="Python学习之路（9）类"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2022/07/03/Python_9/" class="leancloud-like" data-flag-title="Python学习之路（9）类"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1187</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>面向对象是最有效的软件编写方法之一。在本章中，你将编写一些类并创建其实例。你将指定可在实例中存储什么信息，定义可对这些实例执行哪些操作。你还将编写一些类来扩展既有类的功能，让相似的类能够高效地共享代码。你还将把自己编写的类存储在模块中，并在自己的程序文件中导入其他程序员编写的类。</p>
+<h2 id="1-创建和使用类"><a href="#1-创建和使用类" class="headerlink" title="1.创建和使用类"></a>1.创建和使用类</h2><p>使用类几乎可以模拟任何东西。下面来编写一个表示小狗的简单类Dog。</p>
+<h3 id="1-1创建Dog类"><a href="#1-1创建Dog类" class="headerlink" title="1.1创建Dog类"></a>1.1创建Dog类</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span>():<br>    <span class="hljs-string">&#x27;&#x27;&#x27;dog class dog 类&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, age</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;init name, age 初始化name,age&#x27;&#x27;&#x27;</span><br>        self.name = name<br>        self.age = age<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">sit</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;sit when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; is now sitting.&quot;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">roll_over</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;roll_over when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; rolled over!&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>方法_<em>init</em>_()是一个特殊的方法，每当你根据Dog类创建新实例时，Python会自动运行它。<strong>在这个方法的定义中，形参self必不可少，还必须位于其他形参的前面。</strong></p>
+<h3 id="1-2根据类创建实例"><a href="#1-2根据类创建实例" class="headerlink" title="1.2根据类创建实例"></a>1.2根据类创建实例</h3><p>创建实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">my_dog = Dog(<span class="hljs-string">&#x27;willie&#x27;</span>, <span class="hljs-number">6</span>)<br></code></pre></td></tr></table></figure>
+
+<p>调用属性：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog&#x27;s name is &quot;</span> + my_dog.name.title() + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog is &quot;</span> + <span class="hljs-built_in">str</span>(my_dog.age) + <span class="hljs-string">&quot; years old.&quot;</span>)<br><span class="hljs-comment"># output:</span><br>My dog’s name <span class="hljs-keyword">is</span> Willie.<br>My dog <span class="hljs-keyword">is</span> <span class="hljs-number">6</span> years old.<br></code></pre></td></tr></table></figure>
+
+<p>调用方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">my_dog.sit()<br>my_dog.roll_over()<br><span class="hljs-comment"># output:</span><br>Willie <span class="hljs-keyword">is</span> now sitting.<br>Willie rolled over!<br></code></pre></td></tr></table></figure>
+
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>茴香豆</li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/07/03/Python_9/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;07&#x2F;03&#x2F;Python_9&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;07&#x2F;03&#x2F;Python_9&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
         
         
-          
-            <h3 class="archive-year">2022 年</h3>
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/07/03/Python_9/">07/03</a>
-            <a class="archive-title" href="/2022/07/03/Python_9/">Python学习之路（9）类</a>
-          </div>
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="/images/支付宝.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2022/07/25/Interview_experience/"><i class="iconfont iconleft"></i>面经总结</a>
+    <a href="/2022/07/03/Python_8/">Python学习之路（8）函数<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz",
+        app_key: "6DvkgciWlfleRrT7w9r6snJI",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
         
           
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/07/03/Python_8/">07/03</a>
-            <a class="archive-title" href="/2022/07/03/Python_8/">Python学习之路（8）函数</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/07/01/Python_7/">07/01</a>
-            <a class="archive-title" href="/2022/07/01/Python_7/">Python学习之路（7）用户输入和while循环</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/07/01/Python_6/">07/01</a>
-            <a class="archive-title" href="/2022/07/01/Python_6/">Python学习之路（6）字典</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/07/01/Python_5/">07/01</a>
-            <a class="archive-title" href="/2022/07/01/Python_5/">Python学习之路（5）if 语句</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/07/01/Python_4/">07/01</a>
-            <a class="archive-title" href="/2022/07/01/Python_4/">Python学习之路（4）操作列表</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/30/Python_3/">06/30</a>
-            <a class="archive-title" href="/2022/06/30/Python_3/">Python学习之路（3）列表简介</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/30/Python_2/">06/30</a>
-            <a class="archive-title" href="/2022/06/30/Python_2/">Python学习之路（2）变量与简单的数据类型</a>
-          </div>
-        
-          
-          <div class="archive-item">
-            <a class="archive-date" href="/2022/06/30/Python_1/">06/30</a>
-            <a class="archive-title" href="/2022/06/30/Python_1/">Python学习之路（1）环境配置</a>
-          </div>
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8%E7%B1%BB"><span class="toc-text">1.创建和使用类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E5%88%9B%E5%BB%BADog%E7%B1%BB"><span class="toc-text">1.1创建Dog类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E6%A0%B9%E6%8D%AE%E7%B1%BB%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B"><span class="toc-text">1.2根据类创建实例</span></a></li></ol></li></ol>
+  </aside>
+
         
       </div>
     </div>
-  </section>
+  </div>
 </main>
   
 
@@ -307,6 +364,10 @@
       <div class="fab fab-plus">
     <i class="iconfont iconplus"></i>
   </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
   
   
     <div class="fab fab-daovoice">

@@ -1,36 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/06/26/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;name&quot;</span>       <span class="hljs-comment"># 新建文章</span><br>hexo new page <span class="hljs-string">&quot;name&quot;</span>  <span class="hljs-comment"># 新建页面</span><br>hexo g                <span class="hljs-comment"># 生成页面</span><br>hexo d                <span class="hljs-comment"># 部署</span><br>hexo g -d             <span class="hljs-comment"># 生成页面并部署</span><br>hexo s                <span class="hljs-comment"># 本地预览</span><br>hexo clean            <span class="hljs-comment"># 清除缓存和已生成的静态文件</span><br>hexo <span class="hljs-built_in">help</span>             <span class="hljs-comment"># 帮助</span><br></code></pre></td></tr></table></figure>]]></content>
+    <title>深度学习相关期刊</title>
+    <url>/2022/09/22/DL_periodical_conference/</url>
+    <content><![CDATA[<p>收集深度学习常见期刊的分类以及简写等内容。</p>
+<h2 id="常见期刊"><a href="#常见期刊" class="headerlink" title="常见期刊"></a>常见期刊</h2><ul>
+<li><p>ECCV（European Conference on Computer Vision）</p>
+<p>  <strong>欧洲计算机视觉国际会议。</strong>ECCV每年的论文接受率为25-30%左右，每次会议在全球范围会收录论文300篇左右，收录论文的主要来源是来自于美国、欧洲等顶级实验室及研究所，中国大陆的收录论文数量在10-20篇之间。</p>
+</li>
+<li><p>CVPR（Conference on Computer Vision and Pattern Recognition）</p>
+<p>  <strong>国际计算机视觉模式识别会议。</strong>这个会议是由IEEE主办的一年一度的全球学术性顶级会议，会议的主要内容是计算机视觉与模式识别技术，每年CVPR都会有一个固定的研讨主题。会议一般在每年六月举行，大部分情况下会议都在美国西部地区举办，也会在美国中部和东部地区之间循环举办。</p>
+</li>
+<li><p>ICCV （International Conference on Computer Vision）</p>
+<p>  <strong>国际计算机视觉大会。</strong>这个会议也是由IEEE主办的全球最高级别学术会议，每两年在世界范围内召开一次，在业内具有极高的评价。ICCV论文录用率非常低，是三大会议中公认级别最高的。与CVPR不同的是，CVPR会议每年都在美国地区举办，而ICCV会议自1987年起至今每两年都会在全世界不同的国家举办会议，2005年ICCV是在中国北京举办的会议。</p>
+<p>  <strong>上述会议为计算机视觉三大顶级会议</strong></p>
+</li>
+</ul>
+<h3 id="计算机视觉顶级会议"><a href="#计算机视觉顶级会议" class="headerlink" title="计算机视觉顶级会议"></a>计算机视觉顶级会议</h3><h4 id="A类"><a href="#A类" class="headerlink" title="A类"></a>A类</h4><ul>
+<li>CVPR: International Conference on Computer Vision and Pattern Recognition</li>
+<li>ICCV: International Conference on Computer Vision</li>
+<li>ICML: International Conference on Machine Learning</li>
+<li>NIPS: Annual Conference on Neural Information Processing Systems</li>
+<li>AAAI: AAAI Conference on Artificial Intelligence</li>
+<li>ACM MM: ACM International Conference on Multimedia</li>
+<li>IJCAI: International Joint Conference on Artificial Intelligence</li>
+</ul>
+<h4 id="暂无评级"><a href="#暂无评级" class="headerlink" title="暂无评级"></a>暂无评级</h4><ul>
+<li>ICLR: International Conference on Learning Representations</li>
+</ul>
+<h4 id="B类"><a href="#B类" class="headerlink" title="B类"></a>B类</h4><ul>
+<li>ECCV: European Conference on Computer Vision</li>
+</ul>
+<h3 id="计算机视觉顶级期刊"><a href="#计算机视觉顶级期刊" class="headerlink" title="计算机视觉顶级期刊"></a>计算机视觉顶级期刊</h3><h4 id="A类-1"><a href="#A类-1" class="headerlink" title="A类"></a>A类</h4><ul>
+<li>TPAMI: IEEE Trans on Pattern Analysis and Machine Intelligence</li>
+<li>IJCV: International Journal of Computer Vision</li>
+<li>TIP: IEEE Transactions on Image Processing</li>
+</ul>
+<h4 id="B类-1"><a href="#B类-1" class="headerlink" title="B类"></a>B类</h4><ul>
+<li>TNNLS: IEEE Transactions on Neural Networks and learning systems</li>
+<li>Pattern Recognition</li>
+</ul>
+<h3 id="SCI"><a href="#SCI" class="headerlink" title="SCI"></a>SCI</h3><p>SCI全称Science Citation Index，是美国科学信息研究所（Institute for Scientific Information， 简称ISI）出版的一部世界著名的期刊文献检索工具。</p>
+]]></content>
       <categories>
-        <category>随笔</category>
+        <category>DeepLearning期刊</category>
       </categories>
       <tags>
-        <tag>Hello-World</tag>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+        <tag>papers</tag>
       </tags>
   </entry>
   <entry>
     <title>Hexo+Github博客搭建指南</title>
-    <url>/2022/06/27/Hexo-Github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/</url>
+    <url>/2022/06/27/Hexo_Github_blog_build_guide/</url>
     <content><![CDATA[<p>记录本博客搭建过程以及搭建过程中遇到的一些琐碎的问题。</p>
 <h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><h3 id="详细搭建过程说明"><a href="#详细搭建过程说明" class="headerlink" title="详细搭建过程说明"></a>详细搭建过程说明</h3><p><a href="https://zhuanlan.zhihu.com/p/60578464">Hexo+Github搭建博客——知乎</a></p>
 <h3 id="搭建过程中遇到的坑"><a href="#搭建过程中遇到的坑" class="headerlink" title="搭建过程中遇到的坑"></a>搭建过程中遇到的坑</h3><ol>
-<li>验证连接步骤，如果无法连接到<a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;</a>，<code>ssh: connect to host github.com port 22: Connection refused</code>可能是因为使用游戏加速器或者科学上网的原因，需要修改host文件，并且刷新DNS缓存。<ul>
+<li>验证连接步骤，如果无法连接到<a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;</a>，<code>ssh: connect to host github.com port 22: Connection refused</code>可能是因为使用游戏加速器或者科学上网的原因，需要修改host文件，并且刷新DNS缓存。<ul>
 <li>修改host文件：在<code>C:\Windows\System32\drivers\etc\</code>文件夹下，用文本编辑器打开host文件，在最后一行添加如下内容：<figure class="highlight accesslog"><table><tr><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">140.82.113.4</span> github.com<br></code></pre></td></tr></table></figure></li>
 <li>DNS刷新：在控制台输入<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">ipconfig /flushdns<br></code></pre></td></tr></table></figure></li>
 </ul>
@@ -47,365 +74,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Python学习之路（1）环境配置</title>
-    <url>/2022/06/30/Python-1/</url>
-    <content><![CDATA[<p>之前一直在windows平台编程，这次从零开始，完全使用Ubuntu系统学习Python。</p>
-<p>参考：<a href="https://muzing.top/posts/6c3096a1/">在 Ubuntu 22.04 上安装 Python 3.9 - muzing的杂货铺</a></p>
-<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><h3 id="更新系统软件"><a href="#更新系统软件" class="headerlink" title="更新系统软件"></a>更新系统软件</h3><figure class="highlight applescript"><table><tr><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># 刷新软件包目录</span><br>sudo apt update<br><span class="hljs-comment"># 列出当前可用的更新</span><br>sudo apt <span class="hljs-built_in">list</span> <span class="hljs-comment">--upgradable</span><br><span class="hljs-comment"># 如上一步提示有可以更新的项目，则执行更新</span><br>sudo apt upgrade<br></code></pre></td></tr></table></figure>
-
-<h3 id="安装GCC编译器"><a href="#安装GCC编译器" class="headerlink" title="安装GCC编译器"></a>安装GCC编译器</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 安装 GCC 编译器</span><br>sudo apt <span class="hljs-keyword">install</span> gcc<br><span class="hljs-comment"># 检查安装是否成功</span><br>gcc -v<br><span class="hljs-comment"># 若显示出 GCC 版本则成功</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="安装其他依赖"><a href="#安装其他依赖" class="headerlink" title="安装其他依赖"></a>安装其他依赖</h3><figure class="highlight q"><table><tr><td class="code"><pre><code class="hljs q"># 刷新软件包目录<br>sudo apt <span class="hljs-keyword">update</span><br># 安装依赖<br>sudo apt install build-essential zlib1g-<span class="hljs-built_in">dev</span> libncurses5-<span class="hljs-built_in">dev</span> libgdbm-<span class="hljs-built_in">dev</span> libnss3-<span class="hljs-built_in">dev</span> libssl-<span class="hljs-built_in">dev</span> libreadline-<span class="hljs-built_in">dev</span> libffi-<span class="hljs-built_in">dev</span> libbz2-<span class="hljs-built_in">dev</span> liblzma-<span class="hljs-built_in">dev</span> sqlite3 libsqlite3-<span class="hljs-built_in">dev</span> tk-<span class="hljs-built_in">dev</span> uuid-<span class="hljs-built_in">dev</span> libgdbm-compat-<span class="hljs-built_in">dev</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="编译与安装"><a href="#编译与安装" class="headerlink" title="编译与安装"></a>编译与安装</h2><h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><p>在 <a href="https://www.python.org/downloads/source/">Python 官网下载界面</a>下载 Python 3.9 的源代码，此处使用目前最新的 3.9.13。</p>
-<p>或者采用命令行下载</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 下载 Python 3.9.13</span><br><span class="hljs-attribute">sudo</span> wget https://www.python.org/ftp/python/<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 下载其他版本只需替换版本号数字</span><br><span class="hljs-comment"># 解压</span><br><span class="hljs-attribute">tar</span> -xf Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 进入该目录</span><br><span class="hljs-attribute">cd</span> Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/<br></code></pre></td></tr></table></figure>
-
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-comment"># 检查依赖与配置编译</span><br>sudo <span class="hljs-string">./configure</span> <span class="hljs-params">--enable-optimizations</span> <span class="hljs-params">--with-lto</span> <span class="hljs-params">--enable-shared</span><br></code></pre></td></tr></table></figure>
-
-<p>此处使用了三个可选配置项，含义如下：</p>
-<ul>
-<li><code>--enable-optimizations</code>：用 <a href="https://docs.python.org/zh-cn/3/using/configure.html#envvar-PROFILE_TASK">PROFILE_TASK</a> 启用以配置文件主导的优化（PGO）</li>
-<li><code>--with-lto</code>：在编译过程中启用链接时间优化（LTO）</li>
-<li><code>--enable-shared</code>：启用共享 Python 库 <code>libpython</code> 的编译</li>
-</ul>
-<p>经过一系列检查无误之后，会自动生成 Makefile，即可进行下一步的编译了。</p>
-<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>完成配置，生成 Makefile 后，就可以开始编译了。<strong>编译耗时较长</strong>（要耐心等待），可以使用 <code>-j</code> 选项指定参与编译的 CPU 核心数，例如此机器为 2核 CPU：</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 编译，-j 后面的数字为参与编译的CPU核心数，根据个人机器配置调整</span><br><span class="hljs-attribute">sudo</span> make -j <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
-
-<p>编译结束后，注意仔细查看一下输出，检查可能存在的错误：</p>
-<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment"># 一种可能出现的问题：</span><br>$ sudo make<br><span class="hljs-comment"># ......省略部分输出......</span><br>Python <span class="hljs-keyword">build </span>finished successfully!<br>The necessary <span class="hljs-keyword">bits </span>to <span class="hljs-keyword">build </span>these optional modules were not found:<br>_dbm                  _tkinter              _uuid              <br>To find the necessary <span class="hljs-keyword">bits, </span>look in setup.py in detect_modules() for the module<span class="hljs-string">&#x27;s name.</span><br></code></pre></td></tr></table></figure>
-
-<p>如果出现类似如上的警告，说明编译时有部分软件包不可用，导致编译出的 Python 有部分可选模块不可用。检查上一节中提到的依赖是否都已安装，或求助于网络搜索引擎，安装对应软件包后再次编译即可。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight gauss"><table><tr><td class="code"><pre><code class="hljs gauss"><span class="hljs-meta"># 安装二进制文件</span><br>sudo <span class="hljs-built_in">make</span> altinstall<br></code></pre></td></tr></table></figure>
-
-<h3 id="链接动态库"><a href="#链接动态库" class="headerlink" title="链接动态库"></a>链接动态库</h3><p>由于[编译配置]中有 <code>--enable-shared</code> 的选项，故此时直接使用命令 <code>python3.9</code> 会提示无法找到 <code>libpython3.9.so.1.0</code> 的错误。只需找到该 <code>so</code> 文件，复制（或创建符号链接）到 <code>/usr/lib/</code> 目录下即可：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 找到 libpython 的位置</span><br>$ whereis libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1</span>: <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br><span class="hljs-comment"># 在 /usr/lib/ 下创建 libpython 的符号链接</span><br>$ sudo ln -s <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span> <span class="hljs-regexp">/usr/</span>lib/<br></code></pre></td></tr></table></figure>
-
-<h2 id="使用Python3-9"><a href="#使用Python3-9" class="headerlink" title="使用Python3.9"></a>使用Python3.9</h2><h3 id="命令行使用"><a href="#命令行使用" class="headerlink" title="命令行使用"></a>命令行使用</h3><p>直接在命令行使用 <code>python3.9</code> 命令即可调用新安装的解释器：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 在命令行使用 Python 交互式解释器</span><br>$ python3.<span class="hljs-number">9</span><br>Python <span class="hljs-number">3.9</span>.<span class="hljs-number">13</span> (main, Jun <span class="hljs-number">30</span> <span class="hljs-number">2022</span>, <span class="hljs-number">00</span>:<span class="hljs-number">03</span>:<span class="hljs-number">51</span>) <br>[GCC <span class="hljs-number">9.4</span>.<span class="hljs-number">0</span>] on linux<br>Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string">&quot;copyright&quot;</span>, <span class="hljs-string">&quot;credits&quot;</span> or <span class="hljs-string">&quot;license&quot;</span> <span class="hljs-keyword">for</span> more information.<br>&gt;&gt;&gt; <br><br><span class="hljs-comment"># 查看该命令所在位置</span><br>$ which python3.<span class="hljs-number">9</span><br><span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/</span>python3.<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
-
-<p>类似的，使用 Python 3.9 的 <code>pip</code> 的命令为 <code>pip3.9</code></p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 查看 pip3.9 版本</span><br>$ pip3.<span class="hljs-number">9</span> -V<br>pip <span class="hljs-number">22.0</span>.<span class="hljs-number">4</span> from <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>python3.<span class="hljs-number">9</span><span class="hljs-regexp">/site-packages/</span>pip (python <span class="hljs-number">3.9</span>)<br></code></pre></td></tr></table></figure>
-
-<h3 id="PyCharm使用"><a href="#PyCharm使用" class="headerlink" title="PyCharm使用"></a>PyCharm使用</h3><p>在 PyCharm 中简单设置后，就可以使用新安装的解释器了。</p>
-<ul>
-<li><p>首先打开 PyCharm 设置，找到 “Python 解释器” 一项，点击下拉菜单——全部显示</p>
-</li>
-<li><p>点击左上角的 <code>+</code> ，添加新的解释器</p>
-</li>
-<li><p>选择添加 “系统解释器”，点击后面的 <code>...</code> 以浏览选择解释器路径</p>
-</li>
-<li><p>编译安装，解释器可执行文件默认路径为 <code>/usr/local/bin/python3.9</code>，或者可以返回[命令行使用]检查命令 <code>python3.9</code> 的位置。在此处将完整路径粘贴进编辑框即可</p>
-</li>
-<li><p>点击确定，即可正常使用新安装的解释器了</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（2）变量与简单的数据类型</title>
-    <url>/2022/06/30/Python-2/</url>
-    <content><![CDATA[<p>在本章中，主要学习Python中可使用的各种数据，以及如何存储、使用和访问这些数据。</p>
-<h2 id="1-Hello-World"><a href="#1-Hello-World" class="headerlink" title="1.Hello-World"></a>1.Hello-World</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">message = <span class="hljs-string">&quot;Hello World!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br></code></pre></td></tr></table></figure>
-
-<h2 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h2><p>命名规则：</p>
-<ul>
-<li>变量名只能包含字母数字和下划线，且不能以数据打头。</li>
-<li>变量名不能包含空格。</li>
-<li>变量名不能与关键字或函数名相同。</li>
-<li>变量名应简短且具有描述性</li>
-<li>慎用小写字母 l 和大写字母 O，因为会被错认为数字1和0</li>
-</ul>
-<h2 id="3-字符串"><a href="#3-字符串" class="headerlink" title="3.字符串"></a>3.字符串</h2><p>Python中，单引号或双引号括起来的是字符串，这种灵活性可以使程序员在字符串中包含引号和撇号。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># var</span><br>message = <span class="hljs-string">&quot;Hello Python world!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># change the case of string 改变大小写</span><br>name = <span class="hljs-string">&quot;ada lovelace&quot;</span><br><span class="hljs-built_in">print</span>(name.title()) <span class="hljs-comment"># Title 标题格式</span><br><span class="hljs-built_in">print</span>(name.upper()) <span class="hljs-comment"># upper case 大写</span><br><span class="hljs-built_in">print</span>(name.lower()) <span class="hljs-comment"># lower case 小写</span><br><span class="hljs-comment"># merge string 合并字符串</span><br>first_name = <span class="hljs-string">&quot;ada&quot;</span><br>last_name = <span class="hljs-string">&quot;lovelace&quot;</span><br>full_name = first_name + <span class="hljs-string">&quot; &quot;</span> + last_name<br><span class="hljs-built_in">print</span>(full_name)<br><span class="hljs-comment"># add whitespace \n \t 添加空白</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tPython&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;languages:\n\tPython\n\tC\n\tJavaScript&quot;</span>)<br><span class="hljs-comment"># delete block 删除空白</span><br>language = <span class="hljs-string">&quot;  Python  &quot;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language + <span class="hljs-string">&quot;-&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.rstrip() + <span class="hljs-string">&quot;-&quot;</span>) <span class="hljs-comment"># delete the whitespace at the right</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.lstrip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the left</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.strip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the both</span><br></code></pre></td></tr></table></figure>
-
-<p>Output:</p>
-<figure class="highlight ldif"><table><tr><td class="code"><pre><code class="hljs ldif">Hello Python world!<br>Ada Lovelace<br>ADA LOVELACE<br>ada lovelace<br>ada lovelace<br>	Python<br><span class="hljs-attribute">languages</span>:<br>	Python<br>	C<br>	JavaScript<br><span class="hljs-literal">-</span>  Python  -<br><span class="hljs-literal">-</span>  Python-<br><span class="hljs-literal">-</span>Python  -<br><span class="hljs-literal">-</span>Python-<br></code></pre></td></tr></table></figure>
-
-<h2 id="4-数字"><a href="#4-数字" class="headerlink" title="4.数字"></a>4.数字</h2><h3 id="4-1整数"><a href="#4-1整数" class="headerlink" title="4.1整数"></a>4.1整数</h3><p>在Python中，整数可执行加（+）减（-）乘（*）除（&#x2F;）乘方（**）整除（&#x2F;&#x2F;）取模（%），并支持运算次序，并支持括号改变运算次序。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span><br><span class="hljs-number">5</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> - <span class="hljs-number">3</span><br>-<span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> * <span class="hljs-number">3</span><br><span class="hljs-number">6</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> / <span class="hljs-number">3</span><br><span class="hljs-number">0.6666666666666666</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> // <span class="hljs-number">2</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> % <span class="hljs-number">3</span><br><span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span>**<span class="hljs-number">3</span><br><span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="4-2浮点数"><a href="#4-2浮点数" class="headerlink" title="4.2浮点数"></a>4.2浮点数</h3><p>需要注意的是，运算结果包含的浮点数的小数位数可能是不确定的。后续会学习处理多余小数位的方式。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">0.2</span> + <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> * <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（3）列表简介</title>
-    <url>/2022/06/30/Python-3/</url>
-    <content><![CDATA[<p>本章和下一章，将学习列表是什么以及如何使用列表元素。列表让你能够在一个地方存储成组的信息。</p>
-<h2 id="认识列表"><a href="#认识列表" class="headerlink" title="认识列表"></a>认识列表</h2><p>列表由一系列按特定顺序排列的元素组成。鉴于列表通常包含多个元素，给列表指定一个表示复数的名称是个不错的主意。</p>
-<p>Python中，用 [ ] 来表示列表，用逗号分隔其中的元素。示例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">bicycles = [<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]<br><span class="hljs-built_in">print</span>(bicycles) <span class="hljs-comment"># [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="1-访问列表元素"><a href="#1-访问列表元素" class="headerlink" title="1.访问列表元素"></a>1.访问列表元素</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">bicycles = [<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]<br><span class="hljs-comment"># access list element 访问第n个元素（从0开始）</span><br><span class="hljs-built_in">print</span>(bicycles[<span class="hljs-number">0</span>]) <span class="hljs-comment"># trek</span><br><span class="hljs-comment"># access the n element from bottom of the list 访问倒数第n个元素（从-1开始）</span><br><span class="hljs-built_in">print</span>(bicycles[-<span class="hljs-number">1</span>]) <span class="hljs-comment"># specialized</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-修改、添加和删除元素"><a href="#2-修改、添加和删除元素" class="headerlink" title="2.修改、添加和删除元素"></a>2.修改、添加和删除元素</h3><p>修改元素：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">motorcycles = [<span class="hljs-string">&#x27;honda&#x27;</span>, <span class="hljs-string">&#x27;yamaha&#x27;</span>, <span class="hljs-string">&#x27;suzuki&#x27;</span>]<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-comment"># change element 修改元素</span><br>motorcycles[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;ducati&#x27;</span><br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></code></pre></td></tr></table></figure>
-<p>添加元素：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># add element at the end 在末尾添加元素</span><br>motorcycles.append(<span class="hljs-string">&#x27;honda&#x27;</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br><span class="hljs-comment"># insert element 在指定位置添加元素</span><br>motorcycles.insert(<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;ducatipro&#x27;</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducatipro&#x27;, &#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br></code></pre></td></tr></table></figure>
-<p>删除元素：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># delete element 删除指定位置元素</span><br><span class="hljs-keyword">del</span> motorcycles[<span class="hljs-number">0</span>]<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br><span class="hljs-comment"># pop element 获取指定位置元素并在列表中删除（默认删除表尾元素）</span><br>poped_motorcycle = motorcycles.pop()<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(poped_motorcycle) <span class="hljs-comment"># honda</span><br>poped_motorcycle = motorcycles.pop(<span class="hljs-number">0</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(poped_motorcycle) <span class="hljs-comment"># ducati</span><br><span class="hljs-comment"># delete accroding value 根据值删除元素</span><br><span class="hljs-comment"># notice: remove only delete the first same element 注意：remove只删除第一个相同的元素</span><br>too_expensive = <span class="hljs-string">&#x27;yamaha&#x27;</span><br>motorcycles.remove(too_expensive)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(too_expensive) <span class="hljs-comment"># yamaga</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="3-组织列表"><a href="#3-组织列表" class="headerlink" title="3.组织列表"></a>3.组织列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">cars = [<span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>]<br><span class="hljs-comment"># forever sort list 永久排序</span><br>cars.sort()<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># reverse sort list 逆序排序</span><br>cars.sort(reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br><span class="hljs-comment"># temporary sort list(reverse same) 临时排序（逆序同样适用）</span><br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">sorted</span>(cars)) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># reverse list 列表反转</span><br>cars.reverse()<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># get list&#x27;s length</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(cars)) <span class="hljs-comment"># 4</span><br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（4）操作列表</title>
-    <url>/2022/07/01/Python-4/</url>
-    <content><![CDATA[<p>在本章中，你将学习如何遍历整个列表、使用列表的一部分、元组。</p>
-<h1 id="操作列表"><a href="#操作列表" class="headerlink" title="操作列表"></a>操作列表</h1><h2 id="1-遍历整个列表"><a href="#1-遍历整个列表" class="headerlink" title="1.遍历整个列表"></a>1.遍历整个列表</h2><p>遍历列表元素时，选择描述单个列表元素的有意义的名称会是一个不错的选择。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">magicians = [<span class="hljs-string">&#x27;alice&#x27;</span>, <span class="hljs-string">&#x27;david&#x27;</span>, <span class="hljs-string">&#x27;carolina&#x27;</span>]<br><span class="hljs-keyword">for</span> magician <span class="hljs-keyword">in</span> magicians:<br>    <span class="hljs-built_in">print</span>(magician)<br><span class="hljs-comment"># output:</span><br>alice<br>david<br>carolina<br></code></pre></td></tr></table></figure>
-
-<h2 id="2-创建数值列表"><a href="#2-创建数值列表" class="headerlink" title="2.创建数值列表"></a>2.创建数值列表</h2><h3 id="2-1使用函数range"><a href="#2-1使用函数range" class="headerlink" title="2.1使用函数range()"></a>2.1使用函数range()</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># range() 左闭右开</span><br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">5</span>):<br>    <span class="hljs-built_in">print</span>(value)<br><span class="hljs-comment"># output</span><br><span class="hljs-number">1</span><br><span class="hljs-number">2</span><br><span class="hljs-number">3</span><br><span class="hljs-number">4</span><br><span class="hljs-comment"># range() and list 利用range构建列表</span><br>numbers = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">6</span>))<br><span class="hljs-built_in">print</span>(numbers) <span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># set pace 设置range步长</span><br>even_numbers = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>,<span class="hljs-number">11</span>,<span class="hljs-number">2</span>))<br><span class="hljs-built_in">print</span>(even_numbers) <span class="hljs-comment"># [2, 4, 6, 8, 10]</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-2对数字列表进行简单的统计计算"><a href="#2-2对数字列表进行简单的统计计算" class="headerlink" title="2.2对数字列表进行简单的统计计算"></a>2.2对数字列表进行简单的统计计算</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>digits = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">min</span>(digits) <span class="hljs-comment"># 返回最小值</span><br><span class="hljs-number">0</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">max</span>(digits) <span class="hljs-comment"># 返回最大值</span><br><span class="hljs-number">9</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">sum</span>(digits) <span class="hljs-comment"># 返回元素和</span><br><span class="hljs-number">45</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-3列表解析"><a href="#2-3列表解析" class="headerlink" title="2.3列表解析"></a>2.3列表解析</h3><p>列表解析将for循环和创建新元素的代码合并成一行，并自动附加新元素。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># list comprehension 列表解析</span><br>squares = [value**<span class="hljs-number">2</span> <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>)]<br><span class="hljs-built_in">print</span>(squares) <span class="hljs-comment"># [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="3-使用列表的一部分"><a href="#3-使用列表的一部分" class="headerlink" title="3.使用列表的一部分"></a>3.使用列表的一部分</h2><h3 id="3-1切片"><a href="#3-1切片" class="headerlink" title="3.1切片"></a>3.1切片</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># slice list 左闭又开，省略左从头开始，省略右末尾结束</span><br>players = [<span class="hljs-string">&#x27;charles&#x27;</span>, <span class="hljs-string">&#x27;martina&#x27;</span>, <span class="hljs-string">&#x27;michael&#x27;</span>, <span class="hljs-string">&#x27;florence&#x27;</span>, <span class="hljs-string">&#x27;eli&#x27;</span>]<br><span class="hljs-built_in">print</span>(players[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>]) <span class="hljs-comment"># [&#x27;martina&#x27;, &#x27;michael&#x27;]</span><br><span class="hljs-built_in">print</span>(players[:<span class="hljs-number">4</span>]) <span class="hljs-comment"># [&#x27;charles&#x27;, &#x27;martina&#x27;, &#x27;michael&#x27;, &#x27;florence&#x27;]</span><br><span class="hljs-built_in">print</span>(players[<span class="hljs-number">2</span>:]) <span class="hljs-comment"># [&#x27;michael&#x27;, &#x27;florence&#x27;, &#x27;eli&#x27;]</span><br><span class="hljs-built_in">print</span>(players[-<span class="hljs-number">3</span>:]) <span class="hljs-comment"># [&#x27;michael&#x27;, &#x27;florence&#x27;, &#x27;eli&#x27;]</span><br><span class="hljs-comment"># 遍历切片</span><br><span class="hljs-keyword">for</span> player <span class="hljs-keyword">in</span> players[:<span class="hljs-number">3</span>]:<br>    <span class="hljs-built_in">print</span>(player.upper())<br><span class="hljs-comment"># output</span><br>CHARLES<br>MARTINA<br>MICHAEL<br></code></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-2复制"><a href="#3-2复制" class="headerlink" title="3.2复制"></a>3.2复制</h3><p>正确的复制：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># copy list</span><br>my_foods = [<span class="hljs-string">&#x27;pizza&#x27;</span>, <span class="hljs-string">&#x27;falafel&#x27;</span>, <span class="hljs-string">&#x27;carrot cake&#x27;</span>]<br>friend_foods = my_foods[:]<br>my_foods.append(<span class="hljs-string">&#x27;cannoli&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;my_foods: &quot;</span>, my_foods)<br><span class="hljs-comment"># my_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;, &#x27;cannoli&#x27;]</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;friend_foods: &quot;</span>, friend_foods)<br><span class="hljs-comment"># friend_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;]</span><br></code></pre></td></tr></table></figure>
-
-<p>错误的复制（并没有复制列表，而是引用了同一个列表）：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># not copy list</span><br>my_foods = [<span class="hljs-string">&#x27;pizza&#x27;</span>, <span class="hljs-string">&#x27;falafel&#x27;</span>, <span class="hljs-string">&#x27;carrot cake&#x27;</span>]<br>friend_foods = my_foods<br>my_foods.append(<span class="hljs-string">&#x27;cannoli&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;my_foods: &quot;</span>, my_foods)<br><span class="hljs-comment"># my_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;, &#x27;cannoli&#x27;]</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;friend_foods: &quot;</span>, friend_foods)<br><span class="hljs-comment"># friend_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;, &#x27;cannoli&#x27;]</span><br></code></pre></td></tr></table></figure>
-
-<p>可以看到直接赋值，即使只是修改my_foods，friend_foods仍会跟my_foods保持一致。</p>
-<h2 id="4-元组"><a href="#4-元组" class="headerlink" title="4.元组"></a>4.元组</h2><p>列表非常适合用于存储在程序运行期间可能变化的数据集。但有时候需要存储不能改变的元素，元组可以满足这种需求，不可变的列表称为元组。</p>
-<ul>
-<li>除了不支持修改，其他与列表相同</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># tuple 元组</span><br>dimensions = (<span class="hljs-number">200</span>, <span class="hljs-number">50</span>)<br><span class="hljs-built_in">print</span>(dimensions[<span class="hljs-number">0</span>]) <span class="hljs-comment"># 200</span><br><span class="hljs-built_in">print</span>(dimensions[<span class="hljs-number">1</span>]) <span class="hljs-comment"># 50</span><br><span class="hljs-comment"># dimensions[0] = 10 报错，元组不可变</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Original &quot;</span>, dimensions) <span class="hljs-comment"># Original  (200, 50)</span><br><span class="hljs-comment"># 可赋值</span><br>dimensions = (<span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Modified &quot;</span>, dimensions) <span class="hljs-comment"># Modified  (400, 100, 50)</span><br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（5）if 语句</title>
-    <url>/2022/07/01/Python-5/</url>
-    <content><![CDATA[<p>本章中，你将学习条件测试，学习简单的if语句，以及创建一系列复杂的if语句来确定当前到底处于什么情形。接下来将if应用于列表，以编写for循环。</p>
-<h1 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h1><p>一个简单实例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">cars = [<span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>]<br><span class="hljs-keyword">for</span> car <span class="hljs-keyword">in</span> cars:<br>    <span class="hljs-keyword">if</span> car == <span class="hljs-string">&#x27;bmw&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(car.upper())<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(car.title())<br><span class="hljs-comment">#output</span><br>Audi<br>BMW<br>Subaru<br>Toyota<br></code></pre></td></tr></table></figure>
-
-<h2 id="1-条件测试"><a href="#1-条件测试" class="headerlink" title="1.条件测试"></a>1.条件测试</h2><ul>
-<li>等于（&#x3D;&#x3D;），大于（&gt;），小于（&lt;）， 小于等于（&lt;&#x3D;），大于等于（&gt;&#x3D;）</li>
-<li>and、or</li>
-<li>检查特定值是否包含在列表中（in）、是否不包含在列表中（not in）</li>
-<li>bool表达式（True、False）</li>
-</ul>
-<h2 id="2-使用if语句处理列表"><a href="#2-使用if语句处理列表" class="headerlink" title="2.使用if语句处理列表"></a>2.使用if语句处理列表</h2><p>以披萨店制作披萨为例，每添加一种配料都打印一条消息：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># usr if check list</span><br>requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output</span><br>Adding mushrooms.<br>Adding green peppers.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
-
-<p>青椒用光了：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-keyword">if</span> requested_topping == <span class="hljs-string">&#x27;green peppers&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Sorry, we are out of green peppers right now.&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output</span><br>Adding mushrooms.<br>Sorry, we are out of green peppers right now.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
-
-<p>判断顾客点的配料列表是否为空：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = []<br><span class="hljs-keyword">if</span> requested_toppings:<br>    <span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Are you sure you want a plain pizza?&quot;</span>)<br><span class="hljs-comment">#output:</span><br>Are you sure you want a plain pizza?<br></code></pre></td></tr></table></figure>
-
-<p>顾客的要求往往五花八门，下面定义两个列表。第一个包含披萨店供应的配料，第二个包含顾客点的配料。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;french fires&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br>available_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;olives&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>,<br>                      <span class="hljs-string">&#x27;pepperoni&#x27;</span>, <span class="hljs-string">&#x27;pineapple&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-keyword">if</span> requested_topping <span class="hljs-keyword">in</span> available_toppings:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Sorry, we donot have &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output:</span><br>Adding mushrooms.<br>Sorry, we donot have french fires.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（6）字典</title>
-    <url>/2022/07/01/Python-6/</url>
-    <content><![CDATA[<p>本章中，你将学习如何访问和修改字典的信息。并且演示如何遍历字典中的数据。另外，还将学习存储字典的列表、存储列表的字典和存储字典的字典。</p>
-<h2 id="1-一个简单的字典"><a href="#1-一个简单的字典" class="headerlink" title="1.一个简单的字典"></a>1.一个简单的字典</h2><p>在Python中，字典是一系列键值对。每个键都与一个值相关联，你可以使用键来访问与之相关联的值。事实上，可将任何Python对象用作字典中中的值。</p>
-<p>字典用放在花括号 { } 中的一系列键值表示。</p>
-<p>我们来设置一些外星人，设置一个简单的字典，存储特定外星人的信息：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0[<span class="hljs-string">&#x27;color&#x27;</span>]) <span class="hljs-comment"># green</span><br><span class="hljs-built_in">print</span>(alien_0[<span class="hljs-string">&#x27;points&#x27;</span>]) <span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="2-使用字典"><a href="#2-使用字典" class="headerlink" title="2.使用字典"></a>2.使用字典</h2><h3 id="2-1添加键值对："><a href="#2-1添加键值对：" class="headerlink" title="2.1添加键值对："></a>2.1添加键值对：</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># add key-calue </span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;</span><br>alien_0[<span class="hljs-string">&#x27;x_position&#x27;</span>] = <span class="hljs-number">0</span><br>alien_0[<span class="hljs-string">&#x27;y_position&#x27;</span>] = <span class="hljs-number">25</span><br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5, &#x27;x_position&#x27;: 0, &#x27;y_position&#x27;: 25&#125;</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-2修改字典中的值"><a href="#2-2修改字典中的值" class="headerlink" title="2.2修改字典中的值"></a>2.2修改字典中的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># change value</span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;</span><br>alien_0[<span class="hljs-string">&#x27;color&#x27;</span>] = <span class="hljs-string">&#x27;yellow&#x27;</span><br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;yellow&#x27;, &#x27;points&#x27;: 5&#125;</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-3删除键值对："><a href="#2-3删除键值对：" class="headerlink" title="2.3删除键值对："></a>2.3删除键值对：</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># delete key-value</span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;</span><br><span class="hljs-keyword">del</span> alien_0[<span class="hljs-string">&#x27;points&#x27;</span>]<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;&#125;</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="3-遍历字典"><a href="#3-遍历字典" class="headerlink" title="3.遍历字典"></a>3.遍历字典</h2><h3 id="3-1遍历所有键值对"><a href="#3-1遍历所有键值对" class="headerlink" title="3.1遍历所有键值对"></a>3.1遍历所有键值对</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># for</span><br>user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> user_0.items():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;key: &quot;</span> + key + <span class="hljs-string">&quot; | value: &quot;</span> + value)<br><span class="hljs-comment">#output:</span><br>key: username | value: efermi<br>key: first | value: enrico<br>key: last | value: fermi<br></code></pre></td></tr></table></figure>
-
-<h3 id="3-2遍历所有键"><a href="#3-2遍历所有键" class="headerlink" title="3.2遍历所有键"></a>3.2遍历所有键</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> user_0.keys():<br>    <span class="hljs-built_in">print</span>(key.title())<br><span class="hljs-comment">#output:</span><br>Username<br>First<br>Last<br></code></pre></td></tr></table></figure>
-
-<h3 id="3-3按顺序遍历所有键"><a href="#3-3按顺序遍历所有键" class="headerlink" title="3.3按顺序遍历所有键"></a>3.3按顺序遍历所有键</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(user_0.keys()):<br>    <span class="hljs-built_in">print</span>(key.title())<br><span class="hljs-comment">#output:</span><br>First<br>Last<br>Username<br></code></pre></td></tr></table></figure>
-
-<h3 id="3-4遍历所有值"><a href="#3-4遍历所有值" class="headerlink" title="3.4遍历所有值"></a>3.4遍历所有值</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> user_0.values():<br>    <span class="hljs-built_in">print</span>(value.title())<br><span class="hljs-comment">#output:</span><br>Efermi<br>Enrico<br>Fermi<br><span class="hljs-comment">#use set drop same value 删除重复元素</span><br>user_0[<span class="hljs-string">&#x27;middle&#x27;</span>] = <span class="hljs-string">&#x27;fermi&#x27;</span><br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">set</span>(user_0.values()):<br>    <span class="hljs-built_in">print</span>(value.title())<br><span class="hljs-comment">#output:</span><br>Efermi<br>Enrico<br>Fermi<br></code></pre></td></tr></table></figure>
-
-<h2 id="4-嵌套"><a href="#4-嵌套" class="headerlink" title="4.嵌套"></a>4.嵌套</h2><h3 id="4-1字典列表"><a href="#4-1字典列表" class="headerlink" title="4.1字典列表"></a>4.1字典列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># dictionary list</span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">5</span>&#125;<br>alien_1 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;yellow&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">10</span>&#125;<br>alien_2 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">15</span>&#125;<br><br>aliens = [alien_0, alien_1, alien_2]<br><span class="hljs-built_in">print</span>(aliens)<br><span class="hljs-comment">#output:</span><br>[&#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">5</span>&#125;, &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;yellow&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">10</span>&#125;, &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">15</span>&#125;]<br></code></pre></td></tr></table></figure>
-
-<h3 id="4-2在字典中存储列表"><a href="#4-2在字典中存储列表" class="headerlink" title="4.2在字典中存储列表"></a>4.2在字典中存储列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># list in dictionary</span><br>pizza = &#123;<br>    <span class="hljs-string">&#x27;crust&#x27;</span>: <span class="hljs-string">&#x27;thick&#x27;</span>,<br>    <span class="hljs-string">&#x27;toppings&#x27;</span>: [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br>&#125;<br><span class="hljs-built_in">print</span>(pizza)<br><span class="hljs-comment">#output:</span><br>&#123;<span class="hljs-string">&#x27;crust&#x27;</span>: <span class="hljs-string">&#x27;thick&#x27;</span>, <span class="hljs-string">&#x27;toppings&#x27;</span>: [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="4-3在字典中存储字典"><a href="#4-3在字典中存储字典" class="headerlink" title="4.3在字典中存储字典"></a>4.3在字典中存储字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># dictionary in dictionary</span><br>users = &#123;<br>    <span class="hljs-string">&#x27;aeinstein&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;albert&#x27;</span>,<br>        <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;einstein&#x27;</span>,<br>        <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;princeton&#x27;</span><br>    &#125;,<br>    <span class="hljs-string">&#x27;mcurie&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;marie&#x27;</span>,<br>        <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;curie&#x27;</span>,<br>        <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;paris&#x27;</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">for</span> username, user_info <span class="hljs-keyword">in</span> users.items():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;username: &quot;</span> + username)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tfullname: &quot;</span> + user_info[<span class="hljs-string">&#x27;first&#x27;</span>] + <span class="hljs-string">&quot; &quot;</span> + user_info[<span class="hljs-string">&#x27;last&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tlocation: &quot;</span> + user_info[<span class="hljs-string">&#x27;location&#x27;</span>])<br><span class="hljs-comment">#output:</span><br>username: aeinstein<br>	fullname: albert einstein<br>	location: princeton<br>username: mcurie<br>	fullname: marie curie<br>	location: paris<br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（7）用户输入和while循环</title>
-    <url>/2022/07/01/Python-7/</url>
-    <content><![CDATA[<p>在本章中，你将学习如何接收用户输入，让程序能够对其进行处理。你还将学习如何让程序不断地运行，直到指定的条件不满足为止。</p>
-<h2 id="1-函数input"><a href="#1-函数input" class="headerlink" title="1.函数input()"></a>1.函数input()</h2><p>input()让程序暂停运行，等待用户输入一些文本，再将这些文本呈现给用户。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># input 函数</span><br>message = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Tell me something, and I will repeat it back to you: &quot;</span>)<br><span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># output：</span><br><span class="hljs-comment"># Tell me something, and I will repeat it back to you: Hello!</span><br><span class="hljs-comment"># Hello!</span><br></code></pre></td></tr></table></figure>
-<p>函数input()接受一个参数：即要向用户显示的提示或说明，让用户知道该怎么做。</p>
-<h2 id="2-while循环"><a href="#2-while循环" class="headerlink" title="2.while循环"></a>2.while循环</h2><h3 id="2-1使用while循环"><a href="#2-1使用while循环" class="headerlink" title="2.1使用while循环"></a>2.1使用while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># while</span><br>current_number = <span class="hljs-number">1</span><br><span class="hljs-keyword">while</span> current_number &lt;= <span class="hljs-number">5</span>:<br>    <span class="hljs-built_in">print</span>(current_number)<br>    current_number += <span class="hljs-number">1</span><br><span class="hljs-comment"># output:</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="2-2让用户选择何时退出"><a href="#2-2让用户选择何时退出" class="headerlink" title="2.2让用户选择何时退出"></a>2.2让用户选择何时退出</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># select when to exit</span><br>prompt = <span class="hljs-string">&quot;Tell me something, and I will repeat it back to you:&quot;</span><br>prompt += <span class="hljs-string">&quot;\nEnter &#x27;quit&#x27; to end the program. input:&quot;</span><br>message = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-keyword">while</span> message != <span class="hljs-string">&#x27;quit&#x27;</span>:<br>    message = <span class="hljs-built_in">input</span>(prompt)<br>    <span class="hljs-keyword">if</span> message != <span class="hljs-string">&#x27;quit&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># output</span><br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:Hello<br>Hello<br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:Hello again<br>Hello again<br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:quit<br></code></pre></td></tr></table></figure>
-<h3 id="2-3使用break退出循环"><a href="#2-3使用break退出循环" class="headerlink" title="2.3使用break退出循环"></a>2.3使用break退出循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">prompt = <span class="hljs-string">&quot;Tell me something, and I will repeat it back to you:&quot;</span><br>prompt += <span class="hljs-string">&quot;\nEnter &#x27;quit&#x27; to end the program. input:&quot;</span><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    city = <span class="hljs-built_in">input</span>(prompt)<br>    <span class="hljs-keyword">if</span> city == <span class="hljs-string">&#x27;quit&#x27;</span>:<br>        <span class="hljs-keyword">break</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(city.title())<br><span class="hljs-comment">#output</span><br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:Hello<br>Hello<br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:quit<br></code></pre></td></tr></table></figure>
-
-<h3 id="2-4在循环中使用continue"><a href="#2-4在循环中使用continue" class="headerlink" title="2.4在循环中使用continue"></a>2.4在循环中使用continue</h3><p>continue，跳过后面的语句直接执行下一次循环。</p>
-<h2 id="3-使用while处理字典列表"><a href="#3-使用while处理字典列表" class="headerlink" title="3.使用while处理字典列表"></a>3.使用while处理字典列表</h2><h3 id="3-1在列表之间移动元素"><a href="#3-1在列表之间移动元素" class="headerlink" title="3.1在列表之间移动元素"></a>3.1在列表之间移动元素</h3><p>使用while循环在验证用户的同时将其从未验证用户列表中提取出来，再加入到另一个已验证的用户列表中。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># use while</span><br>unconfirmed_users = [<span class="hljs-string">&#x27;alice&#x27;</span>, <span class="hljs-string">&#x27;brian&#x27;</span>, <span class="hljs-string">&#x27;candace&#x27;</span>]<br>confirmed_users = []<br><br><span class="hljs-keyword">while</span> unconfirmed_users:<br>    current_user = unconfirmed_users.pop()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Verifying user: &quot;</span> + current_user.title())<br>    confirmed_users.append(current_user)<br><span class="hljs-comment">#output:</span><br>Verifying user: Candace<br>Verifying user: Brian<br>Verifying user: Alice<br></code></pre></td></tr></table></figure>
-
-<h3 id="3-2删除包含特定值的所有列表元素"><a href="#3-2删除包含特定值的所有列表元素" class="headerlink" title="3.2删除包含特定值的所有列表元素"></a>3.2删除包含特定值的所有列表元素</h3><p>使用while删除列表中所有 ‘cat’ 元素。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">pets = [<span class="hljs-string">&#x27;dog&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>, <span class="hljs-string">&#x27;dog&#x27;</span>, <span class="hljs-string">&#x27;goldfish&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>, <span class="hljs-string">&#x27;rabbit&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>]<br><span class="hljs-built_in">print</span>(pets) <span class="hljs-comment"># [&#x27;dog&#x27;, &#x27;cat&#x27;, &#x27;dog&#x27;, &#x27;goldfish&#x27;, &#x27;cat&#x27;, &#x27;rabbit&#x27;, &#x27;cat&#x27;]</span><br><span class="hljs-keyword">while</span> <span class="hljs-string">&#x27;cat&#x27;</span> <span class="hljs-keyword">in</span> pets:<br>    pets.remove(<span class="hljs-string">&#x27;cat&#x27;</span>)<br><span class="hljs-built_in">print</span>(pets) <span class="hljs-comment"># [&#x27;dog&#x27;, &#x27;dog&#x27;, &#x27;goldfish&#x27;, &#x27;rabbit&#x27;]</span><br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（8）函数</title>
-    <url>/2022/07/03/Python-8/</url>
-    <content><![CDATA[<p>在本章中，你将学习编写函数。函数是带名字的代码块，用于完成具体的工作。你还会学习向函数传递信息的方式，学习如何将函数存储在被称为模块的独立文件中，让主程序文件的组织更为有序。</p>
-<h2 id="1-定义函数"><a href="#1-定义函数" class="headerlink" title="1.定义函数"></a>1.定义函数</h2><p>简单的示例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>():<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user()<br><span class="hljs-comment"># output:</span><br>Hello!<br></code></pre></td></tr></table></figure>
-
-<h2 id="2-向函数传递信息"><a href="#2-向函数传递信息" class="headerlink" title="2.向函数传递信息"></a>2.向函数传递信息</h2><p>位置实参：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>(<span class="hljs-params">username</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + username.title() + <span class="hljs-string">&quot;!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user(<span class="hljs-string">&#x27;hesse&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>Hello, Hesse!<br></code></pre></td></tr></table></figure>
-
-<p>关键字实参：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>(<span class="hljs-params">username</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + username.title() + <span class="hljs-string">&quot;!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user(username=<span class="hljs-string">&#x27;hesse&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>Hello, Hesse!<br></code></pre></td></tr></table></figure>
-
-<p>参数默认值：（若无默认值，则必须进行参数传递）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>(<span class="hljs-params">username=<span class="hljs-string">&#x27;tom&#x27;</span></span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + username.title() + <span class="hljs-string">&quot;!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user(username=<span class="hljs-string">&#x27;hesse&#x27;</span>)<br>greet_user()<br><span class="hljs-comment"># output:</span><br>Hello, Hesse!<br>Hello, Tom!<br></code></pre></td></tr></table></figure>
-
-<h2 id="3-函数返回值"><a href="#3-函数返回值" class="headerlink" title="3.函数返回值"></a>3.函数返回值</h2><h3 id="3-1返回简单值"><a href="#3-1返回简单值" class="headerlink" title="3.1返回简单值"></a>3.1返回简单值</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_full_name</span>(<span class="hljs-params">first_name, last_name</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;return full name&#x27;&#x27;&#x27;</span><br>    full_name = first_name + <span class="hljs-string">&#x27; &#x27;</span> + last_name<br>    <span class="hljs-keyword">return</span> full_name.title()<br><span class="hljs-comment"># use function</span><br>musician = get_full_name(<span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;hendrix&#x27;</span>)<br><span class="hljs-built_in">print</span>(musician)<br><span class="hljs-comment"># output:</span><br>Jimi Hendrix<br></code></pre></td></tr></table></figure>
-
-<h3 id="3-2返回字典"><a href="#3-2返回字典" class="headerlink" title="3.2返回字典"></a>3.2返回字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_person</span>(<span class="hljs-params">first_name, last_name</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;return a person dictionary&#x27;&#x27;&#x27;</span><br>    person = &#123;<span class="hljs-string">&#x27;first&#x27;</span>: first_name, <span class="hljs-string">&#x27;last&#x27;</span>: last_name&#125;<br>    <span class="hljs-keyword">return</span> person<br><span class="hljs-comment"># use function</span><br>musician = build_person(<span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;hendrix&#x27;</span>)<br><span class="hljs-built_in">print</span>(musician)<br><span class="hljs-comment"># output:</span><br>&#123;<span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;hendrix&#x27;</span>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="4-传递列表"><a href="#4-传递列表" class="headerlink" title="4.传递列表"></a>4.传递列表</h2><p>你经常会发现，向函数传递列表很有用。</p>
-<h3 id="4-1简单使用"><a href="#4-1简单使用" class="headerlink" title="4.1简单使用"></a>4.1简单使用</h3><p>将列表传递给函数后，函数就能直接访问其内容。假设有一个用户列表，我们要问候其中的每位用户。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greer_users</span>(<span class="hljs-params">names</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;greet to everyone in names&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names:<br>        msg = <span class="hljs-string">&quot;Hello, &quot;</span> + name.title() + <span class="hljs-string">&quot;!&quot;</span><br>        <span class="hljs-built_in">print</span>(msg)<br><span class="hljs-comment"># use function</span><br>usernames = [<span class="hljs-string">&#x27;hannah&#x27;</span>, <span class="hljs-string">&#x27;ty&#x27;</span>, <span class="hljs-string">&#x27;margot&#x27;</span>]<br>greer_users(usernames)<br><span class="hljs-comment"># output:</span><br>Hello, Hannah!<br>Hello, Ty!<br>Hello, Margot!<br></code></pre></td></tr></table></figure>
-
-<h3 id="4-2在函数中修改列表"><a href="#4-2在函数中修改列表" class="headerlink" title="4.2在函数中修改列表"></a>4.2在函数中修改列表</h3><p>将列表传递给函数后，函数就可对其进行修改。在函数中对这个列表所做的任何修改都是永久性的，这让你能够高效的处理大量的数据。（形参命名只是引用，即使实参与形参的名称不同，但都是在同一个列表上操作）</p>
-<p>当不想要函数操作后修改列表时，只需利用 list[ : ] 复制一份列表传递给函数即可。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># change list in function 在函数中修改列表</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">print_models</span>(<span class="hljs-params">un_designs, com_models</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    print every design in un_designs</span><br><span class="hljs-string">    then put it in com_models</span><br><span class="hljs-string">    打印所有未打印列表的设计，并将他们放到已完成列表</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">while</span> unprinted_designs:<br>        current_design = un_designs.pop()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Printing model: &quot;</span> + current_design)<br>        com_models.append(current_design)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">show_completed_models</span>(<span class="hljs-params">com_models</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;show completed_models 显示已完成列表&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nThe following models have been printed:&quot;</span>)<br>    <span class="hljs-keyword">for</span> completed_model <span class="hljs-keyword">in</span> completed_models:<br>        <span class="hljs-built_in">print</span>(completed_model)<br><span class="hljs-comment"># define list</span><br>unprinted_designs = [<span class="hljs-string">&#x27;iphone case&#x27;</span>, <span class="hljs-string">&#x27;robot pendant&#x27;</span>, <span class="hljs-string">&#x27;dodecahedron&#x27;</span>]<br>completed_models = []<br><span class="hljs-comment"># use function</span><br>print_models(unprinted_designs, completed_models)<br>show_completed_models(completed_models)<br><span class="hljs-comment"># output:</span><br>Printing model: dodecahedron<br>Printing model: robot pendant<br>Printing model: iphone case<br><br>The following models have been printed:<br>dodecahedron<br>robot pendant<br>iphone case<br></code></pre></td></tr></table></figure>
-
-<h2 id="5-传递任意数量的实参"><a href="#5-传递任意数量的实参" class="headerlink" title="5.传递任意数量的实参"></a>5.传递任意数量的实参</h2><p>有时候，你预先不知道函数需要接受多少个实参，好在Python允许函数从调用语句中收集任意数量的实参。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">make_pizza</span>(<span class="hljs-params">*toopings</span>):<br>    <span class="hljs-built_in">print</span>(toopings)<br><span class="hljs-comment"># use function</span><br>make_pizza(<span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>(<span class="hljs-string">&#x27;pepperoni&#x27;</span>,)<br>(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<p>形参名 *toppings 中的星号让Python创建一个名为toppings的空元组，并将收到的所有值都封装到这个元组中。（注意：Python将实参封装到一个元组中，即使函数只收到一个值也是如此）</p>
-<h3 id="5-1结合使用位置实参和任意数量实参"><a href="#5-1结合使用位置实参和任意数量实参" class="headerlink" title="5.1结合使用位置实参和任意数量实参"></a>5.1结合使用位置实参和任意数量实参</h3><p>如果要让函数接收不同类型的实参，必须在函数定义中将接纳任意数量实参的形参放在最后。Python先匹配位置实参和关键字实参，再将余下的实参收集到最后一个形参中。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">make_pizza</span>(<span class="hljs-params">size, *toopings</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pizza size: &quot;</span>, size)<br>    <span class="hljs-built_in">print</span>(toopings)<br><span class="hljs-comment"># use function</span><br>make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>pizza size:  <span class="hljs-number">16</span><br>(<span class="hljs-string">&#x27;pepperoni&#x27;</span>,)<br>pizza size:  <span class="hljs-number">12</span><br>(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<h3 id="5-2使用任意数量的关键字实参"><a href="#5-2使用任意数量的关键字实参" class="headerlink" title="5.2使用任意数量的关键字实参"></a>5.2使用任意数量的关键字实参</h3><p>有时候，需要接受任意数量的实参，但预先不知道传递给函数的会是什么样的信息。在这种情况下，可将函数编写成能够接收任意数量的键值对——调用语句提供多少就接收多少。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_profile</span>(<span class="hljs-params">first, last, **user_info</span>):<br>    profile = &#123;&#125;<br>    profile[<span class="hljs-string">&#x27;first_name&#x27;</span>] = first<br>    profile[<span class="hljs-string">&#x27;last_name&#x27;</span>] = last<br>    <span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> user_info.items():<br>        profile[key] = value<br>    <span class="hljs-keyword">return</span> profile<br><span class="hljs-comment"># use function</span><br>user_profile = build_profile(<span class="hljs-string">&#x27;albert&#x27;</span>, <span class="hljs-string">&#x27;einstein&#x27;</span>, location=<span class="hljs-string">&#x27;princeton&#x27;</span>, field=<span class="hljs-string">&#x27;physics&#x27;</span>)<br><span class="hljs-built_in">print</span>(user_profile)<br><span class="hljs-comment"># output:</span><br>&#123;<span class="hljs-string">&#x27;first_name&#x27;</span>: <span class="hljs-string">&#x27;albert&#x27;</span>, <span class="hljs-string">&#x27;last_name&#x27;</span>: <span class="hljs-string">&#x27;einstein&#x27;</span>, <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;princeton&#x27;</span>, <span class="hljs-string">&#x27;field&#x27;</span>: <span class="hljs-string">&#x27;physics&#x27;</span>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>形参**user_info中的两个星号让Python创建一个名为user_info的空字典，并将收到的所有键值对（除了用户已经定义的）都封装在这个字典中。</p>
-<h2 id="6-将函数存储在模块中"><a href="#6-将函数存储在模块中" class="headerlink" title="6.将函数存储在模块中"></a>6.将函数存储在模块中</h2><p>通过将函数存储在独立的文件中，可隐藏程序代码的细节，将重点放在程序的高层逻辑上。也可与其他程序员共享这些文件而不是整个程序。知道如何导入函数还能让你使用其他程序员编写的函数库。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># pizza.py</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">make_pizza</span>(<span class="hljs-params">size, *toopings</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pizza size: &quot;</span>, size)<br>    <span class="hljs-built_in">print</span>(toopings)<br></code></pre></td></tr></table></figure>
-
-<p>导入整个模块：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># import whole module</span><br><span class="hljs-keyword">import</span> pizza<br>pizza.make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>pizza.make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<p>导入模块中某个函数：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># import specific function</span><br><span class="hljs-keyword">from</span> pizza <span class="hljs-keyword">import</span> make_pizza<br>make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<p>给导入的函数命名：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># use other name</span><br><span class="hljs-keyword">from</span> pizza <span class="hljs-keyword">import</span> make_pizza <span class="hljs-keyword">as</span> mp<br>mp(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>mp(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<p>导入模块中所有函数：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># import all function in module</span><br><span class="hljs-keyword">from</span> pizza <span class="hljs-keyword">import</span> *<br>make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-<p>上述四种方法输出都是相同的：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># output:</span><br>pizza size:  <span class="hljs-number">16</span><br>(<span class="hljs-string">&#x27;pepperoni&#x27;</span>,)<br>pizza size:  <span class="hljs-number">12</span><br>(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python学习之路（9）类</title>
-    <url>/2022/07/03/Python-9/</url>
-    <content><![CDATA[<p>面向对象是最有效的软件编写方法之一。在本章中，你将编写一些类并创建其实例。你将指定可在实例中存储什么信息，定义可对这些实例执行哪些操作。你还将编写一些类来扩展既有类的功能，让相似的类能够高效地共享代码。你还将把自己编写的类存储在模块中，并在自己的程序文件中导入其他程序员编写的类。</p>
-<h2 id="1-创建和使用类"><a href="#1-创建和使用类" class="headerlink" title="1.创建和使用类"></a>1.创建和使用类</h2><p>使用类几乎可以模拟任何东西。下面来编写一个表示小狗的简单类Dog。</p>
-<h3 id="1-1创建Dog类"><a href="#1-1创建Dog类" class="headerlink" title="1.1创建Dog类"></a>1.1创建Dog类</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span>():<br>    <span class="hljs-string">&#x27;&#x27;&#x27;dog class dog 类&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, age</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;init name, age 初始化name,age&#x27;&#x27;&#x27;</span><br>        self.name = name<br>        self.age = age<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">sit</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;sit when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; is now sitting.&quot;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">roll_over</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;roll_over when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; rolled over!&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<p>方法_<em>init</em>_()是一个特殊的方法，每当你根据Dog类创建新实例时，Python会自动运行它。<strong>在这个方法的定义中，形参self必不可少，还必须位于其他形参的前面。</strong></p>
-<h3 id="1-2根据类创建实例"><a href="#1-2根据类创建实例" class="headerlink" title="1.2根据类创建实例"></a>1.2根据类创建实例</h3><p>创建实例：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">my_dog = Dog(<span class="hljs-string">&#x27;willie&#x27;</span>, <span class="hljs-number">6</span>)<br></code></pre></td></tr></table></figure>
-
-<p>调用属性：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog&#x27;s name is &quot;</span> + my_dog.name.title() + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog is &quot;</span> + <span class="hljs-built_in">str</span>(my_dog.age) + <span class="hljs-string">&quot; years old.&quot;</span>)<br><span class="hljs-comment"># output:</span><br>My dog’s name <span class="hljs-keyword">is</span> Willie.<br>My dog <span class="hljs-keyword">is</span> <span class="hljs-number">6</span> years old.<br></code></pre></td></tr></table></figure>
-
-<p>调用方法：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">my_dog.sit()<br>my_dog.roll_over()<br><span class="hljs-comment"># output:</span><br>Willie <span class="hljs-keyword">is</span> now sitting.<br>Willie rolled over!<br></code></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Python学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>面经总结</title>
-    <url>/2022/07/25/%E9%9D%A2%E7%BB%8F/</url>
+    <url>/2022/07/25/Interview_experience/</url>
     <content><![CDATA[<p>准备试找工作，故没事看些面经并进行总结。</p>
 <p>大数据开发项目：<a href="https://www.nowcoder.com/discuss/945701?source_id=discuss_experience_nctrack&channel=-1">大数据开发项目_技术交流_牛客网 (nowcoder.com)</a></p>
 <h2 id="1-复习"><a href="#1-复习" class="headerlink" title="1. 复习"></a>1. 复习</h2><p>看书，记笔记，形成健全的知识体系。大数据分：数据产品（算法）、数据平台（服务端开发）、数仓（业务）三个方向。</p>
@@ -502,71 +172,397 @@
       </tags>
   </entry>
   <entry>
-    <title>动手学习深度学习（1）课程介绍及环境配置</title>
-    <url>/2022/09/22/DL-1/</url>
-    <content><![CDATA[<p>准研究生，学习一些研究生阶段需要的预备知识，打好深度学习基础。</p>
-<h2 id="课程安排"><a href="#课程安排" class="headerlink" title="课程安排"></a>课程安排</h2><p>相关资源：</p>
-<p>课程主页：<a href="https://courses.d2l.ai/zh-v2">https://courses.d2l.ai/zh-v2</a></p>
-<p>教材：<a href="https://zh-v2.d2l.ai/">https://zh-v2.d2l.ai/</a></p>
-<p>课程论坛讨论：<a href="https://discuss.d2l.ai/c/16">https://discuss.d2l.ai/c/16</a></p>
-<p>Pytorch论坛：<a href="https://discuss.pytorch.org/">https://discuss.pytorch.org/</a></p>
-<h2 id="深度学习介绍"><a href="#深度学习介绍" class="headerlink" title="深度学习介绍"></a>深度学习介绍</h2>]]></content>
-      <categories>
-        <category>DeepLearning学习</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>DeepLearning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习相关期刊</title>
-    <url>/2022/09/22/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E6%9C%9F%E5%88%8A/</url>
-    <content><![CDATA[<p>收集深度学习常见期刊的分类以及简写等内容</p>
-<h2 id="常见期刊"><a href="#常见期刊" class="headerlink" title="常见期刊"></a>常见期刊</h2><ul>
-<li><p>ECCV（European Conference on Computer Vision）</p>
-<p>  <strong>欧洲计算机视觉国际会议。</strong>ECCV每年的论文接受率为25-30%左右，每次会议在全球范围会收录论文300篇左右，收录论文的主要来源是来自于美国、欧洲等顶级实验室及研究所，中国大陆的收录论文数量在10-20篇之间。</p>
+    <title>Python学习之路（1）环境配置</title>
+    <url>/2022/06/30/Python_1/</url>
+    <content><![CDATA[<p>之前一直在windows平台编程，这次从零开始，完全使用Ubuntu系统学习Python。</p>
+<p>参考：<a href="https://muzing.top/posts/6c3096a1/">在 Ubuntu 22.04 上安装 Python 3.9 - muzing的杂货铺</a></p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><h3 id="更新系统软件"><a href="#更新系统软件" class="headerlink" title="更新系统软件"></a>更新系统软件</h3><figure class="highlight applescript"><table><tr><td class="code"><pre><code class="hljs applescript"><span class="hljs-comment"># 刷新软件包目录</span><br>sudo apt update<br><span class="hljs-comment"># 列出当前可用的更新</span><br>sudo apt <span class="hljs-built_in">list</span> <span class="hljs-comment">--upgradable</span><br><span class="hljs-comment"># 如上一步提示有可以更新的项目，则执行更新</span><br>sudo apt upgrade<br></code></pre></td></tr></table></figure>
+
+<h3 id="安装GCC编译器"><a href="#安装GCC编译器" class="headerlink" title="安装GCC编译器"></a>安装GCC编译器</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><code class="hljs cmake"><span class="hljs-comment"># 安装 GCC 编译器</span><br>sudo apt <span class="hljs-keyword">install</span> gcc<br><span class="hljs-comment"># 检查安装是否成功</span><br>gcc -v<br><span class="hljs-comment"># 若显示出 GCC 版本则成功</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="安装其他依赖"><a href="#安装其他依赖" class="headerlink" title="安装其他依赖"></a>安装其他依赖</h3><figure class="highlight q"><table><tr><td class="code"><pre><code class="hljs q"># 刷新软件包目录<br>sudo apt <span class="hljs-keyword">update</span><br># 安装依赖<br>sudo apt install build-essential zlib1g-<span class="hljs-built_in">dev</span> libncurses5-<span class="hljs-built_in">dev</span> libgdbm-<span class="hljs-built_in">dev</span> libnss3-<span class="hljs-built_in">dev</span> libssl-<span class="hljs-built_in">dev</span> libreadline-<span class="hljs-built_in">dev</span> libffi-<span class="hljs-built_in">dev</span> libbz2-<span class="hljs-built_in">dev</span> liblzma-<span class="hljs-built_in">dev</span> sqlite3 libsqlite3-<span class="hljs-built_in">dev</span> tk-<span class="hljs-built_in">dev</span> uuid-<span class="hljs-built_in">dev</span> libgdbm-compat-<span class="hljs-built_in">dev</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="编译与安装"><a href="#编译与安装" class="headerlink" title="编译与安装"></a>编译与安装</h2><h3 id="下载源代码"><a href="#下载源代码" class="headerlink" title="下载源代码"></a>下载源代码</h3><p>在 <a href="https://www.python.org/downloads/source/">Python 官网下载界面</a>下载 Python 3.9 的源代码，此处使用目前最新的 3.9.13。</p>
+<p>或者采用命令行下载</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 下载 Python 3.9.13</span><br><span class="hljs-attribute">sudo</span> wget https://www.python.org/ftp/python/<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 下载其他版本只需替换版本号数字</span><br><span class="hljs-comment"># 解压</span><br><span class="hljs-attribute">tar</span> -xf Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>.tar.xz<br><span class="hljs-comment"># 进入该目录</span><br><span class="hljs-attribute">cd</span> Python-<span class="hljs-number">3</span>.<span class="hljs-number">9</span>.<span class="hljs-number">13</span>/<br></code></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight jboss-cli"><table><tr><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-comment"># 检查依赖与配置编译</span><br>sudo <span class="hljs-string">./configure</span> <span class="hljs-params">--enable-optimizations</span> <span class="hljs-params">--with-lto</span> <span class="hljs-params">--enable-shared</span><br></code></pre></td></tr></table></figure>
+
+<p>此处使用了三个可选配置项，含义如下：</p>
+<ul>
+<li><code>--enable-optimizations</code>：用 <a href="https://docs.python.org/zh-cn/3/using/configure.html#envvar-PROFILE_TASK">PROFILE_TASK</a> 启用以配置文件主导的优化（PGO）</li>
+<li><code>--with-lto</code>：在编译过程中启用链接时间优化（LTO）</li>
+<li><code>--enable-shared</code>：启用共享 Python 库 <code>libpython</code> 的编译</li>
+</ul>
+<p>经过一系列检查无误之后，会自动生成 Makefile，即可进行下一步的编译了。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>完成配置，生成 Makefile 后，就可以开始编译了。<strong>编译耗时较长</strong>（要耐心等待），可以使用 <code>-j</code> 选项指定参与编译的 CPU 核心数，例如此机器为 2核 CPU：</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 编译，-j 后面的数字为参与编译的CPU核心数，根据个人机器配置调整</span><br><span class="hljs-attribute">sudo</span> make -j <span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+<p>编译结束后，注意仔细查看一下输出，检查可能存在的错误：</p>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><code class="hljs mipsasm"><span class="hljs-comment"># 一种可能出现的问题：</span><br>$ sudo make<br><span class="hljs-comment"># ......省略部分输出......</span><br>Python <span class="hljs-keyword">build </span>finished successfully!<br>The necessary <span class="hljs-keyword">bits </span>to <span class="hljs-keyword">build </span>these optional modules were not found:<br>_dbm                  _tkinter              _uuid              <br>To find the necessary <span class="hljs-keyword">bits, </span>look in setup.py in detect_modules() for the module<span class="hljs-string">&#x27;s name.</span><br></code></pre></td></tr></table></figure>
+
+<p>如果出现类似如上的警告，说明编译时有部分软件包不可用，导致编译出的 Python 有部分可选模块不可用。检查上一节中提到的依赖是否都已安装，或求助于网络搜索引擎，安装对应软件包后再次编译即可。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight gauss"><table><tr><td class="code"><pre><code class="hljs gauss"><span class="hljs-meta"># 安装二进制文件</span><br>sudo <span class="hljs-built_in">make</span> altinstall<br></code></pre></td></tr></table></figure>
+
+<h3 id="链接动态库"><a href="#链接动态库" class="headerlink" title="链接动态库"></a>链接动态库</h3><p>由于[编译配置]中有 <code>--enable-shared</code> 的选项，故此时直接使用命令 <code>python3.9</code> 会提示无法找到 <code>libpython3.9.so.1.0</code> 的错误。只需找到该 <code>so</code> 文件，复制（或创建符号链接）到 <code>/usr/lib/</code> 目录下即可：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 找到 libpython 的位置</span><br>$ whereis libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1</span>: <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span><br><span class="hljs-comment"># 在 /usr/lib/ 下创建 libpython 的符号链接</span><br>$ sudo ln -s <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>libpython3.<span class="hljs-number">9</span>.so.<span class="hljs-number">1.0</span> <span class="hljs-regexp">/usr/</span>lib/<br></code></pre></td></tr></table></figure>
+
+<h2 id="使用Python3-9"><a href="#使用Python3-9" class="headerlink" title="使用Python3.9"></a>使用Python3.9</h2><h3 id="命令行使用"><a href="#命令行使用" class="headerlink" title="命令行使用"></a>命令行使用</h3><p>直接在命令行使用 <code>python3.9</code> 命令即可调用新安装的解释器：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 在命令行使用 Python 交互式解释器</span><br>$ python3.<span class="hljs-number">9</span><br>Python <span class="hljs-number">3.9</span>.<span class="hljs-number">13</span> (main, Jun <span class="hljs-number">30</span> <span class="hljs-number">2022</span>, <span class="hljs-number">00</span>:<span class="hljs-number">03</span>:<span class="hljs-number">51</span>) <br>[GCC <span class="hljs-number">9.4</span>.<span class="hljs-number">0</span>] on linux<br>Type <span class="hljs-string">&quot;help&quot;</span>, <span class="hljs-string">&quot;copyright&quot;</span>, <span class="hljs-string">&quot;credits&quot;</span> or <span class="hljs-string">&quot;license&quot;</span> <span class="hljs-keyword">for</span> more information.<br>&gt;&gt;&gt; <br><br><span class="hljs-comment"># 查看该命令所在位置</span><br>$ which python3.<span class="hljs-number">9</span><br><span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/</span>python3.<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure>
+
+<p>类似的，使用 Python 3.9 的 <code>pip</code> 的命令为 <code>pip3.9</code></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 查看 pip3.9 版本</span><br>$ pip3.<span class="hljs-number">9</span> -V<br>pip <span class="hljs-number">22.0</span>.<span class="hljs-number">4</span> from <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/lib/</span>python3.<span class="hljs-number">9</span><span class="hljs-regexp">/site-packages/</span>pip (python <span class="hljs-number">3.9</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="PyCharm使用"><a href="#PyCharm使用" class="headerlink" title="PyCharm使用"></a>PyCharm使用</h3><p>在 PyCharm 中简单设置后，就可以使用新安装的解释器了。</p>
+<ul>
+<li><p>首先打开 PyCharm 设置，找到 “Python 解释器” 一项，点击下拉菜单——全部显示</p>
 </li>
-<li><p>CVPR（Conference on Computer Vision and Pattern Recognition）</p>
-<p>  <strong>国际计算机视觉模式识别会议。</strong>这个会议是由IEEE主办的一年一度的全球学术性顶级会议，会议的主要内容是计算机视觉与模式识别技术，每年CVPR都会有一个固定的研讨主题。会议一般在每年六月举行，大部分情况下会议都在美国西部地区举办，也会在美国中部和东部地区之间循环举办。</p>
+<li><p>点击左上角的 <code>+</code> ，添加新的解释器</p>
 </li>
-<li><p>ICCV （International Conference on Computer Vision）</p>
-<p>  <strong>国际计算机视觉大会。</strong>这个会议也是由IEEE主办的全球最高级别学术会议，每两年在世界范围内召开一次，在业内具有极高的评价。ICCV论文录用率非常低，是三大会议中公认级别最高的。与CVPR不同的是，CVPR会议每年都在美国地区举办，而ICCV会议自1987年起至今每两年都会在全世界不同的国家举办会议，2005年ICCV是在中国北京举办的会议。</p>
-<p>  <strong>上述会议为计算机视觉三大顶级会议</strong></p>
+<li><p>选择添加 “系统解释器”，点击后面的 <code>...</code> 以浏览选择解释器路径</p>
 </li>
-</ul>
-<h3 id="计算机视觉顶级会议"><a href="#计算机视觉顶级会议" class="headerlink" title="计算机视觉顶级会议"></a>计算机视觉顶级会议</h3><h4 id="A类"><a href="#A类" class="headerlink" title="A类"></a>A类</h4><ul>
-<li>CVPR: International Conference on Computer Vision and Pattern Recognition</li>
-<li>ICCV: International Conference on Computer Vision</li>
-<li>ICML: International Conference on Machine Learning</li>
-<li>NIPS: Annual Conference on Neural Information Processing Systems</li>
-<li>AAAI: AAAI Conference on Artificial Intelligence</li>
-<li>ACM MM: ACM International Conference on Multimedia</li>
-<li>IJCAI: International Joint Conference on Artificial Intelligence</li>
-</ul>
-<h4 id="暂无评级"><a href="#暂无评级" class="headerlink" title="暂无评级"></a>暂无评级</h4><ul>
-<li>ICLR: International Conference on Learning Representations</li>
-</ul>
-<h4 id="B类"><a href="#B类" class="headerlink" title="B类"></a>B类</h4><ul>
-<li>ECCV: European Conference on Computer Vision</li>
-</ul>
-<h3 id="计算机视觉顶级期刊"><a href="#计算机视觉顶级期刊" class="headerlink" title="计算机视觉顶级期刊"></a>计算机视觉顶级期刊</h3><h4 id="A类-1"><a href="#A类-1" class="headerlink" title="A类"></a>A类</h4><ul>
-<li>TPAMI: IEEE Trans on Pattern Analysis and Machine Intelligence</li>
-<li>IJCV: International Journal of Computer Vision</li>
-<li>TIP: IEEE Transactions on Image Processing</li>
-</ul>
-<h4 id="B类-1"><a href="#B类-1" class="headerlink" title="B类"></a>B类</h4><ul>
-<li>TNNLS: IEEE Transactions on Neural Networks and learning systems</li>
-<li>Pattern Recognition</li>
+<li><p>编译安装，解释器可执行文件默认路径为 <code>/usr/local/bin/python3.9</code>，或者可以返回[命令行使用]检查命令 <code>python3.9</code> 的位置。在此处将完整路径粘贴进编辑框即可</p>
+</li>
+<li><p>点击确定，即可正常使用新安装的解释器了</p>
+</li>
 </ul>
 ]]></content>
       <categories>
-        <category>DeepLearning期刊</category>
+        <category>Python学习</category>
       </categories>
       <tags>
         <tag>Python</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（2）变量与简单的数据类型</title>
+    <url>/2022/06/30/Python_2/</url>
+    <content><![CDATA[<p>在本章中，主要学习Python中可使用的各种数据，以及如何存储、使用和访问这些数据。</p>
+<h2 id="1-Hello-World"><a href="#1-Hello-World" class="headerlink" title="1.Hello-World"></a>1.Hello-World</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">message = <span class="hljs-string">&quot;Hello World!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h2><p>命名规则：</p>
+<ul>
+<li>变量名只能包含字母数字和下划线，且不能以数据打头。</li>
+<li>变量名不能包含空格。</li>
+<li>变量名不能与关键字或函数名相同。</li>
+<li>变量名应简短且具有描述性</li>
+<li>慎用小写字母 l 和大写字母 O，因为会被错认为数字1和0</li>
+</ul>
+<h2 id="3-字符串"><a href="#3-字符串" class="headerlink" title="3.字符串"></a>3.字符串</h2><p>Python中，单引号或双引号括起来的是字符串，这种灵活性可以使程序员在字符串中包含引号和撇号。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># var</span><br>message = <span class="hljs-string">&quot;Hello Python world!&quot;</span><br><span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># change the case of string 改变大小写</span><br>name = <span class="hljs-string">&quot;ada lovelace&quot;</span><br><span class="hljs-built_in">print</span>(name.title()) <span class="hljs-comment"># Title 标题格式</span><br><span class="hljs-built_in">print</span>(name.upper()) <span class="hljs-comment"># upper case 大写</span><br><span class="hljs-built_in">print</span>(name.lower()) <span class="hljs-comment"># lower case 小写</span><br><span class="hljs-comment"># merge string 合并字符串</span><br>first_name = <span class="hljs-string">&quot;ada&quot;</span><br>last_name = <span class="hljs-string">&quot;lovelace&quot;</span><br>full_name = first_name + <span class="hljs-string">&quot; &quot;</span> + last_name<br><span class="hljs-built_in">print</span>(full_name)<br><span class="hljs-comment"># add whitespace \n \t 添加空白</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tPython&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;languages:\n\tPython\n\tC\n\tJavaScript&quot;</span>)<br><span class="hljs-comment"># delete block 删除空白</span><br>language = <span class="hljs-string">&quot;  Python  &quot;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language + <span class="hljs-string">&quot;-&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.rstrip() + <span class="hljs-string">&quot;-&quot;</span>) <span class="hljs-comment"># delete the whitespace at the right</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.lstrip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the left</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;-&quot;</span> + language.strip() + <span class="hljs-string">&quot;-&quot;</span>)  <span class="hljs-comment"># delete the whitespace at the both</span><br></code></pre></td></tr></table></figure>
+
+<p>Output:</p>
+<figure class="highlight ldif"><table><tr><td class="code"><pre><code class="hljs ldif">Hello Python world!<br>Ada Lovelace<br>ADA LOVELACE<br>ada lovelace<br>ada lovelace<br>	Python<br><span class="hljs-attribute">languages</span>:<br>	Python<br>	C<br>	JavaScript<br><span class="hljs-literal">-</span>  Python  -<br><span class="hljs-literal">-</span>  Python-<br><span class="hljs-literal">-</span>Python  -<br><span class="hljs-literal">-</span>Python-<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-数字"><a href="#4-数字" class="headerlink" title="4.数字"></a>4.数字</h2><h3 id="4-1整数"><a href="#4-1整数" class="headerlink" title="4.1整数"></a>4.1整数</h3><p>在Python中，整数可执行加（+）减（-）乘（*）除（&#x2F;）乘方（**）整除（&#x2F;&#x2F;）取模（%），并支持运算次序，并支持括号改变运算次序。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span><br><span class="hljs-number">5</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> - <span class="hljs-number">3</span><br>-<span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> * <span class="hljs-number">3</span><br><span class="hljs-number">6</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> / <span class="hljs-number">3</span><br><span class="hljs-number">0.6666666666666666</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> // <span class="hljs-number">2</span><br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> % <span class="hljs-number">3</span><br><span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span>**<span class="hljs-number">3</span><br><span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2浮点数"><a href="#4-2浮点数" class="headerlink" title="4.2浮点数"></a>4.2浮点数</h3><p>需要注意的是，运算结果包含的浮点数的小数位数可能是不确定的。后续会学习处理多余小数位的方式。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">0.2</span> + <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> * <span class="hljs-number">0.1</span><br><span class="hljs-number">0.30000000000000004</span><br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（3）列表简介</title>
+    <url>/2022/06/30/Python_3/</url>
+    <content><![CDATA[<p>本章和下一章，将学习列表是什么以及如何使用列表元素。列表让你能够在一个地方存储成组的信息。</p>
+<h2 id="认识列表"><a href="#认识列表" class="headerlink" title="认识列表"></a>认识列表</h2><p>列表由一系列按特定顺序排列的元素组成。鉴于列表通常包含多个元素，给列表指定一个表示复数的名称是个不错的主意。</p>
+<p>Python中，用 [ ] 来表示列表，用逗号分隔其中的元素。示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">bicycles = [<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]<br><span class="hljs-built_in">print</span>(bicycles) <span class="hljs-comment"># [&#x27;trek&#x27;, &#x27;cannondale&#x27;, &#x27;redline&#x27;, &#x27;specialized&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="1-访问列表元素"><a href="#1-访问列表元素" class="headerlink" title="1.访问列表元素"></a>1.访问列表元素</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">bicycles = [<span class="hljs-string">&#x27;trek&#x27;</span>, <span class="hljs-string">&#x27;cannondale&#x27;</span>, <span class="hljs-string">&#x27;redline&#x27;</span>, <span class="hljs-string">&#x27;specialized&#x27;</span>]<br><span class="hljs-comment"># access list element 访问第n个元素（从0开始）</span><br><span class="hljs-built_in">print</span>(bicycles[<span class="hljs-number">0</span>]) <span class="hljs-comment"># trek</span><br><span class="hljs-comment"># access the n element from bottom of the list 访问倒数第n个元素（从-1开始）</span><br><span class="hljs-built_in">print</span>(bicycles[-<span class="hljs-number">1</span>]) <span class="hljs-comment"># specialized</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-修改、添加和删除元素"><a href="#2-修改、添加和删除元素" class="headerlink" title="2.修改、添加和删除元素"></a>2.修改、添加和删除元素</h3><p>修改元素：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">motorcycles = [<span class="hljs-string">&#x27;honda&#x27;</span>, <span class="hljs-string">&#x27;yamaha&#x27;</span>, <span class="hljs-string">&#x27;suzuki&#x27;</span>]<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;honda&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-comment"># change element 修改元素</span><br>motorcycles[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;ducati&#x27;</span><br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br></code></pre></td></tr></table></figure>
+<p>添加元素：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># add element at the end 在末尾添加元素</span><br>motorcycles.append(<span class="hljs-string">&#x27;honda&#x27;</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br><span class="hljs-comment"># insert element 在指定位置添加元素</span><br>motorcycles.insert(<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;ducatipro&#x27;</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducatipro&#x27;, &#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br></code></pre></td></tr></table></figure>
+<p>删除元素：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># delete element 删除指定位置元素</span><br><span class="hljs-keyword">del</span> motorcycles[<span class="hljs-number">0</span>]<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;, &#x27;honda&#x27;]</span><br><span class="hljs-comment"># pop element 获取指定位置元素并在列表中删除（默认删除表尾元素）</span><br>poped_motorcycle = motorcycles.pop()<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;ducati&#x27;, &#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(poped_motorcycle) <span class="hljs-comment"># honda</span><br>poped_motorcycle = motorcycles.pop(<span class="hljs-number">0</span>)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;yamaha&#x27;, &#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(poped_motorcycle) <span class="hljs-comment"># ducati</span><br><span class="hljs-comment"># delete accroding value 根据值删除元素</span><br><span class="hljs-comment"># notice: remove only delete the first same element 注意：remove只删除第一个相同的元素</span><br>too_expensive = <span class="hljs-string">&#x27;yamaha&#x27;</span><br>motorcycles.remove(too_expensive)<br><span class="hljs-built_in">print</span>(motorcycles) <span class="hljs-comment"># [&#x27;suzuki&#x27;]</span><br><span class="hljs-built_in">print</span>(too_expensive) <span class="hljs-comment"># yamaga</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-组织列表"><a href="#3-组织列表" class="headerlink" title="3.组织列表"></a>3.组织列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">cars = [<span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>]<br><span class="hljs-comment"># forever sort list 永久排序</span><br>cars.sort()<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># reverse sort list 逆序排序</span><br>cars.sort(reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br><span class="hljs-comment"># temporary sort list(reverse same) 临时排序（逆序同样适用）</span><br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;toyota&#x27;, &#x27;subaru&#x27;, &#x27;bmw&#x27;, &#x27;audi&#x27;]</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">sorted</span>(cars)) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># reverse list 列表反转</span><br>cars.reverse()<br><span class="hljs-built_in">print</span>(cars) <span class="hljs-comment"># [&#x27;audi&#x27;, &#x27;bmw&#x27;, &#x27;subaru&#x27;, &#x27;toyota&#x27;]</span><br><span class="hljs-comment"># get list&#x27;s length</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(cars)) <span class="hljs-comment"># 4</span><br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（4）操作列表</title>
+    <url>/2022/07/01/Python_4/</url>
+    <content><![CDATA[<p>在本章中，你将学习如何遍历整个列表、使用列表的一部分、元组。</p>
+<h1 id="操作列表"><a href="#操作列表" class="headerlink" title="操作列表"></a>操作列表</h1><h2 id="1-遍历整个列表"><a href="#1-遍历整个列表" class="headerlink" title="1.遍历整个列表"></a>1.遍历整个列表</h2><p>遍历列表元素时，选择描述单个列表元素的有意义的名称会是一个不错的选择。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">magicians = [<span class="hljs-string">&#x27;alice&#x27;</span>, <span class="hljs-string">&#x27;david&#x27;</span>, <span class="hljs-string">&#x27;carolina&#x27;</span>]<br><span class="hljs-keyword">for</span> magician <span class="hljs-keyword">in</span> magicians:<br>    <span class="hljs-built_in">print</span>(magician)<br><span class="hljs-comment"># output:</span><br>alice<br>david<br>carolina<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-创建数值列表"><a href="#2-创建数值列表" class="headerlink" title="2.创建数值列表"></a>2.创建数值列表</h2><h3 id="2-1使用函数range"><a href="#2-1使用函数range" class="headerlink" title="2.1使用函数range()"></a>2.1使用函数range()</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># range() 左闭右开</span><br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">5</span>):<br>    <span class="hljs-built_in">print</span>(value)<br><span class="hljs-comment"># output</span><br><span class="hljs-number">1</span><br><span class="hljs-number">2</span><br><span class="hljs-number">3</span><br><span class="hljs-number">4</span><br><span class="hljs-comment"># range() and list 利用range构建列表</span><br>numbers = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">6</span>))<br><span class="hljs-built_in">print</span>(numbers) <span class="hljs-comment"># [1, 2, 3, 4, 5]</span><br><span class="hljs-comment"># set pace 设置range步长</span><br>even_numbers = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>,<span class="hljs-number">11</span>,<span class="hljs-number">2</span>))<br><span class="hljs-built_in">print</span>(even_numbers) <span class="hljs-comment"># [2, 4, 6, 8, 10]</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-2对数字列表进行简单的统计计算"><a href="#2-2对数字列表进行简单的统计计算" class="headerlink" title="2.2对数字列表进行简单的统计计算"></a>2.2对数字列表进行简单的统计计算</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>digits = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">min</span>(digits) <span class="hljs-comment"># 返回最小值</span><br><span class="hljs-number">0</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">max</span>(digits) <span class="hljs-comment"># 返回最大值</span><br><span class="hljs-number">9</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">sum</span>(digits) <span class="hljs-comment"># 返回元素和</span><br><span class="hljs-number">45</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-3列表解析"><a href="#2-3列表解析" class="headerlink" title="2.3列表解析"></a>2.3列表解析</h3><p>列表解析将for循环和创建新元素的代码合并成一行，并自动附加新元素。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># list comprehension 列表解析</span><br>squares = [value**<span class="hljs-number">2</span> <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>,<span class="hljs-number">11</span>)]<br><span class="hljs-built_in">print</span>(squares) <span class="hljs-comment"># [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="3-使用列表的一部分"><a href="#3-使用列表的一部分" class="headerlink" title="3.使用列表的一部分"></a>3.使用列表的一部分</h2><h3 id="3-1切片"><a href="#3-1切片" class="headerlink" title="3.1切片"></a>3.1切片</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># slice list 左闭又开，省略左从头开始，省略右末尾结束</span><br>players = [<span class="hljs-string">&#x27;charles&#x27;</span>, <span class="hljs-string">&#x27;martina&#x27;</span>, <span class="hljs-string">&#x27;michael&#x27;</span>, <span class="hljs-string">&#x27;florence&#x27;</span>, <span class="hljs-string">&#x27;eli&#x27;</span>]<br><span class="hljs-built_in">print</span>(players[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>]) <span class="hljs-comment"># [&#x27;martina&#x27;, &#x27;michael&#x27;]</span><br><span class="hljs-built_in">print</span>(players[:<span class="hljs-number">4</span>]) <span class="hljs-comment"># [&#x27;charles&#x27;, &#x27;martina&#x27;, &#x27;michael&#x27;, &#x27;florence&#x27;]</span><br><span class="hljs-built_in">print</span>(players[<span class="hljs-number">2</span>:]) <span class="hljs-comment"># [&#x27;michael&#x27;, &#x27;florence&#x27;, &#x27;eli&#x27;]</span><br><span class="hljs-built_in">print</span>(players[-<span class="hljs-number">3</span>:]) <span class="hljs-comment"># [&#x27;michael&#x27;, &#x27;florence&#x27;, &#x27;eli&#x27;]</span><br><span class="hljs-comment"># 遍历切片</span><br><span class="hljs-keyword">for</span> player <span class="hljs-keyword">in</span> players[:<span class="hljs-number">3</span>]:<br>    <span class="hljs-built_in">print</span>(player.upper())<br><span class="hljs-comment"># output</span><br>CHARLES<br>MARTINA<br>MICHAEL<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-2复制"><a href="#3-2复制" class="headerlink" title="3.2复制"></a>3.2复制</h3><p>正确的复制：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># copy list</span><br>my_foods = [<span class="hljs-string">&#x27;pizza&#x27;</span>, <span class="hljs-string">&#x27;falafel&#x27;</span>, <span class="hljs-string">&#x27;carrot cake&#x27;</span>]<br>friend_foods = my_foods[:]<br>my_foods.append(<span class="hljs-string">&#x27;cannoli&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;my_foods: &quot;</span>, my_foods)<br><span class="hljs-comment"># my_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;, &#x27;cannoli&#x27;]</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;friend_foods: &quot;</span>, friend_foods)<br><span class="hljs-comment"># friend_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<p>错误的复制（并没有复制列表，而是引用了同一个列表）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># not copy list</span><br>my_foods = [<span class="hljs-string">&#x27;pizza&#x27;</span>, <span class="hljs-string">&#x27;falafel&#x27;</span>, <span class="hljs-string">&#x27;carrot cake&#x27;</span>]<br>friend_foods = my_foods<br>my_foods.append(<span class="hljs-string">&#x27;cannoli&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;my_foods: &quot;</span>, my_foods)<br><span class="hljs-comment"># my_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;, &#x27;cannoli&#x27;]</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;friend_foods: &quot;</span>, friend_foods)<br><span class="hljs-comment"># friend_foods:  [&#x27;pizza&#x27;, &#x27;falafel&#x27;, &#x27;carrot cake&#x27;, &#x27;cannoli&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<p>可以看到直接赋值，即使只是修改my_foods，friend_foods仍会跟my_foods保持一致。</p>
+<h2 id="4-元组"><a href="#4-元组" class="headerlink" title="4.元组"></a>4.元组</h2><p>列表非常适合用于存储在程序运行期间可能变化的数据集。但有时候需要存储不能改变的元素，元组可以满足这种需求，不可变的列表称为元组。</p>
+<ul>
+<li>除了不支持修改，其他与列表相同</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># tuple 元组</span><br>dimensions = (<span class="hljs-number">200</span>, <span class="hljs-number">50</span>)<br><span class="hljs-built_in">print</span>(dimensions[<span class="hljs-number">0</span>]) <span class="hljs-comment"># 200</span><br><span class="hljs-built_in">print</span>(dimensions[<span class="hljs-number">1</span>]) <span class="hljs-comment"># 50</span><br><span class="hljs-comment"># dimensions[0] = 10 报错，元组不可变</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Original &quot;</span>, dimensions) <span class="hljs-comment"># Original  (200, 50)</span><br><span class="hljs-comment"># 可赋值</span><br>dimensions = (<span class="hljs-number">400</span>, <span class="hljs-number">100</span>, <span class="hljs-number">50</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Modified &quot;</span>, dimensions) <span class="hljs-comment"># Modified  (400, 100, 50)</span><br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（6）字典</title>
+    <url>/2022/07/01/Python_6/</url>
+    <content><![CDATA[<p>本章中，你将学习如何访问和修改字典的信息。并且演示如何遍历字典中的数据。另外，还将学习存储字典的列表、存储列表的字典和存储字典的字典。</p>
+<h2 id="1-一个简单的字典"><a href="#1-一个简单的字典" class="headerlink" title="1.一个简单的字典"></a>1.一个简单的字典</h2><p>在Python中，字典是一系列键值对。每个键都与一个值相关联，你可以使用键来访问与之相关联的值。事实上，可将任何Python对象用作字典中中的值。</p>
+<p>字典用放在花括号 { } 中的一系列键值表示。</p>
+<p>我们来设置一些外星人，设置一个简单的字典，存储特定外星人的信息：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0[<span class="hljs-string">&#x27;color&#x27;</span>]) <span class="hljs-comment"># green</span><br><span class="hljs-built_in">print</span>(alien_0[<span class="hljs-string">&#x27;points&#x27;</span>]) <span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="2-使用字典"><a href="#2-使用字典" class="headerlink" title="2.使用字典"></a>2.使用字典</h2><h3 id="2-1添加键值对："><a href="#2-1添加键值对：" class="headerlink" title="2.1添加键值对："></a>2.1添加键值对：</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># add key-calue </span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;</span><br>alien_0[<span class="hljs-string">&#x27;x_position&#x27;</span>] = <span class="hljs-number">0</span><br>alien_0[<span class="hljs-string">&#x27;y_position&#x27;</span>] = <span class="hljs-number">25</span><br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5, &#x27;x_position&#x27;: 0, &#x27;y_position&#x27;: 25&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-2修改字典中的值"><a href="#2-2修改字典中的值" class="headerlink" title="2.2修改字典中的值"></a>2.2修改字典中的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># change value</span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;</span><br>alien_0[<span class="hljs-string">&#x27;color&#x27;</span>] = <span class="hljs-string">&#x27;yellow&#x27;</span><br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;yellow&#x27;, &#x27;points&#x27;: 5&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-3删除键值对："><a href="#2-3删除键值对：" class="headerlink" title="2.3删除键值对："></a>2.3删除键值对：</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># delete key-value</span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;points&#x27;</span>: <span class="hljs-number">5</span>&#125;<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;, &#x27;points&#x27;: 5&#125;</span><br><span class="hljs-keyword">del</span> alien_0[<span class="hljs-string">&#x27;points&#x27;</span>]<br><span class="hljs-built_in">print</span>(alien_0) <span class="hljs-comment"># &#123;&#x27;color&#x27;: &#x27;green&#x27;&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="3-遍历字典"><a href="#3-遍历字典" class="headerlink" title="3.遍历字典"></a>3.遍历字典</h2><h3 id="3-1遍历所有键值对"><a href="#3-1遍历所有键值对" class="headerlink" title="3.1遍历所有键值对"></a>3.1遍历所有键值对</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># for</span><br>user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> user_0.items():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;key: &quot;</span> + key + <span class="hljs-string">&quot; | value: &quot;</span> + value)<br><span class="hljs-comment">#output:</span><br>key: username | value: efermi<br>key: first | value: enrico<br>key: last | value: fermi<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-2遍历所有键"><a href="#3-2遍历所有键" class="headerlink" title="3.2遍历所有键"></a>3.2遍历所有键</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> user_0.keys():<br>    <span class="hljs-built_in">print</span>(key.title())<br><span class="hljs-comment">#output:</span><br>Username<br>First<br>Last<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-3按顺序遍历所有键"><a href="#3-3按顺序遍历所有键" class="headerlink" title="3.3按顺序遍历所有键"></a>3.3按顺序遍历所有键</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(user_0.keys()):<br>    <span class="hljs-built_in">print</span>(key.title())<br><span class="hljs-comment">#output:</span><br>First<br>Last<br>Username<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-4遍历所有值"><a href="#3-4遍历所有值" class="headerlink" title="3.4遍历所有值"></a>3.4遍历所有值</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">user_0 = &#123;<br>    <span class="hljs-string">&#x27;username&#x27;</span>: <span class="hljs-string">&#x27;efermi&#x27;</span>,<br>    <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;enrico&#x27;</span>,<br>    <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;fermi&#x27;</span><br>&#125;<br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> user_0.values():<br>    <span class="hljs-built_in">print</span>(value.title())<br><span class="hljs-comment">#output:</span><br>Efermi<br>Enrico<br>Fermi<br><span class="hljs-comment">#use set drop same value 删除重复元素</span><br>user_0[<span class="hljs-string">&#x27;middle&#x27;</span>] = <span class="hljs-string">&#x27;fermi&#x27;</span><br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> <span class="hljs-built_in">set</span>(user_0.values()):<br>    <span class="hljs-built_in">print</span>(value.title())<br><span class="hljs-comment">#output:</span><br>Efermi<br>Enrico<br>Fermi<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-嵌套"><a href="#4-嵌套" class="headerlink" title="4.嵌套"></a>4.嵌套</h2><h3 id="4-1字典列表"><a href="#4-1字典列表" class="headerlink" title="4.1字典列表"></a>4.1字典列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># dictionary list</span><br>alien_0 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">5</span>&#125;<br>alien_1 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;yellow&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">10</span>&#125;<br>alien_2 = &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">15</span>&#125;<br><br>aliens = [alien_0, alien_1, alien_2]<br><span class="hljs-built_in">print</span>(aliens)<br><span class="hljs-comment">#output:</span><br>[&#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">5</span>&#125;, &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;yellow&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">10</span>&#125;, &#123;<span class="hljs-string">&#x27;color&#x27;</span>: <span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;point&#x27;</span>: <span class="hljs-number">15</span>&#125;]<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2在字典中存储列表"><a href="#4-2在字典中存储列表" class="headerlink" title="4.2在字典中存储列表"></a>4.2在字典中存储列表</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># list in dictionary</span><br>pizza = &#123;<br>    <span class="hljs-string">&#x27;crust&#x27;</span>: <span class="hljs-string">&#x27;thick&#x27;</span>,<br>    <span class="hljs-string">&#x27;toppings&#x27;</span>: [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br>&#125;<br><span class="hljs-built_in">print</span>(pizza)<br><span class="hljs-comment">#output:</span><br>&#123;<span class="hljs-string">&#x27;crust&#x27;</span>: <span class="hljs-string">&#x27;thick&#x27;</span>, <span class="hljs-string">&#x27;toppings&#x27;</span>: [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-3在字典中存储字典"><a href="#4-3在字典中存储字典" class="headerlink" title="4.3在字典中存储字典"></a>4.3在字典中存储字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># dictionary in dictionary</span><br>users = &#123;<br>    <span class="hljs-string">&#x27;aeinstein&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;albert&#x27;</span>,<br>        <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;einstein&#x27;</span>,<br>        <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;princeton&#x27;</span><br>    &#125;,<br>    <span class="hljs-string">&#x27;mcurie&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;marie&#x27;</span>,<br>        <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;curie&#x27;</span>,<br>        <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;paris&#x27;</span><br>    &#125;<br>&#125;<br><span class="hljs-keyword">for</span> username, user_info <span class="hljs-keyword">in</span> users.items():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;username: &quot;</span> + username)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tfullname: &quot;</span> + user_info[<span class="hljs-string">&#x27;first&#x27;</span>] + <span class="hljs-string">&quot; &quot;</span> + user_info[<span class="hljs-string">&#x27;last&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\tlocation: &quot;</span> + user_info[<span class="hljs-string">&#x27;location&#x27;</span>])<br><span class="hljs-comment">#output:</span><br>username: aeinstein<br>	fullname: albert einstein<br>	location: princeton<br>username: mcurie<br>	fullname: marie curie<br>	location: paris<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（5）if 语句</title>
+    <url>/2022/07/01/Python_5/</url>
+    <content><![CDATA[<p>本章中，你将学习条件测试，学习简单的if语句，以及创建一系列复杂的if语句来确定当前到底处于什么情形。接下来将if应用于列表，以编写for循环。</p>
+<h1 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h1><p>一个简单实例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">cars = [<span class="hljs-string">&#x27;audi&#x27;</span>, <span class="hljs-string">&#x27;bmw&#x27;</span>, <span class="hljs-string">&#x27;subaru&#x27;</span>, <span class="hljs-string">&#x27;toyota&#x27;</span>]<br><span class="hljs-keyword">for</span> car <span class="hljs-keyword">in</span> cars:<br>    <span class="hljs-keyword">if</span> car == <span class="hljs-string">&#x27;bmw&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(car.upper())<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(car.title())<br><span class="hljs-comment">#output</span><br>Audi<br>BMW<br>Subaru<br>Toyota<br></code></pre></td></tr></table></figure>
+
+<h2 id="1-条件测试"><a href="#1-条件测试" class="headerlink" title="1.条件测试"></a>1.条件测试</h2><ul>
+<li>等于（&#x3D;&#x3D;），大于（&gt;），小于（&lt;）， 小于等于（&lt;&#x3D;），大于等于（&gt;&#x3D;）</li>
+<li>and、or</li>
+<li>检查特定值是否包含在列表中（in）、是否不包含在列表中（not in）</li>
+<li>bool表达式（True、False）</li>
+</ul>
+<h2 id="2-使用if语句处理列表"><a href="#2-使用if语句处理列表" class="headerlink" title="2.使用if语句处理列表"></a>2.使用if语句处理列表</h2><p>以披萨店制作披萨为例，每添加一种配料都打印一条消息：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># usr if check list</span><br>requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output</span><br>Adding mushrooms.<br>Adding green peppers.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
+
+<p>青椒用光了：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-keyword">if</span> requested_topping == <span class="hljs-string">&#x27;green peppers&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Sorry, we are out of green peppers right now.&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output</span><br>Adding mushrooms.<br>Sorry, we are out of green peppers right now.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
+
+<p>判断顾客点的配料列表是否为空：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = []<br><span class="hljs-keyword">if</span> requested_toppings:<br>    <span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Are you sure you want a plain pizza?&quot;</span>)<br><span class="hljs-comment">#output:</span><br>Are you sure you want a plain pizza?<br></code></pre></td></tr></table></figure>
+
+<p>顾客的要求往往五花八门，下面定义两个列表。第一个包含披萨店供应的配料，第二个包含顾客点的配料。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">requested_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;french fires&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br>available_toppings = [<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;olives&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>,<br>                      <span class="hljs-string">&#x27;pepperoni&#x27;</span>, <span class="hljs-string">&#x27;pineapple&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>]<br><span class="hljs-keyword">for</span> requested_topping <span class="hljs-keyword">in</span> requested_toppings:<br>    <span class="hljs-keyword">if</span> requested_topping <span class="hljs-keyword">in</span> available_toppings:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Adding &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Sorry, we donot have &quot;</span> + requested_topping + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nFinished making your pizza!&quot;</span>)<br><span class="hljs-comment">#output:</span><br>Adding mushrooms.<br>Sorry, we donot have french fires.<br>Adding extra cheese.<br><br>Finished making your pizza!<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（7）用户输入和while循环</title>
+    <url>/2022/07/01/Python_7/</url>
+    <content><![CDATA[<p>在本章中，你将学习如何接收用户输入，让程序能够对其进行处理。你还将学习如何让程序不断地运行，直到指定的条件不满足为止。</p>
+<h2 id="1-函数input"><a href="#1-函数input" class="headerlink" title="1.函数input()"></a>1.函数input()</h2><p>input()让程序暂停运行，等待用户输入一些文本，再将这些文本呈现给用户。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># input 函数</span><br>message = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Tell me something, and I will repeat it back to you: &quot;</span>)<br><span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># output：</span><br><span class="hljs-comment"># Tell me something, and I will repeat it back to you: Hello!</span><br><span class="hljs-comment"># Hello!</span><br></code></pre></td></tr></table></figure>
+<p>函数input()接受一个参数：即要向用户显示的提示或说明，让用户知道该怎么做。</p>
+<h2 id="2-while循环"><a href="#2-while循环" class="headerlink" title="2.while循环"></a>2.while循环</h2><h3 id="2-1使用while循环"><a href="#2-1使用while循环" class="headerlink" title="2.1使用while循环"></a>2.1使用while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># while</span><br>current_number = <span class="hljs-number">1</span><br><span class="hljs-keyword">while</span> current_number &lt;= <span class="hljs-number">5</span>:<br>    <span class="hljs-built_in">print</span>(current_number)<br>    current_number += <span class="hljs-number">1</span><br><span class="hljs-comment"># output:</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 5</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-2让用户选择何时退出"><a href="#2-2让用户选择何时退出" class="headerlink" title="2.2让用户选择何时退出"></a>2.2让用户选择何时退出</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># select when to exit</span><br>prompt = <span class="hljs-string">&quot;Tell me something, and I will repeat it back to you:&quot;</span><br>prompt += <span class="hljs-string">&quot;\nEnter &#x27;quit&#x27; to end the program. input:&quot;</span><br>message = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-keyword">while</span> message != <span class="hljs-string">&#x27;quit&#x27;</span>:<br>    message = <span class="hljs-built_in">input</span>(prompt)<br>    <span class="hljs-keyword">if</span> message != <span class="hljs-string">&#x27;quit&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(message)<br><span class="hljs-comment"># output</span><br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:Hello<br>Hello<br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:Hello again<br>Hello again<br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:quit<br></code></pre></td></tr></table></figure>
+<h3 id="2-3使用break退出循环"><a href="#2-3使用break退出循环" class="headerlink" title="2.3使用break退出循环"></a>2.3使用break退出循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">prompt = <span class="hljs-string">&quot;Tell me something, and I will repeat it back to you:&quot;</span><br>prompt += <span class="hljs-string">&quot;\nEnter &#x27;quit&#x27; to end the program. input:&quot;</span><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    city = <span class="hljs-built_in">input</span>(prompt)<br>    <span class="hljs-keyword">if</span> city == <span class="hljs-string">&#x27;quit&#x27;</span>:<br>        <span class="hljs-keyword">break</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(city.title())<br><span class="hljs-comment">#output</span><br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:Hello<br>Hello<br>Tell me something, <span class="hljs-keyword">and</span> I will repeat it back to you:<br>Enter <span class="hljs-string">&#x27;quit&#x27;</span> to end the program. <span class="hljs-built_in">input</span>:quit<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-4在循环中使用continue"><a href="#2-4在循环中使用continue" class="headerlink" title="2.4在循环中使用continue"></a>2.4在循环中使用continue</h3><p>continue，跳过后面的语句直接执行下一次循环。</p>
+<h2 id="3-使用while处理字典列表"><a href="#3-使用while处理字典列表" class="headerlink" title="3.使用while处理字典列表"></a>3.使用while处理字典列表</h2><h3 id="3-1在列表之间移动元素"><a href="#3-1在列表之间移动元素" class="headerlink" title="3.1在列表之间移动元素"></a>3.1在列表之间移动元素</h3><p>使用while循环在验证用户的同时将其从未验证用户列表中提取出来，再加入到另一个已验证的用户列表中。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># use while</span><br>unconfirmed_users = [<span class="hljs-string">&#x27;alice&#x27;</span>, <span class="hljs-string">&#x27;brian&#x27;</span>, <span class="hljs-string">&#x27;candace&#x27;</span>]<br>confirmed_users = []<br><br><span class="hljs-keyword">while</span> unconfirmed_users:<br>    current_user = unconfirmed_users.pop()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Verifying user: &quot;</span> + current_user.title())<br>    confirmed_users.append(current_user)<br><span class="hljs-comment">#output:</span><br>Verifying user: Candace<br>Verifying user: Brian<br>Verifying user: Alice<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-2删除包含特定值的所有列表元素"><a href="#3-2删除包含特定值的所有列表元素" class="headerlink" title="3.2删除包含特定值的所有列表元素"></a>3.2删除包含特定值的所有列表元素</h3><p>使用while删除列表中所有 ‘cat’ 元素。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">pets = [<span class="hljs-string">&#x27;dog&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>, <span class="hljs-string">&#x27;dog&#x27;</span>, <span class="hljs-string">&#x27;goldfish&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>, <span class="hljs-string">&#x27;rabbit&#x27;</span>, <span class="hljs-string">&#x27;cat&#x27;</span>]<br><span class="hljs-built_in">print</span>(pets) <span class="hljs-comment"># [&#x27;dog&#x27;, &#x27;cat&#x27;, &#x27;dog&#x27;, &#x27;goldfish&#x27;, &#x27;cat&#x27;, &#x27;rabbit&#x27;, &#x27;cat&#x27;]</span><br><span class="hljs-keyword">while</span> <span class="hljs-string">&#x27;cat&#x27;</span> <span class="hljs-keyword">in</span> pets:<br>    pets.remove(<span class="hljs-string">&#x27;cat&#x27;</span>)<br><span class="hljs-built_in">print</span>(pets) <span class="hljs-comment"># [&#x27;dog&#x27;, &#x27;dog&#x27;, &#x27;goldfish&#x27;, &#x27;rabbit&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（8）函数</title>
+    <url>/2022/07/03/Python_8/</url>
+    <content><![CDATA[<p>在本章中，你将学习编写函数。函数是带名字的代码块，用于完成具体的工作。你还会学习向函数传递信息的方式，学习如何将函数存储在被称为模块的独立文件中，让主程序文件的组织更为有序。</p>
+<h2 id="1-定义函数"><a href="#1-定义函数" class="headerlink" title="1.定义函数"></a>1.定义函数</h2><p>简单的示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>():<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user()<br><span class="hljs-comment"># output:</span><br>Hello!<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-向函数传递信息"><a href="#2-向函数传递信息" class="headerlink" title="2.向函数传递信息"></a>2.向函数传递信息</h2><p>位置实参：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>(<span class="hljs-params">username</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + username.title() + <span class="hljs-string">&quot;!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user(<span class="hljs-string">&#x27;hesse&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>Hello, Hesse!<br></code></pre></td></tr></table></figure>
+
+<p>关键字实参：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>(<span class="hljs-params">username</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + username.title() + <span class="hljs-string">&quot;!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user(username=<span class="hljs-string">&#x27;hesse&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>Hello, Hesse!<br></code></pre></td></tr></table></figure>
+
+<p>参数默认值：（若无默认值，则必须进行参数传递）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet_user</span>(<span class="hljs-params">username=<span class="hljs-string">&#x27;tom&#x27;</span></span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;say hello&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + username.title() + <span class="hljs-string">&quot;!&quot;</span>)<br><span class="hljs-comment"># use function</span><br>greet_user(username=<span class="hljs-string">&#x27;hesse&#x27;</span>)<br>greet_user()<br><span class="hljs-comment"># output:</span><br>Hello, Hesse!<br>Hello, Tom!<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-函数返回值"><a href="#3-函数返回值" class="headerlink" title="3.函数返回值"></a>3.函数返回值</h2><h3 id="3-1返回简单值"><a href="#3-1返回简单值" class="headerlink" title="3.1返回简单值"></a>3.1返回简单值</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_full_name</span>(<span class="hljs-params">first_name, last_name</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;return full name&#x27;&#x27;&#x27;</span><br>    full_name = first_name + <span class="hljs-string">&#x27; &#x27;</span> + last_name<br>    <span class="hljs-keyword">return</span> full_name.title()<br><span class="hljs-comment"># use function</span><br>musician = get_full_name(<span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;hendrix&#x27;</span>)<br><span class="hljs-built_in">print</span>(musician)<br><span class="hljs-comment"># output:</span><br>Jimi Hendrix<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-2返回字典"><a href="#3-2返回字典" class="headerlink" title="3.2返回字典"></a>3.2返回字典</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_person</span>(<span class="hljs-params">first_name, last_name</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;return a person dictionary&#x27;&#x27;&#x27;</span><br>    person = &#123;<span class="hljs-string">&#x27;first&#x27;</span>: first_name, <span class="hljs-string">&#x27;last&#x27;</span>: last_name&#125;<br>    <span class="hljs-keyword">return</span> person<br><span class="hljs-comment"># use function</span><br>musician = build_person(<span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;hendrix&#x27;</span>)<br><span class="hljs-built_in">print</span>(musician)<br><span class="hljs-comment"># output:</span><br>&#123;<span class="hljs-string">&#x27;first&#x27;</span>: <span class="hljs-string">&#x27;jimi&#x27;</span>, <span class="hljs-string">&#x27;last&#x27;</span>: <span class="hljs-string">&#x27;hendrix&#x27;</span>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-传递列表"><a href="#4-传递列表" class="headerlink" title="4.传递列表"></a>4.传递列表</h2><p>你经常会发现，向函数传递列表很有用。</p>
+<h3 id="4-1简单使用"><a href="#4-1简单使用" class="headerlink" title="4.1简单使用"></a>4.1简单使用</h3><p>将列表传递给函数后，函数就能直接访问其内容。假设有一个用户列表，我们要问候其中的每位用户。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">greer_users</span>(<span class="hljs-params">names</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;greet to everyone in names&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names:<br>        msg = <span class="hljs-string">&quot;Hello, &quot;</span> + name.title() + <span class="hljs-string">&quot;!&quot;</span><br>        <span class="hljs-built_in">print</span>(msg)<br><span class="hljs-comment"># use function</span><br>usernames = [<span class="hljs-string">&#x27;hannah&#x27;</span>, <span class="hljs-string">&#x27;ty&#x27;</span>, <span class="hljs-string">&#x27;margot&#x27;</span>]<br>greer_users(usernames)<br><span class="hljs-comment"># output:</span><br>Hello, Hannah!<br>Hello, Ty!<br>Hello, Margot!<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2在函数中修改列表"><a href="#4-2在函数中修改列表" class="headerlink" title="4.2在函数中修改列表"></a>4.2在函数中修改列表</h3><p>将列表传递给函数后，函数就可对其进行修改。在函数中对这个列表所做的任何修改都是永久性的，这让你能够高效的处理大量的数据。（形参命名只是引用，即使实参与形参的名称不同，但都是在同一个列表上操作）</p>
+<p>当不想要函数操作后修改列表时，只需利用 list[ : ] 复制一份列表传递给函数即可。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># change list in function 在函数中修改列表</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">print_models</span>(<span class="hljs-params">un_designs, com_models</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    print every design in un_designs</span><br><span class="hljs-string">    then put it in com_models</span><br><span class="hljs-string">    打印所有未打印列表的设计，并将他们放到已完成列表</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">while</span> unprinted_designs:<br>        current_design = un_designs.pop()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Printing model: &quot;</span> + current_design)<br>        com_models.append(current_design)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">show_completed_models</span>(<span class="hljs-params">com_models</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;show completed_models 显示已完成列表&#x27;&#x27;&#x27;</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nThe following models have been printed:&quot;</span>)<br>    <span class="hljs-keyword">for</span> completed_model <span class="hljs-keyword">in</span> completed_models:<br>        <span class="hljs-built_in">print</span>(completed_model)<br><span class="hljs-comment"># define list</span><br>unprinted_designs = [<span class="hljs-string">&#x27;iphone case&#x27;</span>, <span class="hljs-string">&#x27;robot pendant&#x27;</span>, <span class="hljs-string">&#x27;dodecahedron&#x27;</span>]<br>completed_models = []<br><span class="hljs-comment"># use function</span><br>print_models(unprinted_designs, completed_models)<br>show_completed_models(completed_models)<br><span class="hljs-comment"># output:</span><br>Printing model: dodecahedron<br>Printing model: robot pendant<br>Printing model: iphone case<br><br>The following models have been printed:<br>dodecahedron<br>robot pendant<br>iphone case<br></code></pre></td></tr></table></figure>
+
+<h2 id="5-传递任意数量的实参"><a href="#5-传递任意数量的实参" class="headerlink" title="5.传递任意数量的实参"></a>5.传递任意数量的实参</h2><p>有时候，你预先不知道函数需要接受多少个实参，好在Python允许函数从调用语句中收集任意数量的实参。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">make_pizza</span>(<span class="hljs-params">*toopings</span>):<br>    <span class="hljs-built_in">print</span>(toopings)<br><span class="hljs-comment"># use function</span><br>make_pizza(<span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>(<span class="hljs-string">&#x27;pepperoni&#x27;</span>,)<br>(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>形参名 *toppings 中的星号让Python创建一个名为toppings的空元组，并将收到的所有值都封装到这个元组中。（注意：Python将实参封装到一个元组中，即使函数只收到一个值也是如此）</p>
+<h3 id="5-1结合使用位置实参和任意数量实参"><a href="#5-1结合使用位置实参和任意数量实参" class="headerlink" title="5.1结合使用位置实参和任意数量实参"></a>5.1结合使用位置实参和任意数量实参</h3><p>如果要让函数接收不同类型的实参，必须在函数定义中将接纳任意数量实参的形参放在最后。Python先匹配位置实参和关键字实参，再将余下的实参收集到最后一个形参中。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">make_pizza</span>(<span class="hljs-params">size, *toopings</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pizza size: &quot;</span>, size)<br>    <span class="hljs-built_in">print</span>(toopings)<br><span class="hljs-comment"># use function</span><br>make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br><span class="hljs-comment"># output:</span><br>pizza size:  <span class="hljs-number">16</span><br>(<span class="hljs-string">&#x27;pepperoni&#x27;</span>,)<br>pizza size:  <span class="hljs-number">12</span><br>(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="5-2使用任意数量的关键字实参"><a href="#5-2使用任意数量的关键字实参" class="headerlink" title="5.2使用任意数量的关键字实参"></a>5.2使用任意数量的关键字实参</h3><p>有时候，需要接受任意数量的实参，但预先不知道传递给函数的会是什么样的信息。在这种情况下，可将函数编写成能够接收任意数量的键值对——调用语句提供多少就接收多少。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># define function</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">build_profile</span>(<span class="hljs-params">first, last, **user_info</span>):<br>    profile = &#123;&#125;<br>    profile[<span class="hljs-string">&#x27;first_name&#x27;</span>] = first<br>    profile[<span class="hljs-string">&#x27;last_name&#x27;</span>] = last<br>    <span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> user_info.items():<br>        profile[key] = value<br>    <span class="hljs-keyword">return</span> profile<br><span class="hljs-comment"># use function</span><br>user_profile = build_profile(<span class="hljs-string">&#x27;albert&#x27;</span>, <span class="hljs-string">&#x27;einstein&#x27;</span>, location=<span class="hljs-string">&#x27;princeton&#x27;</span>, field=<span class="hljs-string">&#x27;physics&#x27;</span>)<br><span class="hljs-built_in">print</span>(user_profile)<br><span class="hljs-comment"># output:</span><br>&#123;<span class="hljs-string">&#x27;first_name&#x27;</span>: <span class="hljs-string">&#x27;albert&#x27;</span>, <span class="hljs-string">&#x27;last_name&#x27;</span>: <span class="hljs-string">&#x27;einstein&#x27;</span>, <span class="hljs-string">&#x27;location&#x27;</span>: <span class="hljs-string">&#x27;princeton&#x27;</span>, <span class="hljs-string">&#x27;field&#x27;</span>: <span class="hljs-string">&#x27;physics&#x27;</span>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>形参**user_info中的两个星号让Python创建一个名为user_info的空字典，并将收到的所有键值对（除了用户已经定义的）都封装在这个字典中。</p>
+<h2 id="6-将函数存储在模块中"><a href="#6-将函数存储在模块中" class="headerlink" title="6.将函数存储在模块中"></a>6.将函数存储在模块中</h2><p>通过将函数存储在独立的文件中，可隐藏程序代码的细节，将重点放在程序的高层逻辑上。也可与其他程序员共享这些文件而不是整个程序。知道如何导入函数还能让你使用其他程序员编写的函数库。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># pizza.py</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">make_pizza</span>(<span class="hljs-params">size, *toopings</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;pizza size: &quot;</span>, size)<br>    <span class="hljs-built_in">print</span>(toopings)<br></code></pre></td></tr></table></figure>
+
+<p>导入整个模块：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># import whole module</span><br><span class="hljs-keyword">import</span> pizza<br>pizza.make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>pizza.make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>导入模块中某个函数：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># import specific function</span><br><span class="hljs-keyword">from</span> pizza <span class="hljs-keyword">import</span> make_pizza<br>make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>给导入的函数命名：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># use other name</span><br><span class="hljs-keyword">from</span> pizza <span class="hljs-keyword">import</span> make_pizza <span class="hljs-keyword">as</span> mp<br>mp(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>mp(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>导入模块中所有函数：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># import all function in module</span><br><span class="hljs-keyword">from</span> pizza <span class="hljs-keyword">import</span> *<br>make_pizza(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;pepperoni&#x27;</span>)<br>make_pizza(<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>上述四种方法输出都是相同的：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># output:</span><br>pizza size:  <span class="hljs-number">16</span><br>(<span class="hljs-string">&#x27;pepperoni&#x27;</span>,)<br>pizza size:  <span class="hljs-number">12</span><br>(<span class="hljs-string">&#x27;mushrooms&#x27;</span>, <span class="hljs-string">&#x27;green peppers&#x27;</span>, <span class="hljs-string">&#x27;extra cheese&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（9）类</title>
+    <url>/2022/07/03/Python_9/</url>
+    <content><![CDATA[<p>面向对象是最有效的软件编写方法之一。在本章中，你将编写一些类并创建其实例。你将指定可在实例中存储什么信息，定义可对这些实例执行哪些操作。你还将编写一些类来扩展既有类的功能，让相似的类能够高效地共享代码。你还将把自己编写的类存储在模块中，并在自己的程序文件中导入其他程序员编写的类。</p>
+<h2 id="1-创建和使用类"><a href="#1-创建和使用类" class="headerlink" title="1.创建和使用类"></a>1.创建和使用类</h2><p>使用类几乎可以模拟任何东西。下面来编写一个表示小狗的简单类Dog。</p>
+<h3 id="1-1创建Dog类"><a href="#1-1创建Dog类" class="headerlink" title="1.1创建Dog类"></a>1.1创建Dog类</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span>():<br>    <span class="hljs-string">&#x27;&#x27;&#x27;dog class dog 类&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, name, age</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;init name, age 初始化name,age&#x27;&#x27;&#x27;</span><br>        self.name = name<br>        self.age = age<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">sit</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;sit when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; is now sitting.&quot;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">roll_over</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&#x27;&#x27;&#x27;roll_over when be ordered 被命令时蹲下&#x27;&#x27;&#x27;</span><br>        <span class="hljs-built_in">print</span>(self.name.title() + <span class="hljs-string">&quot; rolled over!&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>方法_<em>init</em>_()是一个特殊的方法，每当你根据Dog类创建新实例时，Python会自动运行它。<strong>在这个方法的定义中，形参self必不可少，还必须位于其他形参的前面。</strong></p>
+<h3 id="1-2根据类创建实例"><a href="#1-2根据类创建实例" class="headerlink" title="1.2根据类创建实例"></a>1.2根据类创建实例</h3><p>创建实例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">my_dog = Dog(<span class="hljs-string">&#x27;willie&#x27;</span>, <span class="hljs-number">6</span>)<br></code></pre></td></tr></table></figure>
+
+<p>调用属性：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog&#x27;s name is &quot;</span> + my_dog.name.title() + <span class="hljs-string">&quot;.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My dog is &quot;</span> + <span class="hljs-built_in">str</span>(my_dog.age) + <span class="hljs-string">&quot; years old.&quot;</span>)<br><span class="hljs-comment"># output:</span><br>My dog’s name <span class="hljs-keyword">is</span> Willie.<br>My dog <span class="hljs-keyword">is</span> <span class="hljs-number">6</span> years old.<br></code></pre></td></tr></table></figure>
+
+<p>调用方法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">my_dog.sit()<br>my_dog.roll_over()<br><span class="hljs-comment"># output:</span><br>Willie <span class="hljs-keyword">is</span> now sitting.<br>Willie rolled over!<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>House-GAN：用于图约束房屋布局生成的关系生成对抗网络</title>
+    <url>/2022/09/23/paper_1/</url>
+    <content><![CDATA[<p>本文提出了一种新颖的图约束生成对抗网络，其生成器和判别器建立在关系架构之上。主要思想是将约束编码到其关系网络的图结构中。我们已经为新的房屋布局生成问题展示了所提出的架构，其任务是将架构约束作为图（即房间的数量和类型及其空间邻接）并生成一组轴对齐的边界框房间。我们使用三个指标来衡量生成的房屋布局的质量：真实性、多样性和与输入图约束的兼容性。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2>]]></content>
+      <categories>
+        <category>DeepLearning论文</category>
+      </categories>
+      <tags>
         <tag>DeepLearning</tag>
         <tag>papers</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/06/26/helloworld/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;name&quot;</span>       <span class="hljs-comment"># 新建文章</span><br>hexo new page <span class="hljs-string">&quot;name&quot;</span>  <span class="hljs-comment"># 新建页面</span><br>hexo g                <span class="hljs-comment"># 生成页面</span><br>hexo d                <span class="hljs-comment"># 部署</span><br>hexo g -d             <span class="hljs-comment"># 生成页面并部署</span><br>hexo s                <span class="hljs-comment"># 本地预览</span><br>hexo clean            <span class="hljs-comment"># 清除缓存和已生成的静态文件</span><br>hexo <span class="hljs-built_in">help</span>             <span class="hljs-comment"># 帮助</span><br></code></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>Hello-World</tag>
       </tags>
   </entry>
   <entry>
