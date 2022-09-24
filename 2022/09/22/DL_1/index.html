@@ -1,0 +1,597 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>动手学习深度学习（1）课程介绍及环境配置 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="准研究生，学习一些研究生阶段需要的预备知识，打好深度学...">
+  <meta name="author" content="茴香豆">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/支付宝.JPG',
+        wechat: '/images/微信.JPG'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">动手学习深度学习（1）课程介绍及环境配置</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 相册</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/pat/2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">动手学习深度学习（1）课程介绍及环境配置</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 22, 2022</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2022/09/22/DL_1/" class="leancloud-counter" data-flag-title="动手学习深度学习（1）课程介绍及环境配置"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2022/09/22/DL_1/" class="leancloud-like" data-flag-title="动手学习深度学习（1）课程介绍及环境配置"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2556</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>准研究生，学习一些研究生阶段需要的预备知识，打好深度学习基础。</p>
+<h2 id="课程安排"><a href="#课程安排" class="headerlink" title="课程安排"></a>课程安排</h2><p>相关资源：</p>
+<p>课程主页：<a target="_blank" rel="noopener" href="https://courses.d2l.ai/zh-v2">https://courses.d2l.ai/zh-v2</a></p>
+<p>教材：<a target="_blank" rel="noopener" href="https://zh-v2.d2l.ai/">https://zh-v2.d2l.ai/</a></p>
+<p>课程论坛讨论：<a target="_blank" rel="noopener" href="https://discuss.d2l.ai/c/16">https://discuss.d2l.ai/c/16</a></p>
+<p>Pytorch论坛：<a target="_blank" rel="noopener" href="https://discuss.pytorch.org/">https://discuss.pytorch.org/</a></p>
+<h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><p>数据的一些基本操作</p>
+<h3 id="1-访问元素"><a href="#1-访问元素" class="headerlink" title="1. 访问元素"></a>1. 访问元素</h3><p>一个元素 [1, 2]、一行 [1, :]、一列 [:, 1]</p>
+<p>子区域 [1:3, 1:]：访问第1到第2行，第2到最后一列的子区域</p>
+<p>子区域 [::3, ::2]：每三行一跳，每两列一跳的所有元素构成的子区域</p>
+<h3 id="2-张量及其基本操作"><a href="#2-张量及其基本操作" class="headerlink" title="2. 张量及其基本操作"></a>2. 张量及其基本操作</h3><p>张量表示一个数值组成的数组，这个数组可能有多个维度。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">x = torch.arange(<span class="hljs-number">12</span>)<br><span class="hljs-comment">#output</span><br>tensor([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>])<br></code></pre></td></tr></table></figure>
+
+<p><code>x.shape</code>访问张量的形状</p>
+<p><code>x.numel()</code>访问张量中元素的个数</p>
+<p><code>X = x.reshape(3, 4)</code>改变张量的形状而不改变元素数量和值</p>
+<p><code>torch.zeros((2, 3, 4))</code>创建三维全0的2x3x4的张量</p>
+<p><code>torch.ones((2, 3, 4))</code>创建三维全0的2x3x4的张量</p>
+<p><code>torch.tensor([[1, 2, 3, 4], [5, 6, 7, 8]])</code>创建指定张量</p>
+<p><code>X.sum()</code>对张量中所有元素进行求和</p>
+<h4 id="按元素基本运算"><a href="#按元素基本运算" class="headerlink" title="按元素基本运算"></a>按元素基本运算</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#按元素运算</span><br>x = torch.tensor([<span class="hljs-number">1.0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>])<br>y = torch.tensor([<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>])<br>x + y, x - y, x * y, x / y, x**y, torch.exp(x)<br><span class="hljs-comment">#output</span><br>tensor([ <span class="hljs-number">3.</span>, <span class="hljs-number">4.</span>, <span class="hljs-number">6.</span>, <span class="hljs-number">10.</span>])<br>tensor([-<span class="hljs-number">1.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">2.</span>, <span class="hljs-number">6.</span>])<br>tensor([ <span class="hljs-number">2.</span>, <span class="hljs-number">4.</span>, <span class="hljs-number">8.</span>, <span class="hljs-number">16.</span>])<br>tensor([ <span class="hljs-number">0.5000</span>, <span class="hljs-number">1.0000</span>, <span class="hljs-number">2.0000</span>, <span class="hljs-number">4.0000</span>])<br>tensor([ <span class="hljs-number">1.</span>, <span class="hljs-number">4.</span>, <span class="hljs-number">16.</span>, <span class="hljs-number">65.</span>])<br></code></pre></td></tr></table></figure>
+
+<h4 id="多个张量连结"><a href="#多个张量连结" class="headerlink" title="多个张量连结"></a>多个张量连结</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">X = torch.arange(<span class="hljs-number">12</span>, dtype=torch,float32).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">4</span>))<br>Y = torch.tensor([[<span class="hljs-number">2.0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]])<br>torch.cat((X, Y), dim=<span class="hljs-number">0</span>)<span class="hljs-comment">#按行连接</span><br>torch.cat((X, Y), dim=<span class="hljs-number">1</span>)<span class="hljs-comment">#按列连接</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="通过逻辑运算符构建二元张量"><a href="#通过逻辑运算符构建二元张量" class="headerlink" title="通过逻辑运算符构建二元张量"></a>通过逻辑运算符构建二元张量</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">X == Y<br><span class="hljs-comment">#output</span><br>tensor([[<span class="hljs-literal">False</span>,  <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>,  <span class="hljs-literal">True</span>],<br>		[<span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>],<br>		[<span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>]])<br></code></pre></td></tr></table></figure>
+
+<h4 id="广播机制"><a href="#广播机制" class="headerlink" title="广播机制"></a>广播机制</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">a = torch.arange(<span class="hljs-number">3</span>).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">1</span>))<br>b = torch.arange(<span class="hljs-number">2</span>).rashape((<span class="hljs-number">1</span>, <span class="hljs-number">2</span>))<br>a + b<br><span class="hljs-comment">#output</span><br>tensor([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>],<br>		[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>],<br>		[<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]])<br></code></pre></td></tr></table></figure>
+
+<h4 id="运行一些操作可能导致为新结果分配内存"><a href="#运行一些操作可能导致为新结果分配内存" class="headerlink" title="运行一些操作可能导致为新结果分配内存"></a>运行一些操作可能导致为新结果分配内存</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">before = <span class="hljs-built_in">id</span>(Y)<br>Y = Y + X<br><span class="hljs-built_in">id</span>(Y) == before<br><span class="hljs-comment">#output</span><br><span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+
+<p>执行原地操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">Z = torch.zeros_like(Y)<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(Z))<br>Z[:] = X + Y<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(Z))<br><span class="hljs-comment">#output</span><br><span class="hljs-number">140146615319872</span><br><span class="hljs-number">140146615319872</span><br></code></pre></td></tr></table></figure>
+
+<p>如果在后续计算中没有重复使用X， 我们也可以使用 <code>X[:] = X + Y</code>或 <code>X += Y</code>来减少操作的内存开销。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#仅适用于张量，若X，Y为数字则结果为False</span><br>before = <span class="hljs-built_in">id</span>(X)<br>X += Y<br><span class="hljs-built_in">id</span>(X) == before<br><span class="hljs-comment">#output</span><br><span class="hljs-literal">True</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="简单的数据预处理"><a href="#简单的数据预处理" class="headerlink" title="简单的数据预处理"></a>简单的数据预处理</h2><p>创建一个人工数据集，并存储在csv（逗号分隔值）文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-comment"># 创建一个csv文件</span><br>os.makedirs(os.path.join(<span class="hljs-string">&#x27;..&#x27;</span>, <span class="hljs-string">&#x27;data&#x27;</span>), exist_ok=<span class="hljs-literal">True</span>)<br>data_file = os.path.join(<span class="hljs-string">&#x27;..&#x27;</span>, <span class="hljs-string">&#x27;data&#x27;</span>, <span class="hljs-string">&#x27;house_tiny.csv&#x27;</span>)<br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(data_file, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>	f.write(<span class="hljs-string">&#x27;NumRooms,Alley,Price\n&#x27;</span>) <span class="hljs-comment"># 列名</span><br>	f.write(<span class="hljs-string">&#x27;NA,Pave,127500\n&#x27;</span>) <span class="hljs-comment"># 每行表示一个数据样本</span><br>	f.write(<span class="hljs-string">&#x27;2,NA,106000\n&#x27;</span>)<br>	f.write(<span class="hljs-string">&#x27;4,NA,178100\n&#x27;</span>)<br>	f.write(<span class="hljs-string">&#x27;NA,NA,140000\n&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-comment"># 读取文件</span><br>data = pd.read_csv(data_file)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">inputs, outputs = data.iloc[:, <span class="hljs-number">0</span>:<span class="hljs-number">2</span>], data.iloc[:, <span class="hljs-number">2</span>]<br><span class="hljs-comment"># 数值型的缺失值利用均值填充</span><br>inputs = inputs.fillna(inputs.mean())<br><span class="hljs-built_in">print</span>(inputs)<br><span class="hljs-comment"># 非数值型的缺失值，我们将“NAN”视为一个类别</span><br>inputs = pd.get_dummies(inputs, dummy_na=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(inputs)<br></code></pre></td></tr></table></figure>
+
+<p>现在inputs和outputs中的所有条目都是数值类型，他们可以转换为张量格式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br>X, y = torch.tensor(inputs.values), torch.tensor(outputs.values)<br></code></pre></td></tr></table></figure>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>茴香豆</li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/09/22/DL_1/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;09&#x2F;22&#x2F;DL_1&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;09&#x2F;22&#x2F;DL_1&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="/images/支付宝.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DeepLearning/" rel="tag">DeepLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2022/09/22/DL_periodical_conference/"><i class="iconfont iconleft"></i>深度学习相关期刊</a>
+    <a href="/2022/07/25/Interview_experience/">面经总结<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz",
+        app_key: "6DvkgciWlfleRrT7w9r6snJI",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E5%AE%89%E6%8E%92"><span class="toc-text">课程安排</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-text">数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%BF%E9%97%AE%E5%85%83%E7%B4%A0"><span class="toc-text">1. 访问元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%BC%A0%E9%87%8F%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">2. 张量及其基本操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">简单的数据预处理</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1134384717 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/Squirrel00011 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1134384717@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#ff3b00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz',
+      appKey: '6DvkgciWlfleRrT7w9r6snJI',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: "38fcd752"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

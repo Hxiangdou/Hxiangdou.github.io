@@ -532,7 +532,45 @@
     <title>House-GAN：用于图约束房屋布局生成的关系生成对抗网络</title>
     <url>/2022/09/23/paper_1/</url>
     <content><![CDATA[<p>本文提出了一种新颖的图约束生成对抗网络，其生成器和判别器建立在关系架构之上。主要思想是将约束编码到其关系网络的图结构中。我们已经为新的房屋布局生成问题展示了所提出的架构，其任务是将架构约束作为图（即房间的数量和类型及其空间邻接）并生成一组轴对齐的边界框房间。我们使用三个指标来衡量生成的房屋布局的质量：真实性、多样性和与输入图约束的兼容性。</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2>]]></content>
+<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p>本文提出了一种新颖的房屋布局生成问题，其任务是将气泡图作为输入，并生成一组逼真且兼容的房屋布局。气泡图表示为一个图形，其中</p>
+<ol>
+<li><p>节点用房间类型对房间进行编码</p>
+</li>
+<li><p>边用它们的空间邻接进行编码</p>
+</li>
+</ol>
+<p>房屋布局表示为一组轴对齐的房间边界框。</p>
+<p>房屋布局的生成带来了新的挑战：图表作为约束被强制执行。我们提出了一种称为House-GAN的新型生成模型，该模型采用关系生成器和判别器，其中约束被编码到其关系神经网络的图形结构中。更具体地说，我们采用卷积消息传递神经网络（Conv-MPN），它与图卷积网络（GCN）的不同之处在于</p>
+<ol>
+<li>节点将房间表示为设计空间中的特征量（与一维潜在向量相反）</li>
+<li>卷积更新设计空间中的特征（与多层感知器相反）</li>
+</ol>
+<p>该架构为组合布局和验证邻接约束提供了更有效的高阶推理。</p>
+<h2 id="2-图约束房屋布局生成问题"><a href="#2-图约束房屋布局生成问题" class="headerlink" title="2 图约束房屋布局生成问题"></a>2 图约束房屋布局生成问题</h2><p>该部分解释了我们的数据集、指标和限制。</p>
+<h3 id="2-1-数据集"><a href="#2-1-数据集" class="headerlink" title="2.1 数据集"></a>2.1 数据集</h3><p>117587个实际平面图，重新缩放以适应256x256分辨率。使用平面图矢量化算法（floorplan vectorzation algorithm）生成矢量图形格式，并将其转换为气泡图。气泡图是一个图形，其中一个节点是一个房间，节点属性为房间类型（如客厅、厨房、卧室等）。<strong>如果边界框之间的曼哈顿距离小于8像素，则连接两个房间。</strong>输出房屋布局是轴对齐的边界框。</p>
+<h3 id="2-2-衡量指标"><a href="#2-2-衡量指标" class="headerlink" title="2.2 衡量指标"></a>2.2 衡量指标</h3><p>我们根据<strong>房间数量</strong>将样本分为五组：1-3、4-6、7-9、10-12、13+。为了测试泛化能力，进行k折验证（k&#x3D;5）。在测试时，我们随机选择一个房屋布局并生成X个样本。</p>
+<ul>
+<li>X &#x3D; 10用于衡量真实性和多样性</li>
+<li>X &#x3D; 1  用于衡量其评估计算量大的兼容性</li>
+</ul>
+<h4 id="真实性"><a href="#真实性" class="headerlink" title="真实性"></a>真实性</h4><p>真实性通过平均用户评分来衡量。我们根据真实情况或其他方法展示生成的房屋布局。受试者给出以下四个等级之一：较好（+1）、较差（-1）、同样好（+1）或同样坏（-1）。</p>
+<h4 id="多样性"><a href="#多样性" class="headerlink" title="多样性"></a>多样性</h4><p>多样性是由光栅化布局图像的FID分数来衡量的。我们通过</p>
+<ol>
+<li>将背景设置为白色来栅格化布局</li>
+<li>按面积降序对房间进行排序</li>
+<li>根据房间类型为每个房间涂上颜色（例如卧室涂橙色）</li>
+</ol>
+<h4 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h4><p>与气泡图的兼容性是输入气泡图与输出布局构建的气泡图之间的图形编辑距离（graph editing distance），方法与上面的GT准备相同。</p>
+<h3 id="2-3-限制"><a href="#2-3-限制" class="headerlink" title="2.3 限制"></a>2.3 限制</h3><p>与实际设计过程相比，我们做了一些限制性假设来简化问题设置：</p>
+<ol>
+<li>节点属性没有房间大小</li>
+<li>房间形状始终是矩形</li>
+<li>边缘属性（即房间邻接）不反应门的存在</li>
+</ol>
+<h2 id="3-House-GAN"><a href="#3-House-GAN" class="headerlink" title="3 House-GAN"></a>3 House-GAN</h2><p>House-GAN 是一种关系生成对抗网络。关键的特化是我们的关系生成器和鉴别器，其中输入图约束被编码到关系网络的图结构中。</p>
+<h3 id="3-1-房屋布局生成器"><a href="#3-1-房屋布局生成器" class="headerlink" title="3.1 房屋布局生成器"></a>3.1 房屋布局生成器</h3><p>生成器获取每个房间的噪声向量和气泡图，然后将房屋布局生成为每个房间的轴对齐矩形。我们现在解释噪声生成过程的三个阶段。</p>
+<h4 id="输入图像"><a href="#输入图像" class="headerlink" title="输入图像"></a>输入图像</h4><p>给定一个气泡图，我们形成Conv-MPN，其关系图结构与气泡图相同。我们为每个房间生成一个节点，并使用正态分布中采样的128维噪声向量进行初始化，并与10维房间类型向量连接在一起</p>
+]]></content>
       <categories>
         <category>DeepLearning论文</category>
       </categories>
@@ -563,6 +601,63 @@
       </categories>
       <tags>
         <tag>Hello-World</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动手学习深度学习（1）课程介绍及环境配置</title>
+    <url>/2022/09/22/DL_1/</url>
+    <content><![CDATA[<p>准研究生，学习一些研究生阶段需要的预备知识，打好深度学习基础。</p>
+<h2 id="课程安排"><a href="#课程安排" class="headerlink" title="课程安排"></a>课程安排</h2><p>相关资源：</p>
+<p>课程主页：<a href="https://courses.d2l.ai/zh-v2">https://courses.d2l.ai/zh-v2</a></p>
+<p>教材：<a href="https://zh-v2.d2l.ai/">https://zh-v2.d2l.ai/</a></p>
+<p>课程论坛讨论：<a href="https://discuss.d2l.ai/c/16">https://discuss.d2l.ai/c/16</a></p>
+<p>Pytorch论坛：<a href="https://discuss.pytorch.org/">https://discuss.pytorch.org/</a></p>
+<h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><p>数据的一些基本操作</p>
+<h3 id="1-访问元素"><a href="#1-访问元素" class="headerlink" title="1. 访问元素"></a>1. 访问元素</h3><p>一个元素 [1, 2]、一行 [1, :]、一列 [:, 1]</p>
+<p>子区域 [1:3, 1:]：访问第1到第2行，第2到最后一列的子区域</p>
+<p>子区域 [::3, ::2]：每三行一跳，每两列一跳的所有元素构成的子区域</p>
+<h3 id="2-张量及其基本操作"><a href="#2-张量及其基本操作" class="headerlink" title="2. 张量及其基本操作"></a>2. 张量及其基本操作</h3><p>张量表示一个数值组成的数组，这个数组可能有多个维度。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">x = torch.arange(<span class="hljs-number">12</span>)<br><span class="hljs-comment">#output</span><br>tensor([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>])<br></code></pre></td></tr></table></figure>
+
+<p><code>x.shape</code>访问张量的形状</p>
+<p><code>x.numel()</code>访问张量中元素的个数</p>
+<p><code>X = x.reshape(3, 4)</code>改变张量的形状而不改变元素数量和值</p>
+<p><code>torch.zeros((2, 3, 4))</code>创建三维全0的2x3x4的张量</p>
+<p><code>torch.ones((2, 3, 4))</code>创建三维全0的2x3x4的张量</p>
+<p><code>torch.tensor([[1, 2, 3, 4], [5, 6, 7, 8]])</code>创建指定张量</p>
+<p><code>X.sum()</code>对张量中所有元素进行求和</p>
+<h4 id="按元素基本运算"><a href="#按元素基本运算" class="headerlink" title="按元素基本运算"></a>按元素基本运算</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#按元素运算</span><br>x = torch.tensor([<span class="hljs-number">1.0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">8</span>])<br>y = torch.tensor([<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>])<br>x + y, x - y, x * y, x / y, x**y, torch.exp(x)<br><span class="hljs-comment">#output</span><br>tensor([ <span class="hljs-number">3.</span>, <span class="hljs-number">4.</span>, <span class="hljs-number">6.</span>, <span class="hljs-number">10.</span>])<br>tensor([-<span class="hljs-number">1.</span>, <span class="hljs-number">0.</span>, <span class="hljs-number">2.</span>, <span class="hljs-number">6.</span>])<br>tensor([ <span class="hljs-number">2.</span>, <span class="hljs-number">4.</span>, <span class="hljs-number">8.</span>, <span class="hljs-number">16.</span>])<br>tensor([ <span class="hljs-number">0.5000</span>, <span class="hljs-number">1.0000</span>, <span class="hljs-number">2.0000</span>, <span class="hljs-number">4.0000</span>])<br>tensor([ <span class="hljs-number">1.</span>, <span class="hljs-number">4.</span>, <span class="hljs-number">16.</span>, <span class="hljs-number">65.</span>])<br></code></pre></td></tr></table></figure>
+
+<h4 id="多个张量连结"><a href="#多个张量连结" class="headerlink" title="多个张量连结"></a>多个张量连结</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">X = torch.arange(<span class="hljs-number">12</span>, dtype=torch,float32).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">4</span>))<br>Y = torch.tensor([[<span class="hljs-number">2.0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>], [<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]])<br>torch.cat((X, Y), dim=<span class="hljs-number">0</span>)<span class="hljs-comment">#按行连接</span><br>torch.cat((X, Y), dim=<span class="hljs-number">1</span>)<span class="hljs-comment">#按列连接</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="通过逻辑运算符构建二元张量"><a href="#通过逻辑运算符构建二元张量" class="headerlink" title="通过逻辑运算符构建二元张量"></a>通过逻辑运算符构建二元张量</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">X == Y<br><span class="hljs-comment">#output</span><br>tensor([[<span class="hljs-literal">False</span>,  <span class="hljs-literal">True</span>, <span class="hljs-literal">False</span>,  <span class="hljs-literal">True</span>],<br>		[<span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>],<br>		[<span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>, <span class="hljs-literal">False</span>]])<br></code></pre></td></tr></table></figure>
+
+<h4 id="广播机制"><a href="#广播机制" class="headerlink" title="广播机制"></a>广播机制</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">a = torch.arange(<span class="hljs-number">3</span>).reshape((<span class="hljs-number">3</span>, <span class="hljs-number">1</span>))<br>b = torch.arange(<span class="hljs-number">2</span>).rashape((<span class="hljs-number">1</span>, <span class="hljs-number">2</span>))<br>a + b<br><span class="hljs-comment">#output</span><br>tensor([[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>],<br>		[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>],<br>		[<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]])<br></code></pre></td></tr></table></figure>
+
+<h4 id="运行一些操作可能导致为新结果分配内存"><a href="#运行一些操作可能导致为新结果分配内存" class="headerlink" title="运行一些操作可能导致为新结果分配内存"></a>运行一些操作可能导致为新结果分配内存</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">before = <span class="hljs-built_in">id</span>(Y)<br>Y = Y + X<br><span class="hljs-built_in">id</span>(Y) == before<br><span class="hljs-comment">#output</span><br><span class="hljs-literal">False</span><br></code></pre></td></tr></table></figure>
+
+<p>执行原地操作</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">Z = torch.zeros_like(Y)<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(Z))<br>Z[:] = X + Y<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">id</span>(Z))<br><span class="hljs-comment">#output</span><br><span class="hljs-number">140146615319872</span><br><span class="hljs-number">140146615319872</span><br></code></pre></td></tr></table></figure>
+
+<p>如果在后续计算中没有重复使用X， 我们也可以使用 <code>X[:] = X + Y</code>或 <code>X += Y</code>来减少操作的内存开销。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#仅适用于张量，若X，Y为数字则结果为False</span><br>before = <span class="hljs-built_in">id</span>(X)<br>X += Y<br><span class="hljs-built_in">id</span>(X) == before<br><span class="hljs-comment">#output</span><br><span class="hljs-literal">True</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="简单的数据预处理"><a href="#简单的数据预处理" class="headerlink" title="简单的数据预处理"></a>简单的数据预处理</h2><p>创建一个人工数据集，并存储在csv（逗号分隔值）文件</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-comment"># 创建一个csv文件</span><br>os.makedirs(os.path.join(<span class="hljs-string">&#x27;..&#x27;</span>, <span class="hljs-string">&#x27;data&#x27;</span>), exist_ok=<span class="hljs-literal">True</span>)<br>data_file = os.path.join(<span class="hljs-string">&#x27;..&#x27;</span>, <span class="hljs-string">&#x27;data&#x27;</span>, <span class="hljs-string">&#x27;house_tiny.csv&#x27;</span>)<br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(data_file, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>	f.write(<span class="hljs-string">&#x27;NumRooms,Alley,Price\n&#x27;</span>) <span class="hljs-comment"># 列名</span><br>	f.write(<span class="hljs-string">&#x27;NA,Pave,127500\n&#x27;</span>) <span class="hljs-comment"># 每行表示一个数据样本</span><br>	f.write(<span class="hljs-string">&#x27;2,NA,106000\n&#x27;</span>)<br>	f.write(<span class="hljs-string">&#x27;4,NA,178100\n&#x27;</span>)<br>	f.write(<span class="hljs-string">&#x27;NA,NA,140000\n&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><span class="hljs-comment"># 读取文件</span><br>data = pd.read_csv(data_file)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">inputs, outputs = data.iloc[:, <span class="hljs-number">0</span>:<span class="hljs-number">2</span>], data.iloc[:, <span class="hljs-number">2</span>]<br><span class="hljs-comment"># 数值型的缺失值利用均值填充</span><br>inputs = inputs.fillna(inputs.mean())<br><span class="hljs-built_in">print</span>(inputs)<br><span class="hljs-comment"># 非数值型的缺失值，我们将“NAN”视为一个类别</span><br>inputs = pd.get_dummies(inputs, dummy_na=<span class="hljs-literal">True</span>)<br><span class="hljs-built_in">print</span>(inputs)<br></code></pre></td></tr></table></figure>
+
+<p>现在inputs和outputs中的所有条目都是数值类型，他们可以转换为张量格式</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br>X, y = torch.tensor(inputs.values), torch.tensor(outputs.values)<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
       </tags>
   </entry>
   <entry>

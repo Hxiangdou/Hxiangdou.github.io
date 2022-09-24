@@ -200,7 +200,7 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/pat/3.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">House-GAN：用于图约束房屋布局生成的关系生成对抗网络</h1>
     <div class="head-info">
@@ -213,7 +213,7 @@
           <i class="iconfont iconheart"></i><span id="/2022/09/23/paper_1/" class="leancloud-like" data-flag-title="House-GAN：用于图约束房屋布局生成的关系生成对抗网络"></span>
         </span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>173</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1448</span>
     </div>
   </div>
 </section>
@@ -221,7 +221,45 @@
       <section class="content">
         
         <p>本文提出了一种新颖的图约束生成对抗网络，其生成器和判别器建立在关系架构之上。主要思想是将约束编码到其关系网络的图结构中。我们已经为新的房屋布局生成问题展示了所提出的架构，其任务是将架构约束作为图（即房间的数量和类型及其空间邻接）并生成一组轴对齐的边界框房间。我们使用三个指标来衡量生成的房屋布局的质量：真实性、多样性和与输入图约束的兼容性。</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2>
+<h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1 简介"></a>1 简介</h2><p>本文提出了一种新颖的房屋布局生成问题，其任务是将气泡图作为输入，并生成一组逼真且兼容的房屋布局。气泡图表示为一个图形，其中</p>
+<ol>
+<li><p>节点用房间类型对房间进行编码</p>
+</li>
+<li><p>边用它们的空间邻接进行编码</p>
+</li>
+</ol>
+<p>房屋布局表示为一组轴对齐的房间边界框。</p>
+<p>房屋布局的生成带来了新的挑战：图表作为约束被强制执行。我们提出了一种称为House-GAN的新型生成模型，该模型采用关系生成器和判别器，其中约束被编码到其关系神经网络的图形结构中。更具体地说，我们采用卷积消息传递神经网络（Conv-MPN），它与图卷积网络（GCN）的不同之处在于</p>
+<ol>
+<li>节点将房间表示为设计空间中的特征量（与一维潜在向量相反）</li>
+<li>卷积更新设计空间中的特征（与多层感知器相反）</li>
+</ol>
+<p>该架构为组合布局和验证邻接约束提供了更有效的高阶推理。</p>
+<h2 id="2-图约束房屋布局生成问题"><a href="#2-图约束房屋布局生成问题" class="headerlink" title="2 图约束房屋布局生成问题"></a>2 图约束房屋布局生成问题</h2><p>该部分解释了我们的数据集、指标和限制。</p>
+<h3 id="2-1-数据集"><a href="#2-1-数据集" class="headerlink" title="2.1 数据集"></a>2.1 数据集</h3><p>117587个实际平面图，重新缩放以适应256x256分辨率。使用平面图矢量化算法（floorplan vectorzation algorithm）生成矢量图形格式，并将其转换为气泡图。气泡图是一个图形，其中一个节点是一个房间，节点属性为房间类型（如客厅、厨房、卧室等）。<strong>如果边界框之间的曼哈顿距离小于8像素，则连接两个房间。</strong>输出房屋布局是轴对齐的边界框。</p>
+<h3 id="2-2-衡量指标"><a href="#2-2-衡量指标" class="headerlink" title="2.2 衡量指标"></a>2.2 衡量指标</h3><p>我们根据<strong>房间数量</strong>将样本分为五组：1-3、4-6、7-9、10-12、13+。为了测试泛化能力，进行k折验证（k&#x3D;5）。在测试时，我们随机选择一个房屋布局并生成X个样本。</p>
+<ul>
+<li>X &#x3D; 10用于衡量真实性和多样性</li>
+<li>X &#x3D; 1  用于衡量其评估计算量大的兼容性</li>
+</ul>
+<h4 id="真实性"><a href="#真实性" class="headerlink" title="真实性"></a>真实性</h4><p>真实性通过平均用户评分来衡量。我们根据真实情况或其他方法展示生成的房屋布局。受试者给出以下四个等级之一：较好（+1）、较差（-1）、同样好（+1）或同样坏（-1）。</p>
+<h4 id="多样性"><a href="#多样性" class="headerlink" title="多样性"></a>多样性</h4><p>多样性是由光栅化布局图像的FID分数来衡量的。我们通过</p>
+<ol>
+<li>将背景设置为白色来栅格化布局</li>
+<li>按面积降序对房间进行排序</li>
+<li>根据房间类型为每个房间涂上颜色（例如卧室涂橙色）</li>
+</ol>
+<h4 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h4><p>与气泡图的兼容性是输入气泡图与输出布局构建的气泡图之间的图形编辑距离（graph editing distance），方法与上面的GT准备相同。</p>
+<h3 id="2-3-限制"><a href="#2-3-限制" class="headerlink" title="2.3 限制"></a>2.3 限制</h3><p>与实际设计过程相比，我们做了一些限制性假设来简化问题设置：</p>
+<ol>
+<li>节点属性没有房间大小</li>
+<li>房间形状始终是矩形</li>
+<li>边缘属性（即房间邻接）不反应门的存在</li>
+</ol>
+<h2 id="3-House-GAN"><a href="#3-House-GAN" class="headerlink" title="3 House-GAN"></a>3 House-GAN</h2><p>House-GAN 是一种关系生成对抗网络。关键的特化是我们的关系生成器和鉴别器，其中输入图约束被编码到关系网络的图结构中。</p>
+<h3 id="3-1-房屋布局生成器"><a href="#3-1-房屋布局生成器" class="headerlink" title="3.1 房屋布局生成器"></a>3.1 房屋布局生成器</h3><p>生成器获取每个房间的噪声向量和气泡图，然后将房屋布局生成为每个房间的轴对齐矩形。我们现在解释噪声生成过程的三个阶段。</p>
+<h4 id="输入图像"><a href="#输入图像" class="headerlink" title="输入图像"></a>输入图像</h4><p>给定一个气泡图，我们形成Conv-MPN，其关系图结构与气泡图相同。我们为每个房间生成一个节点，并使用正态分布中采样的128维噪声向量进行初始化，并与10维房间类型向量连接在一起</p>
+
       </section>
       <section class="extra">
         
@@ -296,7 +334,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%AE%80%E4%BB%8B"><span class="toc-text">1 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9B%BE%E7%BA%A6%E6%9D%9F%E6%88%BF%E5%B1%8B%E5%B8%83%E5%B1%80%E7%94%9F%E6%88%90%E9%97%AE%E9%A2%98"><span class="toc-text">2 图约束房屋布局生成问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">2.1 数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%A1%A1%E9%87%8F%E6%8C%87%E6%A0%87"><span class="toc-text">2.2 衡量指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%99%90%E5%88%B6"><span class="toc-text">2.3 限制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-House-GAN"><span class="toc-text">3 House-GAN</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%88%BF%E5%B1%8B%E5%B8%83%E5%B1%80%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-text">3.1 房屋布局生成器</span></a></li></ol></li></ol>
   </aside>
 
         
