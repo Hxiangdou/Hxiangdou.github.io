@@ -661,6 +661,43 @@
       </tags>
   </entry>
   <entry>
+    <title>动手学习深度学习（2）简单的数学知识</title>
+    <url>/2022/09/24/DL-2/</url>
+    <content><![CDATA[<p>本节主要讲解线性代数，按特定轴求和，矩阵计算和自动求导相关内容</p>
+<h2 id="1-线性代数"><a href="#1-线性代数" class="headerlink" title="1. 线性代数"></a>1. 线性代数</h2><p>矩阵的特征值和特征向量。</p>
+<p>矩阵的转置。</p>
+<h2 id="2-矩阵计算"><a href="#2-矩阵计算" class="headerlink" title="2. 矩阵计算"></a>2. 矩阵计算</h2><h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 按某个轴进行累加求和</span><br>A.cumsum(axis=<span class="hljs-number">0</span>)<br><span class="hljs-comment"># output</span><br>tensor([[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],<br>        [ <span class="hljs-number">4</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">8</span>, <span class="hljs-number">10</span>],<br>        [<span class="hljs-number">12</span>, <span class="hljs-number">15</span>, <span class="hljs-number">18</span>, <span class="hljs-number">21</span>]])<br><span class="hljs-comment"># 点积运算</span><br>torch.dot(x, y)<br><span class="hljs-comment"># 叉乘运算</span><br>torch.mv(x, y) <span class="hljs-comment"># matrix-vector 矩阵-向量乘法</span><br>torch.mm(A, B) <span class="hljs-comment"># matrix-matrix 矩阵-矩阵乘法</span><br><br><span class="hljs-comment"># L2范数是向量元素平方和的平方根</span><br>torch.norm(u)<br><span class="hljs-comment"># L1范数是向量元素的绝对值之和</span><br>torch.<span class="hljs-built_in">abs</span>(u).<span class="hljs-built_in">sum</span>()<br><span class="hljs-comment"># 佛罗贝尼乌斯范数（Frobenius norm）是矩阵元素的平方和的平方根</span><br>torch.norm(A)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="按特定轴求和"><a href="#按特定轴求和" class="headerlink" title="按特定轴求和"></a>按特定轴求和</h3><p>举例比较好理解，例如，对于2x3x4的矩阵：</p>
+<ul>
+<li>若axis&#x3D;0，求sum后矩阵变为二维矩阵，大小为3x4</li>
+<li>若axis&#x3D;1，求sum后矩阵变为二维矩阵，大小为2x4</li>
+<li>若axis&#x3D;2，求sum后矩阵变为二维矩阵，大小为2x3</li>
+<li>若axis&#x3D;[0, 1]，求sum后矩阵变为一维矩阵，长度为4</li>
+<li>若axis&#x3D;[0, 2]，求sum后矩阵变为一维矩阵，长度为3</li>
+<li>若axis&#x3D;[1, 2]，求sum后矩阵变为一维矩阵，长度为2</li>
+<li>若axis&#x3D;[0, 1, 2]，求sum后矩阵变为一个数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">A = torch.arange(<span class="hljs-number">24</span>).reshape((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))<br>A.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>).shape, A.<span class="hljs-built_in">sum</span>(axis=[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>]).shape<br><span class="hljs-comment"># output</span><br>torch.Size([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>]), torch.Size([<span class="hljs-number">3</span>])<br></code></pre></td></tr></table></figure>
+
+<h3 id="计算总和或均值时保持轴数不变"><a href="#计算总和或均值时保持轴数不变" class="headerlink" title="计算总和或均值时保持轴数不变"></a>计算总和或均值时保持轴数不变</h3><p>保持求和后的矩阵与求和前的矩阵形状相同。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">sum_A = A.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>, keepdims=<span class="hljs-literal">True</span>)<br><span class="hljs-comment"># output</span><br>tensor([[ <span class="hljs-number">6.</span>],<br>		[<span class="hljs-number">22.</span>],<br>		[<span class="hljs-number">38.</span>],<br>		[<span class="hljs-number">54.</span>],<br>		[<span class="hljs-number">70.</span>]])<br></code></pre></td></tr></table></figure>
+
+<p>应用：使得我们可以通过广播将<code>A</code>除以<code>sum_A</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">A / sum_A <span class="hljs-comment"># 广播机制要求维度相同</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="自动求导"><a href="#自动求导" class="headerlink" title="自动求导"></a>自动求导</h2>]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
