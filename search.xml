@@ -662,7 +662,7 @@
   </entry>
   <entry>
     <title>动手学习深度学习（2）简单的数学知识</title>
-    <url>/2022/09/24/DL-2/</url>
+    <url>/2022/09/24/DL_2/</url>
     <content><![CDATA[<p>本节主要讲解线性代数，按特定轴求和，矩阵计算和自动求导相关内容</p>
 <h2 id="1-线性代数"><a href="#1-线性代数" class="headerlink" title="1. 线性代数"></a>1. 线性代数</h2><p>矩阵的特征值和特征向量。</p>
 <p>矩阵的转置。</p>
@@ -688,7 +688,7 @@
 <p>应用：使得我们可以通过广播将<code>A</code>除以<code>sum_A</code></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">A / sum_A <span class="hljs-comment"># 广播机制要求维度相同</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="3-自动求导"><a href="#3-自动求导" class="headerlink" title="3. 自动求导"></a>3. 自动求导</h2><p><a href="https://zhuanlan.zhihu.com/p/263777564">矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇）知乎</a></p>
+<h2 id="3-自动求导"><a href="#3-自动求导" class="headerlink" title="3. 自动求导"></a>3. 自动求导</h2><p><a href="https://zhuanlan.zhihu.com/p/263777564">矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇）</a></p>
 <p>基本向量求导运算：</p>
 <img  src="post_images\DL_2_1.png"   style="zoom:50%;" /><span class="image-caption">DL_2_1</span>
 
@@ -772,7 +772,7 @@
  <use xlink:href="#E1-MJMAINB-78" x="0" y="0"></use>
 </g>
 </svg> 的另一个函数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 在默认情况下，PyTorch会积累梯度，我们需要清楚之前的值</span><br>x.grad.zero_()<br>y = x.<span class="hljs-built_in">sum</span>()<br>y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([1., 1., 1., 1.])</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 在默认情况下，PyTorch会积累梯度，我们需要qin&#x27;chu之前的值</span><br>x.grad.zero_()<br>y = x.<span class="hljs-built_in">sum</span>()<br>y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([1., 1., 1., 1.])</span><br></code></pre></td></tr></table></figure>
 
 <p>深度学习中，我们的目的不是计算微分矩阵，而是批量中每个样本单独计算的偏导数之和。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 对非标量调用‘backward’需要传入一个‘gradient’参数，该参数指定微分函数</span><br>x.grad.zero_()<br>y = x * x<br>y.<span class="hljs-built_in">sum</span>().backward()<br><span class="hljs-comment"># 等价于y.backward(torch.ones(len(x)))</span><br>x.grad<br><span class="hljs-comment"># output: tensor([0., 2., 4., 6.])</span><br></code></pre></td></tr></table></figure>

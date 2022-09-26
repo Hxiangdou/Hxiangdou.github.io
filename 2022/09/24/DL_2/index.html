@@ -207,13 +207,13 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 24, 2022</span>
       
         <span class="post-info-item">
-          <i class="iconfont iconeye"></i><span id="/2022/09/24/DL-2/" class="leancloud-counter" data-flag-title="动手学习深度学习（2）简单的数学知识"></span>
+          <i class="iconfont iconeye"></i><span id="/2022/09/24/DL_2/" class="leancloud-counter" data-flag-title="动手学习深度学习（2）简单的数学知识"></span>
         </span>
         <span class="post-info-item">
-          <i class="iconfont iconheart"></i><span id="/2022/09/24/DL-2/" class="leancloud-like" data-flag-title="动手学习深度学习（2）简单的数学知识"></span>
+          <i class="iconfont iconheart"></i><span id="/2022/09/24/DL_2/" class="leancloud-like" data-flag-title="动手学习深度学习（2）简单的数学知识"></span>
         </span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2168</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2176</span>
     </div>
   </div>
 </section>
@@ -245,7 +245,7 @@
 <p>应用：使得我们可以通过广播将<code>A</code>除以<code>sum_A</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">A / sum_A <span class="hljs-comment"># 广播机制要求维度相同</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="3-自动求导"><a href="#3-自动求导" class="headerlink" title="3. 自动求导"></a>3. 自动求导</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/263777564">矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇）知乎</a></p>
+<h2 id="3-自动求导"><a href="#3-自动求导" class="headerlink" title="3. 自动求导"></a>3. 自动求导</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/263777564">矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇）</a></p>
 <p>基本向量求导运算：</p>
 <img    class="lazyload" data-original="post_images\DL_2_1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="    style="zoom:50%;" /><span class="image-caption">DL_2_1</span>
 
@@ -329,7 +329,7 @@
  <use xlink:href="#E1-MJMAINB-78" x="0" y="0"></use>
 </g>
 </svg> 的另一个函数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 在默认情况下，PyTorch会积累梯度，我们需要清楚之前的值</span><br>x.grad.zero_()<br>y = x.<span class="hljs-built_in">sum</span>()<br>y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([1., 1., 1., 1.])</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 在默认情况下，PyTorch会积累梯度，我们需要qin&#x27;chu之前的值</span><br>x.grad.zero_()<br>y = x.<span class="hljs-built_in">sum</span>()<br>y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([1., 1., 1., 1.])</span><br></code></pre></td></tr></table></figure>
 
 <p>深度学习中，我们的目的不是计算微分矩阵，而是批量中每个样本单独计算的偏导数之和。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 对非标量调用‘backward’需要传入一个‘gradient’参数，该参数指定微分函数</span><br>x.grad.zero_()<br>y = x * x<br>y.<span class="hljs-built_in">sum</span>().backward()<br><span class="hljs-comment"># 等价于y.backward(torch.ones(len(x)))</span><br>x.grad<br><span class="hljs-comment"># output: tensor([0., 2., 4., 6.])</span><br></code></pre></td></tr></table></figure>
@@ -344,7 +344,7 @@
           <ul class="copyright">
   
     <li><strong>本文作者：</strong>茴香豆</li>
-    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/09/24/DL-2/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;09&#x2F;24&#x2F;DL-2&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;09&#x2F;24&#x2F;DL-2&#x2F;index.html</a></li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/09/24/DL_2/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;09&#x2F;24&#x2F;DL_2&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;09&#x2F;24&#x2F;DL_2&#x2F;index.html</a></li>
     <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
   
 </ul>
