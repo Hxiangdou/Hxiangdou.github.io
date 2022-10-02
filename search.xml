@@ -520,6 +520,7 @@
 <p>调用方法：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">my_dog.sit()<br>my_dog.roll_over()<br><span class="hljs-comment"># output:</span><br>Willie <span class="hljs-keyword">is</span> now sitting.<br>Willie rolled over!<br></code></pre></td></tr></table></figure>
 
+<h2 id="2-使用类和实例"><a href="#2-使用类和实例" class="headerlink" title="2. 使用类和实例"></a>2. 使用类和实例</h2><p>类编写好后，你的大部分时 间都将花在使用根据类创建的实例上。你需要执行的一个重要任务是修改 实例的属性。你可以直接修改实例的属性，也可以编写方法以特定的方式 进行修改。</p>
 ]]></content>
       <categories>
         <category>Python学习</category>
