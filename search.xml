@@ -1199,6 +1199,69 @@
       </tags>
   </entry>
   <entry>
+    <title>Python学习之路（11）测试代码</title>
+    <url>/2022/10/03/Python_11/</url>
+    <content><![CDATA[<p>在本章中，你将学习如何使用Python模块unittest 中的工具来测试代码。你将学习编写测试用例，核实一系列输入都将得到预期的输出。你将看到测试通过了是什么样子，测试未通过又是什么样子，还将知道测试未通过如何有助于改进代码。你将学习如何测试函数和类，并将知道该为项目编写多少个测试。</p>
+<h2 id="1-测试函数"><a href="#1-测试函数" class="headerlink" title="1.测试函数"></a>1.测试函数</h2><p>下面是一个简单的函数，它接收名和姓并返回整洁的姓名。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># name_function.py</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_formatted_name</span>(<span class="hljs-params">first, last, middle=<span class="hljs-string">&#x27;&#x27;</span></span>):<br>    <span class="hljs-string">&quot;&quot;&quot;Generate a neatly formatted full name.&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">if</span> middle:<br>        full_name = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;first&#125;</span> <span class="hljs-subst">&#123;middle&#125;</span> <span class="hljs-subst">&#123;last&#125;</span>&quot;</span><br>    <span class="hljs-keyword">else</span>:<br>        full_name = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;first&#125;</span> <span class="hljs-subst">&#123;last&#125;</span>&quot;</span><br>    <span class="hljs-keyword">return</span> full_name.title()<br></code></pre></td></tr></table></figure>
+
+<p>为核实<code>get_formatted_name</code>像期望的那样工作，我们来编写一个使用这个函数的程序。程序names.py让用户输入名和姓，并显示整洁的全名。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># names.py</span><br><span class="hljs-keyword">from</span> name_function <span class="hljs-keyword">import</span> get_formatted_name<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Enter &#x27;q&#x27; at any time to quit.&quot;</span>)<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    first = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;\nPlease give me a first name: &quot;</span>)<br>    <span class="hljs-keyword">if</span> first == <span class="hljs-string">&#x27;q&#x27;</span>:<br>        <span class="hljs-keyword">break</span><br>    last = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Please give me a last name: &quot;</span>)<br>    <span class="hljs-keyword">if</span> last == <span class="hljs-string">&#x27;q&#x27;</span>:<br>        <span class="hljs-keyword">break</span><br>    formatted_name = get_formatted_name(first, last)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;\tNeatly formatted name: <span class="hljs-subst">&#123;formatted_name&#125;</span>.&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>每次都需要输入测试太过繁琐，所幸Python提供了 一种自动测试函数输出的高效方式。</p>
+<h3 id="1-1测试单元和测试用例"><a href="#1-1测试单元和测试用例" class="headerlink" title="1.1测试单元和测试用例"></a>1.1测试单元和测试用例</h3><p>Python标准库中的模块<code>unittest</code> 提供了代码测试工具。<strong>单元测试</strong>用于核实函数的某个方面没有问题；<strong>测试用例</strong>是一组单元测试，这些单元测试一 起核实函数在各种情形下的行为都符合要求。良好的测试用例考虑到了函数可能收到的各种输入，包含针对所有这些情形的测试。<strong>全覆盖式测试用例</strong>包含一整套单元测试，涵盖了各种可能的函数使用方式。对于大型项 目，要实现全覆盖可能很难。通常，最初只要针对代码的重要行为编写测试即可，等项目被广泛使用时再考虑全覆盖。</p>
+<h3 id="1-2可通过的测试"><a href="#1-2可通过的测试" class="headerlink" title="1.2可通过的测试"></a>1.2可通过的测试</h3><p>要为函数编写测试用例，可先导入模块<code>unittest</code>以及要测试的函数，再创建一个继承<code>unittest.TestCase</code>的类，并编写一系列方法对函数行为的不同方面进行测试。</p>
+<p>下面是一个只包含一个方法的测试用例。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># test_name_function.py</span><br><span class="hljs-keyword">import</span> unittest<br><span class="hljs-keyword">from</span> name_function <span class="hljs-keyword">import</span> get_formatted_name<br><span class="hljs-comment"># 继承unittest.TestCase的自定义的测试类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">NamesTestCase</span>(unittest.TestCase):<br>    <span class="hljs-string">&quot;&quot;&quot;测试 &#x27;name_function.py&#x27;.&quot;&quot;&quot;</span><br>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_first_last_name</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;能够正确地处理像Janis Joplin这样的姓名吗？&quot;&quot;&quot;</span><br>        formatted_name = get_formatted_name(<span class="hljs-string">&#x27;janis&#x27;</span>, <span class="hljs-string">&#x27;joplin&#x27;</span>)<br>        <span class="hljs-comment">#使用断言方法来核实得到的结果与期望的结果是否一致</span><br>        self.assertEqual(formatted_name, <span class="hljs-string">&#x27;Janis Joplin&#x27;</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_first_last_middle_name</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;能够正确地处理像Wolfgang Amadeus Mozart这样的姓名吗？&quot;&quot;&quot;</span><br>        formatted_name = get_formatted_name(<br>            <span class="hljs-string">&#x27;wolfgang&#x27;</span>, <span class="hljs-string">&#x27;mozart&#x27;</span>, <span class="hljs-string">&#x27;amadeus&#x27;</span>)<br>        self.assertEqual(formatted_name, <span class="hljs-string">&#x27;Wolfgang Amadeus Mozart&#x27;</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-comment"># 在运行时，所有以test打头的方法都将自动运行</span><br>    unittest.main()<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-测试类"><a href="#2-测试类" class="headerlink" title="2. 测试类"></a>2. 测试类</h2><p>下面来编写针对类的测试。很多程序中都会用到类，因此能够证明你的类能够正确地工作会大有裨益。如果针对类的测试通过了，你就能确信对类所做的改进没有意外地破坏其原有的行为。</p>
+<h3 id="2-1各种断言方法"><a href="#2-1各种断言方法" class="headerlink" title="2.1各种断言方法"></a>2.1各种断言方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>assertEqual(a, b)</code></td>
+<td>核实a &#x3D;&#x3D; b</td>
+</tr>
+<tr>
+<td><code>assertNotEqual(a, b)</code></td>
+<td>核实a !&#x3D; b</td>
+</tr>
+<tr>
+<td><code>assertTrue(x)</code></td>
+<td>核实x为True</td>
+</tr>
+<tr>
+<td><code>assertFalse(x)</code></td>
+<td>核实x为False</td>
+</tr>
+<tr>
+<td><code>assertIn(item, list)</code></td>
+<td>核实item在list中</td>
+</tr>
+<tr>
+<td><code>assertNotIn(item, list)</code></td>
+<td>核实item不在list中</td>
+</tr>
+</tbody></table>
+<h3 id="2-2一个要测试的类"><a href="#2-2一个要测试的类" class="headerlink" title="2.2一个要测试的类"></a>2.2一个要测试的类</h3><p>下面来编写一个类进行测试。来看一个帮助管理匿名调查的类。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># survey.py</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">AnonymousSurvey</span>:<br>    <span class="hljs-string">&quot;&quot;&quot;收集匿名调查问卷的答案&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, question</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;存储一个问题，并为存储答案做准备&quot;&quot;&quot;</span><br>        self.question = question<br>        self.responses = []<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">show_question</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;显示调查问卷&quot;&quot;&quot;</span><br>        <span class="hljs-built_in">print</span>(self.question)        <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">store_response</span>(<span class="hljs-params">self, new_response</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;存储单份调查答卷&quot;&quot;&quot;</span><br>        self.responses.append(new_response)        <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">show_results</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;显示收集到的所有答卷&quot;&quot;&quot;</span><br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Survey results:&quot;</span>)<br>        <span class="hljs-keyword">for</span> response <span class="hljs-keyword">in</span> self.responses:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;- <span class="hljs-subst">&#123;response&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-3测试AnonymousSurvey类"><a href="#2-3测试AnonymousSurvey类" class="headerlink" title="2.3测试AnonymousSurvey类"></a>2.3测试AnonymousSurvey类</h3><p>我们将在这个答案被存储后，使用方法<code>assertIn()</code> 来核实它包含在答案列表中。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># test_survey.py</span><br><span class="hljs-keyword">import</span> unittest<br><span class="hljs-keyword">from</span> survey <span class="hljs-keyword">import</span> AnonymousSurvey<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">TestAnonymousSurvey</span>(unittest.TestCase):<br>    <span class="hljs-string">&quot;&quot;&quot;针对AnonymousSurvey类的测试&quot;&quot;&quot;</span>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">setUp</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;创建一个调查对象和一组答案，供使用的测试方法使用&quot;&quot;&quot;</span><br>        <span class="hljs-comment"># 如果你在TestCase类包含方法setUp()，Python将先运行它，再运行各个以test_打头的方法。</span><br>        question = <span class="hljs-string">&quot;What language did you first learn to speak?&quot;</span><br>        self.my_survey = AnonymousSurvey(question)<br>        self.responses = [<span class="hljs-string">&#x27;English&#x27;</span>, <span class="hljs-string">&#x27;Spanish&#x27;</span>, <span class="hljs-string">&#x27;Mandarin&#x27;</span>]<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_store_single_response</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;测试单个答案会被妥善地存储&quot;&quot;&quot;</span><br>        self.my_survey.store_response(self.responses[<span class="hljs-number">0</span>])<br>        self.assertIn(self.responses[<span class="hljs-number">0</span>], self.my_survey.responses)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_store_three_responses</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;测试三个答案会被妥善地存储&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">for</span> response <span class="hljs-keyword">in</span> self.responses:<br>            self.my_survey.store_response(response)<br>        <span class="hljs-keyword">for</span> response <span class="hljs-keyword">in</span> self.responses:<br>            self.assertIn(response, self.my_survey.responses)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    unittest.main()<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
