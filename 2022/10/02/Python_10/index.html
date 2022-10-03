@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python学习之路（10）文件和异常 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="在本章中，你将学习处理文件，让程序能够快速地分析大量的...">
+  <meta name="author" content="茴香豆">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/支付宝.JPG',
+        wechat: '/images/微信.JPG'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">Python学习之路（10）文件和异常</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 相册</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Python学习之路（10）文件和异常</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 02, 2022</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2022/10/02/Python_10/" class="leancloud-counter" data-flag-title="Python学习之路（10）文件和异常"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2022/10/02/Python_10/" class="leancloud-like" data-flag-title="Python学习之路（10）文件和异常"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4549</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>在本章中，你将学习处理文件，让程序能够快速地分析大量的数据；你将学习错误处理，避免程序在面对意外情形时崩溃；你将学习异常 ，它们是Python创建的特殊对象，用于管理程序运行时出现的错误；你还将学习模块json，它让你能够保存用户数据，以免在程序停止运行后丢失。在本章学习的技能可提高程序的适用性、可用性和稳定性。</p>
+<h2 id="1-从文件中读取数据"><a href="#1-从文件中读取数据" class="headerlink" title="1.从文件中读取数据"></a>1.从文件中读取数据</h2><p>要使用文本文件中的信息，首先需要将信息读取到内存中。为此，你可以一次性读取文件的全部内容，也可以以每次一行的方式逐步读取。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python">filename = <span class="hljs-string">&#x27;pi_digits.txt&#x27;</span><br><span class="hljs-comment"># 读取整个文件</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> file_object:<br>    contents = file_object.read()<br>    <span class="hljs-built_in">print</span>(line.rstrip())<br><span class="hljs-comment"># 因为read() 到达文件末尾时返回一个空字符串，而将这个空字符串显示就是一个空行。</span><br><span class="hljs-comment"># 要删除多出来的空行，可在print语句中使用rstrip()。</span><br><br><span class="hljs-comment"># 逐行读取</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> file_object:<br>    <span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> file_object:<br>        <span class="hljs-built_in">print</span>(line.rstrip())<br><span class="hljs-comment"># 创建一个包含文件各行内容的列表</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> file_object:<br>    lines = file_object.readlines()<br><span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> lines:<br>    <span class="hljs-built_in">print</span>(line.rstrip())    <br></code></pre></td></tr></table></figure>
+
+<h2 id="2-写入文件"><a href="#2-写入文件" class="headerlink" title="2. 写入文件"></a>2. 写入文件</h2><p>保存数据的最简单的方式之一是将其写入到文件中。通过将输出写入文 件，即便关闭包含程序输出的终端窗口，这些输出也依然存在：你可以在程序结束运行后查看这些输出，可与别人分享输出文件，还可编写程序来 将这些输出读取到内存中并进行处理。</p>
+<h3 id="2-1写入空文件"><a href="#2-1写入空文件" class="headerlink" title="2.1写入空文件"></a>2.1写入空文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">filename = <span class="hljs-string">&#x27;programming.txt&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> file_object:<br>    file_object.write(<span class="hljs-string">&quot;I love programming.&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>在这个示例中，调用<strong>open()</strong> 时提供了两个实参。第一个实参也是要打开的文件的名称；第二个实参（’w’ ）告诉Python，我们要以写入模式打开这个文件。打开文件时，可指定读取模式 （’r’ ）、写入模式 （’w’ ）、附加模式 （’a’ ）或让你能够读取和写入文件的模式（’r+’ ）。如果你省略了模式实参，Python将以<strong>默认的只读模式</strong>打开文件。</p>
+<p> <strong>如果你要写入的文件不存在，函数open() 将自动创建它。</strong></p>
+<p>以写入 （’w’ ）模式打开文件时千万要小心，因为如果指定的文件已经存在， Python将会先清空该文件，再将指定内容写入文件。</p>
+<h3 id="2-2写入多行"><a href="#2-2写入多行" class="headerlink" title="2.2写入多行"></a>2.2写入多行</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">filename = <span class="hljs-string">&#x27;programming.txt&#x27;</span><br><span class="hljs-comment"># write()函数不会自动在文本末尾添加换行符，需要手动添加换行符</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> file_object:<br>    file_object.write(<span class="hljs-string">&quot;I love programming.\n&quot;</span>)<br>    file_object.write(<span class="hljs-string">&quot;I love creating new games.\n&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-3附加到文件"><a href="#2-3附加到文件" class="headerlink" title="2.3附加到文件"></a>2.3附加到文件</h3><p>我们打开文件时指定了实参（’a’） ，以便将内容附加到文件末尾， 而不是覆盖文件原来的内容。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">filename = <span class="hljs-string">&#x27;programming.txt&#x27;</span><br><span class="hljs-comment"># write()函数不会自动在文本末尾添加换行符，需要手动添加换行符</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;a&#x27;</span>) <span class="hljs-keyword">as</span> file_object:<br>    file_object.write(<span class="hljs-string">&quot;I also love finding meaning in large datasets.\n&quot;</span>)<br>    file_object.write(<span class="hljs-string">&quot;I love creating apps that can run in a browser.\n&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-异常"><a href="#3-异常" class="headerlink" title="3.异常"></a>3.异常</h2><p>Python使用被称为异常 的特殊对象来管理程序执行期间发生的错误。每当 发生让Python不知所措的错误时，它都会创建一个异常对象。如果你编写 了处理该异常的代码，程序将继续运行；如果你未对异常进行处理，程序将停止，并显示一个traceback，其中包含有关异常的报告。</p>
+<p>异常是使用 <code>try-except</code>代码块处理的。<code>try-except</code> 代码块让Python执 行指定的操作，同时告诉Python发生异常时怎么办。使用了<code>try-except</code> 代码块时，即便出现异常，程序也将继续运行：显示你编写的友好的错误 消息，而不是令用户迷惑的traceback。</p>
+<h3 id="3-1使用try-except代码块"><a href="#3-1使用try-except代码块" class="headerlink" title="3.1使用try-except代码块"></a>3.1使用try-except代码块</h3><p>处理ZeroDivisionError异常的try-except代码块类似于下面这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">try</span>:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-number">5</span>/<span class="hljs-number">0</span>)<br><span class="hljs-keyword">except</span> ZeroDivisionError:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;You can&#x27;t divide by zero!&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-2使用else代码块"><a href="#3-2使用else代码块" class="headerlink" title="3.2使用else代码块"></a>3.2使用else代码块</h3><p>通过将可能引发错误的代码放在<code>try-except</code>代码块中，可提高这个程序抵御错误的能力。这个示例还包含一个<code>else</code>代码块；依赖于<code>try</code> 代码块成功执行的代码都应放到else代码块中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Give me two numbers, and I&#x27;ll divide them.&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Enter &#x27;q&#x27; to quit.&quot;</span>)<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    first_number = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;\nFirst number: &quot;</span>)<br>    <span class="hljs-keyword">if</span> first_number == <span class="hljs-string">&#x27;q&#x27;</span>:<br>        <span class="hljs-keyword">break</span><br>    second_number = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Second number: &quot;</span>)<br>    <span class="hljs-keyword">if</span> second_number == <span class="hljs-string">&#x27;q&#x27;</span>:<br>        <span class="hljs-keyword">break</span><br>    <span class="hljs-keyword">try</span>:<br>        answer = <span class="hljs-built_in">int</span>(first_number) / <span class="hljs-built_in">int</span>(second_number)<br>    <span class="hljs-keyword">except</span> ZeroDivisionError:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;You can&#x27;t divide by 0!&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(answer)<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-3使用多个文件"><a href="#3-3使用多个文件" class="headerlink" title="3.3使用多个文件"></a>3.3使用多个文件</h3><p>下面我们统计多本书中的单词数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">count_words</span>(<span class="hljs-params">filename</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;Count the approximate number of words in a file.&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>            contents = f.read()<br>    <span class="hljs-keyword">except</span> FileNotFoundError:<br>        <span class="hljs-comment"># 提示某本书文件不存在</span><br>        msg = <span class="hljs-string">&quot;Sorry, the file &quot;</span> + filename + <span class="hljs-string">&quot; does not exist.&quot;</span><br>        <span class="hljs-built_in">print</span>(msg)<br>    <span class="hljs-comment"># 失败时一声不吭</span><br>    <span class="hljs-comment"># except FileNotFoundEror:</span><br>    <span class="hljs-comment">#	  pass</span><br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-comment"># 计算包含多少个单词</span><br>        words = contents.split()<br>        num_words = <span class="hljs-built_in">len</span>(words)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;The file <span class="hljs-subst">&#123;filename&#125;</span> has about <span class="hljs-subst">&#123;num_words&#125;</span> words.&quot;</span>)<br><br>filenames = [<span class="hljs-string">&#x27;alice.txt&#x27;</span>, <span class="hljs-string">&#x27;siddhartha.txt&#x27;</span>, <span class="hljs-string">&#x27;moby_dick.txt&#x27;</span>, <span class="hljs-string">&#x27;little_women.txt&#x27;</span>]<br><span class="hljs-keyword">for</span> filename <span class="hljs-keyword">in</span> filenames:<br>    count_words(filename)<br></code></pre></td></tr></table></figure>
+
+<h2 id="4-存储数据"><a href="#4-存储数据" class="headerlink" title="4.存储数据"></a>4.存储数据</h2><p>很多程序都要求用户输入某种信息，如让用户存储游戏首选项或提供要可 视化的数据。不管专注的是什么，程序都把用户提供的信息存储在列表和 字典等数据结构中。用户关闭程序时，你几乎总是要保存他们提供的信 息；一种简单的方式是使用模块json 来存储数据。</p>
+<p>模块json 让你能够将简单的Python数据结构转储到文件中，并在程序再次 运行时加载该文件中的数据。你还可以使用json 在Python程序之间分享数 据。更重要的是，JSON数据格式并非Python专用的，这让你能够将以 JSON格式存储的数据与使用其他编程语言的人分享。这是一种轻便格式， 很有用，也易于学习。</p>
+<h3 id="4-1使用json-dump-和json-load"><a href="#4-1使用json-dump-和json-load" class="headerlink" title="4.1使用json.dump()和json.load()"></a>4.1使用json.dump()和json.load()</h3><p>函数<code>json.dump()</code> 接受两个实参：<strong>要存储的数据</strong>以及可用于存储数据的<strong>文件对象</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br>numbers = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">13</span>]<br>filename = <span class="hljs-string">&#x27;numbers.json&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;w&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>    json.dump(numbers, f)<br></code></pre></td></tr></table></figure>
+
+<p>使用<code>json.load()</code> 将这个列表读取到内存中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br>filename = <span class="hljs-string">&#x27;numbers.json&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    numbers = json.load(f)<br><span class="hljs-built_in">print</span>(numbers)<br><span class="hljs-comment"># output: [2, 3, 5, 7, 11, 13]</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-2重构"><a href="#4-2重构" class="headerlink" title="4.2重构"></a>4.2重构</h3><p>你经常会遇到这样的情况：代码能够正确地运行，但可做进一步的改进——将代码划分为一系列完成具体工作的函数。这样的过程被称为重构。 重构让代码更清晰、更易于理解、更容易扩展。</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>茴香豆</li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/10/02/Python_10/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;10&#x2F;02&#x2F;Python_10&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;10&#x2F;02&#x2F;Python_10&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="/images/支付宝.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2022/09/27/DL_4/">动手学习深度学习（4）Softmax回归<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz",
+        app_key: "6DvkgciWlfleRrT7w9r6snJI",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-text">1.从文件中读取数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-text">2. 写入文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E5%86%99%E5%85%A5%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="toc-text">2.1写入空文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E5%86%99%E5%85%A5%E5%A4%9A%E8%A1%8C"><span class="toc-text">2.2写入多行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3%E9%99%84%E5%8A%A0%E5%88%B0%E6%96%87%E4%BB%B6"><span class="toc-text">2.3附加到文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BC%82%E5%B8%B8"><span class="toc-text">3.异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E4%BD%BF%E7%94%A8try-except%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">3.1使用try-except代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2%E4%BD%BF%E7%94%A8else%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-text">3.2使用else代码块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-text">3.3使用多个文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE"><span class="toc-text">4.存储数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E4%BD%BF%E7%94%A8json-dump-%E5%92%8Cjson-load"><span class="toc-text">4.1使用json.dump()和json.load()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2%E9%87%8D%E6%9E%84"><span class="toc-text">4.2重构</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1134384717 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/Squirrel00011 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1134384717@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#ff3b00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz',
+      appKey: '6DvkgciWlfleRrT7w9r6snJI',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: "38fcd752"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
