@@ -1201,7 +1201,7 @@
   <entry>
     <title>Python学习之路（11）测试代码</title>
     <url>/2022/10/03/Python_11/</url>
-    <content><![CDATA[<p>在本章中，你将学习如何使用Python模块unittest 中的工具来测试代码。你将学习编写测试用例，核实一系列输入都将得到预期的输出。你将看到测试通过了是什么样子，测试未通过又是什么样子，还将知道测试未通过如何有助于改进代码。你将学习如何测试函数和类，并将知道该为项目编写多少个测试。</p>
+    <content><![CDATA[<p>在本章中，你将学习如何使用Python模块<code>unittest</code> 中的工具来测试代码。你将学习编写测试用例，核实一系列输入都将得到预期的输出。你将看到测试通过了是什么样子，测试未通过又是什么样子，还将知道测试未通过如何有助于改进代码。你将学习如何测试函数和类，并将知道该为项目编写多少个测试。</p>
 <h2 id="1-测试函数"><a href="#1-测试函数" class="headerlink" title="1.测试函数"></a>1.测试函数</h2><p>下面是一个简单的函数，它接收名和姓并返回整洁的姓名。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># name_function.py</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_formatted_name</span>(<span class="hljs-params">first, last, middle=<span class="hljs-string">&#x27;&#x27;</span></span>):<br>    <span class="hljs-string">&quot;&quot;&quot;Generate a neatly formatted full name.&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">if</span> middle:<br>        full_name = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;first&#125;</span> <span class="hljs-subst">&#123;middle&#125;</span> <span class="hljs-subst">&#123;last&#125;</span>&quot;</span><br>    <span class="hljs-keyword">else</span>:<br>        full_name = <span class="hljs-string">f&quot;<span class="hljs-subst">&#123;first&#125;</span> <span class="hljs-subst">&#123;last&#125;</span>&quot;</span><br>    <span class="hljs-keyword">return</span> full_name.title()<br></code></pre></td></tr></table></figure>
 
@@ -1212,7 +1212,7 @@
 <h3 id="1-1测试单元和测试用例"><a href="#1-1测试单元和测试用例" class="headerlink" title="1.1测试单元和测试用例"></a>1.1测试单元和测试用例</h3><p>Python标准库中的模块<code>unittest</code> 提供了代码测试工具。<strong>单元测试</strong>用于核实函数的某个方面没有问题；<strong>测试用例</strong>是一组单元测试，这些单元测试一 起核实函数在各种情形下的行为都符合要求。良好的测试用例考虑到了函数可能收到的各种输入，包含针对所有这些情形的测试。<strong>全覆盖式测试用例</strong>包含一整套单元测试，涵盖了各种可能的函数使用方式。对于大型项 目，要实现全覆盖可能很难。通常，最初只要针对代码的重要行为编写测试即可，等项目被广泛使用时再考虑全覆盖。</p>
 <h3 id="1-2可通过的测试"><a href="#1-2可通过的测试" class="headerlink" title="1.2可通过的测试"></a>1.2可通过的测试</h3><p>要为函数编写测试用例，可先导入模块<code>unittest</code>以及要测试的函数，再创建一个继承<code>unittest.TestCase</code>的类，并编写一系列方法对函数行为的不同方面进行测试。</p>
 <p>下面是一个只包含一个方法的测试用例。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># test_name_function.py</span><br><span class="hljs-keyword">import</span> unittest<br><span class="hljs-keyword">from</span> name_function <span class="hljs-keyword">import</span> get_formatted_name<br><span class="hljs-comment"># 继承unittest.TestCase的自定义的测试类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">NamesTestCase</span>(unittest.TestCase):<br>    <span class="hljs-string">&quot;&quot;&quot;测试 &#x27;name_function.py&#x27;.&quot;&quot;&quot;</span><br>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_first_last_name</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;能够正确地处理像Janis Joplin这样的姓名吗？&quot;&quot;&quot;</span><br>        formatted_name = get_formatted_name(<span class="hljs-string">&#x27;janis&#x27;</span>, <span class="hljs-string">&#x27;joplin&#x27;</span>)<br>        <span class="hljs-comment">#使用断言方法来核实得到的结果与期望的结果是否一致</span><br>        self.assertEqual(formatted_name, <span class="hljs-string">&#x27;Janis Joplin&#x27;</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_first_last_middle_name</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;能够正确地处理像Wolfgang Amadeus Mozart这样的姓名吗？&quot;&quot;&quot;</span><br>        formatted_name = get_formatted_name(<br>            <span class="hljs-string">&#x27;wolfgang&#x27;</span>, <span class="hljs-string">&#x27;mozart&#x27;</span>, <span class="hljs-string">&#x27;amadeus&#x27;</span>)<br>        self.assertEqual(formatted_name, <span class="hljs-string">&#x27;Wolfgang Amadeus Mozart&#x27;</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-comment"># 在运行时，所有以test打头的方法都将自动运行</span><br>    unittest.main()<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># test_name_function.py</span><br><span class="hljs-keyword">import</span> unittest<br><span class="hljs-keyword">from</span> name_function <span class="hljs-keyword">import</span> get_formatted_name<br><span class="hljs-comment"># 继承unittest.TestCase的自定义的测试类</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">NamesTestCase</span>(unittest.TestCase):<br>    <span class="hljs-string">&quot;&quot;&quot;测试 &#x27;name_function.py&#x27;.&quot;&quot;&quot;</span>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_first_last_name</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;能够正确地处理像Janis Joplin这样的姓名吗？&quot;&quot;&quot;</span><br>        formatted_name = get_formatted_name(<span class="hljs-string">&#x27;janis&#x27;</span>, <span class="hljs-string">&#x27;joplin&#x27;</span>)<br>        <span class="hljs-comment">#使用断言方法来核实得到的结果与期望的结果是否一致</span><br>        self.assertEqual(formatted_name, <span class="hljs-string">&#x27;Janis Joplin&#x27;</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">test_first_last_middle_name</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-string">&quot;&quot;&quot;能够正确地处理像Wolfgang Amadeus Mozart这样的姓名吗？&quot;&quot;&quot;</span><br>        formatted_name = get_formatted_name(<br>            <span class="hljs-string">&#x27;wolfgang&#x27;</span>, <span class="hljs-string">&#x27;mozart&#x27;</span>, <span class="hljs-string">&#x27;amadeus&#x27;</span>)<br>        self.assertEqual(formatted_name, <span class="hljs-string">&#x27;Wolfgang Amadeus Mozart&#x27;</span>)<br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-comment"># 在运行时，所有以test打头的方法都将自动运行</span><br>    unittest.main()<br></code></pre></td></tr></table></figure>
 
 <h2 id="2-测试类"><a href="#2-测试类" class="headerlink" title="2. 测试类"></a>2. 测试类</h2><p>下面来编写针对类的测试。很多程序中都会用到类，因此能够证明你的类能够正确地工作会大有裨益。如果针对类的测试通过了，你就能确信对类所做的改进没有意外地破坏其原有的行为。</p>
 <h3 id="2-1各种断言方法"><a href="#2-1各种断言方法" class="headerlink" title="2.1各种断言方法"></a>2.1各种断言方法</h3><table>
@@ -1259,6 +1259,86 @@
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PR_noob_learning</title>
+    <url>/2022/10/03/Pr_noob/</url>
+    <content><![CDATA[<p>适当学习一些Pr知识，尝试剪辑一些视频。</p>
+<h2 id="1-常用快捷键"><a href="#1-常用快捷键" class="headerlink" title="1.常用快捷键"></a>1.常用快捷键</h2><ul>
+<li>空格键Space播放和暂停</li>
+<li>Left Right键 ：向前向后一帧 （比较细致，可以一直按，这样速度快一点）</li>
+<li>shift+Left Right键：向前向后五帧（这个比较快）</li>
+<li>J 左穿梭&#x2F;倒放</li>
+<li>K 停止穿梭</li>
+<li>L 右穿梭&#x2F;正放</li>
+<li>Shift + L 慢速右穿梭</li>
+<li>Shift + J 慢速左穿梭</li>
+<li>穿梭键如果连按，可以加速，K和Space都可以停止播放</li>
+<li>时间线窗口中时间帧的管理</li>
+<li>End 跳转到序列-素材结束点</li>
+<li>Home 跳转到序列-素材开始点</li>
+<li>Shift + End 跳转到所选素材结束点</li>
+<li>Up 跳转上一个编辑点 </li>
+<li>Down 跳转下一个编辑点</li>
+<li>i , o:设出入点</li>
+<li>Shift + I 跳转入店</li>
+<li>Shift + O 跳转出点</li>
+<li>‘    提取</li>
+<li>， 插入</li>
+<li>.    覆盖</li>
+</ul>
+<h2 id="2-剪辑多素材如何标记出入点"><a href="#2-剪辑多素材如何标记出入点" class="headerlink" title="2.剪辑多素材如何标记出入点"></a>2.剪辑多素材如何标记出入点</h2><table>
+<thead>
+<tr>
+<th align="left">总体</th>
+<th>细节</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">导入素材</td>
+<td>1. 熟悉素材，选取合适的音乐<br />2. 将素材和音乐导入到pr素材窗口中</td>
+</tr>
+<tr>
+<td align="left">简介流程</td>
+<td>3. 反复感受音乐，对音乐做一个节奏和情绪上的区分<br />4. 选取偏努力和刻苦一类的素材，选择合适的段落<br />5. 前半段音乐节奏较快的地方，素材相应的要短一些<br />6. 选取成功，胜利一类的素材，放在音乐后半段<br />7. 反复感受音乐节奏，可以在音乐有大的节拍的地方，将剪辑点对齐<br />8. 反复预览视频，使剪辑点和音乐更加契合<br />9. 导出视频</td>
+</tr>
+</tbody></table>
+<h2 id="3-使用卡点插件"><a href="#3-使用卡点插件" class="headerlink" title="3.使用卡点插件"></a>3.使用卡点插件</h2><ol>
+<li>导入素材</li>
+<li>窗口 -&gt; 扩展 -&gt; beat edit</li>
+<li>load music -&gt; sequence markers -&gt; create makers -&gt; 根据节奏调整amounts</li>
+<li>导出makers</li>
+<li>选择视频或者图片素材，点击素材库下方<strong>自动匹配到序列</strong>按钮</li>
+<li>顺序：选择顺序，防止：在未编号标记 -&gt; 确定</li>
+</ol>
+<h2 id="4-如何添加字幕"><a href="#4-如何添加字幕" class="headerlink" title="4.如何添加字幕"></a>4.如何添加字幕</h2><table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th>特点与流程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">arctime pro 2.0</td>
+<td>特点：根据字幕稿添加字幕功能，操作顺手<br />流程：导入视频和字幕稿，直接拖拽字幕，<br />快速添加字幕并调整后导出完整视频</td>
+</tr>
+<tr>
+<td align="left">听见字幕</td>
+<td>特点：0.48元&#x2F;分钟价格相对便宜，值得信赖<br />流程：上传音频，自动生成带时间线的字幕文件，<br />可以直接导入pr中编辑</td>
+</tr>
+<tr>
+<td align="left">网易见外</td>
+<td>特点：免费字幕文件生成工具，轻松白嫖<br />流程：操作步骤与听见字幕类似，支持字母生成、翻译等</td>
+</tr>
+</tbody></table>
+<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><p>学了跟没学一样，还是啥都不会。</p>
+]]></content>
+      <categories>
+        <category>PR学习</category>
+      </categories>
+      <tags>
+        <tag>Pr</tag>
       </tags>
   </entry>
   <entry>
