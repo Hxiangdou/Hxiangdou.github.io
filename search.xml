@@ -1454,7 +1454,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Python学习之路（13）下载数据【项目2 数据可视化】</title>
+    <title>Python学习之路（14）使用API【项目2 数据可视化】</title>
     <url>/2022/10/11/Python_14/</url>
     <content><![CDATA[<p>在本章中，你将学习如何编写一个独立的程序，并对其获取的数据进行可视化。</p>
 <h2 id="1-使用Web-API"><a href="#1-使用Web-API" class="headerlink" title="1.使用Web API"></a>1.使用Web API</h2><p>本章的可视化将基于来自GitHub的信息，这是一个让程序员能够协作开发 项目的网站。我们将使用GitHub的API来请求有关该网站中Python项目的信 息，然后使用<code>Pygal</code>生成交互式可视化，以呈现这些项目的受欢迎程度。</p>
