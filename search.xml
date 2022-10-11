@@ -1379,6 +1379,81 @@
       </tags>
   </entry>
   <entry>
+    <title>Python学习之路（16）下载数据【项目2 数据可视化】</title>
+    <url>/2022/10/10/Python_13/</url>
+    <content><![CDATA[<p>在本章中，你将从网上下载数据，并对这些数据进行可视化。</p>
+<h2 id="1-CSV文件"><a href="#1-CSV文件" class="headerlink" title="1.CSV文件"></a>1.CSV文件</h2><p>要在文本文件中存储数据，最简单的方式是将数据作为一系列以逗号分隔 的值（CSV）写入文件。这样的文件称为CSV文件。下面是一行CSV格式的天气数据：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;USW00025333&quot;</span>,<span class="hljs-string">&quot;SITKA AIRPORT, AK US&quot;</span>,<span class="hljs-string">&quot;2018-01-01&quot;</span>,<span class="hljs-string">&quot;13.87&quot;</span>,<span class="hljs-string">&quot; 0023&quot;</span>,<span class="hljs-string">&quot;0.45&quot;</span>,,,<span class="hljs-string">&quot;48&quot;</span>,<span class="hljs-string">&quot;38&quot;</span>,<span class="hljs-string">&quot;  110&quot;</span>,<span class="hljs-string">&quot;  110&quot;</span>,<span class="hljs-string">&quot;31.1&quot;</span>,<span class="hljs-string">&quot;38.0&quot;</span>,<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-1读取csv文件"><a href="#1-1读取csv文件" class="headerlink" title="1.1读取csv文件"></a>1.1读取csv文件</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> csv<br>filename = <span class="hljs-string">&#x27;./data/sitka_weather_07-2018_simple.csv&#x27;</span><br><span class="hljs-comment">#读取文件头</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    reader = csv.reader(f)<span class="hljs-comment">#创建一个与该文件关联的阅读器（reader）对象</span><br>    header_row = <span class="hljs-built_in">next</span>(reader)<span class="hljs-comment">#next 返回文件中的下一行</span><br>    <span class="hljs-keyword">for</span> index, column_header <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(header_row):<br>        <span class="hljs-built_in">print</span>(index, column_header)<br><span class="hljs-comment">#output:</span><br><span class="hljs-number">0</span> STATION<br><span class="hljs-number">1</span> NAME<br><span class="hljs-number">2</span> DATE<br><span class="hljs-number">3</span> PRCP<br><span class="hljs-number">4</span> TAVG<br><span class="hljs-number">5</span> TMAX<br><span class="hljs-number">6</span> TMIN<br><span class="hljs-comment">#提取数据，最高温</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    reader = csv.reader(f)<br>    header_row = <span class="hljs-built_in">next</span>(reader)<br>    highs = []<br>    <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> reader:<br>        highs.append(<span class="hljs-built_in">int</span>(row[<span class="hljs-number">5</span>]))<br>    <span class="hljs-built_in">print</span>(highs)<br><span class="hljs-comment">#output:</span><br>[<span class="hljs-number">62</span>, <span class="hljs-number">58</span>, <span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">67</span>, <span class="hljs-number">59</span>, <span class="hljs-number">58</span>, <span class="hljs-number">62</span>, <span class="hljs-number">66</span>, <span class="hljs-number">59</span>, <span class="hljs-number">56</span>, <span class="hljs-number">63</span>, <span class="hljs-number">65</span>, <span class="hljs-number">58</span>, <span class="hljs-number">56</span>, <span class="hljs-number">59</span>, <span class="hljs-number">64</span>, <span class="hljs-number">60</span>, <span class="hljs-number">60</span>, <span class="hljs-number">61</span>, <span class="hljs-number">65</span>, <span class="hljs-number">65</span>, <span class="hljs-number">63</span>, <span class="hljs-number">59</span>, <span class="hljs-number">64</span>, <span class="hljs-number">65</span>, <span class="hljs-number">68</span>, <span class="hljs-number">66</span>, <span class="hljs-number">64</span>, <span class="hljs-number">67</span>, <span class="hljs-number">65</span>]<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-2绘制气温图表"><a href="#1-2绘制气温图表" class="headerlink" title="1.2绘制气温图表"></a>1.2绘制气温图表</h3><p>为可视化这些气温数据，我们首先使用matplotlib创建一个显示每日最高气 温的简单图形。</p>
+<table>
+<thead>
+<tr>
+<th>实参</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%A</td>
+<td>星期的名称，如Monday</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>月份名，如January</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>用数字表示的月份（01~12）</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>用数字表示月份中的一天（01~31）</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>四位的年份，如2015</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>两位的年份，如15</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>24小时制的小时数（00~23）</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>12小时制的小时数（01~12）</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>am或pm</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>分钟数（00~59）</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>秒数（00~61）</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime<br><span class="hljs-keyword">import</span> csv<br>filename = <span class="hljs-string">&#x27;./data/sitka_weather_2018_simple.csv&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    reader = csv.reader(f)<br>    header_row = <span class="hljs-built_in">next</span>(reader)<br>    dates, highs, lows = [], [], []<br>    <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> reader:<br>        <span class="hljs-keyword">try</span>:<br>            <span class="hljs-comment">#如果有缺失数据，就会引发ValueError错误</span><br>            dates.append(datetime.strptime(row[<span class="hljs-number">2</span>], <span class="hljs-string">&quot;%Y-%m-%d&quot;</span>))<br>            highs.append(<span class="hljs-built_in">int</span>(row[<span class="hljs-number">5</span>]))<br>            lows.append(<span class="hljs-built_in">int</span>(row[<span class="hljs-number">6</span>]))<br>        <span class="hljs-keyword">except</span> ValueError:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;missing data&#x27;</span>)<br><span class="hljs-comment"># 根据数据绘制图形</span><br>fig = plt.figure(dpi=<span class="hljs-number">128</span>, figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">6</span>))<br>plt.plot(dates, highs, c=<span class="hljs-string">&#x27;red&#x27;</span>)<br>plt.plot(dates, lows, c=<span class="hljs-string">&#x27;blue&#x27;</span>)<br><span class="hljs-comment"># 用阴影填充两条折线间的空间</span><br>plt.fill_between(dates, highs, lows, facecolor=<span class="hljs-string">&#x27;blue&#x27;</span>, alpha=<span class="hljs-number">0.1</span>)<br><span class="hljs-comment"># 设置图形的格式</span><br>plt.title(<span class="hljs-string">&quot;Daily high temperatures, July 2018&quot;</span>, fontsize=<span class="hljs-number">24</span>)<br>plt.xlabel(<span class="hljs-string">&#x27;&#x27;</span>, fontsize=<span class="hljs-number">16</span>)<br>fig.autofmt_xdate()<span class="hljs-comment"># 绘制斜的日期标签</span><br>plt.ylabel(<span class="hljs-string">&#x27;Temperature(F)&#x27;</span>, fontsize=<span class="hljs-number">16</span>)<br>plt.tick_params(axis=<span class="hljs-string">&#x27;both&#x27;</span>, which=<span class="hljs-string">&#x27;major&#x27;</span>, labelsize=<span class="hljs-number">16</span>)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-3绘制世界人口地图：JSON格式"><a href="#1-3绘制世界人口地图：JSON格式" class="headerlink" title="1.3绘制世界人口地图：JSON格式"></a>1.3绘制世界人口地图：JSON格式</h3><p><code>plotly</code>提供了一个适合初学者使用的地图创建工具，你将使用它来对地震数据进行可视化，以探索地震的分布情况。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#提取数据</span><br><span class="hljs-keyword">import</span> json<br><span class="hljs-comment">#将数据加载到一个列表中</span><br>filename = <span class="hljs-string">&#x27;./global_data/eq_data_1_day_m1.json&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    all_eq_data = json.load(f)<br>all_eq_dicts = all_eq_data[<span class="hljs-string">&#x27;features&#x27;</span>]<br><span class="hljs-comment">#打印震级，经度，纬度，标题</span><br>mags, lons, lats, hover_texts = [], [], [], []<br><span class="hljs-keyword">for</span> eq_dict <span class="hljs-keyword">in</span> all_eq_dicts:<br>    mag = eq_dict[<span class="hljs-string">&#x27;properties&#x27;</span>][<span class="hljs-string">&#x27;mag&#x27;</span>]<br>    lon = eq_dict[<span class="hljs-string">&#x27;geometry&#x27;</span>][<span class="hljs-string">&#x27;coordinates&#x27;</span>][<span class="hljs-number">0</span>]<br>    lat = eq_dict[<span class="hljs-string">&#x27;geometry&#x27;</span>][<span class="hljs-string">&#x27;coordinates&#x27;</span>][<span class="hljs-number">1</span>]<br>    title = eq_dict[<span class="hljs-string">&#x27;properties&#x27;</span>][<span class="hljs-string">&#x27;title&#x27;</span>]<br>    mags.append(mag)<br>    lons.append(lon)<br>    lats.append(lat)<br>    hover_texts.append(title)<br><span class="hljs-built_in">print</span>(mags[:<span class="hljs-number">10</span>])<br><span class="hljs-built_in">print</span>(lons[:<span class="hljs-number">5</span>])<br><span class="hljs-built_in">print</span>(lats[:<span class="hljs-number">5</span>])<br><span class="hljs-comment">#output:</span><br>[<span class="hljs-number">0.96</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">4.3</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1.06</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">4.9</span>, <span class="hljs-number">1.8</span>]<br>[-<span class="hljs-number">116.7941667</span>, -<span class="hljs-number">148.9865</span>, -<span class="hljs-number">74.2343</span>, -<span class="hljs-number">161.6801</span>, -<span class="hljs-number">118.5316667</span>]<br>[<span class="hljs-number">33.4863333</span>, <span class="hljs-number">64.6673</span>, -<span class="hljs-number">12.1025</span>, <span class="hljs-number">54.2232</span>, <span class="hljs-number">35.3098333</span>]<br><span class="hljs-comment">#绘制地震地图</span><br><span class="hljs-keyword">from</span> plotly.graph_objs <span class="hljs-keyword">import</span> Scattergeo, Layout<br><span class="hljs-keyword">from</span> plotly <span class="hljs-keyword">import</span> offline<br>data = [&#123;<br>    <span class="hljs-string">&#x27;type&#x27;</span>: <span class="hljs-string">&#x27;scattergeo&#x27;</span>,<br>    <span class="hljs-string">&#x27;lon&#x27;</span>: lons,<br>    <span class="hljs-string">&#x27;lat&#x27;</span>: lats,<br>    <span class="hljs-string">&#x27;text&#x27;</span>: hover_texts,<br>    <span class="hljs-string">&#x27;marker&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;size&#x27;</span>: [<span class="hljs-number">5</span>*mag <span class="hljs-keyword">for</span> mag <span class="hljs-keyword">in</span> mags],<br>        <span class="hljs-string">&#x27;color&#x27;</span>: mags,<br>        <span class="hljs-string">&#x27;colorscale&#x27;</span>: <span class="hljs-string">&#x27;Viridis&#x27;</span>,<br>        <span class="hljs-string">&#x27;reversescale&#x27;</span>: <span class="hljs-literal">True</span>,<br>        <span class="hljs-string">&#x27;colorbar&#x27;</span>: &#123;<span class="hljs-string">&#x27;title&#x27;</span>: <span class="hljs-string">&#x27;Magnitude&#x27;</span>&#125;,<br>    &#125;,<br>&#125;]<br>my_layout = Layout(title=<span class="hljs-string">&#x27;Global Earthquakes&#x27;</span>)<br>fig = &#123;<span class="hljs-string">&#x27;data&#x27;</span>: data, <span class="hljs-string">&#x27;layout&#x27;</span>: my_layout&#125;<br>offline.plot(fig, filename=<span class="hljs-string">&#x27;global_earthquakes.html&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>

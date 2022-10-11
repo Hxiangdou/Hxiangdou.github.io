@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python学习之路（16）下载数据【项目2 数据可视化】 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="在本章中，你将从网上下载数据，并对这些数据进行可视化。...">
+  <meta name="author" content="茴香豆">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/支付宝.JPG',
+        wechat: '/images/微信.JPG'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">Python学习之路（16）下载数据【项目2 数据可视化】</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 相册</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Python学习之路（16）下载数据【项目2 数据可视化】</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 10, 2022</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2022/10/10/Python_13/" class="leancloud-counter" data-flag-title="Python学习之路（16）下载数据【项目2 数据可视化】"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2022/10/10/Python_13/" class="leancloud-like" data-flag-title="Python学习之路（16）下载数据【项目2 数据可视化】"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4120</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>在本章中，你将从网上下载数据，并对这些数据进行可视化。</p>
+<h2 id="1-CSV文件"><a href="#1-CSV文件" class="headerlink" title="1.CSV文件"></a>1.CSV文件</h2><p>要在文本文件中存储数据，最简单的方式是将数据作为一系列以逗号分隔 的值（CSV）写入文件。这样的文件称为CSV文件。下面是一行CSV格式的天气数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-string">&quot;USW00025333&quot;</span>,<span class="hljs-string">&quot;SITKA AIRPORT, AK US&quot;</span>,<span class="hljs-string">&quot;2018-01-01&quot;</span>,<span class="hljs-string">&quot;13.87&quot;</span>,<span class="hljs-string">&quot; 0023&quot;</span>,<span class="hljs-string">&quot;0.45&quot;</span>,,,<span class="hljs-string">&quot;48&quot;</span>,<span class="hljs-string">&quot;38&quot;</span>,<span class="hljs-string">&quot;  110&quot;</span>,<span class="hljs-string">&quot;  110&quot;</span>,<span class="hljs-string">&quot;31.1&quot;</span>,<span class="hljs-string">&quot;38.0&quot;</span>,<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-1读取csv文件"><a href="#1-1读取csv文件" class="headerlink" title="1.1读取csv文件"></a>1.1读取csv文件</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> csv<br>filename = <span class="hljs-string">&#x27;./data/sitka_weather_07-2018_simple.csv&#x27;</span><br><span class="hljs-comment">#读取文件头</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    reader = csv.reader(f)<span class="hljs-comment">#创建一个与该文件关联的阅读器（reader）对象</span><br>    header_row = <span class="hljs-built_in">next</span>(reader)<span class="hljs-comment">#next 返回文件中的下一行</span><br>    <span class="hljs-keyword">for</span> index, column_header <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(header_row):<br>        <span class="hljs-built_in">print</span>(index, column_header)<br><span class="hljs-comment">#output:</span><br><span class="hljs-number">0</span> STATION<br><span class="hljs-number">1</span> NAME<br><span class="hljs-number">2</span> DATE<br><span class="hljs-number">3</span> PRCP<br><span class="hljs-number">4</span> TAVG<br><span class="hljs-number">5</span> TMAX<br><span class="hljs-number">6</span> TMIN<br><span class="hljs-comment">#提取数据，最高温</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    reader = csv.reader(f)<br>    header_row = <span class="hljs-built_in">next</span>(reader)<br>    highs = []<br>    <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> reader:<br>        highs.append(<span class="hljs-built_in">int</span>(row[<span class="hljs-number">5</span>]))<br>    <span class="hljs-built_in">print</span>(highs)<br><span class="hljs-comment">#output:</span><br>[<span class="hljs-number">62</span>, <span class="hljs-number">58</span>, <span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">67</span>, <span class="hljs-number">59</span>, <span class="hljs-number">58</span>, <span class="hljs-number">62</span>, <span class="hljs-number">66</span>, <span class="hljs-number">59</span>, <span class="hljs-number">56</span>, <span class="hljs-number">63</span>, <span class="hljs-number">65</span>, <span class="hljs-number">58</span>, <span class="hljs-number">56</span>, <span class="hljs-number">59</span>, <span class="hljs-number">64</span>, <span class="hljs-number">60</span>, <span class="hljs-number">60</span>, <span class="hljs-number">61</span>, <span class="hljs-number">65</span>, <span class="hljs-number">65</span>, <span class="hljs-number">63</span>, <span class="hljs-number">59</span>, <span class="hljs-number">64</span>, <span class="hljs-number">65</span>, <span class="hljs-number">68</span>, <span class="hljs-number">66</span>, <span class="hljs-number">64</span>, <span class="hljs-number">67</span>, <span class="hljs-number">65</span>]<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-2绘制气温图表"><a href="#1-2绘制气温图表" class="headerlink" title="1.2绘制气温图表"></a>1.2绘制气温图表</h3><p>为可视化这些气温数据，我们首先使用matplotlib创建一个显示每日最高气 温的简单图形。</p>
+<table>
+<thead>
+<tr>
+<th>实参</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%A</td>
+<td>星期的名称，如Monday</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>月份名，如January</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>用数字表示的月份（01~12）</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>用数字表示月份中的一天（01~31）</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>四位的年份，如2015</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>两位的年份，如15</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>24小时制的小时数（00~23）</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>12小时制的小时数（01~12）</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>am或pm</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>分钟数（00~59）</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>秒数（00~61）</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> matplotlib <span class="hljs-keyword">import</span> pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime<br><span class="hljs-keyword">import</span> csv<br>filename = <span class="hljs-string">&#x27;./data/sitka_weather_2018_simple.csv&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    reader = csv.reader(f)<br>    header_row = <span class="hljs-built_in">next</span>(reader)<br>    dates, highs, lows = [], [], []<br>    <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> reader:<br>        <span class="hljs-keyword">try</span>:<br>            <span class="hljs-comment">#如果有缺失数据，就会引发ValueError错误</span><br>            dates.append(datetime.strptime(row[<span class="hljs-number">2</span>], <span class="hljs-string">&quot;%Y-%m-%d&quot;</span>))<br>            highs.append(<span class="hljs-built_in">int</span>(row[<span class="hljs-number">5</span>]))<br>            lows.append(<span class="hljs-built_in">int</span>(row[<span class="hljs-number">6</span>]))<br>        <span class="hljs-keyword">except</span> ValueError:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;missing data&#x27;</span>)<br><span class="hljs-comment"># 根据数据绘制图形</span><br>fig = plt.figure(dpi=<span class="hljs-number">128</span>, figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">6</span>))<br>plt.plot(dates, highs, c=<span class="hljs-string">&#x27;red&#x27;</span>)<br>plt.plot(dates, lows, c=<span class="hljs-string">&#x27;blue&#x27;</span>)<br><span class="hljs-comment"># 用阴影填充两条折线间的空间</span><br>plt.fill_between(dates, highs, lows, facecolor=<span class="hljs-string">&#x27;blue&#x27;</span>, alpha=<span class="hljs-number">0.1</span>)<br><span class="hljs-comment"># 设置图形的格式</span><br>plt.title(<span class="hljs-string">&quot;Daily high temperatures, July 2018&quot;</span>, fontsize=<span class="hljs-number">24</span>)<br>plt.xlabel(<span class="hljs-string">&#x27;&#x27;</span>, fontsize=<span class="hljs-number">16</span>)<br>fig.autofmt_xdate()<span class="hljs-comment"># 绘制斜的日期标签</span><br>plt.ylabel(<span class="hljs-string">&#x27;Temperature(F)&#x27;</span>, fontsize=<span class="hljs-number">16</span>)<br>plt.tick_params(axis=<span class="hljs-string">&#x27;both&#x27;</span>, which=<span class="hljs-string">&#x27;major&#x27;</span>, labelsize=<span class="hljs-number">16</span>)<br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-3绘制世界人口地图：JSON格式"><a href="#1-3绘制世界人口地图：JSON格式" class="headerlink" title="1.3绘制世界人口地图：JSON格式"></a>1.3绘制世界人口地图：JSON格式</h3><p><code>plotly</code>提供了一个适合初学者使用的地图创建工具，你将使用它来对地震数据进行可视化，以探索地震的分布情况。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#提取数据</span><br><span class="hljs-keyword">import</span> json<br><span class="hljs-comment">#将数据加载到一个列表中</span><br>filename = <span class="hljs-string">&#x27;./global_data/eq_data_1_day_m1.json&#x27;</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename) <span class="hljs-keyword">as</span> f:<br>    all_eq_data = json.load(f)<br>all_eq_dicts = all_eq_data[<span class="hljs-string">&#x27;features&#x27;</span>]<br><span class="hljs-comment">#打印震级，经度，纬度，标题</span><br>mags, lons, lats, hover_texts = [], [], [], []<br><span class="hljs-keyword">for</span> eq_dict <span class="hljs-keyword">in</span> all_eq_dicts:<br>    mag = eq_dict[<span class="hljs-string">&#x27;properties&#x27;</span>][<span class="hljs-string">&#x27;mag&#x27;</span>]<br>    lon = eq_dict[<span class="hljs-string">&#x27;geometry&#x27;</span>][<span class="hljs-string">&#x27;coordinates&#x27;</span>][<span class="hljs-number">0</span>]<br>    lat = eq_dict[<span class="hljs-string">&#x27;geometry&#x27;</span>][<span class="hljs-string">&#x27;coordinates&#x27;</span>][<span class="hljs-number">1</span>]<br>    title = eq_dict[<span class="hljs-string">&#x27;properties&#x27;</span>][<span class="hljs-string">&#x27;title&#x27;</span>]<br>    mags.append(mag)<br>    lons.append(lon)<br>    lats.append(lat)<br>    hover_texts.append(title)<br><span class="hljs-built_in">print</span>(mags[:<span class="hljs-number">10</span>])<br><span class="hljs-built_in">print</span>(lons[:<span class="hljs-number">5</span>])<br><span class="hljs-built_in">print</span>(lats[:<span class="hljs-number">5</span>])<br><span class="hljs-comment">#output:</span><br>[<span class="hljs-number">0.96</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">4.3</span>, <span class="hljs-number">3.6</span>, <span class="hljs-number">2.1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1.06</span>, <span class="hljs-number">2.3</span>, <span class="hljs-number">4.9</span>, <span class="hljs-number">1.8</span>]<br>[-<span class="hljs-number">116.7941667</span>, -<span class="hljs-number">148.9865</span>, -<span class="hljs-number">74.2343</span>, -<span class="hljs-number">161.6801</span>, -<span class="hljs-number">118.5316667</span>]<br>[<span class="hljs-number">33.4863333</span>, <span class="hljs-number">64.6673</span>, -<span class="hljs-number">12.1025</span>, <span class="hljs-number">54.2232</span>, <span class="hljs-number">35.3098333</span>]<br><span class="hljs-comment">#绘制地震地图</span><br><span class="hljs-keyword">from</span> plotly.graph_objs <span class="hljs-keyword">import</span> Scattergeo, Layout<br><span class="hljs-keyword">from</span> plotly <span class="hljs-keyword">import</span> offline<br>data = [&#123;<br>    <span class="hljs-string">&#x27;type&#x27;</span>: <span class="hljs-string">&#x27;scattergeo&#x27;</span>,<br>    <span class="hljs-string">&#x27;lon&#x27;</span>: lons,<br>    <span class="hljs-string">&#x27;lat&#x27;</span>: lats,<br>    <span class="hljs-string">&#x27;text&#x27;</span>: hover_texts,<br>    <span class="hljs-string">&#x27;marker&#x27;</span>: &#123;<br>        <span class="hljs-string">&#x27;size&#x27;</span>: [<span class="hljs-number">5</span>*mag <span class="hljs-keyword">for</span> mag <span class="hljs-keyword">in</span> mags],<br>        <span class="hljs-string">&#x27;color&#x27;</span>: mags,<br>        <span class="hljs-string">&#x27;colorscale&#x27;</span>: <span class="hljs-string">&#x27;Viridis&#x27;</span>,<br>        <span class="hljs-string">&#x27;reversescale&#x27;</span>: <span class="hljs-literal">True</span>,<br>        <span class="hljs-string">&#x27;colorbar&#x27;</span>: &#123;<span class="hljs-string">&#x27;title&#x27;</span>: <span class="hljs-string">&#x27;Magnitude&#x27;</span>&#125;,<br>    &#125;,<br>&#125;]<br>my_layout = Layout(title=<span class="hljs-string">&#x27;Global Earthquakes&#x27;</span>)<br>fig = &#123;<span class="hljs-string">&#x27;data&#x27;</span>: data, <span class="hljs-string">&#x27;layout&#x27;</span>: my_layout&#125;<br>offline.plot(fig, filename=<span class="hljs-string">&#x27;global_earthquakes.html&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>茴香豆</li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/10/10/Python_13/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;10&#x2F;10&#x2F;Python_13&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;10&#x2F;10&#x2F;Python_13&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="/images/支付宝.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2022/10/09/Python_12/">Python学习之路（15）生成数据【项目2 数据可视化】<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz",
+        app_key: "6DvkgciWlfleRrT7w9r6snJI",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-CSV%E6%96%87%E4%BB%B6"><span class="toc-text">1.CSV文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E8%AF%BB%E5%8F%96csv%E6%96%87%E4%BB%B6"><span class="toc-text">1.1读取csv文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E7%BB%98%E5%88%B6%E6%B0%94%E6%B8%A9%E5%9B%BE%E8%A1%A8"><span class="toc-text">1.2绘制气温图表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E7%BB%98%E5%88%B6%E4%B8%96%E7%95%8C%E4%BA%BA%E5%8F%A3%E5%9C%B0%E5%9B%BE%EF%BC%9AJSON%E6%A0%BC%E5%BC%8F"><span class="toc-text">1.3绘制世界人口地图：JSON格式</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1134384717 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/Squirrel00011 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1134384717@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#ff3b00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz',
+      appKey: '6DvkgciWlfleRrT7w9r6snJI',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: "38fcd752"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
