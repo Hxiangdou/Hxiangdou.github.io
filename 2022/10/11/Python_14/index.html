@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python学习之路（13）下载数据【项目2 数据可视化】 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="在本章中，你将学习如何编写一个独立的程序，并对其获取的...">
+  <meta name="author" content="茴香豆">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/支付宝.JPG',
+        wechat: '/images/微信.JPG'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">Python学习之路（13）下载数据【项目2 数据可视化】</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 相册</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Python学习之路（13）下载数据【项目2 数据可视化】</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 11, 2022</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2022/10/11/Python_14/" class="leancloud-counter" data-flag-title="Python学习之路（13）下载数据【项目2 数据可视化】"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2022/10/11/Python_14/" class="leancloud-like" data-flag-title="Python学习之路（13）下载数据【项目2 数据可视化】"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>7915</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>在本章中，你将学习如何编写一个独立的程序，并对其获取的数据进行可视化。</p>
+<h2 id="1-使用Web-API"><a href="#1-使用Web-API" class="headerlink" title="1.使用Web API"></a>1.使用Web API</h2><p>本章的可视化将基于来自GitHub的信息，这是一个让程序员能够协作开发 项目的网站。我们将使用GitHub的API来请求有关该网站中Python项目的信 息，然后使用<code>Pygal</code>生成交互式可视化，以呈现这些项目的受欢迎程度。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">https://api.github.com/search/repositories?q=language:python&amp;sort=stars<br>功能: 返回GitHub当前托管了多少个Python项目，还有有关最受欢迎的Python仓库的信息。<br>第一部分:<br>（https://api.github.com/ ）将请求发送到GitHub网站中响应API调用的部分<br>第二部分（search/repositories ）让API搜索GitHub上的所有仓库。<br>repositories 后面的问号指出我们要传递一个实参。<br>q表示查询，而等号让我们能够开始指定查询（q=）。<br>通过使用language:python ，我们指出只想获取主要语言为Python的仓库的信息。最后一部分<br>（&amp;sort=stars）指定将项目按其获得的星星数进行排序。<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-comment">#执行API调用并存储响应</span><br>url = <span class="hljs-string">&#x27;https://api.github.com/search/repositories?q=language:python&amp;sort=stars&#x27;</span><br>r = requests.get(url)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Status code: &quot;</span>, r.status_code)<br><span class="hljs-comment">#将API响应存储在一个变量中</span><br>response_dict = r.json()<br><span class="hljs-comment">#处理结果</span><br><span class="hljs-built_in">print</span>(response_dict.keys())<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Toral repositories:&quot;</span>, response_dict[<span class="hljs-string">&#x27;total_count&#x27;</span>])<br><span class="hljs-comment">#output:</span><br>Status code:  <span class="hljs-number">200</span><br>dict_keys([<span class="hljs-string">&#x27;total_count&#x27;</span>, <span class="hljs-string">&#x27;incomplete_results&#x27;</span>, <span class="hljs-string">&#x27;items&#x27;</span>])<br>Toral repositories: <span class="hljs-number">9020420</span><br></code></pre></td></tr></table></figure>
+
+<p>仓库相关信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#探索有关仓库的信息</span><br>repo_dicts = response_dict[<span class="hljs-string">&#x27;items&#x27;</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Repositories returned: &quot;</span>, <span class="hljs-built_in">len</span>(repo_dicts))<br><span class="hljs-comment">#验究第一个仓库</span><br>repo_dict = repo_dicts[<span class="hljs-number">0</span>]<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nKeys: &quot;</span>, <span class="hljs-built_in">len</span>(repo_dict))<br><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(repo_dict.keys()):<br>    <span class="hljs-built_in">print</span>(key)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nSelected information about first repository:&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Name:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;name&#x27;</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Owner:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;owner&#x27;</span>][<span class="hljs-string">&#x27;login&#x27;</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Stars:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;stargazers_count&#x27;</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Repository:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;html_url&#x27;</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Created:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;created_at&#x27;</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Updated:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;updated_at&#x27;</span>])<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Description:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;description&#x27;</span>])<br><span class="hljs-comment">#output:</span><br>Repositories returned:  <span class="hljs-number">30</span><br><br>Keys:  <span class="hljs-number">79</span><br>allow_forking<br>archive_url<br>archived<br>assignees_url<br>blobs_url<br>branches_url<br>clone_url<br>collaborators_url<br>comments_url<br>commits_url<br>compare_url<br>...<br><br>Selected information about first repository:<br>Name: public-apis<br>Owner: public-apis<br>Stars: <span class="hljs-number">211850</span><br>Repository: https://github.com/public-apis/public-apis<br>Created: <span class="hljs-number">2016</span>-03-20T23:<span class="hljs-number">49</span>:42Z<br>Updated: <span class="hljs-number">2022</span>-<span class="hljs-number">10</span>-11T02:<span class="hljs-number">30</span>:33Z<br>Description: A collective <span class="hljs-built_in">list</span> of free APIs<br>    <br><span class="hljs-comment">#检视检视所有项目的信息</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nSelected information about each repository:&quot;</span>)<br><span class="hljs-keyword">for</span> repo_dict <span class="hljs-keyword">in</span> repo_dicts:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\nName:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;name&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Owner:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;owner&#x27;</span>][<span class="hljs-string">&#x27;login&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Stars:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;stargazers_count&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Repository:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;html_url&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Description:&#x27;</span>, repo_dict[<span class="hljs-string">&#x27;description&#x27;</span>])<br><span class="hljs-comment">#output:</span><br>Selected information about each repository:<br><br>Name: public-apis<br>Owner: public-apis<br>Stars: <span class="hljs-number">211850</span><br>Repository: https://github.com/public-apis/public-apis<br>Description: A collective <span class="hljs-built_in">list</span> of free APIs<br><br>Name: system-design-primer<br>Owner: donnemartin<br>Stars: <span class="hljs-number">199433</span><br>Repository: https://github.com/donnemartin/system-design-primer<br>Description: Learn how to design large-scale systems. Prep <span class="hljs-keyword">for</span> the system design interview.  Includes Anki flashcards.<br><br>Name: awesome-python<br>Owner: vinta<br>Stars: <span class="hljs-number">144231</span><br>Repository: https://github.com/vinta/awesome-python<br>Description: A curated <span class="hljs-built_in">list</span> of awesome Python frameworks, libraries, software <span class="hljs-keyword">and</span> resources<br><br>Name: youtube-dl<br>Owner: ytdl-org<br>Stars: <span class="hljs-number">114026</span><br>Repository: https://github.com/ytdl-org/youtube-dl<br>Description: Command-line program to download videos <span class="hljs-keyword">from</span> YouTube.com <span class="hljs-keyword">and</span> other video sites<br><br>Name: thefuck<br>Owner: nvbn<br>Stars: <span class="hljs-number">73960</span><br>Repository: https://github.com/nvbn/thefuck<br>Description: Magnificent app which corrects your previous console command.<br>    <br>...<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-使用Pygal可视化仓库"><a href="#2-使用Pygal可视化仓库" class="headerlink" title="2.使用Pygal可视化仓库"></a>2.使用Pygal可视化仓库</h2><p>创建条形图表示项目获得了多少颗星星。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> pygal<br><span class="hljs-keyword">from</span> pygal.style <span class="hljs-keyword">import</span> LightColorizedStyle <span class="hljs-keyword">as</span> LCS, LightenStyle <span class="hljs-keyword">as</span> LS<br><span class="hljs-comment"># 执行API调用并存储响应</span><br>URL = <span class="hljs-string">&#x27;https://api.github.com/search/repositories?q=language:python&amp;sort=stars&#x27;</span><br>r = requests.get(URL)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Status code: &quot;</span>, r.status_code)<br><br><span class="hljs-comment">#将API响应存储在一个变量中</span><br>response_dict = r.json()<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Total repositories: &quot;</span>, response_dict[<span class="hljs-string">&#x27;total_count&#x27;</span>])<br><span class="hljs-comment">#研究有关仓库的信息</span><br>repo_dicts = response_dict[<span class="hljs-string">&#x27;items&#x27;</span>]<br>names, plot_dicts = [], []<br><span class="hljs-keyword">for</span> repo_dict <span class="hljs-keyword">in</span> repo_dicts:<br>    names.append(repo_dict[<span class="hljs-string">&#x27;name&#x27;</span>])<br>    plot_dicts.append(&#123;<br>        <span class="hljs-string">&#x27;value&#x27;</span>: repo_dict[<span class="hljs-string">&#x27;stargazers_count&#x27;</span>],<br>        <span class="hljs-comment">#添加自定义工具提示</span><br>        <span class="hljs-string">&#x27;label&#x27;</span>: repo_dict[<span class="hljs-string">&#x27;description&#x27;</span>],<br>        <span class="hljs-comment">#将图表中的每个条形用作网站的链接</span><br>        <span class="hljs-string">&#x27;xlink&#x27;</span>: repo_dict[<span class="hljs-string">&#x27;html_url&#x27;</span>]<br>    &#125;)<br><span class="hljs-comment">#可视化</span><br>my_style = LS(<span class="hljs-string">&#x27;#333366&#x27;</span>, base_style=LCS)<br><span class="hljs-comment"># chart = pygal.Bar(style=my_style, x_label_rotation=45, show_legend=False)</span><br><span class="hljs-comment">#创建一个配置对象，包含传递给Bar()的所有定制</span><br>my_config = pygal.Config()<br>my_config.x_label_rotation = <span class="hljs-number">45</span><span class="hljs-comment">#倾斜45度</span><br>my_config.show_legend = <span class="hljs-literal">False</span><span class="hljs-comment">#不展示图例</span><br>my_config.title_font_size = <span class="hljs-number">24</span><br>my_config.label_font_size = <span class="hljs-number">14</span><br>my_config.major_label_font_size = <span class="hljs-number">18</span><br>my_config.truncate_label = <span class="hljs-number">15</span><span class="hljs-comment">#将较长的项目名缩短为15个字符</span><br>my_config.show_y_guides = <span class="hljs-literal">False</span><span class="hljs-comment">#隐藏图中的水平线</span><br>my_config.width = <span class="hljs-number">1000</span><br>chart = pygal.Bar(my_config, style=my_style)<br><br>chart.title = <span class="hljs-string">&#x27;Most-Starred Python Projects on Github&#x27;</span><br>chart.x_labels = names<br><br>chart.add(<span class="hljs-string">&#x27;&#x27;</span>, plot_dicts)<br>chart.render_to_file(<span class="hljs-string">&#x27;python_repos.svg&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="3-Hacker-News-API"><a href="#3-Hacker-News-API" class="headerlink" title="3.Hacker News API"></a>3.Hacker News API</h2><p>下面的调用返回本书编写时最热门的文章的信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">https://hacker-news.firebaseio.com/v0/item/<span class="hljs-number">9884165.j</span>son<br></code></pre></td></tr></table></figure>
+
+<p>响应是一个字典，包含ID为9884165的文章的信息</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js">&#123;<br>    <span class="hljs-string">&quot;by&quot;</span>:<span class="hljs-string">&quot;nns&quot;</span>,<br>    <span class="hljs-string">&quot;descendants&quot;</span>:<span class="hljs-number">297</span>,<br>    <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">9884165</span>,<br>    <span class="hljs-string">&quot;kids&quot;</span>:[<span class="hljs-number">9885099</span>,<span class="hljs-number">9884723</span>,<span class="hljs-number">9885165</span>,<span class="hljs-number">9884789</span>,<span class="hljs-number">9885604</span>,<span class="hljs-number">9884137</span>,<span class="hljs-number">9886151</span>,<span class="hljs-number">9885220</span>,<span class="hljs-number">9885790</span>,<span class="hljs-number">9884661</span>,<span class="hljs-number">9885844</span>,<span class="hljs-number">9885029</span>,<span class="hljs-number">9884817</span>,<span class="hljs-number">9887342</span>,<span class="hljs-number">9884545</span>,<span class="hljs-number">9884372</span>,<span class="hljs-number">9884499</span>,<span class="hljs-number">9884881</span>,<span class="hljs-number">9884109</span>,<span class="hljs-number">9886496</span>,<span class="hljs-number">9884342</span>,<span class="hljs-number">9887832</span>,<span class="hljs-number">9885023</span>,<span class="hljs-number">9884334</span>,<span class="hljs-number">9884707</span>,<span class="hljs-number">9887008</span>,<span class="hljs-number">9885348</span>,<span class="hljs-number">9885131</span>,<span class="hljs-number">9887539</span>,<span class="hljs-number">9885880</span>,<span class="hljs-number">9884196</span>,<span class="hljs-number">9884640</span>,<span class="hljs-number">9886534</span>,<span class="hljs-number">9885152</span>],<br>    <span class="hljs-string">&quot;score&quot;</span>:<span class="hljs-number">558</span>,<br>    <span class="hljs-string">&quot;time&quot;</span>:<span class="hljs-number">1436875181</span>,<br>    <span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;New Horizons: Nasa spacecraft speeds past Pluto&quot;</span>,<br>    <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-string">&quot;story&quot;</span>,<br>    <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;http://www.bbc.co.uk/news/science-environment-33524589&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>执行一个API调用，返回Hacker News上当前热门文章的ID，再查看 每篇排名靠前的文章</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">from</span> operator <span class="hljs-keyword">import</span> itemgetter<br><span class="hljs-comment">#执行API调用并存储响应</span><br>url =  <span class="hljs-string">&#x27;https://hacker-news.firebaseio.com/v0/topstories.json&#x27;</span><br>r = requests.get(url)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Status code: &quot;</span>, r.status_code)<br><span class="hljs-comment">#处理有关每篇文章的信息</span><br>submission_ids = r.json()<br>submission_dicts = []<br><span class="hljs-keyword">for</span> submission_id <span class="hljs-keyword">in</span> submission_ids[:<span class="hljs-number">30</span>]:<br>    <span class="hljs-comment">#对于每篇文章，都执行一个API调用</span><br>    url = (<span class="hljs-string">&#x27;https://hacker-news.firebaseio.com/v0/item/&#x27;</span> + <span class="hljs-built_in">str</span>(submission_id) + <span class="hljs-string">&#x27;.json&#x27;</span>)<br>    submission_r = requests.get(url)<br>    <span class="hljs-built_in">print</span>(submission_r.status_code)<br>    response_dict = submission_r.json()<br>    submission_dict = &#123;<br>        <span class="hljs-string">&#x27;title&#x27;</span>: response_dict[<span class="hljs-string">&#x27;title&#x27;</span>],<br>        <span class="hljs-string">&#x27;link&#x27;</span>: <span class="hljs-string">&#x27;http://news.ycombinator.com/item?id=&#x27;</span> + <span class="hljs-built_in">str</span>(submission_id),<br>        <span class="hljs-string">&#x27;comments&#x27;</span>: response_dict.get(<span class="hljs-string">&#x27;descendants&#x27;</span>, <span class="hljs-number">0</span>)<br>    &#125;<br>    submission_dicts.append(submission_dict)<br>submission_dicts = <span class="hljs-built_in">sorted</span>(submission_dicts, key=itemgetter(<span class="hljs-string">&#x27;comments&#x27;</span>), reverse=<span class="hljs-literal">True</span>)<br><span class="hljs-keyword">for</span> submission_dict <span class="hljs-keyword">in</span> submission_dicts:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;\nTitle:&quot;</span>, submission_dict[<span class="hljs-string">&#x27;title&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Discussion link:&quot;</span>, submission_dict[<span class="hljs-string">&#x27;link&#x27;</span>])<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Comments:&quot;</span>, submission_dict[<span class="hljs-string">&#x27;comments&#x27;</span>])<br><span class="hljs-comment">#output:</span><br>Status code:  <span class="hljs-number">200</span><br><span class="hljs-number">200</span><br><span class="hljs-number">200</span><br><span class="hljs-number">200</span><br>...<br>Title: Improving Firefox Responsiveness on macOS<br>Discussion link: http://news.ycombinator.com/item?<span class="hljs-built_in">id</span>=<span class="hljs-number">33152472</span><br>Comments: <span class="hljs-number">319</span><br><br>Title: U.S. Army Chooses Google Workspace<br>Discussion link: http://news.ycombinator.com/item?<span class="hljs-built_in">id</span>=<span class="hljs-number">33157558</span><br>Comments: <span class="hljs-number">273</span><br><br>Title: Ask HN: How did you stop drinking?<br>Discussion link: http://news.ycombinator.com/item?<span class="hljs-built_in">id</span>=<span class="hljs-number">33158947</span><br>Comments: <span class="hljs-number">162</span><br><br>...<br></code></pre></td></tr></table></figure>
+
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>茴香豆</li>
+    <li><strong>本文链接：</strong><a href="https://hxiangdou.github.io/2022/10/11/Python_14/index.html" title="https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;10&#x2F;11&#x2F;Python_14&#x2F;index.html">https:&#x2F;&#x2F;hxiangdou.github.io&#x2F;2022&#x2F;10&#x2F;11&#x2F;Python_14&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="/images/支付宝.JPG" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2022/10/10/Python_13/">Python学习之路（13）下载数据【项目2 数据可视化】<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz",
+        app_key: "6DvkgciWlfleRrT7w9r6snJI",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8Web-API"><span class="toc-text">1.使用Web API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8Pygal%E5%8F%AF%E8%A7%86%E5%8C%96%E4%BB%93%E5%BA%93"><span class="toc-text">2.使用Pygal可视化仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Hacker-News-API"><span class="toc-text">3.Hacker News API</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1134384717 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/Squirrel00011 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:1134384717@qq.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#ff3b00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+    <div class="fab fab-daovoice">
+      <i class="iconfont iconcomment"></i>
+    </div>
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz',
+      appKey: '6DvkgciWlfleRrT7w9r6snJI',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://hxiangdou.github.io';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+  
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", "https://widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: "38fcd752"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
