@@ -1342,7 +1342,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Python学习之路（15）生成数据【项目2 数据可视化】</title>
+    <title>Python学习之路（12）生成数据【项目2 数据可视化】</title>
     <url>/2022/10/09/Python_12/</url>
     <content><![CDATA[<p>数据可视化指的是通过可视化表示来探索数据，它与数据挖掘紧密相关，而数据挖掘指的是使用代码来探索数据集的规律和关联。数据集可以是用一行代码就能表示的小型数字列表，也可以是数以G字节的数据。</p>
 <h2 id="1-绘制简单的折线图"><a href="#1-绘制简单的折线图" class="headerlink" title="1.绘制简单的折线图"></a>1.绘制简单的折线图</h2><p>下面来使用matplotlib绘制一个简单的折线图，再对其进行定制，以实现信息更丰富的数据可视化。查看使用matplotlib可制作的各种图表，请访问<a href="http://matplotlib.org/">http://matplotlib.org/</a></p>
@@ -1379,7 +1379,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Python学习之路（16）下载数据【项目2 数据可视化】</title>
+    <title>Python学习之路（13）下载数据【项目2 数据可视化】</title>
     <url>/2022/10/10/Python_13/</url>
     <content><![CDATA[<p>在本章中，你将从网上下载数据，并对这些数据进行可视化。</p>
 <h2 id="1-CSV文件"><a href="#1-CSV文件" class="headerlink" title="1.CSV文件"></a>1.CSV文件</h2><p>要在文本文件中存储数据，最简单的方式是将数据作为一系列以逗号分隔 的值（CSV）写入文件。这样的文件称为CSV文件。下面是一行CSV格式的天气数据：</p>
