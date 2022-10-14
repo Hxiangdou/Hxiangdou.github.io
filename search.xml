@@ -1486,6 +1486,49 @@
       </tags>
   </entry>
   <entry>
+    <title>动手学习深度学习（5）感知机与多层感知机</title>
+    <url>/2022/10/11/DL_5/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英文论文阅读方法</title>
+    <url>/2022/10/14/paper-read-method/</url>
+    <content><![CDATA[<p>学习基本的英文文献阅读方法，以便阅读论文时有章可循。</p>
+<h2 id="1-阅读顺序"><a href="#1-阅读顺序" class="headerlink" title="1.阅读顺序"></a>1.阅读顺序</h2><ol>
+<li>题目优先（Topic）。了解作者要研究的问题。</li>
+<li>关键词（Keywords）。反应文章的核心内容。</li>
+<li>摘要（Abstract）。体显文章的主要思想，对内容有基本掌握。</li>
+</ol>
+<p>此时要尝试回答三个问题：</p>
+<ul>
+<li>作者的目的是什么？</li>
+<li>作者用了什么样的方法？</li>
+<li>作者的结论是什么？</li>
+</ul>
+<ol start="4">
+<li>讨论（Discussion）。了解作者在研究过程中遇到的问题，他们又是如何解决的，以及对于争议性部分的观点。</li>
+<li>图表和数字。这部分能很大程度上避免冗长的表达。</li>
+<li>引言（Introduction）。了解作者的研究背景。</li>
+<li>对上述不了解的部分进行重新阅读。</li>
+<li>方法（Methods）</li>
+</ol>
+<h2 id="2-阅读方法"><a href="#2-阅读方法" class="headerlink" title="2.阅读方法"></a>2.阅读方法</h2><p>批判性的阅读方法（Critical Thinking），多对自己提问题。</p>
+]]></content>
+      <categories>
+        <category>DeepLearning期刊</category>
+      </categories>
+      <tags>
+        <tag>papers</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
