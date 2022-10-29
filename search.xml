@@ -1488,7 +1488,12 @@
   <entry>
     <title>动手学习深度学习（5）感知机与多层感知机</title>
     <url>/2022/10/11/DL_5/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>本文开始学习感知机以及多层感知机。</p>
+<h2 id="多层感知机的从零开始实现"><a href="#多层感知机的从零开始实现" class="headerlink" title="多层感知机的从零开始实现"></a>多层感知机的从零开始实现</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br><span class="hljs-keyword">from</span> d2l <span class="hljs-keyword">import</span> torch <span class="hljs-keyword">as</span> d2l<br><br>batch_size = <span class="hljs-number">256</span><br>train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)<br><br><span class="hljs-string">&#x27;&#x27;&#x27;初始化模型参数&#x27;&#x27;&#x27;</span><br><span class="hljs-comment"># 每个图像由28*28=784个灰度像素值，所有图像共10个类别，</span><br><span class="hljs-comment"># 我们实现一个包含256个隐藏单元的单层多层感知机</span><br>num_inputs, num_outputs, num_hiddens = <span class="hljs-number">784</span>, <span class="hljs-number">10</span>, <span class="hljs-number">256</span><br><br>W1 = nn.Parameter(torch.randn(<br>    num_inputs, num_hiddens, requires_grad=<span class="hljs-literal">True</span>) * <span class="hljs-number">0.01</span>)<br>b1 = nn.Parameter(torch.zeros(num_hiddens, requires_grad=<span class="hljs-literal">True</span>))<br>W2 = nn.Parameter(torch.randn(<br>    num_hiddens, num_outputs, requires_grad=<span class="hljs-literal">True</span>) * <span class="hljs-number">0.01</span>)<br>b2 = nn.Parameter(torch.zeros(num_outputs, requires_grad=<span class="hljs-literal">True</span>))<br><br>params = [W1, b1, W2, b2]<br><span class="hljs-string">&#x27;&#x27;&#x27;激活函数&#x27;&#x27;&#x27;</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">relu</span>(<span class="hljs-params">X</span>):<br>    a = torch.zeros_like(X)<br>    <span class="hljs-keyword">return</span> torch.<span class="hljs-built_in">max</span>(X, a)<br><span class="hljs-string">&#x27;&#x27;&#x27;模型&#x27;&#x27;&#x27;</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">net</span>(<span class="hljs-params">X</span>):<br>    X = X.reshape((-<span class="hljs-number">1</span>, num_inputs))<br>    H = relu(X@W1 + b1)  <span class="hljs-comment"># 这里“@”代表矩阵乘法</span><br>    <span class="hljs-keyword">return</span> (H@W2 + b2)<br><span class="hljs-string">&#x27;&#x27;&#x27;损失函数&#x27;&#x27;&#x27;</span><br>loss = nn.CrossEntropyLoss(reduction=<span class="hljs-string">&#x27;none&#x27;</span>)<br><span class="hljs-string">&#x27;&#x27;&#x27;训练&#x27;&#x27;&#x27;</span><br><span class="hljs-comment"># 多层感知机的训练过程与softmax回归的训练过程完全相同</span><br><span class="hljs-comment"># 可以直接调用d2l包的train_ch3函数（参见 :sec_softmax_scratch ）</span><br>num_epochs, lr = <span class="hljs-number">10</span>, <span class="hljs-number">0.1</span><br>updater = torch.optim.SGD(params, lr=lr)<br>d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, updater)<br><span class="hljs-string">&#x27;&#x27;&#x27;在一些测试数据上应用这个模型&#x27;&#x27;&#x27;</span><br>d2l.predict_ch3(net, test_iter)<br></code></pre></td></tr></table></figure>
+
+<h2 id="多层感知机简洁实现"><a href="#多层感知机简洁实现" class="headerlink" title="多层感知机简洁实现"></a>多层感知机简洁实现</h2><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br><span class="hljs-keyword">from</span> d2l <span class="hljs-keyword">import</span> torch <span class="hljs-keyword">as</span> d2l<br><span class="hljs-string">&#x27;&#x27;&#x27;唯一的区别是我们添加了2个全连接层&#x27;&#x27;&#x27;</span><br>net = nn.Sequential(nn.Flatten(),<br>                    nn.Linear(<span class="hljs-number">784</span>, <span class="hljs-number">256</span>),<br>                    nn.ReLU(),<br>                    nn.Linear(<span class="hljs-number">256</span>, <span class="hljs-number">10</span>))<br><span class="hljs-string">&#x27;&#x27;&#x27;训练过程&#x27;&#x27;&#x27;</span><br><span class="hljs-comment"># 训练过程的实现与我们实现softmax回归时完全相同</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">init_weights</span>(<span class="hljs-params">m</span>):<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">type</span>(m) == nn.Linear:<br>        nn.init.normal_(m.weight, std=<span class="hljs-number">0.01</span>)<br><br>net.apply(init_weights);<br><br>batch_size, lr, num_epochs = <span class="hljs-number">256</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">10</span><br>loss = nn.CrossEntropyLoss(reduction=<span class="hljs-string">&#x27;none&#x27;</span>)<br>trainer = torch.optim.SGD(net.parameters(), lr=lr)<br><br>train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)<br>d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)<br></code></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
         <category>DeepLearning学习</category>
       </categories>
@@ -1548,6 +1553,144 @@
       <tags>
         <tag>DeepLearning</tag>
         <tag>GAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动手学习深度学习（5）模型选择与欠拟合和过拟合</title>
+    <url>/2022/10/28/DL_6/</url>
+    <content><![CDATA[<p>我们如何才能确定模型是真正发现了一种泛化的模式， 而不是简单地记住了数据呢？ 我们的目标是发现某些模式， 这些模式捕捉到了我们训练集潜在总体的规律。 如果成功做到了这点，即使是对以前从未遇到过的个体， 模型也可以成功地评估风险。 如何发现可以泛化的模式是机器学习的根本问题。</p>
+<p>误差：</p>
+<ul>
+<li>训练误差（training error）：模型在训练数据集上计算得到的误差</li>
+<li>泛化误差（generalization error）：模型应用在同样从原始样本的分布中抽取的无限多数据样本时模型误差的期望。简单来说，是模型在新数据上的误差。</li>
+</ul>
+<p>数据集：（<em><strong>验证数据集一定不要和测试数据集混合在一起！</strong></em>）</p>
+<ul>
+<li>验证数据集：一个用来评估模型好坏的数据集</li>
+<li>测试数据集：只用一次的数据集</li>
+</ul>
+<p>通常没有足够数据进行使用，所以常采用<strong>K折交叉验证</strong>，一般取5或10</p>
+<h2 id="过拟合和欠拟合"><a href="#过拟合和欠拟合" class="headerlink" title="过拟合和欠拟合"></a>过拟合和欠拟合</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>数据简单</th>
+<th>数据复杂</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型容量低</td>
+<td>正常</td>
+<td>欠拟合</td>
+</tr>
+<tr>
+<td>模型容量高</td>
+<td>过拟合</td>
+<td>正常</td>
+</tr>
+</tbody></table>
+<p>模型容量：拟合各种函数的能力</p>
+<ul>
+<li>低容量的模型难以拟合训练数据</li>
+<li>高容量的模型可以记住所有的训练数据</li>
+</ul>
+<p>实际中一般靠观察训练误差和验证误差的差值，过小，欠拟合，过大，过拟合。</p>
+<h2 id="一些正则化模型的技术"><a href="#一些正则化模型的技术" class="headerlink" title="一些正则化模型的技术"></a>一些正则化模型的技术</h2><h3 id="权重衰退（weight-decay）"><a href="#权重衰退（weight-decay）" class="headerlink" title="权重衰退（weight-decay）"></a>权重衰退（weight-decay）</h3><p>通过限制参数值的选择范围来控制模型容量，达到避免过拟合的效果<br>MATHJAX-SSR-0</p>
+<ul>
+<li>通常不限制偏移b</li>
+<li>小的 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.09ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 469.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\theta</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-3B8" d="M35 200Q35 302 74 415T180 610T319 704Q320 704 327 704T339 705Q393 701 423 656Q462 596 462 495Q462 380 417 261T302 66T168 -10H161Q125 -10 99 10T60 63T41 130T35 200ZM383 566Q383 668 330 668Q294 668 260 623T204 521T170 421T157 371Q206 370 254 370L351 371Q352 372 359 404T375 484T383 566ZM113 132Q113 26 166 26Q181 26 198 36T239 74T287 161T335 307L340 324H145Q145 321 136 286T120 208T113 132Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-3B8" x="0" y="0"></use>
+</g>
+</svg> 意味着更强的正则项</li>
+</ul>
+<p>可以使用均方范数作为柔性限制。对于每个 MATHJAX-SSR-1，都可以找到 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.355ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 583.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\lambda</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-3BB" d="M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-3BB" x="0" y="0"></use>
+</g>
+</svg> 使得上面的目标函数等价于下面的公式<br>MATHJAX-SSR-2<br>超参数 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.355ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 583.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\lambda</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-3BB" d="M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-3BB" x="0" y="0"></use>
+</g>
+</svg> 控制了正则项的重要程度</p>
+<ul>
+<li><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.355ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 583.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\lambda</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-3BB" d="M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-3BB" x="0" y="0"></use>
+</g>
+</svg>  &#x3D; 0 ：无作用</li>
+<li><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.355ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 583.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\lambda</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-3BB" d="M166 673Q166 685 183 694H202Q292 691 316 644Q322 629 373 486T474 207T524 67Q531 47 537 34T546 15T551 6T555 2T556 -2T550 -11H482Q457 3 450 18T399 152L354 277L340 262Q327 246 293 207T236 141Q211 112 174 69Q123 9 111 -1T83 -12Q47 -12 47 20Q47 37 61 52T199 187Q229 216 266 252T321 306L338 322Q338 323 288 462T234 612Q214 657 183 657Q166 657 166 673Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-3BB" x="0" y="0"></use>
+</g>
+</svg>  -&gt;  <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.324ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 1000.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\infty</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMAIN-221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMAIN-221E" x="0" y="0"></use>
+</g>
+</svg> ， 最优解 -&gt; 0</li>
+</ul>
+<h4 id="从零实现"><a href="#从零实现" class="headerlink" title="从零实现"></a>从零实现</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">%matplotlib inline<br><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br><span class="hljs-keyword">from</span> d2l <span class="hljs-keyword">import</span> torch <span class="hljs-keyword">as</span> d2l<br><span class="hljs-comment"># 生成数据</span><br>n_train, n_test, num_inputs, batch_size = <span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">5</span><br>true_w, true_b = torch.ones((num_inputs, <span class="hljs-number">1</span>)) * <span class="hljs-number">0.01</span>, <span class="hljs-number">0.05</span><br>train_data = d2l.synthetic_data(true_w, true_b, n_train)<br>train_iter = d2l.load_array(train_data, batch_size)<br>test_data = d2l.synthetic_data(true_w, true_b, n_test)<br>test_iter = d2l.load_array(test_data, batch_size, is_train=<span class="hljs-literal">False</span>)<br><span class="hljs-comment"># 随机初始化模型参数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">init_params</span>():<br>    w = torch.normal(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, size=(num_inputs, <span class="hljs-number">1</span>), requires_grad=<span class="hljs-literal">True</span>)<br>    b = torch.zeros(<span class="hljs-number">1</span>, requires_grad=<span class="hljs-literal">True</span>)<br>    <span class="hljs-keyword">return</span> [w, b]<br><span class="hljs-comment"># 定义L2范数惩罚</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">l2_penalty</span>(<span class="hljs-params">w</span>):<br>    <span class="hljs-keyword">return</span> torch.<span class="hljs-built_in">sum</span>(w.<span class="hljs-built_in">pow</span>(<span class="hljs-number">2</span>)) / <span class="hljs-number">2</span><br><span class="hljs-comment"># 定义训练代码实现</span><br><span class="hljs-comment"># 线性网络和平方损失没有变化， 所以我们通过d2l.linreg和d2l.squared_loss导入它们</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">train</span>(<span class="hljs-params">lambd</span>):<br>    w, b = init_params()<br>    net, loss = <span class="hljs-keyword">lambda</span> X: d2l.linreg(X, w, b), d2l.squared_loss<br>    num_epochs, lr = <span class="hljs-number">100</span>, <span class="hljs-number">0.003</span><br>    animator = d2l.Animator(xlabel=<span class="hljs-string">&#x27;epochs&#x27;</span>, ylabel=<span class="hljs-string">&#x27;loss&#x27;</span>, yscale=<span class="hljs-string">&#x27;log&#x27;</span>,<br>                            xlim=[<span class="hljs-number">5</span>, num_epochs], legend=[<span class="hljs-string">&#x27;train&#x27;</span>, <span class="hljs-string">&#x27;test&#x27;</span>])<br>    <span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_epochs):<br>        <span class="hljs-keyword">for</span> X, y <span class="hljs-keyword">in</span> train_iter:<br>            <span class="hljs-comment"># 增加了L2范数惩罚项，</span><br>            <span class="hljs-comment"># 广播机制使l2_penalty(w)成为一个长度为batch_size的向量</span><br>            l = loss(net(X), y) + lambd * l2_penalty(w)<br>            l.<span class="hljs-built_in">sum</span>().backward()<br>            d2l.sgd([w, b], lr, batch_size)<br>        <span class="hljs-keyword">if</span> (epoch + <span class="hljs-number">1</span>) % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>:<br>            animator.add(epoch + <span class="hljs-number">1</span>, (d2l.evaluate_loss(net, train_iter, loss),<br>                                     d2l.evaluate_loss(net, test_iter, loss)))<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;w的L2范数是：&#x27;</span>, torch.norm(w).item())<br><span class="hljs-comment"># 忽略正则化直接训练</span><br>train(<span class="hljs-keyword">lambda</span>=<span class="hljs-number">0</span>)<br><span class="hljs-comment"># 使用权重衰减</span><br>train(<span class="hljs-keyword">lambda</span>=<span class="hljs-number">3</span>)<br></code></pre></td></tr></table></figure>
+
+<h4 id="简洁实现"><a href="#简洁实现" class="headerlink" title="简洁实现"></a>简洁实现</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">train_concise</span>(<span class="hljs-params">wd</span>):<br>    net = nn.Sequential(nn.Linear(num_inputs, <span class="hljs-number">1</span>))<br>    <span class="hljs-keyword">for</span> param <span class="hljs-keyword">in</span> net.parameters():<br>        param.data.normal_()<br>    loss = nn.MSELoss(reduction=<span class="hljs-string">&#x27;none&#x27;</span>)<br>    num_epochs, lr = <span class="hljs-number">100</span>, <span class="hljs-number">0.003</span><br>    <span class="hljs-comment"># 偏置参数没有衰减</span><br>    trainer = torch.optim.SGD([<br>        &#123;<span class="hljs-string">&quot;params&quot;</span>:net[<span class="hljs-number">0</span>].weight,<span class="hljs-string">&#x27;weight_decay&#x27;</span>: wd&#125;,<br>        &#123;<span class="hljs-string">&quot;params&quot;</span>:net[<span class="hljs-number">0</span>].bias&#125;], lr=lr)<br>    animator = d2l.Animator(xlabel=<span class="hljs-string">&#x27;epochs&#x27;</span>, ylabel=<span class="hljs-string">&#x27;loss&#x27;</span>, yscale=<span class="hljs-string">&#x27;log&#x27;</span>,<br>                            xlim=[<span class="hljs-number">5</span>, num_epochs], legend=[<span class="hljs-string">&#x27;train&#x27;</span>, <span class="hljs-string">&#x27;test&#x27;</span>])<br>    <span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_epochs):<br>        <span class="hljs-keyword">for</span> X, y <span class="hljs-keyword">in</span> train_iter:<br>            trainer.zero_grad()<br>            l = loss(net(X), y)<br>            l.mean().backward()<br>            trainer.step()<br>        <span class="hljs-keyword">if</span> (epoch + <span class="hljs-number">1</span>) % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>:<br>            animator.add(epoch + <span class="hljs-number">1</span>,<br>                         (d2l.evaluate_loss(net, train_iter, loss),<br>                          d2l.evaluate_loss(net, test_iter, loss)))<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;w的L2范数：&#x27;</span>, net[<span class="hljs-number">0</span>].weight.norm().item())<br></code></pre></td></tr></table></figure>
+
+<h3 id="丢弃法（dropout）"><a href="#丢弃法（dropout）" class="headerlink" title="丢弃法（dropout）"></a>丢弃法（dropout）</h3><p>丢弃法将一些输出项随机置0来控制模型复杂度，只用在训练过程中，预测过程会被去掉。</p>
+<p>在数据中加入噪音，等价于一个正则。丢弃法是在全连接层间（后）加入噪音。通常将丢弃法作用在隐藏全连接层的输出上，即下一层的输入是上一层输出的进行dropout后的数据。<br>MATHJAX-SSR-3<br>根据此模型的设计，其期望值保持不变，即 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="9.47ex" height="3.009ex" style="vertical-align: -0.838ex;" viewBox="0 -934.9 4077.4 1295.7" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">𝐸[ℎ^′]=ℎ</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-45" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path>
+<path stroke-width="1" id="E1-MJMATHI-68" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-5D" d="M22 710V750H159V-250H22V-210H119V710H22Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-45" x="0" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-5B" x="738" y="0"></use>
+<g transform="translate(1017,0)">
+ <use xlink:href="#E1-MJMATHI-68" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-2032" x="815" y="596"></use>
+</g>
+ <use xlink:href="#E1-MJMAIN-5D" x="1888" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-3D" x="2444" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-68" x="3500" y="0"></use>
+</g>
+</svg>。</p>
+<h4 id="从零开始实现"><a href="#从零开始实现" class="headerlink" title="从零开始实现"></a>从零开始实现</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br><span class="hljs-keyword">from</span> d2l <span class="hljs-keyword">import</span> torch <span class="hljs-keyword">as</span> d2l<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">dropout_layer</span>(<span class="hljs-params">X, dropout</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;该函数以dropout的概率丢弃张量输入X中的元素&#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">assert</span> <span class="hljs-number">0</span> &lt;= dropout &lt;= <span class="hljs-number">1</span><br>    <span class="hljs-comment"># 在本情况中，所有元素都被丢弃</span><br>    <span class="hljs-keyword">if</span> dropout == <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">return</span> torch.zeros_like(X)<br>    <span class="hljs-comment"># 在本情况中，所有元素都被保留</span><br>    <span class="hljs-keyword">if</span> dropout == <span class="hljs-number">0</span>:<br>        <span class="hljs-keyword">return</span> X<br>    mask = (torch.rand(X.shape) &gt; dropout).<span class="hljs-built_in">float</span>()<br>    <span class="hljs-keyword">return</span> mask * X / (<span class="hljs-number">1.0</span> - dropout)<br><span class="hljs-comment"># 定义模型参数</span><br><span class="hljs-string">&#x27;&#x27;&#x27;定义具有两个隐藏层的多层感知机，每个隐藏层包含256个单元&#x27;&#x27;&#x27;</span><br>num_inputs, num_outputs, num_hiddens1, num_hiddens2 = <span class="hljs-number">784</span>, <span class="hljs-number">10</span>, <span class="hljs-number">256</span>, <span class="hljs-number">256</span><br><span class="hljs-comment"># 定义模型</span><br>dropout1, dropout2 = <span class="hljs-number">0.2</span>, <span class="hljs-number">0.5</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Net</span>(nn.Module):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, num_inputs, num_outputs, num_hiddens1, num_hiddens2,</span><br><span class="hljs-params">                 is_training = <span class="hljs-literal">True</span></span>):<br>        <span class="hljs-built_in">super</span>(Net, self).__init__()<br>        self.num_inputs = num_inputs<br>        self.training = is_training<br>        self.lin1 = nn.Linear(num_inputs, num_hiddens1)<br>        self.lin2 = nn.Linear(num_hiddens1, num_hiddens2)<br>        self.lin3 = nn.Linear(num_hiddens2, num_outputs)<br>        self.relu = nn.ReLU()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">forward</span>(<span class="hljs-params">self, X</span>):<br>        H1 = self.relu(self.lin1(X.reshape((-<span class="hljs-number">1</span>, self.num_inputs))))<br>        <span class="hljs-comment"># 只有在训练模型时才使用dropout</span><br>        <span class="hljs-keyword">if</span> self.training == <span class="hljs-literal">True</span>:<br>            <span class="hljs-comment"># 在第一个全连接层之后添加一个dropout层</span><br>            H1 = dropout_layer(H1, dropout1)<br>        H2 = self.relu(self.lin2(H1))<br>        <span class="hljs-keyword">if</span> self.training == <span class="hljs-literal">True</span>:<br>            <span class="hljs-comment"># 在第二个全连接层之后添加一个dropout层</span><br>            H2 = dropout_layer(H2, dropout2)<br>        out = self.lin3(H2)<br>        <span class="hljs-keyword">return</span> out<br><br><br>net = Net(num_inputs, num_outputs, num_hiddens1, num_hiddens2)<br><span class="hljs-comment"># 训练和测试</span><br>num_epochs, lr, batch_size = <span class="hljs-number">10</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">256</span><br>loss = nn.CrossEntropyLoss(reduction=<span class="hljs-string">&#x27;none&#x27;</span>)<br>train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)<br>trainer = torch.optim.SGD(net.parameters(), lr=lr)<br>d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)<br></code></pre></td></tr></table></figure>
+
+<h4 id="简洁实现-1"><a href="#简洁实现-1" class="headerlink" title="简洁实现"></a>简洁实现</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">net = nn.Sequential(nn.Flatten(),<br>        nn.Linear(<span class="hljs-number">784</span>, <span class="hljs-number">256</span>),<br>        nn.ReLU(),<br>        <span class="hljs-comment"># 在第一个全连接层之后添加一个dropout层</span><br>        nn.Dropout(dropout1),<br>        nn.Linear(<span class="hljs-number">256</span>, <span class="hljs-number">256</span>),<br>        nn.ReLU(),<br>        <span class="hljs-comment"># 在第二个全连接层之后添加一个dropout层</span><br>        nn.Dropout(dropout2),<br>        nn.Linear(<span class="hljs-number">256</span>, <span class="hljs-number">10</span>))<br><span class="hljs-comment"># 权重</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">init_weights</span>(<span class="hljs-params">m</span>):<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">type</span>(m) == nn.Linear:<br>        nn.init.normal_(m.weight, std=<span class="hljs-number">0.01</span>)<br><br>net.apply(init_weights);<br><br><span class="hljs-comment"># 训练和测试</span><br>trainer = torch.optim.SGD(net.parameters(), lr=lr)<br>d2l.train_ch3(net, train_iter, test_iter, loss, num_epochs, trainer)<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
       </tags>
   </entry>
   <entry>
