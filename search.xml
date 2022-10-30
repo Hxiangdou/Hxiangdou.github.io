@@ -1930,9 +1930,22 @@
       </tags>
   </entry>
   <entry>
-    <title>DL_9</title>
+    <title>动手学习深度学习（9）使用和购买GPU</title>
     <url>/2022/10/30/DL_9/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>首先查看设备时候具有GPU，在控制台输入</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">nvidia-smi<br></code></pre></td></tr></table></figure>
+
+<p>如果显示显卡信息说明具有GPU。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br><br><span class="hljs-comment"># 查询可用gpu数量</span><br><span class="hljs-built_in">print</span>(torch.cuda.device_count())<br><span class="hljs-comment"># 访问cpu，gpu，某个gpu</span><br><span class="hljs-built_in">print</span>(torch.device(<span class="hljs-string">&#x27;cpu&#x27;</span>), torch.device(<span class="hljs-string">&#x27;cuda&#x27;</span>), torch.device(<span class="hljs-string">&#x27;cuda:1&#x27;</span>))<br><span class="hljs-comment"># 这两个函数允许我们在请求的GPU不存在的情况下运行代码</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">try_gpu</span>(<span class="hljs-params">i=<span class="hljs-number">0</span></span>):  <span class="hljs-comment">#@save</span><br>    <span class="hljs-string">&quot;&quot;&quot;如果存在，则返回gpu(i)，否则返回cpu()&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">if</span> torch.cuda.device_count() &gt;= i + <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">return</span> torch.device(<span class="hljs-string">f&#x27;cuda:<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>)<br>    <span class="hljs-keyword">return</span> torch.device(<span class="hljs-string">&#x27;cpu&#x27;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">try_all_gpus</span>():  <span class="hljs-comment">#@save</span><br>    <span class="hljs-string">&quot;&quot;&quot;返回所有可用的GPU，如果没有GPU，则返回[cpu(),]&quot;&quot;&quot;</span><br>    devices = [torch.device(<span class="hljs-string">f&#x27;cuda:<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>)<br>             <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(torch.cuda.device_count())]<br>    <span class="hljs-keyword">return</span> devices <span class="hljs-keyword">if</span> devices <span class="hljs-keyword">else</span> [torch.device(<span class="hljs-string">&#x27;cpu&#x27;</span>)]<br><br><span class="hljs-built_in">print</span>(try_gpu(), try_gpu(<span class="hljs-number">10</span>), try_all_gpus())<br></code></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
   </entry>
   <entry>
     <title>相册</title>

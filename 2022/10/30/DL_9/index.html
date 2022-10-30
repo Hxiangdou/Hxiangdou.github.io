@@ -6,12 +6,13 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>DL_9 - Hexo</title>
+  <title>动手学习深度学习（9）使用和购买GPU - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  
+  <meta name="description" content="首先查看设备时候具有GPU，在控制台输入
+1nvidi...">
   <meta name="author" content="茴香豆">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -158,7 +159,7 @@
         <i class="iconfont iconsearch j-navbar-search"></i>
       
     </div>
-    <div class="center">DL_9</div>
+    <div class="center">动手学习深度学习（9）使用和购买GPU</div>
     <div class="right">
       <i class="iconfont iconmenu j-navbar-menu"></i>
     </div>
@@ -200,27 +201,33 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/pat/2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">DL_9</h1>
+    <h1 class="head-title">动手学习深度学习（9）使用和购买GPU</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 30, 2022</span>
       
         <span class="post-info-item">
-          <i class="iconfont iconeye"></i><span id="/2022/10/30/DL_9/" class="leancloud-counter" data-flag-title="DL_9"></span>
+          <i class="iconfont iconeye"></i><span id="/2022/10/30/DL_9/" class="leancloud-counter" data-flag-title="动手学习深度学习（9）使用和购买GPU"></span>
         </span>
         <span class="post-info-item">
-          <i class="iconfont iconheart"></i><span id="/2022/10/30/DL_9/" class="leancloud-like" data-flag-title="DL_9"></span>
+          <i class="iconfont iconheart"></i><span id="/2022/10/30/DL_9/" class="leancloud-like" data-flag-title="动手学习深度学习（9）使用和购买GPU"></span>
         </span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>0</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>866</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        
+        <p>首先查看设备时候具有GPU，在控制台输入</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">nvidia-smi<br></code></pre></td></tr></table></figure>
+
+<p>如果显示显卡信息说明具有GPU。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> torch <span class="hljs-keyword">import</span> nn<br><br><span class="hljs-comment"># 查询可用gpu数量</span><br><span class="hljs-built_in">print</span>(torch.cuda.device_count())<br><span class="hljs-comment"># 访问cpu，gpu，某个gpu</span><br><span class="hljs-built_in">print</span>(torch.device(<span class="hljs-string">&#x27;cpu&#x27;</span>), torch.device(<span class="hljs-string">&#x27;cuda&#x27;</span>), torch.device(<span class="hljs-string">&#x27;cuda:1&#x27;</span>))<br><span class="hljs-comment"># 这两个函数允许我们在请求的GPU不存在的情况下运行代码</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">try_gpu</span>(<span class="hljs-params">i=<span class="hljs-number">0</span></span>):  <span class="hljs-comment">#@save</span><br>    <span class="hljs-string">&quot;&quot;&quot;如果存在，则返回gpu(i)，否则返回cpu()&quot;&quot;&quot;</span><br>    <span class="hljs-keyword">if</span> torch.cuda.device_count() &gt;= i + <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">return</span> torch.device(<span class="hljs-string">f&#x27;cuda:<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>)<br>    <span class="hljs-keyword">return</span> torch.device(<span class="hljs-string">&#x27;cpu&#x27;</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">try_all_gpus</span>():  <span class="hljs-comment">#@save</span><br>    <span class="hljs-string">&quot;&quot;&quot;返回所有可用的GPU，如果没有GPU，则返回[cpu(),]&quot;&quot;&quot;</span><br>    devices = [torch.device(<span class="hljs-string">f&#x27;cuda:<span class="hljs-subst">&#123;i&#125;</span>&#x27;</span>)<br>             <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(torch.cuda.device_count())]<br>    <span class="hljs-keyword">return</span> devices <span class="hljs-keyword">if</span> devices <span class="hljs-keyword">else</span> [torch.device(<span class="hljs-string">&#x27;cpu&#x27;</span>)]<br><br><span class="hljs-built_in">print</span>(try_gpu(), try_gpu(<span class="hljs-number">10</span>), try_all_gpus())<br></code></pre></td></tr></table></figure>
+
+
       </section>
       <section class="extra">
         
@@ -244,6 +251,8 @@
 </section>
         
         
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DeepLearning/" rel="tag">DeepLearning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul> 
+
         
   <nav class="nav">
     <a></a>
