@@ -2516,6 +2516,24 @@
       </tags>
   </entry>
   <entry>
+    <title>动手学习深度学习（14）深度学习硬件：CPU和GPU</title>
+    <url>/2022/11/04/DL_14/</url>
+    <content><![CDATA[<p>很好地理解算法和模型才可以捕获统计方面的问题，构建出具有出色性能的系统。同时，至少对底层硬件有一定的了解也是必不可少的。本节的内容可以作为理解某些算法为什么比其他算法更高效以及如何实现良好吞吐量的起点。</p>
+<h2 id="数据并行vs模型并行"><a href="#数据并行vs模型并行" class="headerlink" title="数据并行vs模型并行"></a>数据并行vs模型并行</h2><ul>
+<li>数据并行：将小批量分成n块，每个GPU拿到完整参数计算一块数据的梯度；通常性能更好</li>
+<li>模型并行：将模型分成n块，每个GPU拿到一块模型计算它的前向后后向结果；通常用于模型大到单GPU放不下</li>
+</ul>
+<p>多GPU</p>
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>相册</title>
     <url>/galleries/index.html</url>
     <content><![CDATA[]]></content>
