@@ -229,7 +229,7 @@
 <li>如果是，预测从这个锚框到真实边缘框的偏移</li>
 </ul>
 <h3 id="IoU-交并比"><a href="#IoU-交并比" class="headerlink" title="IoU-交并比"></a>IoU-交并比</h3><p>IoU用来计算两个框之间的相似度，0表示无重叠，1表示重叠。</p>
-<p>这是Jacquard指数的一种特殊情况，给定两个集合A和B。<br>MATHJAX-SSR-17</p>
+<p>这是Jacquard指数的一种特殊情况，给定两个集合A和B。<br>MATHJAX-SSR-10</p>
 <h3 id="赋予锚框标号"><a href="#赋予锚框标号" class="headerlink" title="赋予锚框标号"></a>赋予锚框标号</h3><p>每个锚框是一个训练样本，将每个锚框，要么标注为背景，要么关联上一个真实边缘框。我们可能会生成大量的锚框（这个导致大量的负类样本）。</p>
 <h3 id="使用非极大值抑制（NMS）输出"><a href="#使用非极大值抑制（NMS）输出" class="headerlink" title="使用非极大值抑制（NMS）输出"></a>使用非极大值抑制（NMS）输出</h3><p>每个锚框预测一个边缘框，NMS可以合并相似的预测</p>
 <ul>
