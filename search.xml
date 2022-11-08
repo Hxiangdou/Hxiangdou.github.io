@@ -2609,6 +2609,43 @@
       </tags>
   </entry>
   <entry>
+    <title>动手学习深度学习（17）锚框</title>
+    <url>/2022/11/08/DL_17/</url>
+    <content><![CDATA[<p>以每个像素为中心，生成多个缩放比和宽高比（aspect ratio）不同的边界框。 这些边界框被称为<em>锚框</em>（anchor box）。</p>
+<p><a href="https://zh.d2l.ai/chapter_computer-vision/anchor.html">13.4. 锚框 — 动手学深度学习 2.0.0-beta1 documentation (d2l.ai)</a></p>
+<p>结合上面连接中课本的代码和图片进行理解比较容易理解。</p>
+<ul>
+<li>提出多个被称为锚框的区域</li>
+<li>预测每个锚框里是否含有关注的物体</li>
+<li>如果是，预测从这个锚框到真实边缘框的偏移</li>
+</ul>
+<h3 id="IoU-交并比"><a href="#IoU-交并比" class="headerlink" title="IoU-交并比"></a>IoU-交并比</h3><p>IoU用来计算两个框之间的相似度，0表示无重叠，1表示重叠。</p>
+<p>这是Jacquard指数的一种特殊情况，给定两个集合A和B。<br>MATHJAX-SSR-0</p>
+<h3 id="赋予锚框标号"><a href="#赋予锚框标号" class="headerlink" title="赋予锚框标号"></a>赋予锚框标号</h3><p>每个锚框是一个训练样本，将每个锚框，要么标注为背景，要么关联上一个真实边缘框。我们可能会生成大量的锚框（这个导致大量的负类样本）。</p>
+<h3 id="使用非极大值抑制（NMS）输出"><a href="#使用非极大值抑制（NMS）输出" class="headerlink" title="使用非极大值抑制（NMS）输出"></a>使用非极大值抑制（NMS）输出</h3><p>每个锚框预测一个边缘框，NMS可以合并相似的预测</p>
+<ul>
+<li>选择是非背景类的最大预测值</li>
+<li>去掉所有其他和他IoU值大于 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.09ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 469.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\theta</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-MJMATHI-3B8" d="M35 200Q35 302 74 415T180 610T319 704Q320 704 327 704T339 705Q393 701 423 656Q462 596 462 495Q462 380 417 261T302 66T168 -10H161Q125 -10 99 10T60 63T41 130T35 200ZM383 566Q383 668 330 668Q294 668 260 623T204 521T170 421T157 371Q206 370 254 370L351 371Q352 372 359 404T375 484T383 566ZM113 132Q113 26 166 26Q181 26 198 36T239 74T287 161T335 307L340 324H145Q145 321 136 286T120 208T113 132Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-MJMATHI-3B8" x="0" y="0"></use>
+</g>
+</svg> 的预测</li>
+<li>重复上述过程直到所有预测要么被选中，要么被去掉</li>
+</ul>
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>茴香豆</strong><br><del>计科专业大数据方向憨憨，以后该干什么呢？迷茫ヾ(•ω•&#96;)o</del></p>
