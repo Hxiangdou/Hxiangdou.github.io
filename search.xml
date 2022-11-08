@@ -2646,6 +2646,50 @@
       </tags>
   </entry>
   <entry>
+    <title>动手学习深度学习（18）物体检测算法：R-CNN，SSD，YOLO</title>
+    <url>/2022/11/08/DL_18/</url>
+    <content><![CDATA[<p>快速讲解一下目标检测的常用算法。</p>
+<h2 id="R-CNN"><a href="#R-CNN" class="headerlink" title="R-CNN"></a>R-CNN</h2><ul>
+<li>使用启发式搜索算法来选择锚框</li>
+<li>使用预训练模型来对每个锚框抽取特征</li>
+<li>训练一个SVM来对类别分类</li>
+<li>训练一个线性回归模型来预测边缘框偏移</li>
+</ul>
+<h3 id="兴趣区域（RoI）池化层"><a href="#兴趣区域（RoI）池化层" class="headerlink" title="兴趣区域（RoI）池化层"></a>兴趣区域（RoI）池化层</h3><ul>
+<li>给定一个锚框，均匀分割成n x m块，输出每块里的最大值</li>
+<li>不管锚框多大，总是输出nm个值</li>
+</ul>
+<h3 id="Fast-RCNN"><a href="#Fast-RCNN" class="headerlink" title="Fast RCNN"></a>Fast RCNN</h3><ul>
+<li>使用CNN对图片抽取特征</li>
+<li>使用RoI池化层对每个锚框生成固定长度特征</li>
+</ul>
+<h3 id="Faster-RCNN"><a href="#Faster-RCNN" class="headerlink" title="Faster RCNN"></a>Faster RCNN</h3><ul>
+<li>使用一个区域提议网络来替代启发式搜索来获得更好的锚框</li>
+</ul>
+<h3 id="Mask-RCNN"><a href="#Mask-RCNN" class="headerlink" title="Mask RCNN"></a>Mask RCNN</h3><ul>
+<li>如果有像素级别的标号，使用FCN来利用这些信息</li>
+</ul>
+<h2 id="单次多框检测（SSD）"><a href="#单次多框检测（SSD）" class="headerlink" title="单次多框检测（SSD）"></a>单次多框检测（SSD）</h2><ul>
+<li>一个基础网络来抽取特征，然后多个卷积层块来减半高宽</li>
+<li>在每段都生成锚框。底部段来拟合小物体，顶部段来拟合大物体</li>
+<li>对每个锚框预测类别和边缘框</li>
+</ul>
+<h2 id="YOLO"><a href="#YOLO" class="headerlink" title="YOLO"></a>YOLO</h2><ul>
+<li>SSD中锚框大量重叠，因此浪费了很多计算</li>
+<li>YOLO将图片均匀分成S x S个锚框</li>
+<li>每个锚框预测B个边缘框</li>
+<li>后续版本（V2，V3，V4。。。）持续更新</li>
+</ul>
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>茴香豆</strong><br><del>计科专业大数据方向憨憨，以后该干什么呢？迷茫ヾ(•ω•&#96;)o</del></p>
