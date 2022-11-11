@@ -2690,6 +2690,31 @@
       </tags>
   </entry>
   <entry>
+    <title>动手学习深度学习（19）多尺度锚框和SSD实现</title>
+    <url>/2022/11/09/DL_19/</url>
+    <content><![CDATA[<p>当使用较小的锚框检测较小的物体时，我们可以采样更多的区域，而对于较大的物体，我们可以采样较少的区域。</p>
+<h2 id="多尺度锚框"><a href="#多尺度锚框" class="headerlink" title="多尺度锚框"></a>多尺度锚框</h2><p>为了演示如何在多个尺度下生成锚框，让我们先读取一张图像。 它的高度和宽度分别为561和728像素。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">from</span> d2l <span class="hljs-keyword">import</span> torch <span class="hljs-keyword">as</span> d2l<br><br>img = d2l.plt.imread(<span class="hljs-string">&#x27;../img/catdog.jpg&#x27;</span>)<br>h, w = img.shape[:<span class="hljs-number">2</span>]<br></code></pre></td></tr></table></figure>
+
+<p>给定特征图的宽度和高度<code>fmap_w</code>和<code>fmap_h</code>，以下函数将<em>均匀地</em>对任何输入图像中<code>fmap_h</code>行和<code>fmap_w</code>列中的像素进行采样。 以这些均匀采样的像素为中心，将会生成大小为<code>s</code>（假设列表<code>s</code>的长度为1）且宽高比（<code>ratios</code>）不同的锚框。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">display_anchors</span>(<span class="hljs-params">fmap_w, fmap_h, s</span>):<br>    d2l.set_figsize()<br>    <span class="hljs-comment"># 前两个维度上的值不影响输出</span><br>    fmap = torch.zeros((<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, fmap_h, fmap_w))<br>    anchors = d2l.multibox_prior(fmap, sizes=s, ratios=[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0.5</span>])<br>    bbox_scale = torch.tensor((w, h, w, h))<br>    d2l.show_bboxes(d2l.plt.imshow(img).axes,<br>                    anchors[<span class="hljs-number">0</span>] * bbox_scale)<br>display_anchors(fmap_w=<span class="hljs-number">4</span>, fmap_h=<span class="hljs-number">4</span>, s=[<span class="hljs-number">0.15</span>])<br></code></pre></td></tr></table></figure>
+
+<p>然后，我们将特征图的高度和宽度减小一半，然后使用较大的锚框来检测较大的目标。 当尺度设置为0.4时，一些锚框将彼此重叠。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">display_anchors(fmap_w=<span class="hljs-number">2</span>, fmap_h=<span class="hljs-number">2</span>, s=[<span class="hljs-number">0.4</span>])<br></code></pre></td></tr></table></figure>
+
+<p>最后，我们进一步将特征图的高度和宽度减小一半，然后将锚框的尺度增加到0.8。 此时，锚框的中心即是图像的中心。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">display_anchors(fmap_w=<span class="hljs-number">1</span>, fmap_h=<span class="hljs-number">1</span>, s=[<span class="hljs-number">0.8</span>])<br></code></pre></td></tr></table></figure>
+
+<h2 id="单次多框检测SSD的实现"><a href="#单次多框检测SSD的实现" class="headerlink" title="单次多框检测SSD的实现"></a>单次多框检测SSD的实现</h2>]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>茴香豆</strong><br><del>计科专业大数据方向憨憨，以后该干什么呢？迷茫ヾ(•ω•&#96;)o</del></p>
