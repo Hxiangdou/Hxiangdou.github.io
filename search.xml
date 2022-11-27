@@ -2705,13 +2705,66 @@
 <p>最后，我们进一步将特征图的高度和宽度减小一半，然后将锚框的尺度增加到0.8。 此时，锚框的中心即是图像的中心。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">display_anchors(fmap_w=<span class="hljs-number">1</span>, fmap_h=<span class="hljs-number">1</span>, s=[<span class="hljs-number">0.8</span>])<br></code></pre></td></tr></table></figure>
 
-<h2 id="单次多框检测SSD的实现"><a href="#单次多框检测SSD的实现" class="headerlink" title="单次多框检测SSD的实现"></a>单次多框检测SSD的实现</h2>]]></content>
+<h2 id="单次多框检测SSD的实现"><a href="#单次多框检测SSD的实现" class="headerlink" title="单次多框检测SSD的实现"></a>单次多框检测SSD的实现</h2><p>略</p>
+]]></content>
       <categories>
         <category>DeepLearning学习</category>
       </categories>
       <tags>
         <tag>Python</tag>
         <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GNN</title>
+    <url>/2022/11/21/GNN/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>动手学习深度学习（20）语义分割和数据集</title>
+    <url>/2022/11/24/DL_20/</url>
+    <content><![CDATA[<p>本节将探讨<em>语义分割</em>（semantic segmentation）问题，它重点关注于如何将图像分割成属于不同语义类别的区域。 与目标检测不同，语义分割可以识别并理解图像中每一个像素的内容：其语义区域的标注和预测是像素级的。常见应用：背景虚化，无人车场景下的路面分割。</p>
+<p>最重要的语义分割数据集之一是Pascal VOC2012</p>
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python学习之路（15）查看及修改pip源和conda源</title>
+    <url>/2022/11/27/Python_15/</url>
+    <content><![CDATA[<p>总结修改查看源的方法，免得每次都得重新找。</p>
+<p>高算中心指定源：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#conda </span><br>https://mirrors.tuna.tsinghua.edu.cn/ <br>http://mirrors.ustc.edu.cn/ <br>http://mirrors.aliyun.com/ <br><br><span class="hljs-comment">#pip </span><br>https://pypi.tuna.tsinghua.edu.cn/ <br>http://pypi.mirrors.ustc.edu.cn/ <br>https://pypi.mirrors.ustc.edu.cn/<br></code></pre></td></tr></table></figure>
+
+<h2 id="pip源"><a href="#pip源" class="headerlink" title="pip源"></a>pip源</h2><p>pip更换默认源（以西电源为示例）</p>
+<p>临时使用</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">pip install -i http://linux.xidian.edu.cn/mirrors/pypi/simple --user<br>some-package<br></code></pre></td></tr></table></figure>
+
+<p>设为默认源</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">pip config <span class="hljs-built_in">set</span> global.index-url <br><span class="hljs-function">http://<span class="hljs-title">linux.xidian.edu.cn</span>/<span class="hljs-title">mirrors</span>/<span class="hljs-title">pypi</span>/<span class="hljs-title">simple</span></span><br></code></pre></td></tr></table></figure>
+
+<p>查看当前源</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">pip config <span class="hljs-built_in">list</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="conda源"><a href="#conda源" class="headerlink" title="conda源"></a>conda源</h2><p>conda 更换默认源（以清华源为示例） </p>
+<p>使用下列命令生成<code>.condarc</code> 配置文件，位于用户家目录下</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">conda config --<span class="hljs-built_in">set</span> show_channel_urls yes<br></code></pre></td></tr></table></figure>
+
+<p>编辑<code>.condarc</code>文件，清空原先内容，写入以下内容</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">channels:<br> - defaults<br>show_channel_urls: true<br>default_channels:<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2<br>custom_channels:<br> conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
