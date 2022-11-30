@@ -2721,10 +2721,15 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>动手学习深度学习（20）语义分割和数据集</title>
+    <title>动手学习深度学习（20）语义分割和转置卷积</title>
     <url>/2022/11/24/DL_20/</url>
-    <content><![CDATA[<p>本节将探讨<em>语义分割</em>（semantic segmentation）问题，它重点关注于如何将图像分割成属于不同语义类别的区域。 与目标检测不同，语义分割可以识别并理解图像中每一个像素的内容：其语义区域的标注和预测是像素级的。常见应用：背景虚化，无人车场景下的路面分割。</p>
-<p>最重要的语义分割数据集之一是Pascal VOC2012</p>
+    <content><![CDATA[<h2 id="语义分割"><a href="#语义分割" class="headerlink" title="语义分割"></a>语义分割</h2><p><em>语义分割</em>（semantic segmentation）问题，它重点关注于如何将图像分割成属于不同语义类别的区域。 与目标检测不同，语义分割可以识别并理解图像中每一个像素的内容：其语义区域的标注和预测是像素级的。常见应用：背景虚化，无人车场景下的路面分割。</p>
+<p>最重要的语义分割数据集之一是Pascal VOC2012，数据集的图片采用VOC格式</p>
+<h2 id="转置卷积"><a href="#转置卷积" class="headerlink" title="转置卷积"></a>转置卷积</h2><ul>
+<li>转置卷积可以用来做增大高宽</li>
+</ul>
+<p>输入矩阵的每一个元素分别乘以卷积核，然后拼接起来<br>MATHJAX-SSR-0</p>
+<h2 id="FCD全连接卷积神经网络"><a href="#FCD全连接卷积神经网络" class="headerlink" title="FCD全连接卷积神经网络"></a>FCD全连接卷积神经网络</h2><h2 id="样式迁移"><a href="#样式迁移" class="headerlink" title="样式迁移"></a>样式迁移</h2><p>将样式图片中的样式迁移到内容图片上，得到合成图片</p>
 ]]></content>
       <categories>
         <category>DeepLearning学习</category>
