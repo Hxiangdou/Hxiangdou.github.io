@@ -5358,6 +5358,27 @@
       </tags>
   </entry>
   <entry>
+    <title>李宏毅机器学习课程（1）Pytorch Tutorial</title>
+    <url>/2023/02/15/ML-LHY-1/</url>
+    <content><![CDATA[<p> Pytorch作为深度学习常用模块库，里面包含了很多深度学习相关的操作和模块，底层由C++实现，使用张量进行计算，可使用GPU加速。</p>
+<h2 id="Pytorch-Documentation"><a href="#Pytorch-Documentation" class="headerlink" title="Pytorch Documentation"></a>Pytorch Documentation</h2><p>参考网址：<a class="link"   href="https://pytorch.org/docs/stable/" >https://pytorch.org/docs/stable/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>常用的模块有：</p>
+<ul>
+<li>torch.nn -&gt; neural nework</li>
+<li>torch.optim -&gt; optimization algorithms</li>
+<li>torch.utils.data -&gt; dataset, dataloader</li>
+</ul>
+<h2 id="Pytorch-Documentation-Example"><a href="#Pytorch-Documentation-Example" class="headerlink" title="Pytorch Documentation Example"></a>Pytorch Documentation Example</h2><p>Function inputs and outputs</p>
+<p>Data type and explanation of each input</p>
+]]></content>
+      <categories>
+        <category>Python学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>茴香豆</strong><br><del>计科专业大数据方向憨憨，以后该干什么呢？迷茫ヾ(•ω•&#96;)o</del></p>
