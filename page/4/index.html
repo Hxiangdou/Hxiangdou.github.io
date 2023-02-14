@@ -1,786 +1,988 @@
-
-
 <!DOCTYPE html>
-<html lang="en" color-mode=light>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hexo</title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="google" content="notranslate" />
-  
-  
-  <meta name="author" content="茴香豆">
-  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
-  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
-  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
-  
-    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
-    <meta rel="msapplication-TileColor" content="#000000">
-  
-
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    <meta name="description" content="Hexo Theme Redefine">
+    <meta name="author" content="The Redefine Team">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-redefine.png">
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://hxiangdou.github.io/page/4/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="博客">
+    <meta property="og:description" content="Hexo Theme Redefine">
+    <meta property="og:url" content="https://hxiangdou.github.iopage/4/index.html">
+    <meta property="og:image" content="/images/redefine-logo.svg">
+    <meta property="og:site_name" content="Theme Redefine">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="博客">
+    <meta name="twitter:description" content="Hexo Theme Redefine">
+    <meta name="twitter:image" content="/images/redefine-logo.svg">
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-logo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-logo.svg">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="/images/redefine-logo.svg">
+    
+    <title>
+        
+        Theme Redefine
+    </title>
+    
 <link rel="stylesheet" href="/css/style.css">
 
-
-  
     
-<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+<link rel="stylesheet" href="/assets/fonts.css">
 
-  
-
-  
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-
-  
-
-  
     
-      
-        
-        
-<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
-
-      
-        
-        
-<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
-
-      
-  
-
-  <script>
-    var CONFIG = window.CONFIG || {};
-    var ZHAOO = window.ZHAOO || {};
-    CONFIG = {
-      isHome: true,
-      fancybox: true,
-      pjax: false,
-      loading: {
-        gif: '/images/theme/loading.gif',
-        lottie: ''
-      },
-      lazyload: {
-        enable: true,
-        only_post: 'false',
-        loading: {
-          gif: '/images/theme/loading.gif',
-          lottie: ''
-        }
-      },
-      donate: {
-        enable: true,
-        alipay: '/images/支付宝.JPG',
-        wechat: '/images/微信.JPG'
-      },
-      galleries: {
-        enable: true
-      },
-      fab: {
-        enable: true,
-        always_show: false
-      },
-      carrier: {
-        enable: true
-      },
-      daovoice: {
-        enable: true
-      },
-      preview: {
-        background: {
-          default: '',
-          api: ''
-        },
-        motto: {
-          default: '我在开了灯的床头下，想问问自己的心啊。',
-          typing: true,
-          api: 'https://v2.jinrishici.com/one.json',
-          data_contents: '["data","content"]'
-        },
-      },
-      qrcode: {
-        enable: true,
-        type: 'url',
-        image: 'https://pic.izhaoo.com/weapp-code.jpg',
-      },
-      toc: {
-        enable: true
-      },
-      scrollbar: {
-        type: 'default'
-      },
-      notification: {
-        enable: false,
-        delay: 4500,
-        list: '',
-        page_white_list: '',
-        page_black_list: ''
-      },
-      search: {
-        enable: true,
-        path: '/search.xml'
-      }
-    }
+    
+    <script id="hexo-configurations">
+    let REDEFINE = window.REDEFINE || {};
+    REDEFINE.hexo_config = {"hostname":"hxiangdou.github.io","root":"/","language":"en","path":"/search.xml"};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"https://evan.beee.top/img/wallhaven-wqery6-light.webp","dark":"https://evan.beee.top/img/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"Theme Redefine","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":false,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.1.1","friend_links":{"columns":2}};
+    REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
+    
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
 
-  
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
 
-  
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
 
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head>
 
-<body class="lock-screen">
-  <div class="loading" id="loading"></div>
-  
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
     
 
-
-  <nav class="navbar">
-    <div class="left">
-      
-      
-        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
-      
-      
-        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
-      
-      
-        <i class="iconfont iconsearch j-navbar-search"></i>
-      
-    </div>
-    <div class="center"> </div>
-    <div class="right">
-      <i class="iconfont iconmenu j-navbar-menu"></i>
-    </div>
     
-      <div id="qrcode-navbar"></div>
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
     
-  </nav>
-
-  
-  
-
-<nav class="menu">
-  <div class="menu-container">
-    <div class="menu-close">
-      <i class="iconfont iconbaseline-close-px"></i>
-    </div>
-    <ul class="menu-content"><li class="menu-item">
-        <a href="/ " class="underline "> 首页</a>
-      </li><li class="menu-item">
-        <a href="/galleries/ " class="underline "> 相册</a>
-      </li><li class="menu-item">
-        <a href="/archives/ " class="underline "> 归档</a>
-      </li><li class="menu-item">
-        <a href="/tags/ " class="underline "> 标签</a>
-      </li><li class="menu-item">
-        <a href="/categories/ " class="underline "> 分类</a>
-      </li><li class="menu-item">
-        <a href="/about/ " class="underline "> 关于</a>
-      </li></ul>
-    
-      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
-    
-  </div>
-</nav>
-  <main id="main">
-  
-    <div class="preview">
-  <!-- <nav class="navbar j-navbar-menu">
-    <i class="iconfont iconmenu"></i>
-  </nav> -->
-  <div class="preview-image">
-    
-        
-              <div class="preview-overlay">
-                <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                  <defs>
-                    <path id="gentle-wave"
-                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                  </defs>
-                  <g class="preview-parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb),0.7"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb),0.5)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb),0.3)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-background)"></use>
-                  </g>
-                </svg>
-              </div>
-              
-  </div>
-  <div class="preview-motto-wrapper">
-    <h2 class="preview-motto" id="motto">
-      
-    </h2>
-    
-      <span class="preview-cursor">_</span>
-      
-  </div>
-  <div class="preview-scroll">
-    <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
-  </div>
 </div>
-  
-  <div class="container" id="container">
-    <section class="row post">
-  
+
+
+<main class="page-container">
+
     
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="menu-wrapper">
     
-    <a href="/2022/10/10/Python_13/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/10/10/Python_13/" title="Python学习之路（13）下载数据【项目2 数据可视化】" >Python学习之路（13）下载数据【项目2 数据可视化】</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">在本章中，你将从网上下载数据，并对这些数据进行可视化。
-1.CSV文件要在文本文件中存储数据，最简单的方式是将数据作为一系列以逗号分隔 的值（CSV）写入文件。这样的文件称为CSV文件。下面是一...</p>
+    <div class="menu-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                <h1>
+                Theme Redefine
+                </h1>
+            </a>
         </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 10, 2022</span>
-        
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/10/10/Python_13/" class="leancloud-counter" data-flag-title="Python学习之路（13）下载数据【项目2 数据可视化】"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/10/10/Python_13/" class="leancloud-like" data-flag-title="Python学习之路（13）下载数据【项目2 数据可视化】"></span>
-          </span>
-        
-      </div>
-    </div>
-  </div>
-</div>
 
-  
-    
-
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2022/10/09/Python_12/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/10/09/Python_12/" title="Python学习之路（12）生成数据【项目2 数据可视化】" >Python学习之路（12）生成数据【项目2 数据可视化】</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">数据可视化指的是通过可视化表示来探索数据，它与数据挖掘紧密相关，而数据挖掘指的是使用代码来探索数据集的规律和关联。数据集可以是用一行代码就能表示的小型数字列表，也可以是数以G字节的数据。
-1.绘...</p>
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="active" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 09, 2022</span>
-        
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/10/09/Python_12/" class="leancloud-counter" data-flag-title="Python学习之路（12）生成数据【项目2 数据可视化】"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/10/09/Python_12/" class="leancloud-like" data-flag-title="Python学习之路（12）生成数据【项目2 数据可视化】"></span>
-          </span>
-        
-      </div>
     </div>
-  </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="active" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/11/Python_14/">
+                        Python学习之路（14）使用API【项目2 数据可视化】
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        在本章中，你将学习如何编写一个独立的程序，并对其获取的数据进行可视化。
+1.使用Web API本章的可视化将基于来自GitHub的信息，这是一个让程序员能够协作开发 项目的网站。我们将使用GitHub的API来请求有关该网站中Python项目的信 息...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Oct 11 2022 10:28:00 GMT+0800">
+                
+                    2022/10/11
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2022/10/11/Python_14/">Read more<span class="seo-reader-text">Python学习之路（14）使用API【项目2 数据可视化】</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-  
-    
+            </li>
+        
+            <li class="home-article-item">
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2022/10/03/Pr_noob/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/4.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/10/03/Pr_noob/" title="PR_noob_learning" >PR_noob_learning</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">适当学习一些Pr知识，尝试剪辑一些视频。
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/10/Python_13/">
+                        Python学习之路（13）下载数据【项目2 数据可视化】
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        在本章中，你将从网上下载数据，并对这些数据进行可视化。
+1.CSV文件要在文本文件中存储数据，最简单的方式是将数据作为一系列以逗号分隔 的值（CSV）写入文件。这样的文件称为CSV文件。下面是一行CSV格式的天气数据：
+1&quot;USW00025...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 10 2022 10:21:03 GMT+0800">
+                
+                    2022/10/10
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2022/10/10/Python_13/">Read more<span class="seo-reader-text">Python学习之路（13）下载数据【项目2 数据可视化】</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/09/Python_12/">
+                        Python学习之路（12）生成数据【项目2 数据可视化】
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        数据可视化指的是通过可视化表示来探索数据，它与数据挖掘紧密相关，而数据挖掘指的是使用代码来探索数据集的规律和关联。数据集可以是用一行代码就能表示的小型数字列表，也可以是数以G字节的数据。
+1.绘制简单的折线图下面来使用matplotlib绘制一个简单...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 09 2022 14:52:56 GMT+0800">
+                
+                    2022/10/09
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2022/10/09/Python_12/">Read more<span class="seo-reader-text">Python学习之路（12）生成数据【项目2 数据可视化】</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/03/Pr_noob/">
+                        PR_noob_learning
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        适当学习一些Pr知识，尝试剪辑一些视频。
 1.常用快捷键
 空格键Space播放和暂停
 Left Right键 ：向前向后一帧 （比较细致，可以一直按，这样速度快一点）
-shift+Left Ri...</p>
-        </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 03, 2022</span>
+shift+Left Right键：向前向后五帧（这个比较快）
+J 左穿梭&#x2...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 03 2022 15:49:42 GMT+0800">
+                
+                    2022/10/03
+                
+            </span>
+        </span>
         
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/10/03/Pr_noob/" class="leancloud-counter" data-flag-title="PR_noob_learning"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/10/03/Pr_noob/" class="leancloud-like" data-flag-title="PR_noob_learning"></span>
-          </span>
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/PR%E5%AD%A6%E4%B9%A0/">PR学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
-      </div>
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Pr/">Pr</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
-  </div>
+
+    <a href="/2022/10/03/Pr_noob/">Read more<span class="seo-reader-text">PR_noob_learning</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-  
-    
+            </li>
+        
+            <li class="home-article-item">
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2022/10/03/Python_11/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/10/03/Python_11/" title="Python学习之路（11）测试代码" >Python学习之路（11）测试代码</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">在本章中，你将学习如何使用Python模块unittest 中的工具来测试代码。你将学习编写测试用例，核实一系列输入都将得到预期的输出。你将看到测试通过了是什么样子，测试未通过又是什么样子，还将...</p>
-        </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 03, 2022</span>
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/03/Python_11/">
+                        Python学习之路（11）测试代码
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        在本章中，你将学习如何使用Python模块unittest 中的工具来测试代码。你将学习编写测试用例，核实一系列输入都将得到预期的输出。你将看到测试通过了是什么样子，测试未通过又是什么样子，还将知道测试未通过如何有助于改进代码。你将学习如何测试函数和...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Oct 03 2022 10:53:28 GMT+0800">
+                
+                    2022/10/03
+                
+            </span>
+        </span>
         
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/10/03/Python_11/" class="leancloud-counter" data-flag-title="Python学习之路（11）测试代码"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/10/03/Python_11/" class="leancloud-like" data-flag-title="Python学习之路（11）测试代码"></span>
-          </span>
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
-      </div>
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
-  </div>
+
+    <a href="/2022/10/03/Python_11/">Read more<span class="seo-reader-text">Python学习之路（11）测试代码</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-  
-    
+            </li>
+        
+            <li class="home-article-item">
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2022/10/02/Python_10/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/10/02/Python_10/" title="Python学习之路（10）文件和异常" >Python学习之路（10）文件和异常</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">在本章中，你将学习处理文件，让程序能够快速地分析大量的数据；你将学习错误处理，避免程序在面对意外情形时崩溃；你将学习异常 ，它们是Python创建的特殊对象，用于管理程序运行时出现的错误；你还将...</p>
-        </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 02, 2022</span>
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/10/02/Python_10/">
+                        Python学习之路（10）文件和异常
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        在本章中，你将学习处理文件，让程序能够快速地分析大量的数据；你将学习错误处理，避免程序在面对意外情形时崩溃；你将学习异常 ，它们是Python创建的特殊对象，用于管理程序运行时出现的错误；你还将学习模块json，它让你能够保存用户数据，以免在程序停止...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Oct 02 2022 15:53:30 GMT+0800">
+                
+                    2022/10/02
+                
+            </span>
+        </span>
         
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/10/02/Python_10/" class="leancloud-counter" data-flag-title="Python学习之路（10）文件和异常"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/10/02/Python_10/" class="leancloud-like" data-flag-title="Python学习之路（10）文件和异常"></span>
-          </span>
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Python%E5%AD%A6%E4%B9%A0/">Python学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
-      </div>
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
-  </div>
+
+    <a href="/2022/10/02/Python_10/">Read more<span class="seo-reader-text">Python学习之路（10）文件和异常</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-  
-    
+            </li>
+        
+            <li class="home-article-item">
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2022/09/27/DL_4/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/09/27/DL_4/" title="动手学习深度学习（4）Softmax回归" >动手学习深度学习（4）Softmax回归</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">就像我们从零开始实现线性回归一样，我们认为softmax回归也是重要的基础，因此也应该知道实现softmax回归的细节。
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/09/27/DL_4/">
+                        动手学习深度学习（4）Softmax回归
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        就像我们从零开始实现线性回归一样，我们认为softmax回归也是重要的基础，因此也应该知道实现softmax回归的细节。
 1. 回归和分类
 回归估计一个练习值
 
 分类预测一个离散类别
 
 
-Sof...</p>
-        </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 27, 2022</span>
+Softmax回归是一个多类分类模型，使用Softmax操作子...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Sep 27 2022 18:44:33 GMT+0800">
+                
+                    2022/09/27
+                
+            </span>
+        </span>
         
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/09/27/DL_4/" class="leancloud-counter" data-flag-title="动手学习深度学习（4）Softmax回归"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/09/27/DL_4/" class="leancloud-like" data-flag-title="动手学习深度学习（4）Softmax回归"></span>
-          </span>
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/DeepLearning%E5%AD%A6%E4%B9%A0/">DeepLearning学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
-      </div>
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/DeepLearning/">DeepLearning</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
-  </div>
+
+    <a href="/2022/09/27/DL_4/">Read more<span class="seo-reader-text">动手学习深度学习（4）Softmax回归</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-  
-    
+            </li>
+        
+            <li class="home-article-item">
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2022/09/26/DL_3/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/09/26/DL_3/" title="动手学习深度学习（3）简单的线性回归" >动手学习深度学习（3）简单的线性回归</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">本节将学习一些线性回归基础知识和线性回归的简洁实现。
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/09/26/DL_3/">
+                        动手学习深度学习（3）简单的线性回归
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        本节将学习一些线性回归基础知识和线性回归的简洁实现。
 1. 线性回归 线性回归是最简单的模型，也是一个非常重要的基础模型。可以视作一个单层的神经网络。唯一有最优解的模型。
-基础优化方法：梯度下降...</p>
-        </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 26, 2022</span>
+基础优化方法：梯度下降梯度下降的学习率既不能太小，也不能太大。
+一般不会直接采...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Sep 26 2022 20:21:03 GMT+0800">
+                
+                    2022/09/26
+                
+            </span>
+        </span>
         
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/09/26/DL_3/" class="leancloud-counter" data-flag-title="动手学习深度学习（3）简单的线性回归"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/09/26/DL_3/" class="leancloud-like" data-flag-title="动手学习深度学习（3）简单的线性回归"></span>
-          </span>
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/DeepLearning%E5%AD%A6%E4%B9%A0/">DeepLearning学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
-      </div>
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/DeepLearning/">DeepLearning</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
-  </div>
+
+    <a href="/2022/09/26/DL_3/">Read more<span class="seo-reader-text">动手学习深度学习（3）简单的线性回归</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-  
-    
+            </li>
+        
+            <li class="home-article-item">
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2022/09/24/DL_2/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/09/24/DL_2/" title="动手学习深度学习（2）简单的数学知识" >动手学习深度学习（2）简单的数学知识</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">本节主要讲解线性代数，按特定轴求和，矩阵计算和自动求导相关内容
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2022/09/24/DL_2/">
+                        动手学习深度学习（2）简单的数学知识
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        本节主要讲解线性代数，按特定轴求和，矩阵计算和自动求导相关内容
 1. 线性代数矩阵的特征值和特征向量。
 矩阵的转置。
-2. 矩阵计算常用函数123456789101112131415161718...</p>
-        </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 24, 2022</span>
+2. 矩阵计算常用函数123456789101112131415161718# 按某个轴进行累加求和A.cumsum(axis=0)...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Sep 24 2022 19:03:10 GMT+0800">
+                
+                    2022/09/24
+                
+            </span>
+        </span>
         
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/09/24/DL_2/" class="leancloud-counter" data-flag-title="动手学习深度学习（2）简单的数学知识"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/09/24/DL_2/" class="leancloud-like" data-flag-title="动手学习深度学习（2）简单的数学知识"></span>
-          </span>
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/DeepLearning%E5%AD%A6%E4%B9%A0/">DeepLearning学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
         
-      </div>
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/DeepLearning/">DeepLearning</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
     </div>
-  </div>
+
+    <a href="/2022/09/24/DL_2/">Read more<span class="seo-reader-text">动手学习深度学习（2）简单的数学知识</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
-  
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+        <a class="prev btn"
+           href="/page/3/"
+        >Prev</a>
     
 
-<div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
     
-    <a href="/2022/09/22/DL_periodical_conference/" class="post-image">
-      <img   class="lazyload" data-original="/images/pat/2.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <div class="post-content-wrap">
-        <h3 class="post-title"><a href="/2022/09/22/DL_periodical_conference/" title="深度学习相关期刊" >深度学习相关期刊</a></h3>
-        <div class="post-excerpt">
-          <p class="substr-3">收集深度学习常见期刊的分类以及简写等内容。
-常见期刊
-ECCV（European Conference on Computer Vision）
-  欧洲计算机视觉国际会议。ECCV每年的论文接受...</p>
-        </div>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>September 22, 2022</span>
-        
-          <span class="post-info-item">
-            <i class="iconfont iconeye"></i><span id="/2022/09/22/DL_periodical_conference/" class="leancloud-counter" data-flag-title="深度学习相关期刊"></span>
-          </span>
-          <span class="post-info-item">
-            <i class="iconfont iconheart"></i><span id="/2022/09/22/DL_periodical_conference/" class="leancloud-like" data-flag-title="深度学习相关期刊"></span>
-          </span>
-        
-      </div>
-    </div>
-  </div>
+        <a class="next btn"
+           href="/page/5/"
+        >Next</a>
+    
 </div>
 
-  
-</section>
-    <section class="paginator">
-  
-    <a class="extend prev" rel="prev" href="/page/3/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">&gt;</a>
-  
-</section>
-  </div>
-</main>
-  
+    </div>
+</div>
 
-<footer class="footer">
-  <div class="footer-social"><a 
-        href="tencent://message/?Menu=yes&uin=1134384717 "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#12B7F5'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconQQ "></i>
-      </a><a 
-        href="javascript:; "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#09BB07'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconwechat-fill "></i>
-      </a><a 
-        href="https://www.instagram.com/ "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#DA2E76'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconinstagram "></i>
-      </a><a 
-        href="https://github.com/Squirrel00011 "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#9f7be1'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  icongithub-fill "></i>
-      </a><a 
-        href="mailto:1134384717@qq.com "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color=#ff3b00" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconmail"></i>
-      </a></div>
-  
-    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
-  
+
+                
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">The Redefine Team</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br> 
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v1.1.1</a>
+        </div>
+        
+        
+        
+            <div id="start_time_div" style="display:none">
+                2022/8/17 11:45:14
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax defer>
+                function odometer_init(){
+                        let el = document.getElementsByClassName('odometer');
+                        for (i = 0; i < el.length; i++) {
+                            od = new Odometer({
+                                el: el[i],
+                                format: '( ddd).dd',
+                                duration: 200
+                            });
+                        }
+                }
+                odometer_init();
+            </script>
+        
+        
+        
+    </div>  
 </footer>
-  
-      <div class="fab fab-plus">
-    <i class="iconfont iconplus"></i>
-  </div>
-  
-  
-    <div class="fab fab-daovoice">
-      <i class="iconfont iconcomment"></i>
+        </div>
     </div>
-  
-  
-  <div class="fab fab-up">
-    <i class="iconfont iconcaret-up"></i>
-  </div>
-  
-  
-  
+
     
-<script src="/js/color-mode.js"></script>
 
-  
-  
-    <div class="search">
-  <div class="search-container">
-    <div class="search-close">
-      <i class="iconfont iconbaseline-close-px"></i>
-    </div>
-    <div class="search-input-wrapper">
-      <i class="search-input-icon iconfont iconsearch"></i>
-      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
-        autocorrect="off" autocapitalize="off">
-    </div>
-    <div class="search-output" id="search-output"></div>
-  </div>
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="unfolded-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="fa-regular fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="folded-tools-list">
+        <li class="right-bottom-tools tool-toggle-show flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
 </div>
-  
-</body>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </div>
 
-
-
-
-
-  
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <div class="image-viewer-container">
+    <img src="">
+</div>
 
 
+    
 
 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</main>
 
-
-
-
-
-
-  
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 
 
 
 
 <script src="/js/utils.js"></script>
-<script src="/js/script.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/menu-shrink.js"></script>
+
+<script src="/js/tools/go-top-bottom.js"></script>
+
+<script src="/js/tools/dark-light-toggle.js"></script>
 
 
 
-  <script>
-  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
 
-    AV.init({
-      appId: 'eSrfpdL3XjSFRaFUwnuRl3dn-gzGzoHsz',
-      appKey: '6DvkgciWlfleRrT7w9r6snJI',
-      serverURLs: 'https://leancloud.cn/',
-    });
 
-    const Counter = AV.Object.extend("Counter");
-    const Like = AV.Object.extend("Like");
-
-    const showCount = (Counter) => {
-      const asyncLimit = new AsyncLimit(2);
-      $(".leancloud-counter").each(async (e) => {
-        const url = $(".leancloud-counter").eq(e).attr('id').trim();
-        const query = new AV.Query("Counter");
-        query.equalTo("words", url);
-        let count = await asyncLimit.run(() => query.count());
-        $(".leancloud-counter").eq(e).text(count ? count : 0);
-      });
-    }
-
-    const addCount = (Counter) => {
-      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://hxiangdou.github.io';
-      var query = new Counter;
-      query.save({
-        words: url
-      });
-    }
-
-    const showLike = (Like) => {
-      const asyncLimit = new AsyncLimit(2);
-      $(".leancloud-like").each(async (e) => {
-        const url = $(".leancloud-like").eq(e).attr('id').trim();
-        const query = new AV.Query("Like");
-        query.equalTo("path", url);
-        let count = await asyncLimit.run(() => query.count());
-        $(".leancloud-like").eq(e).text(count ? count : 0);
-      });
-    }
-
-    const addLike = (Like) => {
-      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://hxiangdou.github.io';
-      var query = new Like;
-      query.save({
-        path: url,
-        nickName: 'Anonymous'
-      });
-      $(".leancloud-like").addClass('islike');
-      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
-      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
-      setTimeout(() => showLike(Like), 1000);
-    }
-
-    const handleLikeClick = () => {
-      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
-      if (isLike) {
-        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
-      } else {
-        addLike(Like);
-      }
-    }
-
-    $(function () {
-      addCount(Counter);
-      showCount(Counter);
-      showLike(Like);
-      $(".fab-like").on("click", function () {
-        handleLikeClick();
-      });
-    });
-
-  });
-</script>
+    
+<script src="/js/tools/code-block.js"></script>
 
 
 
-  
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/layouts/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+<div class="post-scripts pjax">
+    
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
 
 <script>
-  (function (i, s, o, g, r, a, m) {
-    i["DaoVoiceObject"] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    a.charset = "utf-8";
-    m.parentNode.insertBefore(a, m)
-  })(window, document, "script", "https://widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
-  daovoice('init', {
-    app_id: "38fcd752"
-  }, {
-    launcher: {
-      disableLauncherIcon: true,
-    },
-  });
-  daovoice('update');
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            REDEFINE.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            REDEFINE.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            REDEFINE.refresh();
+        });
+    });
 </script>
 
 
 
-  <script>
-    (function () {
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
 </html>
