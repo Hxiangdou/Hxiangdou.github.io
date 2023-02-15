@@ -5368,8 +5368,52 @@
 <li>torch.optim -&gt; optimization algorithms</li>
 <li>torch.utils.data -&gt; dataset, dataloader</li>
 </ul>
-<h2 id="Pytorch-Documentation-Example"><a href="#Pytorch-Documentation-Example" class="headerlink" title="Pytorch Documentation Example"></a>Pytorch Documentation Example</h2><p>Function inputs and outputs</p>
-<p>Data type and explanation of each input</p>
+<h2 id="Pytorch-Documentation-Example"><a href="#Pytorch-Documentation-Example" class="headerlink" title="Pytorch Documentation Example"></a>Pytorch Documentation Example</h2><p><strong>Function inputs and outputs</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/ML_LHY_1/1.png?raw=true"
+                      alt="inputs and outputs"
+                ></p>
+<p><strong>Data type and explanation of each input</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/ML_LHY_1/2.png?raw=true"
+                     
+                ></p>
+<p><strong>Some functions behave differently with different inputs</strong></p>
+<p>在PyTorch中，参数(parameters)和关键字参数(keyword arguments)是两种不同的概念。</p>
+<p>参数是模型中的可学习参数，例如线性层中的权重。它们通常被定义为模型的<code>nn.Module</code>的成员变量，并且可以通过调用<code>nn.Module</code>的成员函数<code>parameters()</code>返回。</p>
+<p>关键字参数是函数的额外参数，它们是可选的。它们可以通过向函数提供以参数名称为关键字的额外参数的形式来提供，例如：<code>nn.Linear(in_features, out_features, bias=True)</code>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/ML_LHY_1/3.png?raw=true"
+                     
+                ></p>
+<p><strong>三种不同输入对应的torch.max</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/ML_LHY_1/4.png?raw=true"
+                     
+                ></p>
+<h2 id="Common-Errors"><a href="#Common-Errors" class="headerlink" title="Common Errors"></a>Common Errors</h2><div class="note-large notel-red"><div class="notel-title"><p>Tensor</p>
+</div><div class="notel-content"><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">model = torch.nn.Linear(<span class="hljs-number">5</span>,<span class="hljs-number">1</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cpu&quot;</span>) <br>y = model(x) <br></code></pre></td></tr></table></figure></div>
+
+<p><strong>Tensor for * is on CPU, but expected them to be on GPU</strong> </p>
+<p>&#x3D;&gt; send the tensor to GPU </p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>y = model(x) <br><span class="hljs-built_in">print</span>(y.shape)<br></code></pre></td></tr></table></figure></div>
+ </div></div>
+
+<div class="note-large notel-red"><div class="notel-title"><p>Tensor</p>
+</div><div class="notel-content"><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">model = torch.nn.Linear(<span class="hljs-number">5</span>,<span class="hljs-number">1</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cpu&quot;</span>) <br>y = model(x) <br></code></pre></td></tr></table></figure></div>
+
+<p><strong>Tensor for * is on CPU, but expected them to be on GPU</strong> </p>
+<p>&#x3D;&gt; send the tensor to GPU </p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>y = model(x) <br><span class="hljs-built_in">print</span>(y.shape)<br></code></pre></td></tr></table></figure></div>
+ </div></div>
 ]]></content>
       <categories>
         <category>Python学习</category>
