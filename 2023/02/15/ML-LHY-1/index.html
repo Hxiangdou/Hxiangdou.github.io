@@ -451,7 +451,7 @@
                      data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/ML_LHY_1/4.png?raw=true"
                      
                 ></p>
-<h2 id="Common-Errors"><a href="#Common-Errors" class="headerlink" title="Common Errors"></a>Common Errors</h2><div class="note-large notel-red"><div class="notel-title"><p>Tensor</p>
+<h2 id="Common-Errors"><a href="#Common-Errors" class="headerlink" title="Common Errors"></a>Common Errors</h2><div class="note-large notel-red"><div class="notel-title"><p>Tensor on Different Device to Model</p>
 </div><div class="notel-content"><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">model = torch.nn.Linear(<span class="hljs-number">5</span>,<span class="hljs-number">1</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cpu&quot;</span>) <br>y = model(x) <br></code></pre></td></tr></table></figure></div>
 
 <p><strong>Tensor for * is on CPU, but expected them to be on GPU</strong> </p>
@@ -459,12 +459,27 @@
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>y = model(x) <br><span class="hljs-built_in">print</span>(y.shape)<br></code></pre></td></tr></table></figure></div>
  </div></div>
 
-<div class="note-large notel-red"><div class="notel-title"><p>Tensor</p>
-</div><div class="notel-content"><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">model = torch.nn.Linear(<span class="hljs-number">5</span>,<span class="hljs-number">1</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cpu&quot;</span>) <br>y = model(x) <br></code></pre></td></tr></table></figure></div>
+<div class="note-large notel-red"><div class="notel-title"><p>Mismatched Dimensions</p>
+</div><div class="notel-content"><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">x = torch.randn(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)<br>y = torch.randn(<span class="hljs-number">5</span>,<span class="hljs-number">4</span>)<br>z = x + y<br></code></pre></td></tr></table></figure></div>
 
-<p><strong>Tensor for * is on CPU, but expected them to be on GPU</strong> </p>
-<p>&#x3D;&gt; send the tensor to GPU </p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">x = torch.randn(<span class="hljs-number">5</span>).to(<span class="hljs-string">&quot;cuda:0&quot;</span>) <br>y = model(x) <br><span class="hljs-built_in">print</span>(y.shape)<br></code></pre></td></tr></table></figure></div>
+<p><strong>The size of tensor a (5) must match the size of tensor b (4) at non-singleton  dimension 1</strong> </p>
+<p>&#x3D;&gt;  the shape of a tensor is incorrect, use <em>transpose</em>, <em>squeeze</em>, <em>unsqueeze</em> to align  the dimensions</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">y = y.transpose(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)<br>z = x + y<br><span class="hljs-built_in">print</span>(z.shape)<br></code></pre></td></tr></table></figure></div>
+ </div></div>
+
+<div class="note-large notel-red"><div class="notel-title"><p>Cuda Out of Memory</p>
+</div><div class="notel-content"><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-keyword">import</span> torchvision.models <span class="hljs-keyword">as</span> models<br>resnet18 = models.resnet18().to( <span class="hljs-string">&quot;cuda:0&quot;</span>) <span class="hljs-comment"># Neural Networks for Image Recognition</span><br>data = torch.randn( <span class="hljs-number">512</span>,<span class="hljs-number">3</span>,<span class="hljs-number">244</span>,<span class="hljs-number">244</span>) <span class="hljs-comment"># Create fake data (512 images)</span><br>out = resnet18(data.to( <span class="hljs-string">&quot;cuda:0&quot;</span>)) <span class="hljs-comment"># Use Data as Input and Feed to Model</span><br><span class="hljs-built_in">print</span>(out.shape)<br></code></pre></td></tr></table></figure></div>
+
+<p><strong>CUDA out of memory. Tried to allocate 350.00 MiB (GPU 0; 14.76 GiB total  capacity; 11.94 GiB already allocated; 123.75 MiB free; 13.71 GiB reserved in  total by PyTorch)</strong> </p>
+<p>&#x3D;&gt;  The batch size of data is too large to fit in the GPU. Reduce the batch size. </p>
+ </div></div>
+
+<div class="note-large notel-red"><div class="notel-title"><p>Mismatched Tensor Type</p>
+</div><div class="notel-content"><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn<br>L = nn.CrossEntropyLoss()<br>outs = torch.randn(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>)<br>labels = torch.Tensor([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">0</span>])<br>lossval = L(outs,labels) <span class="hljs-comment"># Calculate CrossEntropyLoss between outs and labels</span><br></code></pre></td></tr></table></figure></div>
+
+<p><strong>expected scalar type Long but found Float</strong> </p>
+<p>&#x3D;&gt; labels must be long tensors, cast it to type “Long” to fix this issue</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">labels = labels.long()<br>lossval = L(outs,labels)<br><span class="hljs-built_in">print</span>(lossval)<br></code></pre></td></tr></table></figure></div>
  </div></div>
 
             </div>
