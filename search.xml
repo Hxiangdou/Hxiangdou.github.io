@@ -713,7 +713,7 @@
     <content><![CDATA[<p>本节主要讲解线性代数，按特定轴求和，矩阵计算和自动求导相关内容</p>
 <h2 id="1-线性代数"><a href="#1-线性代数" class="headerlink" title="1. 线性代数"></a>1. 线性代数</h2><p>矩阵的特征值和特征向量。</p>
 <p>矩阵的转置。</p>
-<h2 id="2-矩阵计算"><a href="#2-矩阵计算" class="headerlink" title="2. 矩阵计算"></a>2. 矩阵计算</h2><h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 按某个轴进行累加求和</span><br>A.cumsum(axis=<span class="hljs-number">0</span>)<br><span class="hljs-comment"># output</span><br>tensor([[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],<br>        [ <span class="hljs-number">4</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">8</span>, <span class="hljs-number">10</span>],<br>        [<span class="hljs-number">12</span>, <span class="hljs-number">15</span>, <span class="hljs-number">18</span>, <span class="hljs-number">21</span>]])<br><span class="hljs-comment"># 点积运算</span><br>torch.dot(x, y)<br><span class="hljs-comment"># 叉乘运算</span><br>torch.mv(x, y) <span class="hljs-comment"># matrix-vector 矩阵-向量乘法</span><br>torch.mm(A, B) <span class="hljs-comment"># matrix-matrix 矩阵-矩阵乘法</span><br><br><span class="hljs-comment"># L2范数是向量元素平方和的平方根</span><br>torch.norm(u)<br><span class="hljs-comment"># L1范数是向量元素的绝对值之和</span><br>torch.<span class="hljs-built_in">abs</span>(u).<span class="hljs-built_in">sum</span>()<br><span class="hljs-comment"># 佛罗贝尼乌斯范数（Frobenius norm）是矩阵元素的平方和的平方根</span><br>torch.norm(A)<br></code></pre></td></tr></table></figure>
+<h2 id="2-矩阵计算"><a href="#2-矩阵计算" class="headerlink" title="2. 矩阵计算"></a>2. 矩阵计算</h2><h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 按某个轴进行累加求和</span><br>A.cumsum(axis=<span class="hljs-number">0</span>)<br><span class="hljs-comment"># output</span><br>tensor([[ <span class="hljs-number">0</span>,  <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>],<br>        [ <span class="hljs-number">4</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">8</span>, <span class="hljs-number">10</span>],<br>        [<span class="hljs-number">12</span>, <span class="hljs-number">15</span>, <span class="hljs-number">18</span>, <span class="hljs-number">21</span>]])<br><span class="hljs-comment"># 点积运算</span><br>torch.dot(x, y)<br><span class="hljs-comment"># 叉乘运算</span><br>torch.mv(x, y) <span class="hljs-comment"># matrix-vector 矩阵-向量乘法</span><br>torch.mm(A, B) <span class="hljs-comment"># matrix-matrix 矩阵-矩阵乘法</span><br><br><span class="hljs-comment"># L2范数是向量元素平方和的平方根</span><br>torch.norm(u)<br><span class="hljs-comment"># L1范数是向量元素的绝对值之和</span><br>torch.<span class="hljs-built_in">abs</span>(u).<span class="hljs-built_in">sum</span>()<br><span class="hljs-comment"># 佛罗贝尼乌斯范数（Frobenius norm）是矩阵元素的平方和的平方根</span><br>torch.norm(A)<br></code></pre></td></tr></table></figure></div>
 
 
 
@@ -727,19 +727,35 @@
 <li>若axis&#x3D;[1, 2]，求sum后矩阵变为一维矩阵，长度为2</li>
 <li>若axis&#x3D;[0, 1, 2]，求sum后矩阵变为一个数</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">A = torch.arange(<span class="hljs-number">24</span>).reshape((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))<br>A.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>).shape, A.<span class="hljs-built_in">sum</span>(axis=[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>]).shape<br><span class="hljs-comment"># output</span><br>torch.Size([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>]), torch.Size([<span class="hljs-number">3</span>])<br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">A = torch.arange(<span class="hljs-number">24</span>).reshape((<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))<br>A.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>).shape, A.<span class="hljs-built_in">sum</span>(axis=[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>]).shape<br><span class="hljs-comment"># output</span><br>torch.Size([<span class="hljs-number">2</span>, <span class="hljs-number">4</span>]), torch.Size([<span class="hljs-number">3</span>])<br></code></pre></td></tr></table></figure></div>
 
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/DL_2/3.png?raw=true"
+                     
+                ></p>
 <h3 id="计算总和或均值时保持轴数不变"><a href="#计算总和或均值时保持轴数不变" class="headerlink" title="计算总和或均值时保持轴数不变"></a>计算总和或均值时保持轴数不变</h3><p>保持求和后的矩阵与求和前的矩阵形状相同。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">sum_A = A.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>, keepdims=<span class="hljs-literal">True</span>)<br><span class="hljs-comment"># output</span><br>tensor([[ <span class="hljs-number">6.</span>],<br>		[<span class="hljs-number">22.</span>],<br>		[<span class="hljs-number">38.</span>],<br>		[<span class="hljs-number">54.</span>],<br>		[<span class="hljs-number">70.</span>]])<br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">sum_A = A.<span class="hljs-built_in">sum</span>(axis=<span class="hljs-number">1</span>, keepdims=<span class="hljs-literal">True</span>)<br><span class="hljs-comment"># output</span><br>tensor([[ <span class="hljs-number">6.</span>],<br>		[<span class="hljs-number">22.</span>],<br>		[<span class="hljs-number">38.</span>],<br>		[<span class="hljs-number">54.</span>],<br>		[<span class="hljs-number">70.</span>]])<br></code></pre></td></tr></table></figure></div>
 
 <p>应用：使得我们可以通过广播将<code>A</code>除以<code>sum_A</code></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">A / sum_A <span class="hljs-comment"># 广播机制要求维度相同</span><br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">A / sum_A <span class="hljs-comment"># 广播机制要求维度相同</span><br></code></pre></td></tr></table></figure></div>
 
-<h2 id="3-自动求导"><a href="#3-自动求导" class="headerlink" title="3. 自动求导"></a>3. 自动求导</h2><p><a href="https://zhuanlan.zhihu.com/p/263777564">矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇）</a></p>
+<h2 id="3-自动求导"><a href="#3-自动求导" class="headerlink" title="3. 自动求导"></a>3. 自动求导</h2><p><a class="link"   href="https://zhuanlan.zhihu.com/p/263777564" >矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <p>基本向量求导运算：</p>
-<img  src="post_images\DL_2_1.png"   style="zoom:50%;" /><span class="image-caption">DL_2_1</span>
-
-<p>矩阵求导运算后的形状：<img  src="/post_images%5CDL_2_2.png"  ><span class="image-caption">DL_2_2</span></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/DL_2/1.png?raw=true"
+                     
+                ></p>
+<p>矩阵求导运算后的形状：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/DL_2/2.png?raw=true"
+                     
+                ></p>
 <p>计算图：</p>
 <ul>
 <li>将代码分解为操作子</li>
@@ -789,7 +805,7 @@
  <use xlink:href="#E1-MJMAINB-78" x="0" y="0"></use>
 </g>
 </svg> 的梯度之前，我们需要一个地方来存储梯度。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br>x = torch.arange(<span class="hljs-number">4.0</span>)<br>x.requires_grad_(<span class="hljs-literal">True</span>) <span class="hljs-comment">#告知需要存储梯度</span><br><span class="hljs-comment">#等价于 x = torch.arange(4.0, requires_grad=True)</span><br>y = <span class="hljs-number">2</span> * torch.dot(x, x)<br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br>x = torch.arange(<span class="hljs-number">4.0</span>)<br>x.requires_grad_(<span class="hljs-literal">True</span>) <span class="hljs-comment">#告知需要存储梯度</span><br><span class="hljs-comment">#等价于 x = torch.arange(4.0, requires_grad=True)</span><br>y = <span class="hljs-number">2</span> * torch.dot(x, x)<br></code></pre></td></tr></table></figure></div>
 
 <p>调用反向传播函数来自动计算 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.155ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 497.5 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title"> y </title>
@@ -808,7 +824,7 @@
  <use xlink:href="#E1-MJMAINB-78" x="0" y="0"></use>
 </g>
 </svg> 每个分量的梯度。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([ 0., 4., 8., 12.])</span><br>x.grad == <span class="hljs-number">4</span> * x<br><span class="hljs-comment"># output: tensor([True, True, True, True])</span><br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([ 0., 4., 8., 12.])</span><br>x.grad == <span class="hljs-number">4</span> * x<br><span class="hljs-comment"># output: tensor([True, True, True, True])</span><br></code></pre></td></tr></table></figure></div>
 
 <p>现在让我们计算 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.411ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 607.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title"> \mathbf{x} </title>
@@ -819,13 +835,13 @@
  <use xlink:href="#E1-MJMAINB-78" x="0" y="0"></use>
 </g>
 </svg> 的另一个函数。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 在默认情况下，PyTorch会积累梯度，我们需要qin&#x27;chu之前的值</span><br>x.grad.zero_()<br>y = x.<span class="hljs-built_in">sum</span>()<br>y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([1., 1., 1., 1.])</span><br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 在默认情况下，PyTorch会积累梯度，我们需要qin&#x27;chu之前的值</span><br>x.grad.zero_()<br>y = x.<span class="hljs-built_in">sum</span>()<br>y.backward()<br>x.grad<br><span class="hljs-comment"># output: tensor([1., 1., 1., 1.])</span><br></code></pre></td></tr></table></figure></div>
 
 <p>深度学习中，我们的目的不是计算微分矩阵，而是批量中每个样本单独计算的偏导数之和。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 对非标量调用‘backward’需要传入一个‘gradient’参数，该参数指定微分函数</span><br>x.grad.zero_()<br>y = x * x<br>y.<span class="hljs-built_in">sum</span>().backward()<br><span class="hljs-comment"># 等价于y.backward(torch.ones(len(x)))</span><br>x.grad<br><span class="hljs-comment"># output: tensor([0., 2., 4., 6.])</span><br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 对非标量调用‘backward’需要传入一个‘gradient’参数，该参数指定微分函数</span><br>x.grad.zero_()<br>y = x * x<br>y.<span class="hljs-built_in">sum</span>().backward()<br><span class="hljs-comment"># 等价于y.backward(torch.ones(len(x)))</span><br>x.grad<br><span class="hljs-comment"># output: tensor([0., 2., 4., 6.])</span><br></code></pre></td></tr></table></figure></div>
 
 <p>将某些计算移动到记录的计算图之外。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">x.grad.zero_()<br>y = x * x<br>u = y.detach() <span class="hljs-comment"># 将y视作常数存储在u之中， y仍旧是x的函数，但u不是。</span><br>z = u * x<br><br>z.<span class="hljs-built_in">sum</span>().backward()<br>x.grad == u<br><span class="hljs-comment"># output: tensor([True, True, True, True])</span><br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">x.grad.zero_()<br>y = x * x<br>u = y.detach() <span class="hljs-comment"># 将y视作常数存储在u之中， y仍旧是x的函数，但u不是。</span><br>z = u * x<br><br>z.<span class="hljs-built_in">sum</span>().backward()<br>x.grad == u<br><span class="hljs-comment"># output: tensor([True, True, True, True])</span><br></code></pre></td></tr></table></figure></div>
 
 ]]></content>
       <categories>
@@ -5863,6 +5879,21 @@
     <content><![CDATA[<p> 基本的运算讲解参考：</p>
 <p><a href="https://hxiangdou.github.io/2023/02/13/DL_23/">动手学习深度学习（23）自注意力机制（self attention） - 顺利毕业企划 (hxiangdou.github.io)</a></p>
 <p><a href="https://hxiangdou.github.io/2023/02/13/DL_24/">动手学习深度学习（24）transformer - 顺利毕业企划 (hxiangdou.github.io)</a></p>
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>南开学术规范与论文写作（第一讲）Writing &amp; Academic Norms</title>
+    <url>/2023/02/19/paper-write-method-1/</url>
+    <content><![CDATA[<p> 讲解学术规范，以免有意或无意构成学术不端行为。</p>
+<p><a class="link"   href="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-1/1.png?raw=true" >https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-1/1.png?raw=true <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>自我取证</p>
 ]]></content>
       <categories>
         <category>DeepLearning学习</category>
