@@ -5889,18 +5889,58 @@
       </tags>
   </entry>
   <entry>
-    <title>南开学术规范与论文写作（第一讲）Writing &amp; Academic Norms</title>
+    <title>南开学术规范与论文写作（第1讲）Writing &amp; Academic Norms</title>
     <url>/2023/02/19/paper-write-method-1/</url>
     <content><![CDATA[<p> 讲解学术规范，以免有意或无意构成学术不端行为。</p>
-<p><a class="link"   href="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-1/1.png?raw=true" >https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-1/1.png?raw=true <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>自我取证</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-1/1.png?raw=true"
+                     
+                ></p>
+<p>自我取证：对工作的开展和执行过程进行记录以便做自证，类似于github时间戳，小组讨论记录等。</p>
+<p>需要完成：<a class="link"   href="https://plagiarism.iu.edu/IUcriteria.html" >https://plagiarism.iu.edu/IUcriteria.html <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 主页上的考核内容。</p>
 ]]></content>
       <categories>
-        <category>DeepLearning学习</category>
+        <category>papers-writing</category>
       </categories>
       <tags>
-        <tag>Python</tag>
-        <tag>DeepLearning</tag>
+        <tag>papers-writing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>paper-write-method-3</title>
+    <url>/2023/02/24/paper-write-method-3/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>南开学术规范与论文写作（第2讲）Writing Tips</title>
+    <url>/2023/02/24/paper-write-method-2/</url>
+    <content><![CDATA[<p> 讲解一些论文写作工作，提高工作效率。</p>
+<h1 id="Overleaf"><a href="#Overleaf" class="headerlink" title="Overleaf"></a>Overleaf</h1><p>提供所见即所得的latex文档编写。</p>
+<p>可以使用git进行overleaf的版本控制。</p>
+<ul>
+<li>建议尽量多的换行，减少产生版本冲突的可能</li>
+<li>提高对overleaf中warning的注意，尽量避免产生warning</li>
+<li>确认本领域的特殊词汇，然后将其添加到词典中</li>
+</ul>
+<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><p>优秀的版本控制软件。使用<a class="link"   href="https://tortoisegit.org/" >TortoiseGit – Windows Shell Interface to Git <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>可以优化git使用体验。</p>
+<ul>
+<li>尽可能频繁的进行更新同步</li>
+<li>应该参照commit，pull，push的命令顺序</li>
+</ul>
+<h1 id="Grammarly"><a href="#Grammarly" class="headerlink" title="Grammarly"></a>Grammarly</h1><p>英文语法分析插件，帮助排除word文件的语法错误，并且给出更好的语法。</p>
+<h1 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h1><p>可以在以下网站找到视觉论文的Latex源码：</p>
+<ul>
+<li><a class="link"   href="https://www.overleaf.com/read/nkyrytybmzcm" >https://www.overleaf.com/read/nkyrytybmzcm <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<p>**使用&#96;\newcommand{\cmd}[]</p>
+]]></content>
+      <categories>
+        <category>papers-writing</category>
+      </categories>
+      <tags>
+        <tag>papers-writing</tag>
       </tags>
   </entry>
   <entry>
