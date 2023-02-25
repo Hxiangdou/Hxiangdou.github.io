@@ -6079,22 +6079,21 @@
     <title>南开学术规范与论文写作（第4讲）论文写作（上）</title>
     <url>/2023/02/25/paper-write-method-4/</url>
     <content><![CDATA[<p> 介绍论文的摘要（abstract）、前言（introduction）、相关工作（related work）、总体介绍（overview）等。<strong>论文书写应当是面向该领域的入门人员。</strong></p>
-<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>摘要在逻辑上是一个单独文档：</p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p><strong>摘要在逻辑上是一个单独文档：</strong></p>
 <ul>
 <li>作为一个总结，应当在完成论文后再书写。</li>
 <li>应当复述论文或者前言中的一些部分。但是要<strong>避免</strong>重复使用相同的描述。</li>
 <li>当论文有任何关键变化时，都需要对摘要进行重写。</li>
 </ul>
-<div class="note-large notel-blue"><div class="notel-title"><p>摘要的内容</p>
-</div><div class="notel-content"><ul>
+<p><strong>摘要的内容：</strong></p>
+<ul>
 <li>说明文章关注的是什么问题，以及为什么值得关注</li>
 <li>解释主要思想、方法、理论和发现</li>
 <li>总结实验证据和理论证明</li>
 <li>论文的结论是什么</li>
 </ul>
- </div></div>
-
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>解释问题。引言内容主要包括：</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>引言的主要功能是解释问题。</p>
+<p><strong>引言内容主要包括：</strong></p>
 <ul>
 <li>将问题对非本专业的人员进行通俗化的解释。</li>
 <li>解释问题存在的背景：<ul>
@@ -6108,7 +6107,101 @@
 <li>简要总结在论文的工作之前，SOTA技术的发展与不足。</li>
 <li>总结论文所做出的<strong>假设</strong>。</li>
 </ul>
-<h1 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h1>]]></content>
+<h1 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h1><p>相关工作需要比引言有更多的细节。确保引用的是正确的论文（Google Scholar）。</p>
+<p><strong>相关工作讨论的目的：</strong></p>
+<ul>
+<li><p>展示您对该领域的熟悉程度：</p>
+<ul>
+<li>先前已经完成了哪些工作。</li>
+<li>现在的最新技术是什么。</li>
+</ul>
+</li>
+<li><p>让审稿人对您声称的新颖性有信心。</p>
+</li>
+<li><p>仔细选择要引用的工作。例如，引用：</p>
+<ul>
+<li><p>开始某个研究方向的论文；</p>
+</li>
+<li><p>取得重大进展的论文；</p>
+</li>
+<li><p>以当前最佳思路&#x2F;结果结束的论文。</p>
+</li>
+</ul>
+</li>
+<li><p>未讨论密切相关的工作可能会导致被拒绝。</p>
+</li>
+</ul>
+<p><strong>确保声明你的工作在该领域的优势：</strong></p>
+<ul>
+<li>你可能是第一个研究一个新问题的人</li>
+<li>仅仅有不同还不够，你的工作必须在某些方面更好。 </li>
+<li>对关键的先前结果进行批判性分析和解释 <ul>
+<li>指出其优点。 </li>
+<li>讨论其弱点或限制。 </li>
+<li>你的工作是一种改进或解决了一个不同但相关的问题。 </li>
+<li>你<strong>不必</strong>在所有方面都进行改进。</li>
+</ul>
+</li>
+</ul>
+<p><strong>不要只是进行简单的描述：</strong></p>
+<ul>
+<li><p>关键分析应该展示您的工作如何是在该问题上所有先前工作的进步。 </p>
+</li>
+<li><p>未引用重要论文可能会导致审稿人得出您的工作较差的结论。 </p>
+</li>
+<li><p>工具： </p>
+<ul>
+<li>您的工作可能依赖于现有方法作为其中一步。 </li>
+<li>可能存在选择替代工具的选择。简要分析它们并证明您的选择的合理性。</li>
+</ul>
+</li>
+<li><p>引用最近的调查基准论文。（评测论文、综述论文） </p>
+</li>
+<li><p>将相关工作进行分组叙述。</p>
+</li>
+</ul>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>在描述细节之前，提供一个<strong>概述</strong>通常是有帮助的。</p>
+<ul>
+<li>你的想法可能有很多组成部分。</li>
+<li>这些组成部分之间往往存在复杂的关系。</li>
+<li>可以将其作为单独的章节，或包含在论文的Introduction部分。</li>
+</ul>
+<p><strong>overview的作用：</strong></p>
+<ul>
+<li>解释论文的关键环节</li>
+<li>解释关键环节是如何结合在一起</li>
+<li>给读者提供一个思维导图</li>
+<li>帮助读者了解论文的其余部分。 </li>
+<li>了解每个步骤的目的以及它们如何结合在一起。 </li>
+<li>对于复杂的关系，图表可能非常有用。 </li>
+<li>在概述后，应在后面的章节中详细解释新颖的想法，并为非原创的想法提供引用。 </li>
+<li>概述还可以提供其他背景材料（例如，定义技术术语或符号），这些材料对于理解您的方法是必要的。</li>
+</ul>
+<h1 id="Detail-Section"><a href="#Detail-Section" class="headerlink" title="Detail Section"></a>Detail Section</h1><p>细节部分是整篇论文的核心，分为几个部分，每个部分描述一种的一个环节，或者给出导致最终结果的理论，或者给出工作的主要方面。</p>
+<p><strong>Detail Section是否具有足够reproducibility：</strong></p>
+<ul>
+<li>应该能够根据论文进行再现。 </li>
+<li>能够实现所描述的内容</li>
+<li>或按照证明中的步骤进行验证</li>
+<li>或收集相似类型的数据并以相同的方式进行分析。</li>
+</ul>
+<p><strong>常见的问题：</strong></p>
+<ul>
+<li><p>忘记读者可能没有与您相同的背景知识。</p>
+</li>
+<li><p>过于注重细节而忽略主要思想。</p>
+</li>
+<li><p>忘记解释思想如何组合在一起。</p>
+</li>
+<li><p>仅仅说出您做了什么，以及您的方法如何工作，并没有解释为什么要以这种方式进行。</p>
+</li>
+<li><p>没有解释每个细节如何适应整个解决方案。</p>
+</li>
+<li><p>用平实的语言概括方程或算法传达的思想。</p>
+</li>
+</ul>
+<p><strong>不要对读者对背景知识的了解有过高的期望。</strong></p>
+]]></content>
       <categories>
         <category>papers-writing</category>
       </categories>
