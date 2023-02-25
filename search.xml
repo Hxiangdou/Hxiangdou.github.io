@@ -6210,6 +6210,129 @@
       </tags>
   </entry>
   <entry>
+    <title>南开学术规范与论文写作（第4讲）论文写作（下）</title>
+    <url>/2023/02/25/paper-write-method-5/</url>
+    <content><![CDATA[<p> 介绍论文主题写作的后半部分，理论（theory），算法（algorithms），实验（experiments），结论（conclusions）等。</p>
+<h1 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h1><p>除了有精确的公式表达，还要有平实语言描述，<strong>即使去除公式依旧是可读的。</strong></p>
+<p><strong>使用例子进行理论解释：</strong></p>
+<p>一些人可能更善于从理论论证中学习，但是有些人更适合从示例中学习。</p>
+<ul>
+<li>提供一些简单的示例有助于展示理论在实践中的运作方式。</li>
+<li>这样可以让读者更有信心地理解你的想法，并确认该方法确实有效。</li>
+</ul>
+<p>不仅要呈现公式，还要解释你的方法是什么，公式的含义，以及公式采取这种形式的原因。</p>
+<h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-5/1.png?raw=true"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-5/2.png?raw=true"
+                     
+                ></p>
+<p>反例：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-5/3.png?raw=true"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-5/4.png?raw=true"
+                     
+                ></p>
+<p><strong>对算法的解释不是简单的对伪代码的描述。</strong></p>
+<h1 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h1><p>报告你做了什么，你发现了什么，因此应该用过去时写。 论文的主要部分应该用现在时来写。</p>
+<p>每个实验应该有单独、明确的<strong>目的</strong>。 </p>
+<ul>
+<li>实验可以验证某个理论的某些方面。 </li>
+<li>实验可以提供一种衡量方法的结果质量的方式。 </li>
+<li>在可能的情况下，重要的是进行能够与现有方法或理论进行比较的测试。 </li>
+<li>为了发表论文，该想法在某种程度上需要有所改进。</li>
+</ul>
+<p><strong>书写步骤：</strong></p>
+<ul>
+<li>明确阐述实验目的，然后解释实验是如何进行的。 </li>
+<li>给出实验结果。 </li>
+<li>提供对结果的解释，明确从中推断出了什么。 </li>
+<li>解释测试数据的来源和获取方式，以及为什么选择了这个特定的数据集。 </li>
+<li>如果可能，使用带有真实数据（GT）的标准基准测试。 </li>
+<li>在实验描述中保持诚实。 </li>
+<li>所有方法都有局限性。 </li>
+<li><strong>确保你得出的任何结论都有实验结果的支持</strong>，并且不要过度概括。</li>
+</ul>
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><ul>
+<li>简单描述你的contributions并且声明自己的novelty。</li>
+<li>解释为什么你的结果是重要和有用的，并概括实验证据或理论证明，说明你的想法如何改进了早期工作。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-5/5.png?raw=true"
+                     
+                ></p>
+<ul>
+<li>清晰地陈述你的研究存在的局限性。</li>
+</ul>
+<h1 id="Acknowledgements"><a href="#Acknowledgements" class="headerlink" title="Acknowledgements"></a>Acknowledgements</h1><p>简短感谢基金会、工业或其他伙伴，他们提供给您设备、反馈或其他支持。您还应感谢提供数据集、代码、标本等资源的其他研究人员。</p>
+<p><strong>提供数据来源：</strong></p>
+<ul>
+<li>提供引用文献和代码&#x2F;数据链接（如果可能）。 </li>
+<li>如果您希望在论文中复制他人的受版权保护的作品，仅在致谢中提到是不够的。</li>
+<li>您必须获得版权持有人的书面许可，尽管书面材料的简短摘录可能不需要这样做。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-5/6.png?raw=true"
+                     
+                ></p>
+<p><strong>表达对版权的尊重：</strong></p>
+<ul>
+<li>版权法律可能很复杂，并且因国家而异。</li>
+<li>即使获得了许可，您在使用版权材料时也应始终说明其来源。</li>
+<li>有时您可能需要支付使用版权材料的许可费用。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-5/7.png?raw=true"
+                     
+                ></p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p><strong>概述参考文献</strong>（Bibliography）是一份特定于论文中所讨论的文献列表，而<strong>文献引用</strong>（References）则是你在论文中具体讨论并互相引用的项。学术论文中应只包含引用，而不是一份普通的参考文献列表。</p>
+<p>参考文献应该展示以下几个关键点，并帮助读者了解更多关于该主题的信息。</p>
+<ul>
+<li><p>它可以展示你对领域和其最新进展的了解程度。只有在这方面做足功夫，你的创新主张才有可能被认为是可信的。</p>
+</li>
+<li><p>参考文献也可以展示你的工作是对之前研究的一个重要补充或提升。</p>
+</li>
+<li><p>参考文献也能告诉读者如何找到你所使用的工具和其他研究者的工作细节</p>
+</li>
+<li><p>也可以为你的问题提供背景。</p>
+</li>
+</ul>
+<p>按照期望在会议或期刊中发表论文的引用风格来编写参考文献。有些会议或期刊要求参考文献使用特定的引用格式：</p>
+<ul>
+<li>可能使用字母续排列、出现次序排列等</li>
+<li>使用数字引用，e.g. [1].</li>
+<li>作者和日期引用，e.g. [Jones1999].</li>
+</ul>
+<h2 id="Appendices"><a href="#Appendices" class="headerlink" title="Appendices"></a>Appendices</h2><p>有时<strong>附录</strong>太长了，会打断读者的理解，所以会放到文献的末尾进行补充。</p>
+<p>使用附录的主要目的是提供补充材料。 </p>
+]]></content>
+      <categories>
+        <category>papers-writing</category>
+      </categories>
+      <tags>
+        <tag>papers-writing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>茴香豆</strong><br><del>计科专业大数据方向憨憨，以后该干什么呢？迷茫ヾ(•ω•&#96;)o</del></p>
