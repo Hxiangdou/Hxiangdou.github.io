@@ -45,7 +45,7 @@
     <script id="hexo-configurations">
     let REDEFINE = window.REDEFINE || {};
     REDEFINE.hexo_config = {"hostname":"hxiangdou.github.io","root":"/","language":"en","path":"/search.xml"};
-    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"https://evan.beee.top/img/wallhaven-wqery6-light.webp","dark":"https://evan.beee.top/img/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"可能会遇到雾，看到芦苇。当你扒开芦苇，发现前面还有道路可以走。但走着走着，又会有雾来、霜来、雪来、风雨来。","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.1.1","friend_links":{"columns":2}};
+    REDEFINE.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#005080","avatar":"/images/redefine-avatar.svg","favicon":"/images/redefine-logo.svg","article_img_align":"center","right_side_width":"210px","content_max_width":"1000px","nav_color":{"left":"#f78736","right":"#367df7","transparency":35},"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_image":{"light":"https://evan.beee.top/img/wallhaven-wqery6-light.webp","dark":"https://evan.beee.top/img/wallhaven-wqery6-dark.webp"},"title_color":{"light":"#fff","dark":"#d1d1b6"},"description":"可能会遇到雾，看到芦苇。\\n当你扒开芦苇，发现前面还有道路可以走。\\n但走着走着，又会有雾来、霜来、雪来、风雨来。","custom_font":{"enable":false,"font_family":null,"font_url":null}},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_block":{"copy":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"1.1.1","friend_links":{"columns":2}};
     REDEFINE.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
   </script>
     
@@ -339,6 +339,79 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/02/13/DL_25/">
+                        动手学习深度学习（25）BERT
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        创建BERT的动机：预训练的模型抽取了足够多的信息，新的任务只需要增加一个简单的输出层。
+BERT架构
+只有编码器的Transformer
+
+两个版本：
+
+Base:
+
+\#blocks=12,hidden size=768,\#heads=12,\...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Feb 13 2023 20:27:20 GMT+0800">
+                
+                    2023/02/13
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/DeepLearning%E5%AD%A6%E4%B9%A0/">DeepLearning学习</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Python/">Python</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/DeepLearning/">DeepLearning</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2023/02/13/DL_25/">Read more<span class="seo-reader-text">动手学习深度学习（25）BERT</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
@@ -880,79 +953,6 @@ T
     </div>
 
     <a href="/2022/11/09/DL_19/">Read more<span class="seo-reader-text">动手学习深度学习（19）多尺度锚框和SSD实现</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2022/11/08/DL_18/">
-                        动手学习深度学习（18）物体检测算法：R-CNN，SSD，YOLO
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        快速讲解一下目标检测的常用算法。
-R-CNN
-使用启发式搜索算法来选择锚框
-使用预训练模型来对每个锚框抽取特征
-训练一个SVM来对类别分类
-训练一个线性回归模型来预测边缘框偏移
-
-兴趣区域（RoI）池化层
-给定一个锚框，均匀分割成n x m块，输出每...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Nov 08 2022 16:58:44 GMT+0800">
-                
-                    2022/11/08
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/DeepLearning%E5%AD%A6%E4%B9%A0/">DeepLearning学习</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/Python/">Python</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/DeepLearning/">DeepLearning</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2022/11/08/DL_18/">Read more<span class="seo-reader-text">动手学习深度学习（18）物体检测算法：R-CNN，SSD，YOLO</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>

@@ -5912,7 +5912,60 @@
     <title>南开学术规范与论文写作（第3讲）论文写作的准备工作</title>
     <url>/2023/02/24/paper-write-method-3/</url>
     <content><![CDATA[<p> 主要讲解论文开始写作前的准备工作。</p>
-<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1>]]></content>
+<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><p>对于论文的发表，内容和形式都是必要条件。</p>
+<p>论文的内容应当以创新点为核心。</p>
+<p>创新点的主要形式分为三种（创新性递减）：</p>
+<ul>
+<li>发现新的问题去解决（同时提出一种可行的解决方案）</li>
+<li>对已有问题提出新的方法</li>
+<li>将已有问题的一些方法组合起来进行组合式创新</li>
+</ul>
+<p>论文的方法应当在某些领域有一定的提高：</p>
+<ul>
+<li>更少时间花销</li>
+<li>更准确的结果</li>
+<li>更少内存花销</li>
+<li>……</li>
+</ul>
+<p><strong>不要在论文中写两个以上的贡献</strong>（保持贡献为1个或者2个）</p>
+<h2 id="发现新的问题去解决"><a href="#发现新的问题去解决" class="headerlink" title="发现新的问题去解决"></a>发现新的问题去解决</h2><p>这个新问题应当是：</p>
+<ul>
+<li>具有一定难度和挑战性</li>
+<li>对于潜在读者来说有使用价值，或者值得其感兴趣</li>
+</ul>
+<p>发现新的问题是很困难的。</p>
+<h2 id="对已有问题提出新的方法"><a href="#对已有问题提出新的方法" class="headerlink" title="对已有问题提出新的方法"></a>对已有问题提出新的方法</h2><p>新的方法的几个可能来源：</p>
+<ul>
+<li>从问题本身出发发现新的方法</li>
+<li>从其他领域寻找可能的方法</li>
+<li>从与作者不同的角度分析问题</li>
+</ul>
+<h2 id="组合创新"><a href="#组合创新" class="headerlink" title="组合创新"></a>组合创新</h2><p>原创性体现在：</p>
+<ul>
+<li>为什么选择这些模块进行组合</li>
+<li>怎么把不同模块组合起来</li>
+</ul>
+<h1 id="会议-x2F-期刊"><a href="#会议-x2F-期刊" class="headerlink" title="会议&#x2F;期刊"></a>会议&#x2F;期刊</h1><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-3/1.png?raw=true"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-3/2.png?raw=true"
+                     
+                ></p>
+<h1 id="写作规划"><a href="#写作规划" class="headerlink" title="写作规划"></a>写作规划</h1><ul>
+<li>快速撰写第一版草稿然后进行修改</li>
+<li>了解论文中已经被解释过的内容</li>
+<li>了解哪些内容仍然需要被解释</li>
+<li>避免书写过多细节，然后发现没有足够的空间</li>
+<li>写作会迫使作者重新思考实验：重新实验或者是修改算法</li>
+<li>在修改过程中，覆盖需要说的所有内容，并以足够的细节进行说明，然后对其进行润色和缩短</li>
+</ul>
+]]></content>
       <categories>
         <category>papers-writing</category>
       </categories>
@@ -6015,6 +6068,47 @@
 </ul>
 <h1 id="分析审稿人回复"><a href="#分析审稿人回复" class="headerlink" title="分析审稿人回复"></a>分析审稿人回复</h1><p>参照：<a class="link"   href="https://zhuanlan.zhihu.com/p/104298923" >https://zhuanlan.zhihu.com/p/104298923 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
+      <categories>
+        <category>papers-writing</category>
+      </categories>
+      <tags>
+        <tag>papers-writing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>南开学术规范与论文写作（第4讲）论文写作（上）</title>
+    <url>/2023/02/25/paper-write-method-4/</url>
+    <content><![CDATA[<p> 介绍论文的摘要（abstract）、前言（introduction）、相关工作（related work）、总体介绍（overview）等。<strong>论文书写应当是面向该领域的入门人员。</strong></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>摘要在逻辑上是一个单独文档：</p>
+<ul>
+<li>作为一个总结，应当在完成论文后再书写。</li>
+<li>应当复述论文或者前言中的一些部分。但是要<strong>避免</strong>重复使用相同的描述。</li>
+<li>当论文有任何关键变化时，都需要对摘要进行重写。</li>
+</ul>
+<div class="note-large notel-blue"><div class="notel-title"><p>摘要的内容</p>
+</div><div class="notel-content"><ul>
+<li>说明文章关注的是什么问题，以及为什么值得关注</li>
+<li>解释主要思想、方法、理论和发现</li>
+<li>总结实验证据和理论证明</li>
+<li>论文的结论是什么</li>
+</ul>
+ </div></div>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>解释问题。引言内容主要包括：</p>
+<ul>
+<li>将问题对非本专业的人员进行通俗化的解释。</li>
+<li>解释问题存在的背景：<ul>
+<li>潜在用户是谁</li>
+<li>论文的工作如何扩展当前的思考</li>
+<li>为什么简单&#x2F;现有的方案不足以解决问题</li>
+<li>为什么当前问题很重要</li>
+<li>解决问题的挑战是什么</li>
+</ul>
+</li>
+<li>简要总结在论文的工作之前，SOTA技术的发展与不足。</li>
+<li>总结论文所做出的<strong>假设</strong>。</li>
+</ul>
+<h1 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h1>]]></content>
       <categories>
         <category>papers-writing</category>
       </categories>
