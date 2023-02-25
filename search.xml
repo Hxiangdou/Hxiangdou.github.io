@@ -6210,7 +6210,7 @@
       </tags>
   </entry>
   <entry>
-    <title>南开学术规范与论文写作（第4讲）论文写作（下）</title>
+    <title>南开学术规范与论文写作（第5讲）论文写作（下）</title>
     <url>/2023/02/25/paper-write-method-5/</url>
     <content><![CDATA[<p> 介绍论文主题写作的后半部分，理论（theory），算法（algorithms），实验（experiments），结论（conclusions）等。</p>
 <h1 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h1><p>除了有精确的公式表达，还要有平实语言描述，<strong>即使去除公式依旧是可读的。</strong></p>
@@ -6322,8 +6322,179 @@
 <li>使用数字引用，e.g. [1].</li>
 <li>作者和日期引用，e.g. [Jones1999].</li>
 </ul>
-<h2 id="Appendices"><a href="#Appendices" class="headerlink" title="Appendices"></a>Appendices</h2><p>有时<strong>附录</strong>太长了，会打断读者的理解，所以会放到文献的末尾进行补充。</p>
+<h1 id="Appendices"><a href="#Appendices" class="headerlink" title="Appendices"></a>Appendices</h1><p>有时<strong>附录</strong>太长了，会打断读者的理解，所以会放到文献的末尾进行补充。</p>
 <p>使用附录的主要目的是提供补充材料。 </p>
+]]></content>
+      <categories>
+        <category>papers-writing</category>
+      </categories>
+      <tags>
+        <tag>papers-writing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>南开学术规范与论文写作（第6讲）论文风格</title>
+    <url>/2023/02/25/paper-write-method-6/</url>
+    <content><![CDATA[<p> 一篇好的论文不仅要有好的内容，也要有好的风格。论文的风格主要包括以下几个部分：</p>
+<ul>
+<li>明确论文所面对的读者群体</li>
+<li>包含批判性的分析</li>
+<li>应当保持论文的准确、简介、逻辑通顺、章节平衡和完整</li>
+</ul>
+<p><strong>不要低估论文评审人的专业能力！</strong></p>
+<h1 id="Readership"><a href="#Readership" class="headerlink" title="Readership"></a>Readership</h1><p>在开始写作之前，考虑目标读者是谁，他们知道什么。</p>
+<ul>
+<li>他们是某一领域的专家，但你必须向他们解释另一个领域的知识</li>
+<li>他们不是专业人士，你需要给他们讲解专业知识。</li>
+<li>他们熟悉您的领域，熟悉如何正确写作。</li>
+</ul>
+<p><strong>了解读者群体技巧：</strong></p>
+<ul>
+<li>首先评估读者可能了解的主题区域。</li>
+<li><strong>不要</strong>假设读者与你有相同的背景知识（例如，应用程序，当前最先进的技术）。</li>
+<li>读者可能<strong>不会</strong>有和你一样的对问题本身的理解（他们甚至可能什么都不知道）。</li>
+</ul>
+<p><strong>思考读者所熟悉的内容：</strong></p>
+<ul>
+<li>类似的方法是否常见于此类问题？</li>
+<li>或者你有什么新的方法吗？</li>
+<li>您是否采用了在其他领域广为人知的方法，但是不适合当前的读者群？</li>
+</ul>
+<p><em><strong>Things that may be obvious to you may not be obvious to the reader.</strong></em></p>
+<h1 id="Critical-Analysis"><a href="#Critical-Analysis" class="headerlink" title="Critical Analysis"></a>Critical Analysis</h1><p>撰写论文时，您的目标应该是为读者提供<strong>见解</strong>和<strong>理解</strong>。</p>
+<ul>
+<li>好论文和弱论文之间最显着的区别是<strong>批判性分析</strong>。</li>
+<li>差异可以贯穿整篇论文。</li>
+<li>不要只是陈述以前的方法，而是<strong>比较</strong>以前方法和自己以及其他工作的方法。</li>
+<li>讨论其他作者作品的<strong>优点</strong>和<strong>缺点</strong>。</li>
+</ul>
+<p><strong>描述你的工作：</strong></p>
+<ul>
+<li>不要只说你<strong>做了什么</strong>，而要从说出目标是什么以及为<strong>什么开始</strong>。</li>
+<li>说出你考虑过的其他方案。</li>
+<li>说出你<strong>为什么</strong>选择你所做的备选方案——你应该<strong>证明</strong>你的方法。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/1.png?raw=true"
+                     
+                ></p>
+<p><strong>分析技巧：</strong></p>
+<p>试着想象坐在旁边的审稿人、考官，或者一个聪明的外行一直问你“为什么”？</p>
+<h1 id="Precision"><a href="#Precision" class="headerlink" title="Precision"></a>Precision</h1><ul>
+<li>精确意味着谨慎使用语言。</li>
+<li>确保你所写的是你真正的意思。</li>
+<li>避免模棱两可或模糊的陈述。(Possibly, maybe)</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/2.png?raw=true"
+                     
+                ></p>
+<p>精确还意味着不遗漏任何重要内容。</p>
+<ul>
+<li>论文的<strong>特定</strong>概念定义。</li>
+<li>注意测量时的单位。</li>
+<li>小心<strong>不要</strong>把推测当成事实。</li>
+</ul>
+<p><em><strong>Statements should be based on evidence, not opinion or belief.</strong></em></p>
+<p>尽量使用<strong>定量</strong>的描述，而不是<strong>定性</strong>描述：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/3.png?raw=true"
+                     
+                ></p>
+<p><strong>应当注意的事情：</strong></p>
+<ul>
+<li>您有责任确保自己被理解。</li>
+<li>如果审稿人误解了你，你的论文可能会被拒绝，即使基础工作不错。</li>
+<li>如果你的论文的读者误解了你，他们可能会在自己的总结性文章中误判你的论文，或者由于误判而构建错误的解决方案。</li>
+<li>确保你没有<strong>误解</strong>他人的工作。</li>
+<li>确保你在描述或者总结他人工作时，已经仔细阅读并清晰理解了他们的作品。</li>
+</ul>
+<h1 id="Conciseness"><a href="#Conciseness" class="headerlink" title="Conciseness"></a>Conciseness</h1><p>简洁意味着使用足够的词语来传达信息，同时不遗漏任何东西。避免使用冗长、散漫的段落或句子，关键点可能在多余的单词中变得难以理解。</p>
+<ul>
+<li>试着在脑海中先弄清楚你想说什么和需要说什么然后再开始写作。</li>
+<li>其他可以省略的是没有提供信息的冗余词。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/4.png?raw=true"
+                     
+                ></p>
+<p><strong>当你想要解释一件事情的时候，你需要保证你真的给出了一个解释：</strong></p>
+<ul>
+<li>对一件事情的冗长表达不是一个解释</li>
+<li>不要用不同的词汇重复表达相同的想法</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/5.png?raw=true"
+                     
+                ></p>
+<p>在文本中有额外的解释的情况下，<strong>表格（或图表）</strong>通常是数值结果最短和最好的呈现方式。同样，<strong>伪代码列表</strong>通常是展示算法的最佳方式。</p>
+<p><strong>避免使用长句子，尽量使用简洁的句子：</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/6.png?raw=true"
+                     
+                ></p>
+<p><strong>行话（jargon）</strong></p>
+<p>一些论文使用行话使简单的想法听起来更学术。行话只应在使用在日常语言存在以下情况时：</p>
+<ul>
+<li>需要一个更长的短语来代替它</li>
+<li>或可能具有误导性或含糊不清。</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/7.png?raw=true"
+                     
+                ></p>
+<h1 id="Logical-Writing"><a href="#Logical-Writing" class="headerlink" title="Logical Writing"></a>Logical Writing</h1><p>合乎逻辑意味着你给出的任何论点都遵循一个合理的从先验试试和假设一步步推理到结论的完整的<strong>推理链</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/8.png?raw=true"
+                     
+                ></p>
+<p><strong>一些保证逻辑顺序的技巧：</strong></p>
+<ul>
+<li>如果说明顺序错误，读者可能无法正确理解，带来不良后果。</li>
+<li>如果解释顺序错误，就很难理解论点。</li>
+<li>概念应该在使用之前定义。</li>
+<li>想法应该建立在彼此之上。</li>
+<li>应避免前向引用，除了该引用已经在介绍或概述部分进行了简要的描述。</li>
+</ul>
+<h1 id="Balance"><a href="#Balance" class="headerlink" title="Balance"></a>Balance</h1><p>应当保持论文<strong>各个章节的平衡性</strong>。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-6/9.png?raw=true"
+                     
+                ></p>
+<p>平衡性也意味着应当同时讨论一件事情的<strong>正反两面</strong>。</p>
+<h1 id="Completeness"><a href="#Completeness" class="headerlink" title="Completeness"></a>Completeness</h1><p>确保对所有步骤进行足够<strong>详细的描述和解释</strong>，其他人可以复现您的工作。</p>
+<ul>
+<li>如果一个步骤是你的新贡献，那么显然你必须详细解释它。</li>
+<li>如果一个想法是您所在社区的标准方法，您至少向那些不是您所在领域专家的读者提供一定的<strong>参考</strong>。</li>
+<li>如果使用其他作者的作品，请再次给出<strong>参考</strong>，并简要总结这个想法。</li>
+</ul>
+<p><strong>确保所有的数学符号都得到了完整的解释</strong></p>
+<p><strong>一些保证完整性的技巧：</strong></p>
+<p>永远忽略论文的完整性，否则会给审稿人留下不好的印象。 如果忽略某些明显的要求，读者跟不上作者的意思。</p>
+<ul>
+<li>确保<strong>明确</strong>说明<strong>所有</strong>假设。</li>
+<li>如果您的论文涉及程序，请<strong>仔细</strong>描述<strong>所有</strong>输入和输出。</li>
+<li>说明用于参数的<strong>典型值</strong>。</li>
+</ul>
+<p><em><strong>Carefulness and rigor are the keys to success.</strong></em></p>
 ]]></content>
       <categories>
         <category>papers-writing</category>
