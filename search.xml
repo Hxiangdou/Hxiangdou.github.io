@@ -5909,9 +5909,16 @@
       </tags>
   </entry>
   <entry>
-    <title>paper-write-method-3</title>
+    <title>南开学术规范与论文写作（第3讲）论文写作的准备工作</title>
     <url>/2023/02/24/paper-write-method-3/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p> 主要讲解论文开始写作前的准备工作。</p>
+<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1>]]></content>
+      <categories>
+        <category>papers-writing</category>
+      </categories>
+      <tags>
+        <tag>papers-writing</tag>
+      </tags>
   </entry>
   <entry>
     <title>南开学术规范与论文写作（第2讲）Writing Tips</title>
@@ -5934,7 +5941,79 @@
 <ul>
 <li><a class="link"   href="https://www.overleaf.com/read/nkyrytybmzcm" >https://www.overleaf.com/read/nkyrytybmzcm <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
-<p>**使用&#96;\newcommand{\cmd}[]</p>
+<p><strong>使用<code>\newcommand</code>命令来保证文件格式的一致性</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-2/1.png?raw=true"
+                     
+                ></p>
+<p>添加图片：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-2/2.png?raw=true"
+                     
+                ></p>
+<p>添加表格</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-2/3.png?raw=true"
+                     
+                ></p>
+<p><strong>使用<code>Strings</code>规范期刊&#x2F;会议名称</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-2/4.png?raw=true"
+                     
+                ></p>
+<p>CVPR</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-3/5.png?raw=true"
+                     
+                ></p>
+<p><strong>Reference</strong></p>
+<p>从Google Scholar上复制过来之后，要再检查一遍。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-3/6.png?raw=true"
+                     
+                ></p>
+<p><strong>避免很无聊的图</strong></p>
+<ul>
+<li>使图片内容紧凑、有意义。避免重复的内容。</li>
+<li>确保图内文字的大小舒适可读。</li>
+</ul>
+<p><strong>保留论文的所有中间文件</strong></p>
+<p><strong>避免无效的内容</strong></p>
+<p>简单的例子：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://github.com/Hxiangdou/hxiangdou.github.io/blob/master/images/paper-write-method-3/7.png?raw=true"
+                     
+                ></p>
+<h1 id="常见的Checklist"><a href="#常见的Checklist" class="headerlink" title="常见的Checklist"></a>常见的Checklist</h1><ul>
+<li>避免一些会让审稿人误认为无创新性的表达。</li>
+<li>使用更好的方式表达结果，以突显论文方法的效果。</li>
+<li>用足够的实验确认效果提升是由论文的创新点得到的。</li>
+</ul>
+<p><strong>一些好的习惯</strong></p>
+<ul>
+<li>开源代码，并且说明代码已经开源</li>
+<li>分析算法尚存的一些问题</li>
+<li>提供足够的理论证明</li>
+<li>分析算法的计算开销、时间开销、内存开销等内容</li>
+<li>使自己的idea保持sharp，可以采用与原有方法的对比</li>
+<li>尽量使用少量的符号进行表达</li>
+<li>尽量使用公平的环境和条件来与现有方法效果进行对比</li>
+</ul>
+<h1 id="分析审稿人回复"><a href="#分析审稿人回复" class="headerlink" title="分析审稿人回复"></a>分析审稿人回复</h1><p>参照：<a class="link"   href="https://zhuanlan.zhihu.com/p/104298923" >https://zhuanlan.zhihu.com/p/104298923 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <categories>
         <category>papers-writing</category>
