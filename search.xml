@@ -2682,27 +2682,27 @@
 <h2 id="Courses"><a href="#Courses" class="headerlink" title="#Courses"></a>#Courses</h2><ul>
 <li><p>动手学深度学习(李沐)</p>
 <ul>
-<li><a href="https://zh.d2l.ai/">https://zh.d2l.ai/</a></li>
+<li><a class="link"   href="https://zh.d2l.ai/" >https://zh.d2l.ai/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
 </li>
 <li><p>学术规范与论文写作(南开)</p>
 <ul>
-<li><a href="https://mmcheng.net/writing/">https://mmcheng.net/writing/</a></li>
+<li><a class="link"   href="https://mmcheng.net/writing/" >https://mmcheng.net/writing/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
 </li>
 <li><p>Deep Learning for Computer Vision(CS231n, Stanford)、</p>
 <ul>
-<li><a href="http://cs231n.stanford.edu/">http://cs231n.stanford.edu/</a></li>
+<li><a class="link"   href="http://cs231n.stanford.edu/" >http://cs231n.stanford.edu/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
 </ul>
 </li>
 </ul>
-<h2 id="Conferences"><a href="#Conferences" class="headerlink" title="#Conferences"></a>#Conferences</h2><p>• CVPR (每年下半年) &amp; ICCV (奇数年上半年)<br>• <a href="https://openaccess.thecvf.com/">https://openaccess.thecvf.com</a><br>• ECCV （偶数年上半年）<br>• <a href="https://www.ecva.net/papers.php">https://www.ecva.net/papers.php</a><br>• SIGGRAPH (每年上半年) &amp; SIGGRAPH Asia (每年下半年)<br>• <a href="https://kesen.realtimerendering.com/">https://kesen.realtimerendering.com/</a><br>• VALSE (计算机视觉领域国内学术组织，每年开)<br>• <a href="http://valser.org/">http://valser.org/</a><br>• GAMES (计算机图形学领域国内学术组织，每年开)<br>• <a href="https://games-cn.org/">https://games-cn.org/</a></p>
+<h2 id="Conferences"><a href="#Conferences" class="headerlink" title="#Conferences"></a>#Conferences</h2><p>• CVPR (每年下半年) &amp; ICCV (奇数年上半年)<br>• <a class="link"   href="https://openaccess.thecvf.com/" >https://openaccess.thecvf.com <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>• ECCV （偶数年上半年）<br>• <a class="link"   href="https://www.ecva.net/papers.php" >https://www.ecva.net/papers.php <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>• SIGGRAPH (每年上半年) &amp; SIGGRAPH Asia (每年下半年)<br>• <a class="link"   href="https://kesen.realtimerendering.com/" >https://kesen.realtimerendering.com/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>• VALSE (计算机视觉领域国内学术组织，每年开)<br>• <a class="link"   href="http://valser.org/" >http://valser.org/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><br>• GAMES (计算机图形学领域国内学术组织，每年开)<br>• <a class="link"   href="https://games-cn.org/" >https://games-cn.org/ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 ]]></content>
       <categories>
         <category>DeepLearning期刊</category>
       </categories>
       <tags>
-        <tag>papers</tag>
+        <tag>papers-reading</tag>
       </tags>
   </entry>
   <entry>
@@ -2751,30 +2751,46 @@
       </tags>
   </entry>
   <entry>
-    <title>Python学习之路（15）查看及修改pip源和conda源</title>
+    <title>Python学习之路（15）查看及修改pip源和conda源及创建环境</title>
     <url>/2022/11/27/Python_15/</url>
     <content><![CDATA[<p>总结修改查看源的方法，免得每次都得重新找。</p>
 <p>高算中心指定源：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#conda </span><br>https://mirrors.tuna.tsinghua.edu.cn/ <br>http://mirrors.ustc.edu.cn/ <br>http://mirrors.aliyun.com/ <br><br><span class="hljs-comment">#pip </span><br>https://pypi.tuna.tsinghua.edu.cn/ <br>http://pypi.mirrors.ustc.edu.cn/ <br>https://pypi.mirrors.ustc.edu.cn/<br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#conda </span><br>https://mirrors.tuna.tsinghua.edu.cn/<br>http://mirrors.ustc.edu.cn/ <br>http://mirrors.aliyun.com/ <br><br><span class="hljs-comment">#pip </span><br>https://pypi.tuna.tsinghua.edu.cn/simple<br>http://pypi.mirrors.ustc.edu.cn/ <br>https://pypi.mirrors.ustc.edu.cn/<br></code></pre></td></tr></table></figure></div>
 
 <h2 id="pip源"><a href="#pip源" class="headerlink" title="pip源"></a>pip源</h2><p>pip更换默认源（以西电源为示例）</p>
 <p>临时使用</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">pip install -i http://linux.xidian.edu.cn/mirrors/pypi/simple --user<br>some-package<br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --user some-package<br></code></pre></td></tr></table></figure></div>
 
-<p>设为默认源</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">pip config <span class="hljs-built_in">set</span> global.index-url <br><span class="hljs-function">http://<span class="hljs-title">linux.xidian.edu.cn</span>/<span class="hljs-title">mirrors</span>/<span class="hljs-title">pypi</span>/<span class="hljs-title">simple</span></span><br></code></pre></td></tr></table></figure>
+<p>设为默认源，先升级pip到最新版本</p>
+<div class="highlight-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">python -m pip install --upgrade pip<br><br>pip config <span class="hljs-built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple<br></code></pre></td></tr></table></figure></div>
 
 <p>查看当前源</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">pip config <span class="hljs-built_in">list</span><br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">pip config <span class="hljs-built_in">list</span><br></code></pre></td></tr></table></figure></div>
 
 
 
 <h2 id="conda源"><a href="#conda源" class="headerlink" title="conda源"></a>conda源</h2><p>conda 更换默认源（以清华源为示例） </p>
 <p>使用下列命令生成<code>.condarc</code> 配置文件，位于用户家目录下</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">conda config --<span class="hljs-built_in">set</span> show_channel_urls yes<br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><code class="hljs bat">conda config --<span class="hljs-built_in">set</span> show_channel_urls yes<br></code></pre></td></tr></table></figure></div>
 
 <p>编辑<code>.condarc</code>文件，清空原先内容，写入以下内容</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">channels:<br> - defaults<br>show_channel_urls: true<br>default_channels:<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2<br>custom_channels:<br> conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br></code></pre></td></tr></table></figure>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python">channels:<br> - defaults<br>show_channel_urls: true<br>default_channels:<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r<br> - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2<br>custom_channels:<br> conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br> simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<br></code></pre></td></tr></table></figure></div>
+
+<h2 id="conda虚拟环境"><a href="#conda虚拟环境" class="headerlink" title="conda虚拟环境"></a>conda虚拟环境</h2><p><strong>1.conda常用命令</strong></p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><code class="hljs powershell">conda list <span class="hljs-comment">#查看当前环境下安装的包</span><br>conda env list <span class="hljs-comment">#查看当前存在哪些虚拟环境</span><br>conda update conda <span class="hljs-comment">#检查更新conda</span><br></code></pre></td></tr></table></figure></div>
+
+<p><strong>2.创建虚拟环境</strong></p>
+<p>anaconda命令创建python版本为x.x，名字为your_env_name的虚拟环境。<strong>your_env_name文件可以在Anaconda安装目录envs文件下找到</strong>。</p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><code class="hljs powershell">conda create <span class="hljs-literal">-n</span> <span class="hljs-variable">$your_env_name</span> python=x.x<br></code></pre></td></tr></table></figure></div>
+
+<p><strong>3.删除虚拟环境</strong></p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><code class="hljs powershell">conda remove <span class="hljs-literal">-n</span> <span class="hljs-variable">$your_env_name</span> <span class="hljs-literal">--all</span><br></code></pre></td></tr></table></figure></div>
+
+<p><strong>4.删除环境中某个包</strong></p>
+<div class="highlight-container" data-rel="Powershell"><figure class="iseeu highlight powershell"><table><tr><td class="code"><pre><code class="hljs powershell">conda remove <span class="hljs-literal">--name</span> MATHJAX<span class="hljs-literal">-SSR-0package_name</span> <br></code></pre></td></tr></table></figure></div>
+
+<h2 id="检测CUDA是否可用"><a href="#检测CUDA是否可用" class="headerlink" title="检测CUDA是否可用"></a>检测CUDA是否可用</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> torch<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;CUDA版本:&#x27;</span>,torch.version.cuda)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Pytorch版本:&#x27;</span>,torch.__version__)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;显卡是否可用:&#x27;</span>,<span class="hljs-string">&#x27;可用&#x27;</span> <span class="hljs-keyword">if</span>(torch.cuda.is_available()) <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;不可用&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;显卡数量:&#x27;</span>,torch.cuda.device_count())<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;是否支持BF16数字格式:&#x27;</span>,<span class="hljs-string">&#x27;支持&#x27;</span> <span class="hljs-keyword">if</span> (torch.cuda.is_bf16_supported()) <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;不支持&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;当前显卡型号:&#x27;</span>,torch.cuda.get_device_name())<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;当前显卡的CUDA算力:&#x27;</span>,torch.cuda.get_device_capability())<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;当前显卡的总显存:&#x27;</span>,torch.cuda.get_device_properties(<span class="hljs-number">0</span>).total_memory/<span class="hljs-number">1024</span>/<span class="hljs-number">1024</span>/<span class="hljs-number">1024</span>,<span class="hljs-string">&#x27;GB&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;是否支持TensorCore:&#x27;</span>,<span class="hljs-string">&#x27;支持&#x27;</span> <span class="hljs-keyword">if</span> (torch.cuda.get_device_properties(<span class="hljs-number">0</span>).major &gt;= <span class="hljs-number">7</span>) <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;不支持&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;当前显卡的显存使用率:&#x27;</span>,torch.cuda.memory_allocated(<span class="hljs-number">0</span>)/torch.cuda.get_device_properties(<span class="hljs-number">0</span>).total_memory*<span class="hljs-number">100</span>,<span class="hljs-string">&#x27;%&#x27;</span>)<br><br><span class="hljs-comment">#如果可以正常使用，应当输出以下内容</span><br>CUDA版本: <span class="hljs-number">11.7</span> <br>Pytorch版本: <span class="hljs-number">1.13</span><span class="hljs-number">.1</span>+cu117 <br>显卡是否可用: 可用 <br>显卡数量: <span class="hljs-number">1</span> <br>是否支持BF16数字格式: 不支持 <br>当前显卡型号: NVIDIA GeForce GTX 960M <br>当前显卡的CUDA算力: (<span class="hljs-number">5</span>, <span class="hljs-number">0</span>) <br>当前显卡的总显存: <span class="hljs-number">3.9998779296875</span> GB <br>是否支持TensorCore: 不支持 <br>当前显卡的显存使用率: <span class="hljs-number">0.0</span> %<br><br>作者：默子要早睡.AinfO<br>链接：https://zhuanlan.zhihu.com/p/<span class="hljs-number">599779565</span><br>来源：知乎<br><br></code></pre></td></tr></table></figure></div>
+
 ]]></content>
       <categories>
         <category>Python学习</category>
@@ -8446,6 +8462,21 @@
       </categories>
       <tags>
         <tag>Python</tag>
+        <tag>DeepLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习配置环境详细步骤及相关问题</title>
+    <url>/2023/03/04/DL-env/</url>
+    <content><![CDATA[<p> 记录自己在配置深度学习环境时遇到的问题以及解决方法。仅以Ubuntu为例。</p>
+<h1 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h1><p><strong>CUDA</strong>（<strong>C</strong>ompute <strong>U</strong>nified <strong>D</strong>evice <strong>A</strong>rchitecture，<strong>统一计算架构</strong>[<a class="link"   href="https://zh.wikipedia.org/zh-cn/CUDA#cite_note-3" >3] <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）是由英伟达<a class="link"   href="https://zh.wikipedia.org/wiki/NVIDIA" >NVIDIA <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>所推出的一种集成技术，是该公司对于<a class="link"   href="https://zh.wikipedia.org/wiki/GPGPU" >GPGPU <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的正式名称。透过这个技术，用户可利用NVIDIA的<a class="link"   href="https://zh.wikipedia.org/wiki/GPU" >GPU <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>进行<a class="link"   href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86" >图像处理 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>之外的运算，亦是首次可以利用GPU作为C-编译器的开发环境。CUDA 开发包（CUDA Toolkit ）只能将自家的CUDA C-语言（对<a class="link"   href="https://zh.wikipedia.org/wiki/OpenCL" >OpenCL <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>只有<a class="link"   href="https://zh.wikipedia.org/wiki/%E9%93%BE%E6%8E%A5%E5%99%A8" >链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的功能[<a class="link"   href="https://zh.wikipedia.org/zh-cn/CUDA#cite_note-4" >4] <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>），也就是执行于GPU的部分编译成<a class="link"   href="https://zh.wikipedia.org/w/index.php?title=PTX&action=edit&redlink=1" >PTX <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><a class="link"   href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%96%93%E8%AA%9E%E8%A8%80" >中间语言 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>或是特定<a class="link"   href="https://zh.wikipedia.org/wiki/%E8%8B%B1%E5%81%89%E9%81%94" >NVIDIA <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> GPU架构的<a class="link"   href="https://zh.wikipedia.org/wiki/%E6%A9%9F%E5%99%A8%E7%A2%BC" >机器代码 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<a class="link"   href="https://zh.wikipedia.org/wiki/NVIDIA" >NVIDIA <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 官方称为 “device code”）；而执行于<a class="link"   href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8" >中央处理器 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>部分的<a class="link"   href="https://zh.wikipedia.org/wiki/C%E8%AF%AD%E8%A8%80" >C <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> &#x2F; <a class="link"   href="https://zh.wikipedia.org/wiki/C%2B%2B" >C++ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>代码（<a class="link"   href="https://zh.wikipedia.org/wiki/NVIDIA" >NVIDIA <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 官方称为 “host code”）仍依赖于外部的编译器，如<a class="link"   href="https://zh.wikipedia.org/wiki/Microsoft_Windows" >Microsoft Windows <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>下需要<a class="link"   href="https://zh.wikipedia.org/wiki/Microsoft_Visual_Studio" >Microsoft Visual Studio <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>；<a class="link"   href="https://zh.wikipedia.org/wiki/Linux" >Linux <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>下则主要依赖于<a class="link"   href="https://zh.wikipedia.org/wiki/GCC" >GCC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>。</p>
+<p>​                                                                                                                                                                                                   <a class="link"   href="https://zh.wikipedia.org/zh-cn/CUDA" >——CUDA - 维基百科 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>1.安装电脑gpu对应版本的</p>
+]]></content>
+      <categories>
+        <category>DeepLearning学习</category>
+      </categories>
+      <tags>
         <tag>DeepLearning</tag>
       </tags>
   </entry>
