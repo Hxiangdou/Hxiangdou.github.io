@@ -8665,6 +8665,11 @@
 <div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">sudo apt-get install build-essential<br></code></pre></td></tr></table></figure></div>
 
 <h2 id="10-预训练模型版本过老导致无法加载的问题"><a href="#10-预训练模型版本过老导致无法加载的问题" class="headerlink" title="10.预训练模型版本过老导致无法加载的问题"></a>10.预训练模型版本过老导致无法加载的问题</h2><p>将<code>.pt</code>模型后缀改为<code>.zip</code>之后，不要解压缩，直接在压缩状态打开，就可以对打包好的代码进行修改，之后再将后缀改回<code>.pt</code>重新加载即可。</p>
+<h2 id="11-Ubuntu重启后进入initramfs中"><a href="#11-Ubuntu重启后进入initramfs中" class="headerlink" title="11.Ubuntu重启后进入initramfs中"></a>11.Ubuntu重启后进入initramfs中</h2><p>这个问题往往是不正常的关机导致磁盘文件受损所引起的。</p>
+<p>解决思路参考<a class="link"   href="https://blog.csdn.net/qq_29855509/article/details/105609721" >(Linux 系统启动后出现(initramfs) 处理办法_天翔MAC的博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<div class="highlight-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">fsck -t ext4 /dev/损坏磁盘名<br></code></pre></td></tr></table></figure></div>
+
+<p>如果提示没有fsck指令，就再强制重启，知道有fsck指令。</p>
 <p><em><strong>其他没能涉及到的问题，试试重装解决把！</strong></em></p>
 ]]></content>
       <categories>
