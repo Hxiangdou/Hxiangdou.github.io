@@ -8468,7 +8468,7 @@
   <entry>
     <title>深度学习配置环境详细步骤及相关问题</title>
     <url>/2023/03/04/DL-env/</url>
-    <content><![CDATA[<p> 记录自己在配置深度学习环境时遇到的问题以及解决方法。仅以Ubuntu为例。</p>
+    <content><![CDATA[<p> 记录自己在配置深度学习环境时遇到的问题以及解决方法。仅以<strong>Ubuntu</strong>为例。</p>
 <p><strong>注意：</strong>没有必要一定按照项目文档中的CUDA、Pytorch版本进行配置，因为Pytorch版本的每次更新改变都在github有详细的记录，可以根据运行项目后的<strong>报错信息</strong>，参照Pytorch<strong>版本更新</strong>修改的代码进行相应修改。</p>
 <h2 id="1-安装电脑gpu对应版本的显卡驱动"><a href="#1-安装电脑gpu对应版本的显卡驱动" class="headerlink" title="1.安装电脑gpu对应版本的显卡驱动"></a>1.安装电脑gpu对应版本的显卡驱动</h2><ul>
 <li>获取可用驱动信息</li>
@@ -8678,6 +8678,11 @@
       <tags>
         <tag>DeepLearning</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Yolo_1</title>
+    <url>/2023/06/19/Yolo-1/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>about</title>
