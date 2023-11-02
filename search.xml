@@ -8687,9 +8687,13 @@
   <entry>
     <title>about</title>
     <url>/about/index.html</url>
-    <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>茴香豆</strong><br><del>计科专业大数据方向憨憨，以后该干什么呢？迷茫ヾ(•ω•&#96;)o</del></p>
-<p>现在是计算机视觉方向的憨憨了，以后估计就是做这个了。</p>
-<h1 id="WORK"><a href="#WORK" class="headerlink" title="WORK"></a>WORK</h1><p><del>谁能给我个工作哇</del> 2022工作真的不好找！</p>
+    <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>Feng Tonghui</strong></p>
+<p>Hi! I am a graduate student currently pursuing my research interests in the field of computer vision at Xidian University. My academic journey began here as an undergraduate, and I have since dedicated myself to the fascinating world of image generation tasks and computer vision.</p>
+<h1 id="RESEARCH"><a href="#RESEARCH" class="headerlink" title="RESEARCH"></a>RESEARCH</h1><p>My research primarily revolves around image synthesis. With a strong foundation in deep learning, I strive to develop innovative solutions to complex challenges within computer vision. I am particularly enthusiastic about enhancing the quality and diversity of generated images and their applications across various domains.</p>
+<h1 id="RESEARCH-1"><a href="#RESEARCH-1" class="headerlink" title="RESEARCH"></a>RESEARCH</h1><ul>
+<li>I am currently pursuing my Master of Science (M.Sc.) degree in [Computer Science](insert link) at <a class="link"   href="https://www.xidian.edu.cn/" >Xidian University <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</li>
+<li>I completed my undergraduate studies in [Computer Science](insert link) at <a class="link"   href="https://www.xidian.edu.cn/" >Xidian University <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
