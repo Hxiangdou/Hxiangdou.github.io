@@ -18,15 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="创建用户并输入密码  ​	sudo adduser user_name  添加ssh权限 cd &#x2F;etc&#x2F;ssh sudo vim sshd_config 在文件最后添加 AllowUsers user_name service ssh restart  添加sudo权限 sudo usermod -G sudo user_name">
+        <meta name="description" content="Ubuntu创建用户  创建用户并输入密码  ​	sudo adduser user_name  添加ssh权限 cd &#x2F;etc&#x2F;ssh sudo vim sshd_config 在文件最后添加 AllowUsers user_name service ssh restart  添加sudo权限 sudo usermod -G sudo user_name   Ubuntu新硬盘挂载  查看硬盘容">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu用户创建及赋予权限">
+<meta property="og:title" content="Ubuntu用户创建及赋予权限、初始化硬盘">
 <meta property="og:url" content="https://hxiangdou.github.io/2024/02/28/Ubuntu-user/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="创建用户并输入密码  ​	sudo adduser user_name  添加ssh权限 cd &#x2F;etc&#x2F;ssh sudo vim sshd_config 在文件最后添加 AllowUsers user_name service ssh restart  添加sudo权限 sudo usermod -G sudo user_name">
+<meta property="og:description" content="Ubuntu创建用户  创建用户并输入密码  ​	sudo adduser user_name  添加ssh权限 cd &#x2F;etc&#x2F;ssh sudo vim sshd_config 在文件最后添加 AllowUsers user_name service ssh restart  添加sudo权限 sudo usermod -G sudo user_name   Ubuntu新硬盘挂载  查看硬盘容">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-02-28T02:29:11.000Z">
-<meta property="article:modified_time" content="2024-02-28T02:44:45.101Z">
+<meta property="article:modified_time" content="2024-02-28T07:37:28.368Z">
 <meta property="article:author" content="茴香豆">
 <meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary">
@@ -41,7 +41,7 @@
     
     <title>
         
-            Ubuntu用户创建及赋予权限 -
+            Ubuntu用户创建及赋予权限、初始化硬盘 -
         
         顺利毕业企划
     </title>
@@ -580,7 +580,7 @@
         <div class="article-title relative w-full">
             
                 <div class="w-full flex items-center pt-6 justify-start">
-                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Ubuntu用户创建及赋予权限</h1>
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">Ubuntu用户创建及赋予权限、初始化硬盘</h1>
                 </div>
             
             </div>
@@ -608,8 +608,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-02-28 10:44:45</span>
-            <span class="mobile">2024-02-28 10:44:45</span>
+            <span class="desktop">2024-02-28 15:37:28</span>
+            <span class="mobile">2024-02-28 15:37:28</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -663,7 +663,8 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <ul>
+            <p><strong>Ubuntu创建用户</strong></p>
+<ul>
 <li>创建用户并输入密码</li>
 </ul>
 <p>​	<code>sudo adduser user_name</code></p>
@@ -678,6 +679,30 @@
 <p><code>sudo usermod -G sudo user_name</code></p>
 </li>
 </ul>
+<p><strong>Ubuntu新硬盘挂载</strong></p>
+<ul>
+<li><p>查看硬盘容量及剩余空间</p>
+<p><code>df -hl</code></p>
+</li>
+<li><p>查看硬盘所属分区情况</p>
+<p><code>sudo fdisk -lu</code></p>
+</li>
+<li><p>格式化硬盘</p>
+<p><font color="#ff0000"><strong>注意:</strong> <code>/dev/sda</code> 为新硬盘，旧硬盘格式化所有数据都会丢失</font></p>
+<p><code>sudo mkfs -t ext4 /dev/sda</code></p>
+<p><font color="#0000ff"><strong>提醒:</strong> 记录输出中的 <code>UUID: </code> 序列号</font></p>
+</li>
+<li><p>新建文件夹用于挂载硬盘</p>
+<p><code>sudo mkdir /data1</code></p>
+</li>
+<li><p>挂载硬盘分区</p>
+<p><code>sudo vim /etc/fstab</code></p>
+<p>在文件最后添加如下配置</p>
+<div class="highlight-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bat"># data1 was on /dec/sda<br>UUID=格式化时记录的序列号		/data1		ext4		defaults	<span class="hljs-number">0</span>	<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure></div>
+
+<p><font color="#ff0000"><strong>注意:</strong> 这里一定要输入正确的<strong>UUID</strong>和<strong>文件夹路径</strong>，否则系统在开机自检的时候就会出问题，严重的甚至需要重装系统。</font></p>
+</li>
+</ul>
 
         </div>
 
@@ -685,14 +710,14 @@
             <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Ubuntu用户创建及赋予权限</li>
+        <li><strong>Title:</strong> Ubuntu用户创建及赋予权限、初始化硬盘</li>
         <li><strong>Author:</strong> 茴香豆</li>
         <li><strong>Created at
                 :</strong> 2024-02-28 10:29:11</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-02-28 10:44:45
+                    :</strong> 2024-02-28 15:37:28
             </li>
         
         <li>
@@ -799,7 +824,7 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">Ubuntu用户创建及赋予权限</div>
+        <div class="page-title">Ubuntu用户创建及赋予权限、初始化硬盘</div>
         
 
     </div>

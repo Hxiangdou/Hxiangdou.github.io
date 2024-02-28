@@ -8680,9 +8680,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu用户创建及赋予权限</title>
+    <title>Ubuntu用户创建及赋予权限、初始化硬盘</title>
     <url>/2024/02/28/Ubuntu-user/</url>
-    <content><![CDATA[<ul>
+    <content><![CDATA[<p><strong>Ubuntu创建用户</strong></p>
+<ul>
 <li>创建用户并输入密码</li>
 </ul>
 <p>​	<code>sudo adduser user_name</code></p>
@@ -8695,6 +8696,30 @@
 </li>
 <li><p>添加<code>sudo</code>权限</p>
 <p><code>sudo usermod -G sudo user_name</code></p>
+</li>
+</ul>
+<p><strong>Ubuntu新硬盘挂载</strong></p>
+<ul>
+<li><p>查看硬盘容量及剩余空间</p>
+<p><code>df -hl</code></p>
+</li>
+<li><p>查看硬盘所属分区情况</p>
+<p><code>sudo fdisk -lu</code></p>
+</li>
+<li><p>格式化硬盘</p>
+<p><font color="#ff0000"><strong>注意:</strong> <code>/dev/sda</code> 为新硬盘，旧硬盘格式化所有数据都会丢失</font></p>
+<p><code>sudo mkfs -t ext4 /dev/sda</code></p>
+<p><font color="#0000ff"><strong>提醒:</strong> 记录输出中的 <code>UUID: </code> 序列号</font></p>
+</li>
+<li><p>新建文件夹用于挂载硬盘</p>
+<p><code>sudo mkdir /data1</code></p>
+</li>
+<li><p>挂载硬盘分区</p>
+<p><code>sudo vim /etc/fstab</code></p>
+<p>在文件最后添加如下配置</p>
+<div class="highlight-container" data-rel="Bat"><figure class="iseeu highlight bat"><table><tr><td class="code"><pre><code class="hljs bat"># data1 was on /dec/sda<br>UUID=格式化时记录的序列号		/data1		ext4		defaults	<span class="hljs-number">0</span>	<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure></div>
+
+<p><font color="#ff0000"><strong>注意:</strong> 这里一定要输入正确的<strong>UUID</strong>和<strong>文件夹路径</strong>，否则系统在开机自检的时候就会出问题，严重的甚至需要重装系统。</font></p>
 </li>
 </ul>
 ]]></content>
