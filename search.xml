@@ -8680,9 +8680,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Yolo_1</title>
-    <url>/2023/06/19/Yolo-1/</url>
-    <content><![CDATA[]]></content>
+    <title>Ubuntu用户创建及赋予权限</title>
+    <url>/2024/02/28/Ubuntu-user/</url>
+    <content><![CDATA[<ul>
+<li>创建用户并输入密码</li>
+</ul>
+<p>​	<code>sudo adduser user_name</code></p>
+<ul>
+<li><p>添加<code>ssh</code>权限</p>
+<p><code>cd /etc/ssh</code></p>
+<p><code>sudo vim sshd_config</code></p>
+<p>在文件最后添加 <code>AllowUsers user_name</code></p>
+<p><code>service ssh restart</code></p>
+</li>
+<li><p>添加<code>sudo</code>权限</p>
+<p><code>sudo usermod -G sudo user_name</code></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
   </entry>
   <entry>
     <title>about</title>
