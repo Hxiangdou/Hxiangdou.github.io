@@ -8732,6 +8732,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Java_1</title>
+    <url>/2024/05/28/Java-1/</url>
+    <content><![CDATA[<p>JDK: Java Development Kit</p>
+<p>JRE: Java Runtime Environment</p>
+<p>JVM: Java Virtual Machine</p>
+<h1 id="卸载JDK"><a href="#卸载JDK" class="headerlink" title="卸载JDK"></a>卸载JDK</h1><ol>
+<li>删除Java的安装目录</li>
+<li>删除JAVA_HOME</li>
+<li>删除path下关于Java的目录</li>
+<li>java -version</li>
+</ol>
+<h1 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h1><ol>
+<li><p>搜索JDK8， 下载并安装，记住安装路径</p>
+</li>
+<li><p>配置环境变量</p>
+<p>2.1 新建 JAVA_HOME 变量</p>
+<p>2.2 配置path路径</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>Tonghui Feng</strong></p>
