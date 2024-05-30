@@ -8793,6 +8793,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Java流程控制</title>
+    <url>/2024/05/30/Java-2/</url>
+    <content><![CDATA[<p>Java流程控制</p>
+<h2 id="用户交互Scanner"><a href="#用户交互Scanner" class="headerlink" title="用户交互Scanner"></a>用户交互Scanner</h2><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">scanner.hasNext()	scanner.next()</span><br><span class="hljs-comment">scanner.hasNextInt()	scanner.nextInt()</span><br><span class="hljs-comment">scanner.hasNextFloat()	scanner.nextFloat()</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Demo01</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 创建一个扫描器对象，用于接收键盘数据</span><br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">scanner</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><br>        System.out.println(<span class="hljs-string">&quot;使用next方式接收：&quot;</span>);<br>        <span class="hljs-comment">// 输入 hello world</span><br><br>        <span class="hljs-comment">// 判断用户有没有输入字符串</span><br>        <span class="hljs-keyword">if</span>(scanner.hasNext())&#123;<br>            <span class="hljs-comment">// 使用next方式接收</span><br>            <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> scanner.next();    <span class="hljs-comment">// 程序等待用户输入完毕</span><br>            System.out.println(<span class="hljs-string">&quot;输入的内容为：&quot;</span>+str); <span class="hljs-comment">// hello</span><br>        &#125;<br>        <span class="hljs-comment">// 凡是属于IO流的类如果不关闭会一直占用资源，要养成好习惯用完就关掉</span><br>        <span class="hljs-comment">// scanner.close();</span><br>        <span class="hljs-comment">// Scanner scannerLine = new Scanner(System.in);</span><br>        System.out.println(<span class="hljs-string">&quot;使用nextLine方式接收：&quot;</span>);<br><br>        <span class="hljs-comment">// 判断用户有没有输入字符串</span><br>        <span class="hljs-keyword">if</span>(scanner.hasNextLine())&#123;<br>            <span class="hljs-comment">// 使用next方式接收</span><br>            <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> scanner.nextLine();    <span class="hljs-comment">// 程序等待用户输入完毕</span><br>            System.out.println(<span class="hljs-string">&quot;输入的内容为：&quot;</span>+str); <span class="hljs-comment">// hello world</span><br>        &#125;<br>        <span class="hljs-comment">// 凡是属于IO流的类如果不关闭会一直占用资源，要养成好习惯用完就关掉</span><br>        scanner.close();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></div>
+
+]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>Tonghui Feng</strong></p>
