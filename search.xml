@@ -8975,6 +8975,69 @@
       </tags>
   </entry>
   <entry>
+    <title>异常（Exception）</title>
+    <url>/2024/06/05/Java-6/</url>
+    <content><![CDATA[<p>程序对异常做出合理的处理，而不至于程序崩溃。</p>
+<p>异常指程序运行中出现的不期而至的各种情况，如：文件找不到、网络连接失败、非法参数等。</p>
+<p>异常发生在程序运行期间，它影响了正常的程序执行流程。</p>
+<ul>
+<li>检查性异常：最具代表性的检查行异常是用户错误或问题引发的异常，这是程序员无法预见的。例如要打开一个不存在的文件时，一个异常就发生了，这些异常在编译时不能被简单的忽略。</li>
+<li>运行时异常：运行时异常是可能被程序员避免的异常。与检查性异常相反，运行时异常可以在编译时被忽略。</li>
+<li>错误ERROR：错误不是异常，而是脱离程序员控制的问题。错误在代码中通常被忽略。例如，当栈溢出时，一个错误就发生了，它们是编译也检查不到的。</li>
+</ul>
+<h2 id="异常体系结构"><a href="#异常体系结构" class="headerlink" title="异常体系结构"></a>异常体系结构</h2><p>Java把异常当作对象来处理，并定义一个基类 Java.lang.Throwable 作为所有异常的超类。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/.%5Cpost_images%5CJava-6-1.jpg"
+                      alt="Java-6-1"
+                ></p>
+<h2 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h2><p>Error类对象由Java虚拟机生成并抛出，大多数错误与代码编写者所执行的操作无关。</p>
+<p>Java虚拟机运行错误（Virtual MachineError），当JVM不再有继续执行操作所需的内存资源时，将出现OutOfMemoryError。这些异常发生时，JVM一般会选择线程终止。</p>
+<p>还有发生在虚拟机试图执行应用时，如类定义错误（NoClassDefFoundError）、链接错误（LinkageError）。这些错误是不可查的，因为它们在应用程序的控制和处理能力之外，而且绝大多数是程序运行时不允许出现的状况。</p>
+<h2 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h2><p>在Exception分支中有一个重要的子类RuntimeException（运行时异常）</p>
+<ul>
+<li>ArrayIndexOutOfBoundsException（数组下标越界）</li>
+<li>NullPointerException（空指针异常）</li>
+<li>ArithmeticException（算数异常）</li>
+<li>MissingResourceException（丢失资源）</li>
+<li>ClassNotFoundException（找不到类）</li>
+</ul>
+<p>这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽量避免这类异常的发生。</p>
+<h2 id="捕获和抛出异常"><a href="#捕获和抛出异常" class="headerlink" title="捕获和抛出异常"></a>捕获和抛出异常</h2><p> 异常处理关键字：try、catch、finally、throw、throws</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.exception;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">try</span> &#123;   <span class="hljs-comment">// try监控区域</span><br>            System.out.println(a/b);<br>        &#125; <span class="hljs-keyword">catch</span> (ArithmeticException e)&#123;    <span class="hljs-comment">// catch 捕获异常</span><br>            System.out.println(<span class="hljs-string">&quot;程序出现异常，变量b不能为0&quot;</span>);<br>        &#125; <span class="hljs-keyword">finally</span> &#123;     <span class="hljs-comment">// 处理善后问题</span><br>            System.out.println(<span class="hljs-string">&quot;finally&quot;</span>);<br>        &#125;<br>        <span class="hljs-comment">// finally 可以不要，假设IO、资源，关闭！</span><br>        System.out.println(<span class="hljs-string">&quot;====================&quot;</span>);<br>        <span class="hljs-keyword">try</span> &#123;   <span class="hljs-comment">// try监控区域</span><br>            <span class="hljs-keyword">new</span> <span class="hljs-title class_">Test</span>().a();<br>        &#125; <span class="hljs-keyword">catch</span> (Throwable e)&#123;    <span class="hljs-comment">// catch(想要捕获的异常类型) 捕获异常</span><br>            System.out.println(<span class="hljs-string">&quot;程序出现异常&quot;</span>);<br>        &#125; <span class="hljs-keyword">finally</span> &#123;     <span class="hljs-comment">// 处理善后问题</span><br>            System.out.println(<span class="hljs-string">&quot;finally&quot;</span>);<br>        &#125;<br>        System.out.println(<span class="hljs-string">&quot;====================&quot;</span>);<br>        <span class="hljs-comment">// 假设要捕获多个异常： 从小到大！</span><br>        <span class="hljs-keyword">try</span> &#123;   <span class="hljs-comment">// try监控区域</span><br><br>            <span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">// throw throws</span><br>                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArithmeticException</span>(); <span class="hljs-comment">// 主动抛出异常，一般不在这里使用</span><br>            &#125;<br><br>            System.out.println(a/b);<br><br><br>        &#125; <span class="hljs-keyword">catch</span> (Error e)&#123;    <span class="hljs-comment">// catch(想要捕获的异常类型) 捕获异常</span><br>            System.out.println(<span class="hljs-string">&quot;程序出现异常 Error&quot;</span>);<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e)&#123;    <span class="hljs-comment">// catch(想要捕获的异常类型) 捕获异常</span><br>            System.out.println(<span class="hljs-string">&quot;程序出现异常 Exception&quot;</span>);<br>        &#125; <span class="hljs-keyword">catch</span> (Throwable t)&#123;    <span class="hljs-comment">// catch(想要捕获的异常类型) 捕获异常</span><br>            System.out.println(<span class="hljs-string">&quot;程序出现异常 Throwable&quot;</span>);<br>        &#125; <span class="hljs-keyword">finally</span> &#123;     <span class="hljs-comment">// 处理善后问题</span><br>            System.out.println(<span class="hljs-string">&quot;finally&quot;</span>);<br>        &#125;<br><br>        System.out.println(<span class="hljs-string">&quot;====================&quot;</span>);<br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-keyword">new</span> <span class="hljs-title class_">Test</span>().test(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>);<br>        &#125; <span class="hljs-keyword">catch</span> (ArithmeticException e) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">a</span><span class="hljs-params">()</span>&#123;b();&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">b</span><span class="hljs-params">()</span>&#123;a();&#125;<br>    <span class="hljs-comment">// 假设这个方法中，处理不了这个异常，在方法上抛出异常</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> ArithmeticException&#123;<br>        <span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">// throw throws</span><br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArithmeticException</span>(); <span class="hljs-comment">// 主动抛出异常, 一般在方法中使用</span><br>        &#125;<br>        System.out.println(a/b);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.exception;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test2</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">// ctrl + alt + t 自动为选中区域生成catch语句</span><br>        <span class="hljs-keyword">try</span> &#123;<br>            System.out.println(a/b);<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>            System.out.println(<span class="hljs-string">&quot;结束&quot;</span>);<br>            System.exit(<span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>        &#125; <span class="hljs-keyword">finally</span> &#123;<br>        &#125;<br>        <span class="hljs-comment">/**</span><br><span class="hljs-comment">         * 结束</span><br><span class="hljs-comment">         *</span><br><span class="hljs-comment">         * 进程已结束，退出代码为 1</span><br><span class="hljs-comment">         */</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></div>
+
+<h2 id="自定义异常及经验小结"><a href="#自定义异常及经验小结" class="headerlink" title="自定义异常及经验小结"></a>自定义异常及经验小结</h2><p>自定义异常步骤：</p>
+<ol>
+<li>创建自定义异常类。</li>
+<li>在方法中通过 throw关键字抛出异常对象。</li>
+<li>如果在当前抛出异常的方法中处理异常，可以使用try-catch语句捕获并处理；否则在方法的声明处通过throws关键字指明要抛出给方法调用者的异常，继续进行下一步操作。</li>
+<li>在出现异常方法的调用者中捕获并处理异常。</li>
+</ol>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.exception;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Exception</span>&#123;<br>    <span class="hljs-comment">// 传递数字 &gt; 10</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> detail;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span>&#123;<br>        <span class="hljs-built_in">this</span>.detail = a;<br>    &#125;<br><br>    <span class="hljs-comment">//toString 异常的打印信息</span><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">toString</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;MyException&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;detail=&quot;</span> + detail +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.exception;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test3</span> &#123;<br>    <span class="hljs-comment">// 可能会存在异常的方法</span><br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> <span class="hljs-keyword">throws</span> MyException&#123;<br>        System.out.println(<span class="hljs-string">&quot;传递的参数为：&quot;</span> + a);<br><br>        <span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">10</span>)&#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyException</span>(a); <span class="hljs-comment">// 抛出</span><br>        &#125;<br><br>        System.out.println(<span class="hljs-string">&quot;OK&quot;</span>);;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            test(<span class="hljs-number">11</span>);<br>        &#125; <span class="hljs-keyword">catch</span> (MyException e) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;MyException=&gt;&quot;</span>+e);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></div>
+
+<p><strong>实际应用中的经验总结：</strong></p>
+<ul>
+<li>处理运行时异常时，采用逻辑去合理规避同时辅助try-catch处理</li>
+<li>在多重catch块后面，可以加一个catch(Exception) 来处理可能被遗漏的异常</li>
+<li>对于不确定的代码，也可以加上try-catch，处理潜在异常</li>
+<li>尽量去处理异常，切忌只是简单地调用printStackTrace()去打印输出</li>
+<li>具体如何处理异常，要根据不同的业务需求和异常类型去决定</li>
+<li>尽量添加finally语句块去释放占用的资源</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>Tonghui Feng</strong></p>
