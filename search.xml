@@ -9038,6 +9038,39 @@
       </tags>
   </entry>
   <entry>
+    <title>线程简介和线程创建</title>
+    <url>/2024/06/06/Java-7/</url>
+    <content><![CDATA[<p> 程序是指令和数据的有序集合，其本身没有任何运行的含义，是一个静态的概念。</p>
+<p>进程是执行程序的一次执行过程，他是一个动态的概念。是系统资源分配的单位。</p>
+<p>通常在一个进程中可以包含若干个线程，当然一个进程中至少有一个线程，不然没有存在的意义。线程是CPU调度和执行的单位。</p>
+<p><strong>注意：</strong>很多多线程是模拟出来的，真正的多线程是指有多个CPU，即多核，如服务器。模拟出来的多线程，在同一个时间点，cpu只能执行一个代码，但是切换到很快，所以有同时执行的错觉。</p>
+<ul>
+<li>线程就是独立的执行路径；</li>
+<li>在程序运行时，即使没有自己创建的线程，后台也会有多个线程，如主线程，gc线程（守护线程）；</li>
+<li>main（）称之为主线程，为系统的入口，用于执行整个程序；</li>
+<li>在一个进程中，如果开辟了多个线程，线程的运行由调度器安排调度，调度器是与操作系统紧密相关的，先后顺序是不能人为干预的；</li>
+<li>对同一份资源操作时，会存在资源抢夺的问题，需要加入并发控制；</li>
+<li>线程会带来额外的开销，如cpu调度时间，并发控制开销；</li>
+<li>每个线程在自己的工作内存交互，内存控制不当会造成数据不一致。</li>
+</ul>
+<h2 id="线程创建"><a href="#线程创建" class="headerlink" title="线程创建"></a>线程创建</h2><ul>
+<li>Thread class 继承Thread类（重点）</li>
+<li>Runnable接口 实现Runnable接口（重点）</li>
+<li>Callable接口 实现Callable接口（现阶段了解，工作重点）</li>
+</ul>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.thread.demo01;<br><br><span class="hljs-comment">// 创建线程方式一：继承Thread类，重写run()方法，调用start开启线程</span><br><br><span class="hljs-comment">// 总结：注意，线程开启，不一定立即执行，由cpu调度执行</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestThread1</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Thread</span>&#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-comment">// run方法线程体</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i= <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++)&#123;<br>            System.out.println(<span class="hljs-string">&quot;我在看代码---&quot;</span>+i);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// main线程，主线程</span><br>        <span class="hljs-comment">// 创建一个线程对象</span><br>        <span class="hljs-type">TestThread1</span> <span class="hljs-variable">testThread1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TestThread1</span>();<br>        <span class="hljs-comment">// 调用start方法</span><br>        testThread1.start();<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i= <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++)&#123;<br>            System.out.println(<span class="hljs-string">&quot;我在学习多线程---&quot;</span>+i);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></div>
+
+<p>练习：多线程下载文件</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.thread.demo01;<br><span class="hljs-comment">// 下载commons-io包</span><br><span class="hljs-keyword">import</span> org.apache.commons.io.FileUtils;<br><br><span class="hljs-keyword">import</span> java.io.File;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.net.URL;<br><br><span class="hljs-comment">// 练习Thread，实现多线程同步下载图片</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestThread2</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Thread</span>&#123;<br>    <span class="hljs-keyword">private</span> String url; <span class="hljs-comment">// 网络图片地址</span><br>    <span class="hljs-keyword">private</span> String name;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">TestThread2</span><span class="hljs-params">(String url, String name)</span>&#123;<br>        <span class="hljs-built_in">this</span>.url = url;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">WebDownloader</span> <span class="hljs-variable">webDownloader</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">WebDownloader</span>();<br>        webDownloader.downloader(url, name);<br>        System.out.println(<span class="hljs-string">&quot;下载了文件名为：&quot;</span>+name);<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">TestThread2</span> <span class="hljs-variable">t1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TestThread2</span>(<span class="hljs-string">&quot;https://blog.kuangstudy.com/usr/themes/handsome/usr/img/sj/1.jpg&quot;</span>, <span class="hljs-string">&quot;1.jpg&quot;</span>);<br>        <span class="hljs-type">TestThread2</span> <span class="hljs-variable">t2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TestThread2</span>(<span class="hljs-string">&quot;https://blog.kuangstudy.com/usr/themes/handsome/usr/img/sj/2.jpg&quot;</span>, <span class="hljs-string">&quot;2.jpg&quot;</span>);<br>        <span class="hljs-type">TestThread2</span> <span class="hljs-variable">t3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TestThread2</span>(<span class="hljs-string">&quot;https://blog.kuangstudy.com/usr/themes/handsome/usr/img/sj/3.jpg&quot;</span>, <span class="hljs-string">&quot;3.jpg&quot;</span>);<br><br>        t1.start();<br>        t2.start();<br>        t3.start();<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">//下载器</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">WebDownloader</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">downloader</span><span class="hljs-params">(String url, String name)</span> &#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            FileUtils.copyURLToFile(<span class="hljs-keyword">new</span> <span class="hljs-title class_">URL</span>(url), <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(name));<br>        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>            e.printStackTrace();<br>            System.out.println(<span class="hljs-string">&quot;IO异常，downloader方法出现问题&quot;</span>);<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></div>
+]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>Java, 多线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>about</title>
     <url>/about/index.html</url>
     <content><![CDATA[<h1 id="ME"><a href="#ME" class="headerlink" title="ME"></a>ME</h1><p><strong>Tonghui Feng</strong></p>
