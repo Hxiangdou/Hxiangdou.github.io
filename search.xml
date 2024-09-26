@@ -2618,7 +2618,7 @@
 
 
 
-<h2 id="5-Python标准库"><a href="#5-Python标准库" class="headerlink" title="5. Python标准库"></a>5. Python标准库</h2><p>Python标准库 是一组模块，安装的Python都包含它。你现在对类的工作原 理已有大致的了解，可以开始使用其他程序员编写好的模块了。可使用标准库中的任何函数和类，为此只需在程序开头包含一条简单的import语句。</p>
+<h2 id="Python标准库"><a href="#Python标准库" class="headerlink" title="Python标准库"></a>Python标准库</h2><p>Python标准库 是一组模块，安装的Python都包含它。你现在对类的工作原 理已有大致的了解，可以开始使用其他程序员编写好的模块了。可使用标准库中的任何函数和类，为此只需在程序开头包含一条简单的import语句。</p>
 ]]></content>
       <categories>
         <category>Python学习</category>
